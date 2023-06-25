@@ -1,0 +1,91 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>資訊架構備忘表 – Execute Envirentment</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/execute-env/</link>
+    <description>Recent content in Execute Envirentment on 資訊架構備忘表</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/execute-env/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: Docker</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/execute-env/docker/</link>
+      <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/execute-env/docker/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview:&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;A representative product of containerization technology that separates independent software operating environments within the same operating system.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Development and Testing: Docker can provide a testing environment with minimal system resources that aligns with the production environment during development and testing stages.&lt;/li&gt;
+&lt;li&gt;Direct Use of Packaged Application Images: The Docker ecosystem offers various pre-packaged application images that can be directly used, saving time on setting up and configuring applications in different environments.&lt;/li&gt;
+&lt;li&gt;Isolation of Multiple Application Environments: Within the same server, containers can be used to separate multiple applications to avoid conflicts in versions and configurations or interference between applications.&lt;/li&gt;
+&lt;li&gt;Rapid Deployment: Docker&amp;rsquo;s lightweight nature makes it suitable for quickly deploying applications across multiple servers.&lt;/li&gt;
+&lt;li&gt;Microservices Architecture: Docker&amp;rsquo;s isolation capabilities make it suitable for integration with microservices. By breaking down applications into smaller components, Docker enables dynamic scaling of container instances based on demand.&lt;/li&gt;
+&lt;li&gt;Cloud-Native Development: Docker&amp;rsquo;s lightweight and fast deployment features are well-suited for cloud environments, which bill based on resource usage and provide scalable computing resources on-demand.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Lightweight: Containers start quickly and consume fewer system resources since they don&amp;rsquo;t include an operating system.&lt;/li&gt;
+&lt;li&gt;Isolation: Each container runs independently, avoiding conflicts between applications. If an error occurs in one container, it can be restarted independently without affecting other containers.&lt;/li&gt;
+&lt;li&gt;Security: Container isolation enhances security by separating different applications.&lt;/li&gt;
+&lt;li&gt;Recoverability: Containers can be monitored, and automatic restart is possible.&lt;/li&gt;
+&lt;li&gt;Rich Management Mechanisms: Docker provides built-in mechanisms for managing containers, such as resource monitoring, error detection, and automatic restart.&lt;/li&gt;
+&lt;li&gt;Avoiding OS Conflicts: Docker abstracts away differences between different versions of operating systems, solving management challenges caused by those differences.&lt;/li&gt;
+&lt;li&gt;On-Demand Activation: Containers can be directly loaded and activated from provided images by developers or the community, unaffected by differences in operating system versions.&lt;/li&gt;
+&lt;li&gt;Horizontal Scaling: Easy to deploy and scale, allowing for quick addition or removal of containers to accommodate changes in traffic.&lt;/li&gt;
+&lt;li&gt;CI/CD Mechanism: Dockerfiles and other necessary build files stored in version control can automatically generate, validate, and deploy container images.&lt;/li&gt;
+&lt;li&gt;Provides IaC Mechanism: Dockerfiles contain the complete process for building containers, offering advantages similar to Infrastructure as Code (IaC), such as easy tracking of container build details.&lt;/li&gt;
+&lt;li&gt;Version Control and Quick Rollback: Multiple versions of container images can be maintained, enabling quick switching between versions in case of errors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Security: Containers are typically started with root privileges by default, which can pose potential risks. It is possible to start containers with other user identities, but implementation can be complex.&lt;/li&gt;
+&lt;li&gt;Learning Curve: Docker&amp;rsquo;s containerization mechanism has its complexity, requiring a significant learning period to understand aspects such as data persistence, network configuration, and automatic restart mechanisms.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: VM</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/execute-env/vm/</link>
+      <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/execute-env/vm/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview:&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;A VM (Virtual Machine) is a virtualized environment created within a physical machine, dividing it into multiple independent virtual machines. Each VM can be configured with its own allocated computational and memory resources. Within each VM, a separate operating system and applications can be installed. This allows for multiple isolated software environments to meet different usage requirements.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Isolated Environments: When there is a larger server available and multiple smaller computing needs that require independent operation.&lt;/li&gt;
+&lt;li&gt;Cloud Migration: When migrating from on-premises to the cloud, but the existing architecture cannot be containerized or requires the installation of non-containerizable software.&lt;/li&gt;
+&lt;li&gt;Vertical Scaling: When there is a need to dynamically adjust the computational resources of the operating environment based on usage requirements.&lt;/li&gt;
+&lt;li&gt;Horizontal Scaling: Through VM image mechanisms, VMs can be quickly deployed to other machines.&lt;/li&gt;
+&lt;li&gt;System Restoration: Quick system restoration can be achieved through VM image mechanisms.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Resource Intensive: Compared to lightweight containerization technologies, each VM requires an operating system, resulting in higher resource usage.&lt;/li&gt;
+&lt;li&gt;Slow Startup: Each VM has its own operating system, leading to slower boot times.&lt;/li&gt;
+&lt;li&gt;Costly: Additional VM management systems or licenses are often required to utilize the full VM functionality, resulting in higher costs.&lt;/li&gt;
+&lt;li&gt;Difficult Horizontal Scaling: Scaling VMs can be challenging, especially for large-scale deployment and management of multiple VMs. Adjustments need to be made to individual VM configurations, network settings, and other attributes, requiring additional time and effort.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

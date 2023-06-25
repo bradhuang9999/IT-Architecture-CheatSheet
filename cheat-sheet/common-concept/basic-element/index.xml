@@ -1,0 +1,112 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT Architecture Cheat Sheet – Basic Element</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/basic-element/</link>
+    <description>Recent content in Basic Element on IT Architecture Cheat Sheet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 05 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/basic-element/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: IaC</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/basic-element/iac/</link>
+      <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/basic-element/iac/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;IaC (Infrastructure as Code) is a method of documenting the configuration requirements of infrastructure by writing code. With specific tools, this code can be deployed to multiple devices and changes can be made to the device state, achieving the goal of rapid deployment. There are generally two types of code that can be used to implement IaC: one describes the desired changes, and the other describes the desired system state.&lt;/p&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Rapid management: Allows for quick deployment and management of the state of multiple servers.&lt;/li&gt;
+&lt;li&gt;Easy understanding of changes: The expected changes are documented in the code.&lt;/li&gt;
+&lt;li&gt;Change traceability: Relevant change history is recorded in the version control system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Higher complexity in setting up IaC.&lt;/li&gt;
+&lt;li&gt;Learning curve: Due to the complexity of the code and tools involved, it requires a longer learning time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;&lt;strong&gt;Examples&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Anisble&lt;/li&gt;
+&lt;li&gt;Puppet&lt;/li&gt;
+&lt;li&gt;Terraform&lt;/li&gt;
+&lt;li&gt;Docker&lt;/li&gt;
+&lt;li&gt;AWS CloudFormation&lt;/li&gt;
+&lt;li&gt;Google Cloud Deployment Manager&lt;/li&gt;
+&lt;li&gt;Azure Resource Manager (ARM)&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Vertical scaling</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/basic-element/vertical-scaling/</link>
+      <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/basic-element/vertical-scaling/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;When a server has high system resource demands (e.g., CPU, memory, disk space), if it is a physical machine, the solution is to upgrade the memory or disk space directly. If it is a virtual machine, the allocation of more system resources to the VM can be dynamically adjusted.&lt;/p&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Simplicity: By increasing the system resources of a single server, it can handle increased system demands.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Downtime: If it is a physical machine, installing new hardware is required. If it is a virtual machine, a reboot may be necessary.&lt;/li&gt;
+&lt;li&gt;Limited scalability: Vertical scaling is still limited by the hardware constraints of a single server. When system demands exceed these limitations, it is not possible to provide additional system resources.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Horizontal scaling</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/basic-element/horizontal-scaling/</link>
+      <pubDate>Sun, 25 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/basic-element/horizontal-scaling/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Horizontal scaling is a system resource management strategy that effectively utilizes system resources and improves system performance by increasing or decreasing the number of servers or containers when the system&amp;rsquo;s resource demands dynamically increase or decrease. This can be achieved through automated scheduling based on traffic predictions or automatic scaling triggered by system load detection.&lt;/p&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Optimized resource utilization: When system resource utilization is low, the number of servers can be dynamically reduced to save costs.&lt;/li&gt;
+&lt;li&gt;Avoidance of single point of failure: Multiple servers or containers working together with load balancing and monitoring mechanisms can prevent single points of failure and enhance system availability.&lt;/li&gt;
+&lt;li&gt;No service interruption: Horizontal scaling typically occurs during runtime by adding more servers or containers to handle high traffic demands without the need for downtime or service interruption.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Complex architecture: It requires consideration of how to monitor and manage the number and status of servers or containers.&lt;/li&gt;
+&lt;li&gt;Not suitable for all systems: Horizontal scaling may require redesigning the system to ensure that all components can adapt to a dynamically changing environment.&lt;/li&gt;
+&lt;li&gt;Network and communication costs: Since the system consists of multiple servers or containers, additional communication overhead and coordination costs are involved.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;&lt;strong&gt;Examples&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Container environments: Container environments like Kubernetes, Docker, and others provide flexible scaling capabilities to automatically adjust the number of containers based on demand.&lt;/li&gt;
+&lt;li&gt;Distributed databases: In distributed databases, the number of nodes can be adjusted based on workload and data volume changes to provide better performance and reliability.&lt;/li&gt;
+&lt;li&gt;Distributed storage: Storing data across multiple nodes allows for scaling based on data volume and storage requirements, ensuring efficient data access and capacity management.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

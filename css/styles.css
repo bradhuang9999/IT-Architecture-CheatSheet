@@ -1,0 +1,11 @@
+div.div-cheatsheet h2 {
+    margin-top: 50px;
+}
+
+div.div-cheatsheet a {
+    color: #222;    
+}
+
+div.div-cheatsheet a:hover, div.div-cheatsheet a:focus {
+    font-weight: bolder;
+}

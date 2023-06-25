@@ -1,0 +1,83 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>資訊架構備忘表 – Application Interface</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/application-interface/</link>
+    <description>Recent content in Application Interface on 資訊架構備忘表</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/application-interface/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: Web Application</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/application-interface/web-application/</link>
+      <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/application-interface/web-application/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview:&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Web applications are accessed through a browser to directly use the application on a website.&lt;/p&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;No Installation Required: Unlike traditional standalone applications that require installation, web applications can be accessed simply by connecting to a website through a browser.&lt;/li&gt;
+&lt;li&gt;Version Synchronization: When connecting to a web application, the latest version is always used, avoiding issues caused by version inconsistencies.&lt;/li&gt;
+&lt;li&gt;Cross-Platform Usage: Web applications can be accessed using standard browsers, eliminating compatibility issues across different types and versions of computers.&lt;/li&gt;
+&lt;li&gt;Low Client-Side Load: Most of the computation is performed on the server-side.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Security: Connecting to web applications over public networks introduces more cybersecurity risks, such as XSS, SQL injection, CSRF attacks.&lt;/li&gt;
+&lt;li&gt;Complexity: Web applications are divided into frontend components responsible for display and backend components handling business logic, making the overall process more abstract and complex.&lt;/li&gt;
+&lt;li&gt;Browser Version Issues: Different users may have different browser versions installed, requiring consideration for browser compatibility.&lt;/li&gt;
+&lt;li&gt;No Offline Usage: Web applications cannot be used when there is no internet connection. Modern Progressive Web Applications (PWAs) address this issue by caching data.&lt;/li&gt;
+&lt;li&gt;Network Speed Issues: Some clients may have unstable internet speeds, which can affect performance. Techniques such as caching and reducing/delaying network requests need to be considered.&lt;/li&gt;
+&lt;li&gt;Limitations on Software and Hardware Access: Due to browser support and security concerns, web applications cannot access all hardware information and user files in the same way as native applications.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Progressive Web Apps</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/application-interface/progressive-web-apps/</link>
+      <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/application-interface/progressive-web-apps/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview:&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;PWA (Progressive Web Application) is a special form of web application that provides some functionalities of native applications. It achieves this by defining information such as icons, theme colors, and utilizing service workers to provide partial functionality and push notifications even when the network is unavailable. PWAs aim to offer native-like features across different platforms.&lt;/p&gt;
+&lt;h2 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases:&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Providing cross-platform applications in a native-like format.&lt;/li&gt;
+&lt;li&gt;Not requiring constant internet connectivity for the web application.&lt;/li&gt;
+&lt;li&gt;Offering better services to users in limited network environments.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages:&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;In addition to the advantages of web applications, such as cross-platform compatibility, no installation or updates, PWAs have the following benefits:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;App-like Experience: They can generate desktop shortcuts and icons, similar to traditional applications.&lt;/li&gt;
+&lt;li&gt;Offline Usage: They can provide core functionality even when the network is unavailable.&lt;/li&gt;
+&lt;li&gt;Fast Loading: Due to data caching in the browser, PWAs have faster startup times.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages:&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;In addition to the general disadvantages of web applications, PWAs have the following drawbacks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Complex Caching Mechanism: Managing offline and online data caching with different update strategies can be challenging and complex.&lt;/li&gt;
+&lt;li&gt;Inconsistent Browser Support: Support for PWAs may vary across different browsers and devices, with some browsers lacking complete compatibility.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

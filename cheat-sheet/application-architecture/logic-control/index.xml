@@ -1,0 +1,89 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT Architecture Cheat Sheet – Logic control</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/</link>
+    <description>Recent content in Logic control on IT Architecture Cheat Sheet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: Batch</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/batch/</link>
+      <pubDate>Sun, 25 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/batch/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview:&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Batch programs are a set of server-side programs that can be executed on a scheduled, manual, or event-triggered basis. They are commonly used for performing predefined tasks such as data conversion, report generation, and data validation.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Data conversion, validation, and report generation.&lt;/li&gt;
+&lt;li&gt;Actions that require a longer execution time.&lt;/li&gt;
+&lt;li&gt;Actions that need to be performed on a scheduled basis.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Resource consumption: Batch programs that require longer execution times often consume more system resources.&lt;/li&gt;
+&lt;li&gt;Complexity of scheduling system: Since multiple batch programs can be queued in different queues, and each program may have different priorities and execution times, improper design can lead to job congestion.&lt;/li&gt;
+&lt;li&gt;Delayed results: Batch data conversion processes do not provide real-time results, and the converted data may not be immediately vis&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Web API</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/web-api/</link>
+      <pubDate>Sun, 25 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/web-api/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview:&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Web API provides services to external clients or other internal systems through HTTP, HTTPS, or other web interfaces.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Resource or service provisioning: Internal systems, partner companies, customers, or the general public.&lt;/li&gt;
+&lt;li&gt;Communication and data exchange: Internal systems, partner companies, customers.&lt;/li&gt;
+&lt;li&gt;Used by other applications for calling, such as backend services for mobile devices.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Reduced system coupling.&lt;/li&gt;
+&lt;li&gt;Provides standardized interfaces for external invocation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Security: If transmitting data over the public network, it is important to address security issues through mechanisms such as HTTPS and authentication.&lt;/li&gt;
+&lt;li&gt;Potential high request volume: Mechanisms like horizontal scaling may be needed to handle flexible request volume requirements.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;common-authentication-mechanisms&#34;&gt;&lt;strong&gt;Common authentication mechanisms:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;JWT&lt;/li&gt;
+&lt;li&gt;OAuth&lt;/li&gt;
+&lt;li&gt;SAML&lt;/li&gt;
+&lt;li&gt;API keys&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;common-data-exchange-formats&#34;&gt;&lt;strong&gt;Common data exchange formats:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;JSON&lt;/li&gt;
+&lt;li&gt;XML&lt;/li&gt;
+&lt;li&gt;CSV&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

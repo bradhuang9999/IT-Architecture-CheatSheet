@@ -1,0 +1,58 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT Architecture Cheat Sheet – Application Architecture</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/</link>
+    <description>Recent content in Application Architecture on IT Architecture Cheat Sheet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: Execute Envirentment</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/execute-env/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/execute-env/</guid>
+      <description>
+        
+        
+        &lt;p&gt;Hello Common Concept&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Application View</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/application-view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/application-view/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Logic control</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
