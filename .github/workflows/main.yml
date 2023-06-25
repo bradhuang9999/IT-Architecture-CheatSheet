@@ -43,10 +43,17 @@ jobs:
           extended: true
           
       # 開始用 Hugo 產生檔案囉
-      - name: build content to public site
-        working-directory: ./
-        # --cleanDestinationDir 清除舊檔案
-        run: hugo --minify --gc --cleanDestinationDir
+      # - name: build content to public site
+      #   working-directory: ./
+      #   # --cleanDestinationDir 清除舊檔案
+      #   run: hugo --minify --gc --cleanDestinationDir
+
+          
+      - name: Build
+        run: |
+         npm install -D --save autoprefixer
+         npm install -D --save postcss-cli
+         hugo      
        
       - name: Print files
         id: lsfiles2
