@@ -1,5 +1,5 @@
-baseURL = "/"
-title = "Goldydocs"
+baseURL = "https://bradhuang9999.github.io/IT-Architecture-CheatSheet/"
+title = "IT Architecture Cheat Sheet"
 
 # Language settings
 contentDir = "content/en"
@@ -60,7 +60,7 @@ id = "UA-00000000-0"
 
 [languages]
 [languages.en]
-title = "IT Architecture Toolset"
+title = "IT Architecture Cheat Sheet"
 languageName ="English"
 # Weight used for sorting.
 weight = 1
@@ -68,7 +68,7 @@ weight = 1
 description = "Collection of important tools to design IT Architecture"
 
 [languages.zh-tw]
-title = "資訊架構工具箱"
+title = "資訊架構備忘表"
 languageName ="繁體中文"
 contentDir = "content/zh-tw"
 [languages.no.params]
@@ -92,7 +92,7 @@ description = "彙整重要的資訊架構元件"
 section = ["HTML", "print", "RSS"]
 
 [params]
-copyright = "The IT Architecture Toolset Authors"
+copyright = "The IT Architecture Cheat Sheet Authors"
 privacy_policy = "https://policies.google.com/privacy"
 
 # First one is picked as the Twitter card image if not set on page.
@@ -155,6 +155,8 @@ sidebar_menu_compact = false
 # Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
 sidebar_search_disable = false
 
+sidebar_menu_foldable = true
+
 # Adds a H2 section titled "Feedback" to the bottom of each doc. The responses are sent to Google Analytics as events.
 # This feature depends on [services.googleAnalytics] and will be disabled if "services.googleAnalytics.id" is not set.
 # If you want this feature, but occasionally need to remove the "Feedback" section from a single page,
@@ -191,7 +193,7 @@ enable = false
 ## Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
   name = "GitHub"
-  url = "https://github.com/bradhuang9999/IT-Architecture-Toolset"
+  url = "https://github.com/bradhuang9999/IT-Architecture-CheatSheet"
   icon = "fab fa-github"
   desc = "Development takes place here!"
 #[[params.links.developer]]
