@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.114.1">
+<meta name="generator" content="Hugo 0.115.0">
 <link rel="canonical" type="text/html" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/">
 <link rel="alternate" type="application/rss&#43;xml" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/index.xml">
 <meta name="robots" content="noindex, nofollow">
@@ -240,6 +240,46 @@ This is the multi-page printable view of this section.
     
 	
 <li>3.2: <a href="#pg-35519184a4f0152c6d32db78640cefb4">Web API</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.3: <a href="#pg-0d9251decb39e4779f11bfe5dba75374">Serverless Function</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.4: <a href="#pg-732adf9ea09f2ee8c023e4c3e280d811">Message Queue</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.5: <a href="#pg-aafefe45efa983a4c34aafb2ba32cae1">DB Procedure</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.6: <a href="#pg-6a7124f201df42e319ba825bf34cea29">DB Function</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.7: <a href="#pg-4aad44857deaecd5722953925db6b969">DB Trigger</a></li>
 
 
     
@@ -675,6 +715,184 @@ This is the multi-page printable view of this section.
 <li>JSON</li>
 <li>XML</li>
 <li>CSV</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0d9251decb39e4779f11bfe5dba75374">3.3 - Serverless Function</h1>
+    
+	<h3 id="overview"><strong>Overview:</strong></h3>
+<p>Serverless Function is a design pattern that allows software developers to focus solely on implementing program logic without having to worry about the programming platform or system management issues.</p>
+<h3 id="use-cases"><strong>Use Cases:</strong></h3>
+<ul>
+<li>Web API</li>
+<li>Batch processing</li>
+<li>Scheduled tasks</li>
+<li>Event-driven operations</li>
+<li>Backend server for frontend-backend separation</li>
+</ul>
+<h3 id="advantages"><strong>Advantages:</strong></h3>
+<ul>
+<li>Flexibility: Pay only when used</li>
+<li>Scalability: Cloud platforms automatically scale based on usage</li>
+<li>No infrastructure management: Unlike IaaS or FaaS models, there is no need to manage the underlying infrastructure or platform configuration.</li>
+<li>Implement logic in general-purpose languages: If the service usage increases in the future, the same logic can be adjusted and moved to environments such as containers.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages:</strong></h3>
+<ul>
+<li>Loading time: Each service execution requires loading the logic, resulting in slower response times. While some platforms offer pre-loading options, they come at a higher cost.</li>
+<li>Since most FaaS services are cloud-based on external networks, compared to services on internal networks, additional security considerations need to be taken into account.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-732adf9ea09f2ee8c023e4c3e280d811">3.4 - Message Queue</h1>
+    
+	<h3 id="overview"><strong>Overview:</strong></h3>
+<p>What are the omissions or errors in the following description of Message Queue?
+A Message Queue is a commonly used mechanism for asynchronous processing of logic. When a service requires a longer time to complete, to avoid upstream waiting, the service request can be placed in a queue and executed in order. Multiple service consumers will retrieve service requests from the queue and perform the corresponding processing.</p>
+<p>A typical Message Queue architecture consists of three main components: the Message producer (role responsible for generating service requests), the Message consumer (role responsible for processing service requests), and the Message broker (role responsible for message sorting and calling consumers).</p>
+<p>By using a Message Queue, we can achieve one-to-many communication. The producer does not need to know how many consumers there are; as long as there are consumers registered for the corresponding events, they will receive the messages. This design pattern effectively decouples the direct dependency between the producer and consumer, making the system more flexible and scalable.</p>
+<p>By appropriately applying Message Queue, we can improve system reliability and performance, especially in scenarios that involve asynchronous processing requirements.</p>
+<h3 id="use-cases"><strong>Use Cases:</strong></h3>
+<ul>
+<li>Asynchronous event-driven operations</li>
+<li>Asynchronous communication</li>
+<li>Log processing</li>
+</ul>
+<h3 id="advantages"><strong>Advantages:</strong></h3>
+<ul>
+<li>Avoid front-end waiting: Once the producer sends the message request, it can complete the action.</li>
+<li>Loose coupling: A large service can be broken down into multiple loosely coupled smaller services. These services do not need to communicate directly; the requests are passed through the broker.</li>
+<li>Scalability: When there are many pending requests, more consumers can be dynamically added to handle the service requests.</li>
+<li>Parallel processing: If multiple consumers are registered for the same event, the event processing can be done synchronously, without the need for sequential execution.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages:</strong></h3>
+<ul>
+<li>Inability to know results in real-time: As messages need to wait for the broker to forward them, if the producer needs to wait for the result, it needs to track the processing status of the message.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-aafefe45efa983a4c34aafb2ba32cae1">3.5 - DB Procedure</h1>
+    
+	<p>DB Procedure is a program stored in a database, usually based on SQL, combined with variables, logical conditions, and loops to efficiently process data in the database.</p>
+<h3 id="advantages"><strong>Advantages:</strong></h3>
+<ul>
+<li>Allows for complex data processing on the database side, effectively handling large amounts of data and avoiding issues with network latency and data transmission.</li>
+<li>Enables convenient transaction management on the database side.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages:</strong></h3>
+<ul>
+<li>Difficult to debug and develop: Setting breakpoints, logging program execution, and having code suggestions in the editor are challenging.</li>
+<li>Limited use of modern programming concepts, such as object-oriented programming, due to the procedural nature.</li>
+<li>High coupling: The programs reside within the database, resulting in high coupling between programs and between programs and database tables.</li>
+<li>Difficult program updates: Updating DB Procedures and related database tables can lead to errors in associated objects. Achieving zero downtime for program updates is challenging.</li>
+<li>Programs are tightly bound to a specific database and migrating to other database products is difficult.</li>
+</ul>
+<h3 id="examples"><strong>Examples:</strong></h3>
+<ul>
+<li>PL/SQL: DB Procedure in Oracle Database.</li>
+<li>T-SQL: DB Procedure in SQL Server Database.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-6a7124f201df42e319ba825bf34cea29">3.6 - DB Function</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>DB Function is a program on the database side, and its syntax varies depending on the type of database, such as PL/SQL or T-SQL. Similar to a regular program function, it receives input values, performs logical operations, and returns a result.</p>
+<h3 id="differences-from-db-procedure"><strong>Differences from DB Procedure</strong></h3>
+<ul>
+<li>Can be used within SQL statements.</li>
+<li>Generally, DB Functions cannot modify data.</li>
+</ul>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<ul>
+<li>Extracting repetitive subquery instructions in SQL.</li>
+<li>Writing complex program logic in SQL that requires additional processing.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-4aad44857deaecd5722953925db6b969">3.7 - DB Trigger</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>DB Trigger is a program on the database side, and its syntax varies depending on the type of database, such as PL/SQL or T-SQL. Its purpose is to monitor changes in specific table data and execute specific logic when data is inserted, updated, or deleted.</p>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<ul>
+<li>Logging data modifications.</li>
+<li>Updating related tables in response to changes.</li>
+<li>Synchronizing deletion of data in associated tables.</li>
+</ul>
+<h3 id="advantages"><strong>Advantages</strong></h3>
+<ul>
+<li>Allows implementation of event-driven logic on the database side: predefined logic automatically executes when events occur.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages</strong></h3>
+<ul>
+<li>Overuse can decrease database performance.</li>
+<li>Care must be taken to prevent infinite triggering loops between different triggers on different tables.</li>
 </ul>
 
 </div>

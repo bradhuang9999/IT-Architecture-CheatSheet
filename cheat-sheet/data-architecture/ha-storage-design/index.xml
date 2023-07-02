@@ -1,0 +1,146 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT Architecture Cheat Sheet – HA Storage design</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/ha-storage-design/</link>
+    <description>Recent content in HA Storage design on IT Architecture Cheat Sheet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/ha-storage-design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: Cold backup</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/ha-storage-design/cold-backup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/ha-storage-design/cold-backup/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;Cold backup refers to the periodic generation of data backups in another location for the purpose of system restoration in the event of system or hardware failures.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;Use Cases&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Personal or small-scale systems&lt;/li&gt;
+&lt;li&gt;Tolerable longer RPO (Recovery Point Objective, the acceptable data loss interval in the event of system failure)&lt;/li&gt;
+&lt;li&gt;Tolerable longer RTO (Recovery Time Objective, the time required for system recovery)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;Advantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Simple architecture: Only requires setting up scheduled backups and storing them in another location.&lt;/li&gt;
+&lt;li&gt;Cost-effective: Does not require additional server activation, resulting in lower costs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;Disadvantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Longer RPO: Since cold backups are typically generated at longer intervals (e.g., once a day), there may be a longer data loss window in the event of a system failure.&lt;/li&gt;
+&lt;li&gt;Longer RTO: Due to the need to load backup data and perform connection setup during system recovery, cold backups require a longer system recovery time.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Warm backup</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/ha-storage-design/warm-backup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/ha-storage-design/warm-backup/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;Warm backup involves setting up a dedicated standby server that is already installed with relevant services and regularly updated. It also loads the latest backup data. Under normal circumstances, the standby server is not operational, and the system does not read from or modify it. Only when the primary server fails, the standby server is activated and the differential data is loaded to provide system services. The RTO (Recovery Time Objective) for warm backup typically ranges from a few hours to a few days.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;Use Cases&lt;/h3&gt;
+&lt;p&gt;Warm backup is suitable for small-scale internal systems that aim to recover services within a few hours.&lt;/p&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;Advantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Lower RPO: Since the standby server regularly loads the latest backup data, less data is lost in the event of a failure.&lt;/li&gt;
+&lt;li&gt;Lower RTO: Because the backup data is already loaded into the standby server, service can be quickly started by making configuration modifications. Additionally, RTO time can be further reduced through automatic failover modes such as fault detection.&lt;/li&gt;
+&lt;li&gt;Simple architecture: There is no need to consider data synchronization in a multi-site architecture, reducing architectural complexity.&lt;/li&gt;
+&lt;li&gt;Lower cost: Only an additional standby server is required. In cloud architecture, fewer system resources can be used during normal operation. When switching to the standby server, more system resources can be obtained through vertical scaling. With the pay-as-you-go model offered by the cloud, costs can be effectively controlled.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;Disadvantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;RPO still exists: Since the data is backed up periodically, there may still be a time gap between the latest backup and the occurrence of a failure.&lt;/li&gt;
+&lt;li&gt;Higher cost: An additional standby server is required, along with the cost of keeping the standby server ready for activation. If automatic fault detection and failover are required, additional costs may be incurred.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Hot backup</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/ha-storage-design/hot-backup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/ha-storage-design/hot-backup/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Hot backup refers to the real-time synchronization of data to another backup server. When the primary server fails, the backup server stops receiving synchronized data, becomes the primary server, and modifies other service configurations to connect to this backup server.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Desire to reduce RPO (Recovery Point Objective) and RTO (Recovery Time Objective) without overly complex architecture and with reasonable backup costs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Lower RPO: Since data is typically synchronized in milliseconds or seconds, less data is lost under normal circumstances.&lt;/li&gt;
+&lt;li&gt;Lower RTO: Because the backup data is already loaded into the backup server, service can be quickly started by making configuration modifications. Automatic switching can even be performed through fault detection modes.&lt;/li&gt;
+&lt;li&gt;Simple architecture: There is no need to consider data synchronization in a multi-site architecture.&lt;/li&gt;
+&lt;li&gt;Lower cost: Only an additional backup server is required. In cloud architecture, fewer system resources can be used during normal operation. When switching to the primary server, more system resources can be obtained through vertical scaling. The pay-as-you-go nature of the cloud can help reduce costs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Higher cost: Another backup server needs to be kept ready for activation at all times. If automatic fault detection and switching are required, additional equipment and management costs may be incurred.&lt;/li&gt;
+&lt;li&gt;RPO still exists: Since it takes time to transfer services to the backup server, there is still a certain amount of RPO.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;&lt;strong&gt;Examples&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Real-time replication of a database to a backup database.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Multi-site</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/ha-storage-design/multi-site/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/ha-storage-design/multi-site/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;Multi-site is a design pattern for achieving high data availability, where multiple servers synchronize data with each other and provide system services. When any server fails, the service on that server is automatically stopped, and other servers take over to support system demands. There are various modes to achieve a multi-site architecture, such as using a primary server for data writes and a backup server for data reads, or employing a server cluster to coordinate multiple servers for service provision.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;Use Cases&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Enterprises seeking to provide a highly available architecture.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;Advantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Minimal RPO and RTO: With real-time synchronization and automatic failover, high availability can be achieved.&lt;/li&gt;
+&lt;li&gt;System responsiveness: Having multiple servers serving requests reduces the workload on individual servers, enhancing user satisfaction.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;Disadvantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Higher cost: Maintaining multiple servers simultaneously increases the system&amp;rsquo;s overall cost.&lt;/li&gt;
+&lt;li&gt;Complexity in architecture: Coordinating data synchronization and automatic switching mechanisms among multiple servers adds complexity to the architecture.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;An enterprise implements a multi-site architecture with a primary server and a backup server to provide high availability for data read and write services.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

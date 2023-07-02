@@ -1,0 +1,1226 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.115.0">
+<link rel="canonical" type="text/html" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/IT-Architecture-CheatSheet/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/IT-Architecture-CheatSheet/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/android-192x192.png" sizes="192x192">
+
+<title>Data Architecture | IT Architecture Cheat Sheet</title>
+<meta name="description" content="Collection of important tools to design IT Architecture">
+<meta property="og:title" content="Data Architecture" />
+<meta property="og:description" content="Collection of important tools to design IT Architecture" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/" />
+<meta itemprop="name" content="Data Architecture">
+<meta itemprop="description" content="Collection of important tools to design IT Architecture"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Data Architecture"/>
+<meta name="twitter:description" content="Collection of important tools to design IT Architecture"/>
+
+
+
+
+<link rel="preload" href="/IT-Architecture-CheatSheet/scss/main.min.e18f5ab4258bc800830805360794427cffd238c0edbf48f5929bef5e984cef17.css" as="style">
+<link href="/IT-Architecture-CheatSheet/scss/main.min.e18f5ab4258bc800830805360794427cffd238c0edbf48f5929bef5e984cef17.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+  crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-00000000-0');
+}
+</script>
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+  <a class="navbar-brand" href="/IT-Architecture-CheatSheet/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500"><g><path style="fill:#fff" d="M116.8525 421.9722c-5.7041.0-10.3442-4.3127-10.3442-9.6129V88.183c0-5.3002 4.6401-9.6117 10.3442-9.6117H320.858c3.0347.0 9.3959.5498 11.7506 2.6302l.3545.3442 58.905 63.2912c2.3101 2.491 2.9202 8.4928 2.9202 11.3184v256.2039c0 5.3002-4.6407 9.6129-10.3436 9.6129H116.8525z"/><g><g><g><path style="fill:#767676" d="M384.4445 423.2066H116.852c-6.3839.0-11.5786-4.8658-11.5786-10.8474V88.1831c0-5.9804 5.1947-10.8461 11.5786-10.8461h204.0062c.377.0 9.2786.0329 12.568 2.9389l.3947.3833 58.9508 63.337c3.2135 3.4652 3.2514 11.7924 3.2514 12.1593v256.2036C396.0231 418.3408 390.8284 423.2066 384.4445 423.2066zM116.5079 411.9189c.0848.0278.1999.0531.3441.0531h267.5925c.1442.0.2581-.0253.3441-.0531V156.1556c-.0076-.9033-.3593-3.7347-.7034-5.0037l-57.6527-61.9416c-1.4651-.3176-4.4533-.6389-5.5742-.6389H116.852c-.143.0-.2594.024-.3441.0531V411.9189zm267.4533-261.149zM327.0321 89.371v.0013V89.371z"/></g></g></g><g><g><path style="fill:#5b7fc0" d="M189.0874 210.1754l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4473C177.5953 212.627 183.0601 210.1742 189.0874 210.1754zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 234.1722 197.0804 232.033z"/><path style="opacity:.3;fill:#fff" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/><g><defs><path id="SVGID_1_" d="M194.7376 237.6875c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 234.2399 196.1861 236.239 194.7376 237.6875z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_2_);fill:#fff" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/><path style="opacity:.13;clip-path:url(#SVGID_2_);fill:#020202" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/></g><g><defs><path id="SVGID_3_" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_4_);fill:#5b7fc0" d="M172.6595 215.6045c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8475-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 209.1953 176.6171 211.647 172.6595 215.6045z"/></g></g><rect x="198.8952" y="225.1043" style="fill:#5b7fc0" width="122.6266" height="13.8671"/></g><g><path style="fill:#d95140" d="M189.0874 155.7611l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.0249 2.454-11.4897 6.4116-15.4473C177.5953 158.2128 183.0601 155.7599 189.0874 155.7611zm7.993 21.8577c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.2508 181.7667 197.0816 179.758 197.0804 177.6188z"/><path style="opacity:.3;fill:#fff" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/><g><defs><path id="SVGID_5_" d="M194.7376 183.2733c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 179.8256 196.1861 181.8248 194.7376 183.2733z"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_6_);fill:#fff" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/><path style="opacity:.13;clip-path:url(#SVGID_6_);fill:#020202" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/></g><g><defs><path id="SVGID_7_" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_8_);fill:#d95140" d="M172.6595 161.1903c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 154.7811 176.6171 157.2327 172.6595 161.1903z"/></g><rect x="198.8952" y="170.69" style="fill:#d95140" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#56a55c" d="M189.5379 264.6147l.0012-.0012c7.7751.0012 15.0294 4.1862 18.932 10.9235 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.3281-2.2733-15.458-6.4032-4.13-4.13-6.4032-9.6186-6.4056-15.4628.0012-6.0249 2.454-11.4897 6.4116-15.4472C178.0458 267.0663 183.5105 264.6135 189.5379 264.6147zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6538 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.7013 290.6202 197.5321 288.6115 197.5309 286.4723z"/><path style="opacity:.3;fill:#fff" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/><g><defs><path id="SVGID_9_" d="M195.1881 292.1268c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9941 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.5344 288.6792 196.6366 290.6783 195.1881 292.1268z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_10_);fill:#fff" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/><path style="opacity:.13;clip-path:url(#SVGID_10_);fill:#020202" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/></g><g><defs><path id="SVGID_11_" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/></defs><clipPath id="SVGID_12_"><use xlink:href="#SVGID_11_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_12_);fill:#56a55c" d="M173.11 270.0439c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7325-11.1497-10.9151-18.926-10.9151C182.5311 263.6346 177.0676 266.0863 173.11 270.0439z"/></g></g><rect x="199.3456" y="279.5436" style="fill:#56a55c" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#f1bc42" d="M189.0874 318.7208l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3305-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4472C177.5953 321.1724 183.0601 318.7196 189.0874 318.7208zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 342.7176 197.0804 340.5784z"/><path style="opacity:.3;fill:#fff" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/><g><defs><path id="SVGID_13_" d="M194.7376 346.2329c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 342.7853 196.1861 344.7844 194.7376 346.2329z"/></defs><clipPath id="SVGID_14_"><use xlink:href="#SVGID_13_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_14_);fill:#fff" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/><path style="opacity:.13;clip-path:url(#SVGID_14_);fill:#020202" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/></g><g><defs><path id="SVGID_15_" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/></defs><clipPath id="SVGID_16_"><use xlink:href="#SVGID_15_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_16_);fill:#f1bc42" d="M172.6595 324.15c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8474-1.0151-7.6327-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 317.7407 176.6171 320.1924 172.6595 324.15z"/></g></g><rect x="198.8952" y="333.6497" style="fill:#f1bc42" width="122.6266" height="13.8671"/></g></g></svg></span><span class="navbar-brand__name">IT Architecture Cheat Sheet</span></a>
+  <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+    <ul class="navbar-nav mt-2 mt-lg-0">
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link active" href="/IT-Architecture-CheatSheet/cheat-sheet/"><span class="active">Cheat Sheet</span></a>
+      </li>
+      <li class="nav-item dropdown mr-4 d-none d-lg-block">
+        
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	English
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/IT-Architecture-CheatSheet/no/"></a>
+	
+	<a class="dropdown-item" href="/IT-Architecture-CheatSheet/zh-tw/">繁體中文</a>
+	
+</div></li>
+      </ul>
+  </div>
+  <div class="navbar-nav d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="Search this site…" aria-label="Search this site…" autocomplete="off">
+</div>
+
+  </div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+This is the multi-page printable view of this section.
+<a href="#" onclick="print();return false;">Click here to print</a>.
+</p><p>
+<a href="/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/">Return to the regular view of this page</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Data Architecture</h1>
+
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1: <a href="#pg-0adba87f7ed97f9ac35f352c861da2b1">Storage Infra</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1.1: <a href="#pg-807729680d004eb1fb47693de4c476b3">DAS</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.2: <a href="#pg-b7ed36665afd3753ec36d922a4eccf28">NAS</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.3: <a href="#pg-d2c0abe5e26fac3e14b6e9c0554e34da">SAN</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.4: <a href="#pg-c4dde74ce75157a0237a126419ff5cfd">RAID</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.5: <a href="#pg-e2f029a2ac83d5e79c99e7bb6e18f2ad">Block Storage</a></li>
+
+
+    
+  
+    
+    
+	
+<li>1.6: <a href="#pg-cfb92545a9cc36df9fbd8fdc96ecc3d3">Object Storage</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-848f92bc600d87a3ab256be64b5824ff">Relational Database</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>2.1: <a href="#pg-5573948ddaf3587a5028b2ef411507a8">Data normalization</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2.2: <a href="#pg-55d8106d71d7eae85e236a2d6631e3e6">Data denormalization</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2.3: <a href="#pg-7a0f5ca760b156d57d7934aade5e1ba3">Query Optimization</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2.4: <a href="#pg-da0d71196caeb8b20c0408cbb45fc05b">Sharding</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2.5: <a href="#pg-87087fc08ae9a72a9b87ba2a372b9c35">Partition</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-c6c96cf05ce4bd28be1bb9ceb70c9aee">NoSQL Database</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>3.1: <a href="#pg-260d5545bb9b01c0608a2688aaafc4a1">Document database</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.2: <a href="#pg-609dca8fba5d31176b35c5eb8f2cae1b">Columnar database</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.3: <a href="#pg-61bb0e7a8fa1470d17f26c02400bb71e">Graph database</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.4: <a href="#pg-483323cda28eb1daeedf703fe4774bff">Key-Value Database</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-57f62882af790411c8f25283189c1823">HA Storage design</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>4.1: <a href="#pg-99dc612641cf3c07819be577bdf8f1ba">Cold backup</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4.2: <a href="#pg-1da9a5aa0bbd1725996b0a05dc8ddd5f">Warm backup</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4.3: <a href="#pg-f4cabda4ba06002af4dbcee8c8a71622">Hot backup</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4.4: <a href="#pg-aa73b3e6a4e186ef5c9fe7f1fbea7a39">Multi-site</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-0adba87f7ed97f9ac35f352c861da2b1">1 - Storage Infra</h1>
+    
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-807729680d004eb1fb47693de4c476b3">1.1 - DAS</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>Direct Attached Storage (DAS) connects disk drives to the computer or server directly through hardware. It can use connections such as SATA, SAS, USB, etc., to connect the hard drives.</p>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<ul>
+<li>Personal computers or small workstations.</li>
+<li>Single servers.</li>
+</ul>
+<h3 id="advantages"><strong>Advantages</strong></h3>
+<ul>
+<li>Simple architecture: Just mount the hard drive and it&rsquo;s ready to use.</li>
+<li>Cost-effective: Compared to NAS and SAN, no additional configuration or server is required.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages</strong></h3>
+<ul>
+<li>Most DAS devices cannot share disk access with other servers.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-b7ed36665afd3753ec36d922a4eccf28">1.2 - NAS</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>Network Attached Storage (NAS) is a standalone file access server that connects hard drives to the network.</p>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<ul>
+<li>Shared disk storage for enterprises.</li>
+<li>Multiple servers accessing the same disk space.</li>
+</ul>
+<h3 id="advantages"><strong>Advantages</strong></h3>
+<ul>
+<li>Multiple servers can access the data simultaneously.</li>
+<li>Supports mounting multiple hard drives, providing larger storage capacity.</li>
+<li>With mechanisms like RAID, it can reduce the risk of data loss due to a single drive failure.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages</strong></h3>
+<ul>
+<li>Higher cost: Compared to DAS, NAS requires a separate server and multiple hard drives, resulting in higher costs.</li>
+<li>Complex architecture and management: NAS requires management of servers, networking, and storage configurations, making it more challenging to manage.</li>
+<li>Single point of failure: If the NAS server experiences a network or power interruption, it will be unable to provide data access services.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d2c0abe5e26fac3e14b6e9c0554e34da">1.3 - SAN</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>A Storage Area Network (SAN) utilizes a dedicated fiber network, multiple disk arrays, and multiple switches to form a storage space. Although it consists of multiple disk arrays, it can be mounted and used by servers just like regular hard drives. SAN addresses the risk of single point of failure found in NAS and provides faster access speed, but it comes with a significantly higher price.</p>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<ul>
+<li>Shared disk storage and server usage in large enterprises.</li>
+</ul>
+<h3 id="advantages"><strong>Advantages</strong></h3>
+<ul>
+<li>Eliminates single point of failure: Multiple disk arrays are available for access, preventing connectivity issues caused by a single disk array failure.</li>
+<li>Fast access: SAN utilizes fiber optics to access data, resulting in faster access speed.</li>
+<li>Does not consume LAN traffic: SAN uses a dedicated network for data access, ensuring other LAN services are unaffected.</li>
+<li>Easy scalability: With multiple disk arrays, storage capacity can be increased in batches without impacting service operation.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages</strong></h3>
+<ul>
+<li>Significantly higher cost: SAN requires multiple disk arrays and fiber network infrastructure, resulting in higher expenses.</li>
+<li>Complex management: SAN requires additional management of disk array devices and maintenance of fiber network configurations, making it complex to manage with a steep learning curve.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-c4dde74ce75157a0237a126419ff5cfd">1.4 - RAID</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>RAID (Redundant Array of Independent Disks) is a technology that utilizes multiple disks to redundantly store data, reducing the risk of data loss due to a single disk failure. There are various levels of RAID, such as RAID 0, RAID 1, RAID 6, each with different redundancy logic and backup methods. RAID can be implemented through hardware or software.</p>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<ul>
+<li>Data storage with important data where the goal is to avoid data loss caused by a single disk failure.</li>
+</ul>
+<h3 id="advantages"><strong>Advantages</strong></h3>
+<ul>
+<li>Redundant protection: Reduces the risk of data loss by storing data across multiple disks with redundancy.</li>
+<li>High read/write efficiency: With multiple disks, simultaneous reading and writing to different disks can improve overall performance.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages</strong></h3>
+<ul>
+<li>Higher cost: Different RAID levels may require additional redundant disks, and specialized RAID disk arrays may need to be purchased.</li>
+<li>Complex management: RAID requires consideration of different RAID levels and storage configurations.</li>
+<li>Potential decrease in write speed: In certain RAID modes, simultaneous writing to multiple disks may result in decreased write speed.</li>
+<li>Inability to address localized risks: RAID alone cannot protect against localized risks such as power outages or natural disasters that may cause data loss.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-e2f029a2ac83d5e79c99e7bb6e18f2ad">1.5 - Block Storage</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>Block Storage is a method of storing a large amount of data by distributing it across multiple servers in individual blocks of data. It allows for both sequential and random file access and can store structured and related sets of files.</p>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<ul>
+<li>Shared folders within an enterprise.</li>
+<li>Data folders mounted by virtual machines (VMs) or containers.</li>
+</ul>
+<h3 id="advantages"><strong>Advantages</strong></h3>
+<ul>
+<li>Storage of large amounts of files: Block Storage can handle high-capacity storage requirements through horizontal scaling.</li>
+<li>Storage of structured files: Block Storage supports storage of structured data, such as relational databases.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages</strong></h3>
+<ul>
+<li>Complex architecture and management: Block Storage requires more configuration and management, including block allocation and access control.</li>
+<li>High setup cost: Establishing and maintaining Block Storage typically involves significant costs, including hardware equipment, storage software, and data protection.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-cfb92545a9cc36df9fbd8fdc96ecc3d3">1.6 - Object Storage</h1>
+    
+	<p>Description
+Object Storage is a storage architecture where each file is treated as an individual object and is assigned a unique ID. Access to these objects is performed through a RESTful API. Files can include images, videos, or general documents and are stored flexibly in a distributed environment. Object Storage is often accompanied by redundant multiple backups to prevent data loss in case of disasters.</p>
+<p>Use Cases
+Large-scale file storage requirements.
+CDNs, photo galleries, video streaming.
+Independent files: Suitable for storing a large number of images, videos, and general documents, but less suitable for storing a group of related structured files, such as a database.
+Advantages
+Easy storage and backup: Each file is independent, allowing for distributed storage and backup.
+Easy access: Files can be accessed through a RESTful API.
+Disadvantages
+Cannot store structured data: Object Storage is primarily designed for storing unstructured files and is not suitable for storing structured data or relational databases.
+Cannot be mounted as a traditional network drive: Object Storage cannot be directly mounted as a network drive in traditional operating systems like Block Storage. Access is done through APIs.
+Complex architecture: Object Storage has a relatively complex architecture that requires more configuration and management.</p>
+
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-848f92bc600d87a3ab256be64b5824ff">2 - Relational Database</h1>
+    
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-5573948ddaf3587a5028b2ef411507a8">2.1 - Data normalization</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>Data normalization is a method of storing data in multiple separate tables based on their logical relationships to avoid storing redundant data across multiple tables.</p>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<p>Data normalization is commonly used in situations where the data attributes are complex and cannot be fully stored in a single table.</p>
+<h3 id="advantages"><strong>Advantages</strong></h3>
+<ul>
+<li>Reduced data storage: Normalization reduces the storage of redundant data fields, effectively reducing storage space requirements.</li>
+<li>Increased flexibility and scalability of tables: Splitting data into multiple tables makes it easy to adjust and expand fields according to requirements.</li>
+<li>Reduced risk of data inconsistency: When data changes occur, modifications only need to be made in the corresponding locations, avoiding the risk of inconsistency caused by multiple modifications.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages</strong></h3>
+<ul>
+<li>Complexity: Data normalization involves managing multiple tables, which is more complex compared to a single table in terms of operations.</li>
+<li>Increased development cost: Developing appropriate data manipulation interfaces to handle multiple tables increases development time and cost.</li>
+<li>Longer query time: To retrieve complete data, multiple tables need to be linked. If proper indexing is not established, it may lead to increased query time. Establishing appropriate indexes can improve query performance.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-55d8106d71d7eae85e236a2d6631e3e6">2.2 - Data denormalization</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>When data processing flows and attributes become extremely complex, excessive normalization can lead to overly complicated data processing, increasing development costs and maintenance complexity. Therefore, in some cases, it may be considered to reduce the level of normalization in order to simplify the data processing flow.</p>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<ul>
+<li>When the data processing flow and fields are highly complex and there is a desire to reduce development complexity.</li>
+</ul>
+<h3 id="advantages"><strong>Advantages</strong></h3>
+<ul>
+<li>Improved query speed: By denormalizing the data and storing it together, the need to join multiple tables is reduced, resulting in faster query speed.</li>
+<li>Controlled development complexity: Appropriate denormalization can reduce the number of interfaces and interfaces required for development, simplifying the development process.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages</strong></h3>
+<ul>
+<li>Increased storage space: Due to the presence of redundant data, more storage space is required.</li>
+<li>Increased complexity and time for data modification: As modifications need to be made in multiple locations where the same data is stored, the complexity and time required for modifying data increase.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-7a0f5ca760b156d57d7934aade5e1ba3">2.3 - Query Optimization</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>Databases often store a large amount of data, and if query statements are not optimized, it can result in slow query speeds, causing user dissatisfaction and excessive consumption of system resources. Therefore, when dealing with large amounts of data, it is important to focus on query optimization.</p>
+<h3 id="common-practices"><strong>Common Practices</strong></h3>
+<ul>
+<li>Timely creation and usage of indexes: Creating data indexes can speed up query performance. However, index creation requires additional storage space, and different databases have different index selection logic. Improper index creation may result in queries not being able to use indexes.</li>
+<li>Viewing SQL execution plans: By examining the indexes and resource status used by SQL statements, it is possible to understand the actual execution method of the current query, which helps in optimizing the query statement.</li>
+<li>Careful use of hints: Hints can be used to specify index usage, but this feature should be used with caution, as the database should be able to automatically choose the appropriate index.</li>
+<li>Creating summary files: If frequently retrieving data after aggregation, consider pre-generating summary files to reduce the computational workload of queries.</li>
+<li>Using advanced features such as partitioning, sharding, and pagination: Based on specific needs, consider using advanced features like partitioning or pagination to optimize query efficiency.</li>
+<li>Monitoring and analyzing database performance: Monitor SQL statements that consume significant system resources and attempt to optimize high-load SQL queries.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-da0d71196caeb8b20c0408cbb45fc05b">2.4 - Sharding</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>Sharding is a method of dividing a large database table into multiple smaller shards based on criteria such as time, letters, numbers, or hash values. Each shard is then stored on a different server using the designated shard key.</p>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<ul>
+<li>When a single database table becomes excessively large and there is a clear and available shard key.</li>
+</ul>
+<h3 id="advantages"><strong>Advantages</strong></h3>
+<ul>
+<li>Distributed server load: By distributing data across multiple databases, it avoids having critical tables (e.g., product information) concentrated on specific servers, which could result in excessive system demands.</li>
+<li>Horizontal scalability: By distributing data across multiple servers according to demand, it improves database operation speed and increases user satisfaction.</li>
+<li>High availability: By dispersing the database across multiple servers, it reduces the risk of a single point of failure.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages</strong></h3>
+<ul>
+<li>Careful design of shard key required: In certain cases, certain shard keys may result in an uneven distribution of data, such as tweets from popular celebrities. Analyzing data distribution in advance can help in designing appropriate shard keys.</li>
+<li>Increased complexity of joining data tables: When performing join operations that span multiple servers, query speed can be affected and become slower.</li>
+<li>Increased complexity of server management: Considerations such as data consistency, server failure recovery, and higher setup costs need to be taken into account.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-87087fc08ae9a72a9b87ba2a372b9c35">2.5 - Partition</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>Partitioning is a method of dividing a massive database table into multiple partitions stored on different hard drives or disk arrays within the same server. The partitioning is done based on criteria such as time, letters, numbers, or hash values, which are specified as the partition key.</p>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<ul>
+<li>When a single database table becomes excessively large, and there is a clear and available partition key.</li>
+<li>When there is a need to distribute the burden of a large table across multiple disks within a single server.</li>
+</ul>
+<h3 id="advantages"><strong>Advantages</strong></h3>
+<ul>
+<li>Query performance optimization: Data queries can be distributed across multiple hard drives, improving query performance.</li>
+<li>Simplified architecture: It does not require complex distributed multi-server database management structures.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages</strong></h3>
+<ul>
+<li>Single point of failure: If a single partition or server experiences a failure, the data within that partition becomes inaccessible.</li>
+<li>Risk of data imbalance: Improper design of the partition key can result in an uneven distribution of data, leading to some disks being underutilized.</li>
+<li>Management complexity: Considerations such as cross-partition queries, data consistency, backup, and fault recovery need to be addressed.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-c6c96cf05ce4bd28be1bb9ceb70c9aee">3 - NoSQL Database</h1>
+    
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-260d5545bb9b01c0608a2688aaafc4a1">3.1 - Document database</h1>
+    
+	<h3 id="description">Description</h3>
+<p>Document database is a form of NoSQL database that stores data in a non-normalized manner using individual documents. There are various types of document databases available in the market, each with its own advantages and disadvantages based on their design goals and characteristics.</p>
+<h3 id="use-cases">Use Cases</h3>
+<ul>
+<li>Providing a high-performance and highly available data storage solution for high-load websites.</li>
+<li>Storing large volumes of data collected by web crawlers.</li>
+<li>Performing big data aggregation and analysis.</li>
+<li>Developing search engines and full-text search applications.</li>
+</ul>
+<h3 id="advantages">Advantages</h3>
+<ul>
+<li>No predefined data schema: Unlike traditional SQL databases, document databases allow flexible data storage, enabling complex document structures to be stored in a tree-like format.</li>
+<li>Consistency control: Document databases offer multiple consistency options, allowing the choice of an appropriate consistency level to improve write efficiency, even if data inconsistencies exist across different regions in the short term.</li>
+<li>Fast writes: Document databases can achieve fast write operations by allowing lower levels of consistency.</li>
+<li>Easy horizontal scalability: Many document databases are designed with clustering, consistency control, and container-based architectures, making them easy to scale horizontally.</li>
+</ul>
+<h3 id="disadvantages">Disadvantages</h3>
+<ul>
+<li>Difficulty handling complex relational queries: Document databases are less efficient than traditional relational databases when it comes to handling complex cross-document queries.</li>
+<li>Higher storage space requirements: The denormalized nature of document databases may result in redundant storage, requiring more storage space.</li>
+<li>Weaker transaction control: Document databases have weaker transaction control capabilities compared to traditional databases with ACID properties.</li>
+<li>Learning specialized syntax: Different document database products have their own query and data manipulation syntax, requiring the learning of specific syntax and techniques.</li>
+<li>Lower precision in financial calculations: Some document database products sacrifice precision in financial calculations for faster aggregation of data summaries.</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<ul>
+<li>MongoDB</li>
+<li>Couchbase</li>
+<li>Elasticsearch</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-609dca8fba5d31176b35c5eb8f2cae1b">3.2 - Columnar database</h1>
+    
+	<h3 id="description">Description</h3>
+<p>Columnar database stores data in columns, allowing for quick retrieval of specific columns for analysis. For example, in sales data with multiple detail columns, such as product ID and sales amount, these columns are stored separately. To retrieve the sales amount for a specific product, one only needs to scan the product ID column and find the corresponding row index. Then, using that row index, the corresponding value in the sales amount column can be filtered to obtain the sales amount for that product. Since unused columns are stored separately, data retrieval is faster compared to traditional row-based databases.</p>
+<h3 id="use-cases">Use Cases</h3>
+<ul>
+<li>Real-time big data analytics systems.</li>
+</ul>
+<h3 id="advantages">Advantages</h3>
+<ul>
+<li>Fast aggregation of specific columns: With separate storage for each column, it allows for quick retrieval of aggregated data for each column.</li>
+<li>Fast writes: Compared to traditional OLAP databases, data can be stored in real-time across different columns, fulfilling the requirements of real-time big data analytics.</li>
+<li>Easy horizontal scalability: Since data is stored separately for each column, it can be stored on different servers, improving availability.</li>
+</ul>
+<h3 id="disadvantages">Disadvantages</h3>
+<ul>
+<li>Efficiency may be lower when aggregating multiple columns compared to traditional row-based databases.</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<ul>
+<li>Apache Cassandra</li>
+<li>Amazon Redshift</li>
+<li>Google BigQuery</li>
+<li>Vertica</li>
+<li>Apache Parquet</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-61bb0e7a8fa1470d17f26c02400bb71e">3.3 - Graph database</h1>
+    
+	<h3 id="description">Description</h3>
+<p>Graph database is specifically designed to record the relationships between a large amount of data. The data is represented as nodes, and the relationships between nodes are represented as edges. By defining the start point, end point, direction, and properties of edges, a graph database can quickly find relevant nodes based on a specific node, even when dealing with a large number of edges. To improve query speed, indexes are commonly created for frequently used edges.</p>
+<h3 id="use-cases">Use Cases</h3>
+<ul>
+<li>Social networking websites: Utilizing friend relationships as edges to recommend friends of friends. Using shared interests as edges to recommend users with similar hobbies.</li>
+<li>Recommendation engines: Finding related recommended products or videos based on browsing history, purchase records, user preferences, and other relationships.</li>
+<li>Fraud detection: Identifying potential fraud risks by analyzing transaction information such as payment recipients, addresses, and phone numbers.</li>
+</ul>
+<h3 id="advantages">Advantages</h3>
+<ul>
+<li>Fast querying of relationships between objects: Even with millions of relationship data, a graph database can perform queries quickly.</li>
+<li>Flexible data model: It allows for the customization of various forms of nodes and edges based on business requirements.</li>
+<li>Built-in graph algorithms: Graph databases typically come with various built-in graph algorithms, enabling users to execute algorithmic queries related to relationship data easily.</li>
+<li>Easy horizontal scalability: Graph databases are designed to handle the demands of billions of relationship data commonly found in large-scale websites. They can be easily scaled across multiple servers to meet the needs of high-volume relationship operations.</li>
+</ul>
+<h3 id="disadvantages">Disadvantages</h3>
+<ul>
+<li>Highly specialized: Graph databases focus on storing and querying the relationships between objects. If detailed information about related objects (such as product details) is required, it often needs to be combined with other databases.</li>
+<li>Requires significant storage space: Due to the often complex relationships between nodes and the need for indexes to improve query performance, more storage space is required.</li>
+<li>High learning curve: The query language and data model of graph databases differ from traditional SQL, requiring additional time and effort to learn.</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<ul>
+<li>Amazon Neptune</li>
+<li>ArangoDB</li>
+<li>JanusGraph</li>
+<li>Neo4j</li>
+<li>OrientDB</li>
+<li>TigerGraph</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-483323cda28eb1daeedf703fe4774bff">3.4 - Key-Value Database</h1>
+    
+	<h3 id="description">Description</h3>
+<p>Key-Value Database stores data using keys as the index for data retrieval, without requiring a predefined data format for each record. Since each data record is independent, Key-Value Databases can efficiently store a massive amount of data while horizontally scaling.</p>
+<h3 id="use-cases">Use Cases</h3>
+<ul>
+<li>Data caching: Key-Value Databases can be used to cache data, allowing for quick access to recent data.</li>
+<li>Stateless servers: Moving user session states from web servers to Key-Value Databases enables horizontal scalability and server replacement without losing user data, increasing website availability.</li>
+<li>Shopping cart data: Storing user shopping cart data in a Key-Value Database can alleviate the burden on relational databases during peak periods and prevent data loss due to a high volume of service requests.</li>
+</ul>
+<h3 id="advantages">Advantages</h3>
+<ul>
+<li>Flexible data storage format: Each data record is stored independently without requiring a predefined format.</li>
+<li>Fast data retrieval: With the knowledge of the key, data can be quickly accessed.</li>
+<li>Horizontal scalability: The independent nature of each key-value pair makes horizontal scaling easier.</li>
+</ul>
+<h3 id="disadvantages">Disadvantages</h3>
+<ul>
+<li>Limited computational operations across keys: Key-Value Databases primarily support simple aggregation calculations based on keys. For complex aggregation calculations, other types of databases are recommended.</li>
+<li>Limited referencing of other data sources: Key-Value Databases lack the ability to enforce data constraints and references using primary keys, foreign keys, and joins.</li>
+<li>Data persistence limitations: Some Key-Value Databases store data in memory rather than providing permanent storage.</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<ul>
+<li>Redis</li>
+<li>Amazon DynamoDB</li>
+<li>Apache Cassandra</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-57f62882af790411c8f25283189c1823">4 - HA Storage design</h1>
+    
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-99dc612641cf3c07819be577bdf8f1ba">4.1 - Cold backup</h1>
+    
+	<h3 id="description">Description</h3>
+<p>Cold backup refers to the periodic generation of data backups in another location for the purpose of system restoration in the event of system or hardware failures.</p>
+<h3 id="use-cases">Use Cases</h3>
+<ul>
+<li>Personal or small-scale systems</li>
+<li>Tolerable longer RPO (Recovery Point Objective, the acceptable data loss interval in the event of system failure)</li>
+<li>Tolerable longer RTO (Recovery Time Objective, the time required for system recovery)</li>
+</ul>
+<h3 id="advantages">Advantages</h3>
+<ul>
+<li>Simple architecture: Only requires setting up scheduled backups and storing them in another location.</li>
+<li>Cost-effective: Does not require additional server activation, resulting in lower costs.</li>
+</ul>
+<h3 id="disadvantages">Disadvantages</h3>
+<ul>
+<li>Longer RPO: Since cold backups are typically generated at longer intervals (e.g., once a day), there may be a longer data loss window in the event of a system failure.</li>
+<li>Longer RTO: Due to the need to load backup data and perform connection setup during system recovery, cold backups require a longer system recovery time.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-1da9a5aa0bbd1725996b0a05dc8ddd5f">4.2 - Warm backup</h1>
+    
+	<h3 id="description">Description</h3>
+<p>Warm backup involves setting up a dedicated standby server that is already installed with relevant services and regularly updated. It also loads the latest backup data. Under normal circumstances, the standby server is not operational, and the system does not read from or modify it. Only when the primary server fails, the standby server is activated and the differential data is loaded to provide system services. The RTO (Recovery Time Objective) for warm backup typically ranges from a few hours to a few days.</p>
+<h3 id="use-cases">Use Cases</h3>
+<p>Warm backup is suitable for small-scale internal systems that aim to recover services within a few hours.</p>
+<h3 id="advantages">Advantages</h3>
+<ul>
+<li>Lower RPO: Since the standby server regularly loads the latest backup data, less data is lost in the event of a failure.</li>
+<li>Lower RTO: Because the backup data is already loaded into the standby server, service can be quickly started by making configuration modifications. Additionally, RTO time can be further reduced through automatic failover modes such as fault detection.</li>
+<li>Simple architecture: There is no need to consider data synchronization in a multi-site architecture, reducing architectural complexity.</li>
+<li>Lower cost: Only an additional standby server is required. In cloud architecture, fewer system resources can be used during normal operation. When switching to the standby server, more system resources can be obtained through vertical scaling. With the pay-as-you-go model offered by the cloud, costs can be effectively controlled.</li>
+</ul>
+<h3 id="disadvantages">Disadvantages</h3>
+<ul>
+<li>RPO still exists: Since the data is backed up periodically, there may still be a time gap between the latest backup and the occurrence of a failure.</li>
+<li>Higher cost: An additional standby server is required, along with the cost of keeping the standby server ready for activation. If automatic fault detection and failover are required, additional costs may be incurred.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-f4cabda4ba06002af4dbcee8c8a71622">4.3 - Hot backup</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>Hot backup refers to the real-time synchronization of data to another backup server. When the primary server fails, the backup server stops receiving synchronized data, becomes the primary server, and modifies other service configurations to connect to this backup server.</p>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<ul>
+<li>Desire to reduce RPO (Recovery Point Objective) and RTO (Recovery Time Objective) without overly complex architecture and with reasonable backup costs.</li>
+</ul>
+<h3 id="advantages"><strong>Advantages</strong></h3>
+<ul>
+<li>Lower RPO: Since data is typically synchronized in milliseconds or seconds, less data is lost under normal circumstances.</li>
+<li>Lower RTO: Because the backup data is already loaded into the backup server, service can be quickly started by making configuration modifications. Automatic switching can even be performed through fault detection modes.</li>
+<li>Simple architecture: There is no need to consider data synchronization in a multi-site architecture.</li>
+<li>Lower cost: Only an additional backup server is required. In cloud architecture, fewer system resources can be used during normal operation. When switching to the primary server, more system resources can be obtained through vertical scaling. The pay-as-you-go nature of the cloud can help reduce costs.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages</strong></h3>
+<ul>
+<li>Higher cost: Another backup server needs to be kept ready for activation at all times. If automatic fault detection and switching are required, additional equipment and management costs may be incurred.</li>
+<li>RPO still exists: Since it takes time to transfer services to the backup server, there is still a certain amount of RPO.</li>
+</ul>
+<h3 id="examples"><strong>Examples</strong></h3>
+<ul>
+<li>Real-time replication of a database to a backup database.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-aa73b3e6a4e186ef5c9fe7f1fbea7a39">4.4 - Multi-site</h1>
+    
+	<h3 id="description">Description</h3>
+<p>Multi-site is a design pattern for achieving high data availability, where multiple servers synchronize data with each other and provide system services. When any server fails, the service on that server is automatically stopped, and other servers take over to support system demands. There are various modes to achieve a multi-site architecture, such as using a primary server for data writes and a backup server for data reads, or employing a server cluster to coordinate multiple servers for service provision.</p>
+<h3 id="use-cases">Use Cases</h3>
+<ul>
+<li>Enterprises seeking to provide a highly available architecture.</li>
+</ul>
+<h3 id="advantages">Advantages</h3>
+<ul>
+<li>Minimal RPO and RTO: With real-time synchronization and automatic failover, high availability can be achieved.</li>
+<li>System responsiveness: Having multiple servers serving requests reduces the workload on individual servers, enhancing user satisfaction.</li>
+</ul>
+<h3 id="disadvantages">Disadvantages</h3>
+<ul>
+<li>Higher cost: Maintaining multiple servers simultaneously increases the system&rsquo;s overall cost.</li>
+<li>Complexity in architecture: Coordinating data synchronization and automatic switching mechanisms among multiple servers adds complexity to the architecture.</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<ul>
+<li>An enterprise implements a multi-site architecture with a primary server and a backup server to provide high availability for data read and write services.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
+    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/bradhuang9999/IT-Architecture-CheatSheet" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2023 The IT Architecture Cheat Sheet Authors All Rights Reserved</small>
+        <small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></small>
+	
+		
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+  <script src="/IT-Architecture-CheatSheet/js/main.min.6f7d640700b5cc73e0ca656e7c5a34738b8f5f56c8670fb52fe5a96d5b221476.js" integrity="sha256-b31kBwC1zHPgymVufFo0c4uPX1bIZw&#43;1L&#43;WpbVsiFHY=" crossorigin="anonymous"></script>
+<script src='/IT-Architecture-CheatSheet/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

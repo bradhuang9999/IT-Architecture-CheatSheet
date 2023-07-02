@@ -1,0 +1,131 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT Architecture Cheat Sheet – Network Hardware</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-hardware/</link>
+    <description>Recent content in Network Hardware on IT Architecture Cheat Sheet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-hardware/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: Hub</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-hardware/hub/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-hardware/hub/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;A hub enables communication among multiple devices in a local area network. Its operation is straightforward as it simply broadcasts any received packet to all other devices connected to the same hub. However, due to its limitation of transmitting only one device&amp;rsquo;s packet at a time, hubs are less commonly used unless there is a need to connect only a few devices.&lt;/p&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;Advantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Affordable price: Hubs have a simple design, resulting in lower device costs.&lt;/li&gt;
+&lt;li&gt;Easy setup: No configuration is required on the hub itself; devices can communicate with each other as long as their IP addresses do not conflict.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;Disadvantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Limited simultaneous device connections: The fixed broadcast nature of hubs can lead to packet collisions, as only one packet can be transmitted at a time.&lt;/li&gt;
+&lt;li&gt;Lower security: Due to the fixed broadcast of packets, other devices connected to the hub receive the packet content, making it possible for unauthorized parties to listen in on the packet content.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Switch</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-hardware/switch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-hardware/switch/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;A switch, similar to a hub, allows multiple devices in a local area network to communicate with each other by transmitting packets. However, a switch differs from a hub in that it records the MAC addresses of devices connected to its ports in an internal MAC table, enabling precise packet forwarding to the intended destination device.&lt;/p&gt;
+&lt;h3 id=&#34;features&#34;&gt;Features&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Packet forwarding: Utilizes the MAC table to accurately deliver packets to the target device.&lt;/li&gt;
+&lt;li&gt;Broadcast MAC address lookup: If an unknown MAC address is encountered, the switch broadcasts to find the corresponding device.&lt;/li&gt;
+&lt;li&gt;MAC table maintenance: Updates the MAC table when a device is found, a MAC address changes, or a port is closed.&lt;/li&gt;
+&lt;li&gt;Provides interface for configuration: Offers interfaces for administrators to manually adjust the MAC table or configure subnet-to-port mappings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;Use Cases&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Required in a local area network where multiple devices need to communicate with each other.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;Advantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Reduced network traffic: Precise packet forwarding using the MAC table results in lower packet volume, reducing overall network traffic.&lt;/li&gt;
+&lt;li&gt;Supports multiple device connections: Without packet collisions, the switch can facilitate simultaneous data exchange among multiple devices.&lt;/li&gt;
+&lt;li&gt;Enhanced security: Prevents packet delivery to unintended recipients, reducing the risk of eavesdropping.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;Disadvantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Higher cost: Switches are more expensive compared to hubs due to their complex structure.&lt;/li&gt;
+&lt;li&gt;Complexity in usage: Managing network segmentation and the MAC table requires understanding of specific requirements.&lt;/li&gt;
+&lt;li&gt;Single point of failure: If a single switch in the network fails, it can cause connectivity issues for the devices connected to it. This can be mitigated by implementing load balancing or redundancy measures.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Router</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-hardware/router/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-hardware/router/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;A router is a network device that maintains a routing table, which records the information about which port to forward network packets to which device based on different IP ranges. When receiving a network packet, the router forwards it according to the rules in its routing table.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;Use Cases&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Segregation of internal and external networks: By utilizing routing tables and features like Network Address Translation (NAT), routers connect internal networks to external networks, enabling communication between them.&lt;/li&gt;
+&lt;li&gt;Segregation of different subnets: Routers are commonly used to divide subnets and forward packets to the corresponding switches based on rules, facilitating communication between different subnets.&lt;/li&gt;
+&lt;li&gt;Integration of NAT, VPN, firewall, and other features: Modern routers often integrate multiple advanced features such as NAT, Virtual Private Networks (VPNs), and firewalls. This simplifies network architecture and reduces the number of required devices. However, this approach offers less flexibility and availability. In large enterprise networks, separate devices are typically used for each function.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;Advantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Subnet segmentation: Router-based subnet segmentation enhances network security and improves communication efficiency among smaller subnets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;Disadvantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Higher cost: Compared to switches and hubs, routers tend to be more expensive, especially those with advanced features like NAT and firewalls.&lt;/li&gt;
+&lt;li&gt;Complexity in management: Managing router routing tables and other configurations can be complex, involving multiple factors. Planning and managing routers in large networks require specialized knowledge and experience.&lt;/li&gt;
+&lt;li&gt;Performance limitation: Routers handle significant network traffic between internal and external networks, which may limit the performance of individual routers. It is recommended to enhance network performance through load balancing and other strategies.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Modem</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-hardware/modem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-hardware/modem/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;A modem is a device used to convert the analog signals provided by an Internet Service Provider (ISP) into digital network signals for internal networks, and vice versa. The network signals from the ISP can be in various forms such as fiber optic, telephone signals (DSL), cable television signals (Cable), and more, requiring the corresponding type of modem for conversion. Modems can also perform packet integrity verification, data compression, and other functions. Some advanced modems are capable of supporting multiple external signals or have router functionality.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;Use Cases&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Connecting personal computers or internal networks to the external network.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

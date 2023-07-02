@@ -1,0 +1,162 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT Architecture Cheat Sheet – Relational Database</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/relational-database/</link>
+    <description>Recent content in Relational Database on IT Architecture Cheat Sheet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/relational-database/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: Data normalization</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/relational-database/data-normalization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/relational-database/data-normalization/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Data normalization is a method of storing data in multiple separate tables based on their logical relationships to avoid storing redundant data across multiple tables.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Data normalization is commonly used in situations where the data attributes are complex and cannot be fully stored in a single table.&lt;/p&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Reduced data storage: Normalization reduces the storage of redundant data fields, effectively reducing storage space requirements.&lt;/li&gt;
+&lt;li&gt;Increased flexibility and scalability of tables: Splitting data into multiple tables makes it easy to adjust and expand fields according to requirements.&lt;/li&gt;
+&lt;li&gt;Reduced risk of data inconsistency: When data changes occur, modifications only need to be made in the corresponding locations, avoiding the risk of inconsistency caused by multiple modifications.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Complexity: Data normalization involves managing multiple tables, which is more complex compared to a single table in terms of operations.&lt;/li&gt;
+&lt;li&gt;Increased development cost: Developing appropriate data manipulation interfaces to handle multiple tables increases development time and cost.&lt;/li&gt;
+&lt;li&gt;Longer query time: To retrieve complete data, multiple tables need to be linked. If proper indexing is not established, it may lead to increased query time. Establishing appropriate indexes can improve query performance.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Data denormalization</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/relational-database/data-denormalization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/relational-database/data-denormalization/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;When data processing flows and attributes become extremely complex, excessive normalization can lead to overly complicated data processing, increasing development costs and maintenance complexity. Therefore, in some cases, it may be considered to reduce the level of normalization in order to simplify the data processing flow.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;When the data processing flow and fields are highly complex and there is a desire to reduce development complexity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Improved query speed: By denormalizing the data and storing it together, the need to join multiple tables is reduced, resulting in faster query speed.&lt;/li&gt;
+&lt;li&gt;Controlled development complexity: Appropriate denormalization can reduce the number of interfaces and interfaces required for development, simplifying the development process.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Increased storage space: Due to the presence of redundant data, more storage space is required.&lt;/li&gt;
+&lt;li&gt;Increased complexity and time for data modification: As modifications need to be made in multiple locations where the same data is stored, the complexity and time required for modifying data increase.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Query Optimization</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/relational-database/query-optimization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/relational-database/query-optimization/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Databases often store a large amount of data, and if query statements are not optimized, it can result in slow query speeds, causing user dissatisfaction and excessive consumption of system resources. Therefore, when dealing with large amounts of data, it is important to focus on query optimization.&lt;/p&gt;
+&lt;h3 id=&#34;common-practices&#34;&gt;&lt;strong&gt;Common Practices&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Timely creation and usage of indexes: Creating data indexes can speed up query performance. However, index creation requires additional storage space, and different databases have different index selection logic. Improper index creation may result in queries not being able to use indexes.&lt;/li&gt;
+&lt;li&gt;Viewing SQL execution plans: By examining the indexes and resource status used by SQL statements, it is possible to understand the actual execution method of the current query, which helps in optimizing the query statement.&lt;/li&gt;
+&lt;li&gt;Careful use of hints: Hints can be used to specify index usage, but this feature should be used with caution, as the database should be able to automatically choose the appropriate index.&lt;/li&gt;
+&lt;li&gt;Creating summary files: If frequently retrieving data after aggregation, consider pre-generating summary files to reduce the computational workload of queries.&lt;/li&gt;
+&lt;li&gt;Using advanced features such as partitioning, sharding, and pagination: Based on specific needs, consider using advanced features like partitioning or pagination to optimize query efficiency.&lt;/li&gt;
+&lt;li&gt;Monitoring and analyzing database performance: Monitor SQL statements that consume significant system resources and attempt to optimize high-load SQL queries.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Sharding</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/relational-database/sharding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/relational-database/sharding/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Sharding is a method of dividing a large database table into multiple smaller shards based on criteria such as time, letters, numbers, or hash values. Each shard is then stored on a different server using the designated shard key.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;When a single database table becomes excessively large and there is a clear and available shard key.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Distributed server load: By distributing data across multiple databases, it avoids having critical tables (e.g., product information) concentrated on specific servers, which could result in excessive system demands.&lt;/li&gt;
+&lt;li&gt;Horizontal scalability: By distributing data across multiple servers according to demand, it improves database operation speed and increases user satisfaction.&lt;/li&gt;
+&lt;li&gt;High availability: By dispersing the database across multiple servers, it reduces the risk of a single point of failure.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Careful design of shard key required: In certain cases, certain shard keys may result in an uneven distribution of data, such as tweets from popular celebrities. Analyzing data distribution in advance can help in designing appropriate shard keys.&lt;/li&gt;
+&lt;li&gt;Increased complexity of joining data tables: When performing join operations that span multiple servers, query speed can be affected and become slower.&lt;/li&gt;
+&lt;li&gt;Increased complexity of server management: Considerations such as data consistency, server failure recovery, and higher setup costs need to be taken into account.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Partition</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/relational-database/partition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/relational-database/partition/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Partitioning is a method of dividing a massive database table into multiple partitions stored on different hard drives or disk arrays within the same server. The partitioning is done based on criteria such as time, letters, numbers, or hash values, which are specified as the partition key.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;When a single database table becomes excessively large, and there is a clear and available partition key.&lt;/li&gt;
+&lt;li&gt;When there is a need to distribute the burden of a large table across multiple disks within a single server.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Query performance optimization: Data queries can be distributed across multiple hard drives, improving query performance.&lt;/li&gt;
+&lt;li&gt;Simplified architecture: It does not require complex distributed multi-server database management structures.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Single point of failure: If a single partition or server experiences a failure, the data within that partition becomes inaccessible.&lt;/li&gt;
+&lt;li&gt;Risk of data imbalance: Improper design of the partition key can result in an uneven distribution of data, leading to some disks being underutilized.&lt;/li&gt;
+&lt;li&gt;Management complexity: Considerations such as cross-partition queries, data consistency, backup, and fault recovery need to be addressed.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -85,5 +85,163 @@
       </description>
     </item>
     
+    <item>
+      <title>Cheat Sheet: Serverless Function</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/serverless-function/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/serverless-function/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview:&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Serverless Function is a design pattern that allows software developers to focus solely on implementing program logic without having to worry about the programming platform or system management issues.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Web API&lt;/li&gt;
+&lt;li&gt;Batch processing&lt;/li&gt;
+&lt;li&gt;Scheduled tasks&lt;/li&gt;
+&lt;li&gt;Event-driven operations&lt;/li&gt;
+&lt;li&gt;Backend server for frontend-backend separation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Flexibility: Pay only when used&lt;/li&gt;
+&lt;li&gt;Scalability: Cloud platforms automatically scale based on usage&lt;/li&gt;
+&lt;li&gt;No infrastructure management: Unlike IaaS or FaaS models, there is no need to manage the underlying infrastructure or platform configuration.&lt;/li&gt;
+&lt;li&gt;Implement logic in general-purpose languages: If the service usage increases in the future, the same logic can be adjusted and moved to environments such as containers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Loading time: Each service execution requires loading the logic, resulting in slower response times. While some platforms offer pre-loading options, they come at a higher cost.&lt;/li&gt;
+&lt;li&gt;Since most FaaS services are cloud-based on external networks, compared to services on internal networks, additional security considerations need to be taken into account.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Message Queue</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/message-queue/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/message-queue/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview:&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;What are the omissions or errors in the following description of Message Queue?
+A Message Queue is a commonly used mechanism for asynchronous processing of logic. When a service requires a longer time to complete, to avoid upstream waiting, the service request can be placed in a queue and executed in order. Multiple service consumers will retrieve service requests from the queue and perform the corresponding processing.&lt;/p&gt;
+&lt;p&gt;A typical Message Queue architecture consists of three main components: the Message producer (role responsible for generating service requests), the Message consumer (role responsible for processing service requests), and the Message broker (role responsible for message sorting and calling consumers).&lt;/p&gt;
+&lt;p&gt;By using a Message Queue, we can achieve one-to-many communication. The producer does not need to know how many consumers there are; as long as there are consumers registered for the corresponding events, they will receive the messages. This design pattern effectively decouples the direct dependency between the producer and consumer, making the system more flexible and scalable.&lt;/p&gt;
+&lt;p&gt;By appropriately applying Message Queue, we can improve system reliability and performance, especially in scenarios that involve asynchronous processing requirements.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Asynchronous event-driven operations&lt;/li&gt;
+&lt;li&gt;Asynchronous communication&lt;/li&gt;
+&lt;li&gt;Log processing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Avoid front-end waiting: Once the producer sends the message request, it can complete the action.&lt;/li&gt;
+&lt;li&gt;Loose coupling: A large service can be broken down into multiple loosely coupled smaller services. These services do not need to communicate directly; the requests are passed through the broker.&lt;/li&gt;
+&lt;li&gt;Scalability: When there are many pending requests, more consumers can be dynamically added to handle the service requests.&lt;/li&gt;
+&lt;li&gt;Parallel processing: If multiple consumers are registered for the same event, the event processing can be done synchronously, without the need for sequential execution.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Inability to know results in real-time: As messages need to wait for the broker to forward them, if the producer needs to wait for the result, it needs to track the processing status of the message.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: DB Procedure</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/db-procedure/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/db-procedure/</guid>
+      <description>
+        
+        
+        &lt;p&gt;DB Procedure is a program stored in a database, usually based on SQL, combined with variables, logical conditions, and loops to efficiently process data in the database.&lt;/p&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allows for complex data processing on the database side, effectively handling large amounts of data and avoiding issues with network latency and data transmission.&lt;/li&gt;
+&lt;li&gt;Enables convenient transaction management on the database side.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Difficult to debug and develop: Setting breakpoints, logging program execution, and having code suggestions in the editor are challenging.&lt;/li&gt;
+&lt;li&gt;Limited use of modern programming concepts, such as object-oriented programming, due to the procedural nature.&lt;/li&gt;
+&lt;li&gt;High coupling: The programs reside within the database, resulting in high coupling between programs and between programs and database tables.&lt;/li&gt;
+&lt;li&gt;Difficult program updates: Updating DB Procedures and related database tables can lead to errors in associated objects. Achieving zero downtime for program updates is challenging.&lt;/li&gt;
+&lt;li&gt;Programs are tightly bound to a specific database and migrating to other database products is difficult.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;&lt;strong&gt;Examples:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;PL/SQL: DB Procedure in Oracle Database.&lt;/li&gt;
+&lt;li&gt;T-SQL: DB Procedure in SQL Server Database.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: DB Function</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/db-function/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/db-function/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;DB Function is a program on the database side, and its syntax varies depending on the type of database, such as PL/SQL or T-SQL. Similar to a regular program function, it receives input values, performs logical operations, and returns a result.&lt;/p&gt;
+&lt;h3 id=&#34;differences-from-db-procedure&#34;&gt;&lt;strong&gt;Differences from DB Procedure&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Can be used within SQL statements.&lt;/li&gt;
+&lt;li&gt;Generally, DB Functions cannot modify data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Extracting repetitive subquery instructions in SQL.&lt;/li&gt;
+&lt;li&gt;Writing complex program logic in SQL that requires additional processing.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: DB Trigger</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/db-trigger/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/db-trigger/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;DB Trigger is a program on the database side, and its syntax varies depending on the type of database, such as PL/SQL or T-SQL. Its purpose is to monitor changes in specific table data and execute specific logic when data is inserted, updated, or deleted.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Logging data modifications.&lt;/li&gt;
+&lt;li&gt;Updating related tables in response to changes.&lt;/li&gt;
+&lt;li&gt;Synchronizing deletion of data in associated tables.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Allows implementation of event-driven logic on the database side: predefined logic automatically executes when events occur.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Overuse can decrease database performance.&lt;/li&gt;
+&lt;li&gt;Care must be taken to prevent infinite triggering loops between different triggers on different tables.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
   </channel>
 </rss>

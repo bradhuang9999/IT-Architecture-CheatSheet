@@ -1,0 +1,180 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT Architecture Cheat Sheet – NoSQL Database</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/nosql-database/</link>
+    <description>Recent content in NoSQL Database on IT Architecture Cheat Sheet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/nosql-database/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: Document database</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/nosql-database/document-database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/nosql-database/document-database/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;Document database is a form of NoSQL database that stores data in a non-normalized manner using individual documents. There are various types of document databases available in the market, each with its own advantages and disadvantages based on their design goals and characteristics.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;Use Cases&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Providing a high-performance and highly available data storage solution for high-load websites.&lt;/li&gt;
+&lt;li&gt;Storing large volumes of data collected by web crawlers.&lt;/li&gt;
+&lt;li&gt;Performing big data aggregation and analysis.&lt;/li&gt;
+&lt;li&gt;Developing search engines and full-text search applications.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;Advantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;No predefined data schema: Unlike traditional SQL databases, document databases allow flexible data storage, enabling complex document structures to be stored in a tree-like format.&lt;/li&gt;
+&lt;li&gt;Consistency control: Document databases offer multiple consistency options, allowing the choice of an appropriate consistency level to improve write efficiency, even if data inconsistencies exist across different regions in the short term.&lt;/li&gt;
+&lt;li&gt;Fast writes: Document databases can achieve fast write operations by allowing lower levels of consistency.&lt;/li&gt;
+&lt;li&gt;Easy horizontal scalability: Many document databases are designed with clustering, consistency control, and container-based architectures, making them easy to scale horizontally.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;Disadvantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Difficulty handling complex relational queries: Document databases are less efficient than traditional relational databases when it comes to handling complex cross-document queries.&lt;/li&gt;
+&lt;li&gt;Higher storage space requirements: The denormalized nature of document databases may result in redundant storage, requiring more storage space.&lt;/li&gt;
+&lt;li&gt;Weaker transaction control: Document databases have weaker transaction control capabilities compared to traditional databases with ACID properties.&lt;/li&gt;
+&lt;li&gt;Learning specialized syntax: Different document database products have their own query and data manipulation syntax, requiring the learning of specific syntax and techniques.&lt;/li&gt;
+&lt;li&gt;Lower precision in financial calculations: Some document database products sacrifice precision in financial calculations for faster aggregation of data summaries.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MongoDB&lt;/li&gt;
+&lt;li&gt;Couchbase&lt;/li&gt;
+&lt;li&gt;Elasticsearch&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Columnar database</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/nosql-database/columnar-database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/nosql-database/columnar-database/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;Columnar database stores data in columns, allowing for quick retrieval of specific columns for analysis. For example, in sales data with multiple detail columns, such as product ID and sales amount, these columns are stored separately. To retrieve the sales amount for a specific product, one only needs to scan the product ID column and find the corresponding row index. Then, using that row index, the corresponding value in the sales amount column can be filtered to obtain the sales amount for that product. Since unused columns are stored separately, data retrieval is faster compared to traditional row-based databases.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;Use Cases&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Real-time big data analytics systems.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;Advantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fast aggregation of specific columns: With separate storage for each column, it allows for quick retrieval of aggregated data for each column.&lt;/li&gt;
+&lt;li&gt;Fast writes: Compared to traditional OLAP databases, data can be stored in real-time across different columns, fulfilling the requirements of real-time big data analytics.&lt;/li&gt;
+&lt;li&gt;Easy horizontal scalability: Since data is stored separately for each column, it can be stored on different servers, improving availability.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;Disadvantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Efficiency may be lower when aggregating multiple columns compared to traditional row-based databases.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Apache Cassandra&lt;/li&gt;
+&lt;li&gt;Amazon Redshift&lt;/li&gt;
+&lt;li&gt;Google BigQuery&lt;/li&gt;
+&lt;li&gt;Vertica&lt;/li&gt;
+&lt;li&gt;Apache Parquet&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Graph database</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/nosql-database/graph-database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/nosql-database/graph-database/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;Graph database is specifically designed to record the relationships between a large amount of data. The data is represented as nodes, and the relationships between nodes are represented as edges. By defining the start point, end point, direction, and properties of edges, a graph database can quickly find relevant nodes based on a specific node, even when dealing with a large number of edges. To improve query speed, indexes are commonly created for frequently used edges.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;Use Cases&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Social networking websites: Utilizing friend relationships as edges to recommend friends of friends. Using shared interests as edges to recommend users with similar hobbies.&lt;/li&gt;
+&lt;li&gt;Recommendation engines: Finding related recommended products or videos based on browsing history, purchase records, user preferences, and other relationships.&lt;/li&gt;
+&lt;li&gt;Fraud detection: Identifying potential fraud risks by analyzing transaction information such as payment recipients, addresses, and phone numbers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;Advantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fast querying of relationships between objects: Even with millions of relationship data, a graph database can perform queries quickly.&lt;/li&gt;
+&lt;li&gt;Flexible data model: It allows for the customization of various forms of nodes and edges based on business requirements.&lt;/li&gt;
+&lt;li&gt;Built-in graph algorithms: Graph databases typically come with various built-in graph algorithms, enabling users to execute algorithmic queries related to relationship data easily.&lt;/li&gt;
+&lt;li&gt;Easy horizontal scalability: Graph databases are designed to handle the demands of billions of relationship data commonly found in large-scale websites. They can be easily scaled across multiple servers to meet the needs of high-volume relationship operations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;Disadvantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Highly specialized: Graph databases focus on storing and querying the relationships between objects. If detailed information about related objects (such as product details) is required, it often needs to be combined with other databases.&lt;/li&gt;
+&lt;li&gt;Requires significant storage space: Due to the often complex relationships between nodes and the need for indexes to improve query performance, more storage space is required.&lt;/li&gt;
+&lt;li&gt;High learning curve: The query language and data model of graph databases differ from traditional SQL, requiring additional time and effort to learn.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Amazon Neptune&lt;/li&gt;
+&lt;li&gt;ArangoDB&lt;/li&gt;
+&lt;li&gt;JanusGraph&lt;/li&gt;
+&lt;li&gt;Neo4j&lt;/li&gt;
+&lt;li&gt;OrientDB&lt;/li&gt;
+&lt;li&gt;TigerGraph&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Key-Value Database</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/nosql-database/key-value-database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/nosql-database/key-value-database/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;Key-Value Database stores data using keys as the index for data retrieval, without requiring a predefined data format for each record. Since each data record is independent, Key-Value Databases can efficiently store a massive amount of data while horizontally scaling.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;Use Cases&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Data caching: Key-Value Databases can be used to cache data, allowing for quick access to recent data.&lt;/li&gt;
+&lt;li&gt;Stateless servers: Moving user session states from web servers to Key-Value Databases enables horizontal scalability and server replacement without losing user data, increasing website availability.&lt;/li&gt;
+&lt;li&gt;Shopping cart data: Storing user shopping cart data in a Key-Value Database can alleviate the burden on relational databases during peak periods and prevent data loss due to a high volume of service requests.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;Advantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Flexible data storage format: Each data record is stored independently without requiring a predefined format.&lt;/li&gt;
+&lt;li&gt;Fast data retrieval: With the knowledge of the key, data can be quickly accessed.&lt;/li&gt;
+&lt;li&gt;Horizontal scalability: The independent nature of each key-value pair makes horizontal scaling easier.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;Disadvantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Limited computational operations across keys: Key-Value Databases primarily support simple aggregation calculations based on keys. For complex aggregation calculations, other types of databases are recommended.&lt;/li&gt;
+&lt;li&gt;Limited referencing of other data sources: Key-Value Databases lack the ability to enforce data constraints and references using primary keys, foreign keys, and joins.&lt;/li&gt;
+&lt;li&gt;Data persistence limitations: Some Key-Value Databases store data in memory rather than providing permanent storage.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Redis&lt;/li&gt;
+&lt;li&gt;Amazon DynamoDB&lt;/li&gt;
+&lt;li&gt;Apache Cassandra&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
