@@ -1,0 +1,118 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT Architecture Cheat Sheet – Solid Principle</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/</link>
+    <description>Recent content in Solid Principle on IT Architecture Cheat Sheet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: Single Responsibility Principle</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/single-responsibility-principle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/single-responsibility-principle/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;A piece of code, such as a class, interface, or function, should be responsible for a single responsibility in order to reduce code coupling and improve readability, maintainability, and testability.&lt;/p&gt;
+&lt;h3 id=&#34;example&#34;&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;In a book ordering system, functions such as order management, order accuracy checking, and database operations for orders should be separated into different classes.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Interface Segregation Principle</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/interface-segregation-principle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/interface-segregation-principle/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;In order to improve code readability and maintainability, a class should not be forced to implement unnecessary methods. Therefore, when certain functionalities of an interface are not needed in certain situations, the interface should be split into multiple sub-interfaces.&lt;/p&gt;
+&lt;h3 id=&#34;example&#34;&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;For example, let&amp;rsquo;s consider an interface called &amp;ldquo;DataManager&amp;rdquo; that is responsible for data querying and modification. If there are cases where only the querying functionality is needed, the &amp;ldquo;DataManager&amp;rdquo; interface should be split into two sub-interfaces: &amp;ldquo;DataReader&amp;rdquo; and &amp;ldquo;DataModifier&amp;rdquo;. This allows each sub-interface to be independently implemented based on specific requirements, enhancing flexibility and scalability.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Liskov Substitution Principle</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/liskov-substitution-principle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/liskov-substitution-principle/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The concept of the Liskov Substitution Principle states that a subclass should be able to completely substitute its superclass in any usage.&lt;/p&gt;
+&lt;p&gt;If a subclass is not designed according to the Liskov Substitution Principle, other parts of the program may encounter errors because they may not know the specific implementation of the superclass and expect consistent behavior. Therefore, a subclass should maintain the same behavior as the superclass and only provide additional details or extensions. If different functionality is truly needed, it indicates that separate classes should be created instead of modifying the inheritance of the superclass.&lt;/p&gt;
+&lt;h3 id=&#34;preconditions-for-substituting-the-superclass&#34;&gt;&lt;strong&gt;Preconditions for Substituting the Superclass&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The behavior should be consistent with the superclass.&lt;/li&gt;
+&lt;li&gt;Only the details of the behavior should be extended.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;example&#34;&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;An interface called &amp;ldquo;DataReader&amp;rdquo; for reading different types of data, such as from files, databases, or networks. According to the Liskov Substitution Principle, any class implementing the &amp;ldquo;DataReader&amp;rdquo; interface should be able to replace the usage of &amp;ldquo;DataReader&amp;rdquo; and provide consistent behavior.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Dependency inversion principle</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/dependency-inversion-principle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/dependency-inversion-principle/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The Dependency Inversion Principle (DIP) states that when designing components, it is important to avoid directly instantiating objects with different implementation details within the component to handle different calling requirements. Instead, the component should depend on abstractions by specifying the interfaces that can be passed in from external sources. This approach helps reduce coupling between code components.&lt;/p&gt;
+&lt;p&gt;There are two specific ways to implement the Dependency Inversion Principle:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Dependency Injection: Components specify interfaces to be injected during design. When using the component, the functionality is dynamically determined by the injected interface implementation.&lt;/li&gt;
+&lt;li&gt;Dependency Lookup: Utilizing container management mechanisms like Spring, the container can dynamically provide the required concrete implementations of classes when needed.&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Open-Closed Principle</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/open-closed-principle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/open-closed-principle/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The Open-Closed Principle (OCP) states that software entities should be open for extension but closed for modification. To achieve this principle, various approaches can be used, such as inheritance, polymorphism, or design patterns.&lt;/p&gt;
+&lt;p&gt;Specifically, there are several common ways to adhere to the Open-Closed Principle:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Inheritance: Subclasses can inherit the existing functionality from the parent class and override the differing parts. Implementing interfaces can also achieve similar results.&lt;/li&gt;
+&lt;li&gt;Polymorphism: The same method can have different implementations based on different input values. By adding different input values to handle different cases, existing methods can be extended without modification.&lt;/li&gt;
+&lt;li&gt;Design patterns offer classic solutions for flexible design. For example, the Builder pattern provides a flexible way to create objects, the Decorator pattern allows dynamic addition of additional functionality, and the Dependency Injection pattern separates variable logic into independent interfaces, implementing different behaviors based on the injected interface.&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

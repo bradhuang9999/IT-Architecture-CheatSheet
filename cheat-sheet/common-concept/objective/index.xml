@@ -1,0 +1,146 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT Architecture Cheat Sheet – Objective</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/</link>
+    <description>Recent content in Objective on IT Architecture Cheat Sheet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: High performance</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/high-performance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/high-performance/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Efficiency is one of the objectives in architectural design. An efficient architecture can enhance user satisfaction, generate more revenue, and enable businesses to respond quickly to external changes.&lt;/p&gt;
+&lt;p&gt;Possible approaches include:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Choosing the right tools based on understanding the system&amp;rsquo;s characteristics. Each tool is designed for specific situations, and selecting the correct tool can significantly increase system efficiency. For example, if it is known that the system needs real-time statistics of product sales on a website, using a columnar database in high-volume sales scenarios is often more efficient than traditional relational databases.&lt;/li&gt;
+&lt;li&gt;Performing computations at the appropriate location and time. For instance, avoiding large-scale computations on the user&amp;rsquo;s device or the website server, as browsers typically have limited system resources and website servers need to serve a large number of users. Instead, performing extensive computations through Stream Data Pipelines for analysis or using batch processing in batch programs.&lt;/li&gt;
+&lt;li&gt;Horizontal auto-scaling: Automatically scaling the number of servers based on system load to accommodate increased resource demands.&lt;/li&gt;
+&lt;li&gt;Optimizing computational logic: Designing suitable algorithms based on understanding the computational requirements, which can significantly reduce redundant computations and improve system performance.&lt;/li&gt;
+&lt;li&gt;Caching computation results: Caching time-consuming or network-dependent computation results. By retrieving results from server-side or cache servers, redundant computations and unnecessary network requests can be avoided.&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Cost Optimization</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/cost-optimization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/cost-optimization/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Cost is a crucial consideration when designing an architecture. Typically, higher-level services require higher costs. For example, although a lower Recovery Time Objective (RTO) is desirable, achieving a lower RTO often comes with higher costs. Therefore, it&amp;rsquo;s important to carefully assess the required service level and optimize costs.&lt;/p&gt;
+&lt;h3 id=&#34;accurately-calculating-costs&#34;&gt;&lt;strong&gt;Accurately Calculating Costs&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Due to the different nature of costs, it is more precise to calculate them separately as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Capital Expenditure (CapEx): The initial cost of purchasing equipment, services, and setup.&lt;/li&gt;
+&lt;li&gt;Operating Expenditure (OpEx): The ongoing cost of maintaining equipment and services, including personnel expenses.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;other-cost-optimization-methods&#34;&gt;&lt;strong&gt;Other Cost Optimization Methods&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use of cloud services: Leveraging cloud services and utilizing a pay-as-you-go pricing model is a common way to optimize costs.&lt;/li&gt;
+&lt;li&gt;Horizontal auto-scaling: Dynamically allocating system resources based on usage requirements can reduce redundant provisioning.&lt;/li&gt;
+&lt;li&gt;Monitor resource utilization and optimize resource allocation.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Security</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/security/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Due to the existence of various malicious external or internal actors seeking to exploit information security vulnerabilities for their gain, organizations can face significant harm. Events such as operational data breaches or customer data leaks can result in severe damage to an organization&amp;rsquo;s reputation and finances.&lt;/p&gt;
+&lt;p&gt;To prevent such incidents, information security factors should be considered during the initial architecture design phase. Ongoing monitoring of risks is also crucial. Important security measures to consider include implementing robust defense mechanisms and adopting a zero-trust approach.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Automation</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/automation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/automation/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Incorporating automation as much as possible in architectural design offers several advantages. It can reduce the likelihood of human errors, allocate human resources to more critical tasks, enable faster responses to external and internal changes, and facilitate large-scale deployment and management of environments.&lt;/p&gt;
+&lt;h3 id=&#34;possible-approaches&#34;&gt;&lt;strong&gt;Possible Approaches&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Automated deployment&lt;/li&gt;
+&lt;li&gt;Automated monitoring and alerting&lt;/li&gt;
+&lt;li&gt;Automated testing&lt;/li&gt;
+&lt;li&gt;Automated data backup&lt;/li&gt;
+&lt;li&gt;Automated error handling and troubleshooting&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Compliance</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/compliance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/compliance/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Depending on the organization&amp;rsquo;s location and industry, there are usually different compliance requirements. Violating compliance requirements can result in fines and negatively impact the organization&amp;rsquo;s reputation. When designing an architecture, it is important to carefully identify the scope of compliance requirements that need to be followed. This helps to avoid additional time and cost for making changes after the architecture design.&lt;/p&gt;
+&lt;p&gt;Possible compliance requirements include the GDPR personal data requirements in the European Union, as well as specific compliance requirements in the finance and healthcare industries. Additionally, there are regulations in various regions regarding the geographical location where data can be stored.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: High Reliability</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/high-reliability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/high-reliability/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;A highly reliable system instills trust among customers and internal members. This helps to enhance reputation and generate more revenue. However, achieving a high level of reliability in a system often comes with additional cost requirements, such as redundant configurations and data backups.&lt;/p&gt;
+&lt;h3 id=&#34;possible-approaches&#34;&gt;&lt;strong&gt;Possible Approaches&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Automatic error detection&lt;/li&gt;
+&lt;li&gt;Designing an architecture that is easy to scale horizontally&lt;/li&gt;
+&lt;li&gt;Designing an architecture that can tolerate high levels of errors&lt;/li&gt;
+&lt;li&gt;Implementing redundancy in the system architecture&lt;/li&gt;
+&lt;li&gt;Planning disaster recovery strategies&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

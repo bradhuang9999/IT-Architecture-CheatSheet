@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.115.0">
+<meta name="generator" content="Hugo 0.115.2">
 <meta name="robots" content="index, follow">
 
 
@@ -27,11 +27,11 @@ Use Cases Large-scale file storage requirements." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/storage-infra/object-storage/" /><meta property="article:section" content="Cheat Sheet" />
 
-<meta property="article:modified_time" content="2023-07-03T07:20:56+08:00" />
+<meta property="article:modified_time" content="2023-07-13T07:04:50+08:00" />
 <meta itemprop="name" content="Object Storage">
 <meta itemprop="description" content="Description Object Storage is a storage architecture where each file is treated as an individual object and is assigned a unique ID. Access to these objects is performed through a RESTful API. Files can include images, videos, or general documents and are stored flexibly in a distributed environment. Object Storage is often accompanied by redundant multiple backups to prevent data loss in case of disasters.
 Use Cases Large-scale file storage requirements.">
-<meta itemprop="dateModified" content="2023-07-03T07:20:56+08:00" />
+<meta itemprop="dateModified" content="2023-07-13T07:04:50+08:00" />
 <meta itemprop="wordCount" content="200">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Object Storage"/>
@@ -41,8 +41,8 @@ Use Cases Large-scale file storage requirements."/>
 
 
 
-<link rel="preload" href="/IT-Architecture-CheatSheet/scss/main.min.e18f5ab4258bc800830805360794427cffd238c0edbf48f5929bef5e984cef17.css" as="style">
-<link href="/IT-Architecture-CheatSheet/scss/main.min.e18f5ab4258bc800830805360794427cffd238c0edbf48f5929bef5e984cef17.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/IT-Architecture-CheatSheet/scss/main.min.4a175a31b978c6dd30b302ad6502e2bc1cb1209487a07cde4b310c79b7717ec8.css" as="style">
+<link href="/IT-Architecture-CheatSheet/scss/main.min.4a175a31b978c6dd30b302ad6502e2bc1cb1209487a07cde4b310c79b7717ec8.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -132,7 +132,69 @@ if (!doNotTrack) {
   <label for="m-it-architecture-cheatsheetcheat-sheetcommon-concept-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/common-concept/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetcheat-sheetcommon-concept"><span class="">Common Concept</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptbasic-element-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjective-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjective-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjective-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjective"><span class="">Objective</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivehigh-performance-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivehigh-performance-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivehigh-performance-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/high-performance/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivehigh-performance"><span class="">High performance</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivecost-optimization-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivecost-optimization-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivecost-optimization-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/cost-optimization/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivecost-optimization"><span class="">Cost Optimization</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivesecurity-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivesecurity-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivesecurity-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/security/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivesecurity"><span class="">Security</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectiveautomation-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectiveautomation-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectiveautomation-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/automation/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectiveautomation"><span class="">Automation</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivecompliance-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivecompliance-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivecompliance-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/compliance/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivecompliance"><span class="">Compliance</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivehigh-reliability-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivehigh-reliability-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivehigh-reliability-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/high-reliability/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptobjectivehigh-reliability"><span class="">High Reliability</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattribute-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattribute-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattribute-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattribute"><span class="">Attribute</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributescalability-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributescalability-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributescalability-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/scalability/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributescalability"><span class="">Scalability</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributefault-tolerance-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributefault-tolerance-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributefault-tolerance-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/fault-tolerance/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributefault-tolerance"><span class="">Fault tolerance</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributeusability-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributeusability-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributeusability-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/usability/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributeusability"><span class="">Usability</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributelow-coupling-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributelow-coupling-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributelow-coupling-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/low-coupling/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributelow-coupling"><span class="">Low coupling</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributeportability-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributeportability-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributeportability-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/portability/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributeportability"><span class="">Portability</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributeextensibility-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributeextensibility-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributeextensibility-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/extensibility/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptattributeextensibility"><span class="">Extensibility</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptbasic-element-li">
   <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptbasic-element-check"/>
   <label for="m-it-architecture-cheatsheetcheat-sheetcommon-conceptbasic-element-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/common-concept/basic-element/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetcheat-sheetcommon-conceptbasic-element"><span class="">Basic Element</span></a></label>
   
@@ -232,6 +294,40 @@ if (!doNotTrack) {
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheetapplication-architecturelogic-controldb-trigger-li">
   <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetapplication-architecturelogic-controldb-trigger-check"/>
   <label for="m-it-architecture-cheatsheetcheat-sheetapplication-architecturelogic-controldb-trigger-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/db-trigger/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheetapplication-architecturelogic-controldb-trigger"><span class="">DB Trigger</span></a></label>
+  
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecture-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecture-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetsortware-architecture-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecture"><span class="">Software Architecture</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principle-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principle-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principle-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principle"><span class="">Solid Principle</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principlesingle-responsibility-principle-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principlesingle-responsibility-principle-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principlesingle-responsibility-principle-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/single-responsibility-principle/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principlesingle-responsibility-principle"><span class="">Single Responsibility Principle</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principleinterface-segregation-principle-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principleinterface-segregation-principle-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principleinterface-segregation-principle-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/interface-segregation-principle/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principleinterface-segregation-principle"><span class="">Interface Segregation Principle</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principleliskov-substitution-principle-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principleliskov-substitution-principle-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principleliskov-substitution-principle-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/liskov-substitution-principle/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principleliskov-substitution-principle"><span class="">Liskov Substitution Principle</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principledependency-inversion-principle-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principledependency-inversion-principle-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principledependency-inversion-principle-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/dependency-inversion-principle/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principledependency-inversion-principle"><span class="">Dependency inversion principle</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principleopen-closed-principle-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principleopen-closed-principle-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principleopen-closed-principle-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/open-closed-principle/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheetsortware-architecturesolid-principleopen-closed-principle"><span class="">Open-Closed Principle</span></a></label>
   
 </li>
   </ul>
@@ -399,6 +495,17 @@ if (!doNotTrack) {
   
 </li>
   </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetcheat-sheettemplate-folder-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheettemplate-folder-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheettemplate-folder-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/template-folder/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetcheat-sheettemplate-folder"><span class=""></span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetcheat-sheettemplate-foldertemp-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetcheat-sheettemplate-foldertemp-check"/>
+  <label for="m-it-architecture-cheatsheetcheat-sheettemplate-foldertemp-check"><a href="/IT-Architecture-CheatSheet/cheat-sheet/template-folder/temp/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetcheat-sheettemplate-foldertemp"><span class=""></span></a></label>
+  
 </li>
   </ul>
 </li>
@@ -570,7 +677,7 @@ Complex architecture: Object Storage has a relatively complex architecture that 
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  Last modified July 3, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/5b623106329f033e71232a763424696b5729035b">adjust grid (5b62310)</a>
+  Last modified July 13, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/c74e5247b5c2369d75e57edec8f268287ee2a20b">Add article (c74e524)</a>
 </div>
 
 </div>

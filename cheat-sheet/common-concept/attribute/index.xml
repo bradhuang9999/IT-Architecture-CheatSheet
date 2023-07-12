@@ -1,0 +1,153 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT Architecture Cheat Sheet – Attribute</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/</link>
+    <description>Recent content in Attribute on IT Architecture Cheat Sheet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: Scalability</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/scalability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/scalability/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The architecture design takes into consideration the variability in system usage and aims to facilitate scalability based on different requirements. An easily scalable system can be adjusted in real-time according to the demands. When the system experiences high demand, resources can be increased to handle the workload efficiently. Conversely, when the demand is low, resources can be reduced to save costs. Scalability needs to be considered in various aspects of the system, including computing power, file and database access, network traffic, and more.&lt;/p&gt;
+&lt;h3 id=&#34;common-practices&#34;&gt;&lt;strong&gt;Common Practices&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Demand planning: Assess the current usage and predict future growth and special events to determine the scaling design of the system.&lt;/li&gt;
+&lt;li&gt;Vertical scaling: Adding more system resources to a single server. Scaling speed is slower, and the scalability is relatively limited.&lt;/li&gt;
+&lt;li&gt;Horizontal scaling: Scaling the system across multiple servers. Scaling speed is faster, and the scalability is greater.&lt;/li&gt;
+&lt;li&gt;Automatic scaling: Dynamically detecting the system&amp;rsquo;s demand and automatically scaling resources accordingly.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Fault tolerance</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/fault-tolerance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/fault-tolerance/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;A highly fault-tolerant architecture can prevent system failures or significant errors caused by single points of failure.&lt;/p&gt;
+&lt;h3 id=&#34;possible-approaches&#34;&gt;&lt;strong&gt;Possible Approaches&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Redundant Design: Increase system reliability by using redundant components or services to prevent single points of failure. This can include using backup servers, redundant network connections, redundant data storage, and more. However, it&amp;rsquo;s important to note that redundant design can increase costs and complexity.&lt;/li&gt;
+&lt;li&gt;Error Detection and Recovery: Implement error detection mechanisms and automated error recovery strategies. This can involve using monitoring systems and health checks to detect failures and automatically redirect traffic to functioning components. This helps quickly detect and recover from errors in the system, minimizing the impact of failures.&lt;/li&gt;
+&lt;li&gt;Rapid Recovery: Ability to quickly restore the system to normal operation after a failure occurs. This includes fast failover, rapid troubleshooting, and implementation of recovery strategies. Rapid recovery minimizes the downtime of services and improves system availability.&lt;/li&gt;
+&lt;li&gt;Fault Tolerance Testing and Drills: Regularly test the system&amp;rsquo;s fault tolerance capabilities to assess the risk of failures in the current architecture.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Usability</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/usability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/usability/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;When designing a system, it should be made as user-friendly as possible to reduce the frustration of unfamiliar users during their initial usage and minimize unnecessary actions. This helps attract a larger customer base and generate more profit.&lt;/p&gt;
+&lt;h3 id=&#34;possible-approaches&#34;&gt;&lt;strong&gt;Possible Approaches&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Designing an intuitive user experience (UX): Good UX design can help users quickly get started and improve efficiency. This includes intuitive interface design, consistent workflows, and clear instructions.&lt;/li&gt;
+&lt;li&gt;Reducing application size and network requirements: Efforts should be made to minimize the size of the application to improve download speed and runtime efficiency. Additionally, reducing network requirements can decrease latency and instability experienced by users during usage.&lt;/li&gt;
+&lt;li&gt;Considering accessibility design: In addition to typical users, attention should also be given to users with different physical abilities. Following accessibility design principles, such as providing readable text, clear labels, and keyboard navigation, ensures that all users can easily access and use the system.&lt;/li&gt;
+&lt;li&gt;Multilingual user interface: Considering users from different regions, providing a multilingual user interface enhances their user experience. This design reduces language barriers and ensures that global users can understand and operate the system effortlessly.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Low coupling</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/low-coupling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/low-coupling/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The low coupling of a system refers to the low degree of interdependence between modules. In large-scale systems, the system is often divided into multiple modules based on their functionality, such as an order module and a user information module. Although these modules may need to collaborate with each other, it is important to minimize direct dependencies between modules for better management. This helps prevent excessive coupling, making it easier to make changes to individual modules without causing significant impacts on others.&lt;/p&gt;
+&lt;h3 id=&#34;different-types-of-coupling-ranked-from-low-to-high&#34;&gt;&lt;strong&gt;Different types of coupling ranked from low to high:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Content coupling: Directly accessing another module&amp;rsquo;s internal data, such as using variables or directly reading another module&amp;rsquo;s data tables.&lt;/li&gt;
+&lt;li&gt;External coupling: Both modules read and write to a global data location.&lt;/li&gt;
+&lt;li&gt;Control coupling: Providing an interface to the other module, allowing Module B to control Module A through this interface while encapsulating its own data and processes.&lt;/li&gt;
+&lt;li&gt;Message coupling: Providing an external messaging interface for invocation, such as calling through a Web API.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;possible-approaches&#34;&gt;&lt;strong&gt;Possible approaches:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Decoupling data access: Decouple data access and process control from internal data and specific databases to improve system flexibility.&lt;/li&gt;
+&lt;li&gt;Dependency inversion: When high-level modules use components, they only need to specify the interface to be returned, rather than the specific class, to reduce coupling between modules.&lt;/li&gt;
+&lt;li&gt;Event-driven: Use events or message passing for module-to-module communication, and even employ asynchronous event handling mechanisms to further reduce coupling.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Portability</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/portability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/portability/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;When developing applications, portability should be considered because the same business logic may need to be executed in different environments in the future. For example, the logic that was originally executed on a web backend server may later need to be executed in batch or scheduled jobs. Having high application portability reduces the amount of modifications required when migrating to a new environment.&lt;/p&gt;
+&lt;h3 id=&#34;common-practices&#34;&gt;&lt;strong&gt;Common Practices&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use programming languages that are executable in multiple environments, such as Java or Golang: These languages have cross-platform capabilities, allowing the application to run on different operating systems and environments, thus increasing its portability.&lt;/li&gt;
+&lt;li&gt;Separate interfaces that interact with external systems into interchangeable components: This approach minimizes dependencies on external systems. When transitioning to a new environment or replacing an external system, only the implementation of the interface needs to be replaced, avoiding extensive code modifications.&lt;/li&gt;
+&lt;li&gt;Modularize the code to avoid high coupling, which makes it difficult to adjust the architecture: Modularized programming divides the functionality into independent modules, reducing dependencies between modules. This enables individual modules to be adjusted and replaced independently, enhancing portability.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Extensibility</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/extensibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/extensibility/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;An extensible software and system architecture helps retain flexibility for future enhancements. It avoids the need for major architectural changes when adjusting the system to meet future requirements.&lt;/p&gt;
+&lt;h3 id=&#34;common-practices&#34;&gt;&lt;strong&gt;Common Practices&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Consider future changes: During the design phase, proactively think about possible future developments, including adding, modifying, or removing functionalities, to preserve system flexibility. This can be achieved through thorough requirements analysis and design planning.&lt;/li&gt;
+&lt;li&gt;Modular design and low coupling: Divide the system into independent modules and ensure low coupling between them. This allows for the addition or replacement of functionalities by adjusting the respective modules, without the need for extensive changes to the entire system. Additionally, provide standardized interfaces or APIs to facilitate the implementation of new functionalities within the same interface, further enhancing system extensibility.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
