@@ -1,5 +1,5 @@
 ---
-title: "Solid Principle"
-weight: 
+title: "SOLID Principle"
+weight: 1
 ---
 

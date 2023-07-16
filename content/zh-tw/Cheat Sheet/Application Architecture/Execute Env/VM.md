@@ -4,21 +4,21 @@ date: 2023-06-10
 weight: 1
 ---
 
-### **Overview:**
+### 概述:
 
-A VM (Virtual Machine) is a virtualized environment created within a physical machine, dividing it into multiple independent virtual machines. Each VM can be configured with its own allocated computational and memory resources. Within each VM, a separate operating system and applications can be installed. This allows for multiple isolated software environments to meet different usage requirements.
+VM (Virtual Machine) 是在一台實體機器中分割多個獨立的虛擬機器，每一個VM可設置可使用的運算資源與記憶體資源量。在每一個VM中，安裝獨立的作業系統與應用程式。這種模式可以提供多個不互相干擾的軟體運作環境，以滿足多個不同的使用需求。
 
-### **Use Cases:**
+### 使用情境:
 
-- Isolated Environments: When there is a larger server available and multiple smaller computing needs that require independent operation.
-- Cloud Migration: When migrating from on-premises to the cloud, but the existing architecture cannot be containerized or requires the installation of non-containerizable software.
-- Vertical Scaling: When there is a need to dynamically adjust the computational resources of the operating environment based on usage requirements.
-- Horizontal Scaling: Through VM image mechanisms, VMs can be quickly deployed to other machines.
-- System Restoration: Quick system restoration can be achieved through VM image mechanisms.
+- 獨立環境：有一台較大的伺服器，且同時有多個希望獨立運作的中小型運算需求。
+- 移植雲端：預計將地端環境移植到雲端，但是舊有架構尚無法容器化或需安裝其他無法容器化套裝軟體。
+- 垂直伸縮：希望可以依照使用需求，動態調整作業環境的運算資源量。
+- 水平伸縮：透過VM的映象檔機制，可以快速部屬到其他機器
+- 系統還原：透過VM的映象檔機制快速進行系統還原。
 
-### **Disadvantages:**
+### 缺點:
 
-- Resource Intensive: Compared to lightweight containerization technologies, each VM requires an operating system, resulting in higher resource usage.
-- Slow Startup: Each VM has its own operating system, leading to slower boot times.
-- Costly: Additional VM management systems or licenses are often required to utilize the full VM functionality, resulting in higher costs.
-- Difficult Horizontal Scaling: Scaling VMs can be challenging, especially for large-scale deployment and management of multiple VMs. Adjustments need to be made to individual VM configurations, network settings, and other attributes, requiring additional time and effort.
+- 資源使用量大：相較於輕量化的容器管理技術，每一個VM都需要安裝作業系統，因此需要使用較多系統資源
+- 啟動速度慢：每一個VM都有獨立的作業系統，因此載入速度較慢
+- 費用高昂：需要採購額外的VM管理系統才能使用完整VM機制，這往往需要高額的授權費用。
+- 水平擴展不易：VM的擴展相對較困難，特別是在需要大規模部署和管理多個VM的情境下。每一台VM的設定、網路配置等屬性都需要進行調整，這可能需要額外的時間和工作量。

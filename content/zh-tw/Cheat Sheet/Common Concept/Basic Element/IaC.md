@@ -1,25 +1,25 @@
 ---
-title: "IaC"
+title: "基礎設施即代碼"
 date: 2023-06-10
 weight: 1
 ---
 
-### **Description**
+### 描述
 
-IaC (Infrastructure as Code) is a method of documenting the configuration requirements of infrastructure by writing code. With specific tools, this code can be deployed to multiple devices and changes can be made to the device state, achieving the goal of rapid deployment. There are generally two types of code that can be used to implement IaC: one describes the desired changes, and the other describes the desired system state.
+IaC (Infrastructure as Code)是一種通過編寫程式碼來記錄基礎設施的相關組態需求的方法。借助特定的工具，可以將這些程式碼部署到多個裝置上，並對裝置狀態進行變更，以實現快速部署的目標。通常有兩種模式的程式碼可以實現 IaC，一種是描述預期的變更內容，另一種是描述預期的系統狀態。
 
-### **Advantages**
+### 優點
 
-- Rapid management: Allows for quick deployment and management of the state of multiple servers.
-- Easy understanding of changes: The expected changes are documented in the code.
-- Change traceability: Relevant change history is recorded in the version control system.
+- 快速管理：可快速部屬、管理多台伺服器的狀態
+- 快速了解異動內容：預計異動內容皆紀錄於代碼
+- 可以追溯變更：相關異動歷程的紀錄於版本庫
 
-### **Disadvantages**
+### 缺點
 
-- Higher complexity in setting up IaC.
-- Learning curve: Due to the complexity of the code and tools involved, it requires a longer learning time.
+- 搭建IaC的複雜度較高
+- 學習成本: 相關代碼與工具由於較複雜，需要較長學習時間。
 
-### **Examples**
+### 案例
 
 - Anisble
 - Puppet

@@ -4,34 +4,34 @@ date: 2023-06-10
 weight: 1
 ---
 
-### **Overview:**
+### 概述:
 
-A representative product of containerization technology that separates independent software operating environments within the same operating system.
+容器化技術的代表性產品，在同一作業系統中分隔獨立的軟體運作環境。
 
-### **Use Cases:**
+### 情境:
 
-- Development and Testing: Docker can provide a testing environment with minimal system resources that aligns with the production environment during development and testing stages.
-- Direct Use of Packaged Application Images: The Docker ecosystem offers various pre-packaged application images that can be directly used, saving time on setting up and configuring applications in different environments.
-- Isolation of Multiple Application Environments: Within the same server, containers can be used to separate multiple applications to avoid conflicts in versions and configurations or interference between applications.
-- Rapid Deployment: Docker's lightweight nature makes it suitable for quickly deploying applications across multiple servers.
-- Microservices Architecture: Docker's isolation capabilities make it suitable for integration with microservices. By breaking down applications into smaller components, Docker enables dynamic scaling of container instances based on demand.
-- Cloud-Native Development: Docker's lightweight and fast deployment features are well-suited for cloud environments, which bill based on resource usage and provide scalable computing resources on-demand.
+- 開發與測試：在開發與測試階段，使用Docker可以少量系統資源提供與正式環境一致的測試環境。
+- 直接使用已封裝的應用程式映像檔：Docker生態系統可找到許多可直接使用的各式應用程式映象檔，節省在不同環境建置、設定應用程式的時間。
+- 隔離多個應用程式環境：在同一伺服器中，分隔多個容器，以避免不同應用程式的版本與設定衝突或是使用時影響其他應用程式
+- 快速部屬：Docker的輕量化特性，適合快速在多台伺服器部屬應用程式
+- 微服務架構：Docker本身的隔離特性適合與微服務進行結合，微服務將應用程式拆為多個小程式，搭配使用Docker可快速、有彈性的依使用需求動態調整各微服務的容器數量。
+- 雲原生程式：由於雲端以系統資源使用量為計價、以及可快速依需求提供多台運算資源。所以Docker的輕量化與快速部屬特性極適合雲端環境。
 
-### **Advantages:**
+### 優點:
 
-- Lightweight: Containers start quickly and consume fewer system resources since they don't include an operating system.
-- Isolation: Each container runs independently, avoiding conflicts between applications. If an error occurs in one container, it can be restarted independently without affecting other containers.
-- Security: Container isolation enhances security by separating different applications.
-- Recoverability: Containers can be monitored, and automatic restart is possible.
-- Rich Management Mechanisms: Docker provides built-in mechanisms for managing containers, such as resource monitoring, error detection, and automatic restart.
-- Avoiding OS Conflicts: Docker abstracts away differences between different versions of operating systems, solving management challenges caused by those differences.
-- On-Demand Activation: Containers can be directly loaded and activated from provided images by developers or the community, unaffected by differences in operating system versions.
-- Horizontal Scaling: Easy to deploy and scale, allowing for quick addition or removal of containers to accommodate changes in traffic.
-- CI/CD Mechanism: Dockerfiles and other necessary build files stored in version control can automatically generate, validate, and deploy container images.
-- Provides IaC Mechanism: Dockerfiles contain the complete process for building containers, offering advantages similar to Infrastructure as Code (IaC), such as easy tracking of container build details.
-- Version Control and Quick Rollback: Multiple versions of container images can be maintained, enabling quick switching between versions in case of errors.
+- 輕量化：由於容器內不包含作業系統，可以因此快速啟動，並且使用較少系統資源。
+- 隔離性：各個容器獨立執行，避免應用程式的衝突。並且在任一容器錯誤時，可獨立重啟而不影響其他現有容器。
+- 安全性：以容器隔離不同的應用程式，可增加安全性。
+- 還原性：可監控容器的狀態並自動重啟。
+- 管理機制豐富：內建多種管理容器的機制，例如：資源監控、錯誤偵測、自動重啟等。
+- 避免作業系統產生的衝突：由於在作業系統上再封裝一個抽象層，因此可解決在傳統不同版本作業系統差異而造成的管理困難。
+- 隨時啟用：由於具有獨立的運作環境，不受不同作業系統版本的差異影響。可直接載入並啟用開發商或社群所提供的映象檔。
+- 水平伸縮：易於部屬與擴展，可快速新增或移除容器，以應對流量變化。
+- CICD機制：將Dockerfile等建置映像檔所需的資料放入版本庫中之後，可自動產生、驗證、部屬映像檔。
+- 提供IaC機制：由於Dockerfile中記載完整的容器建置過程，因此具有IaC的相關優點，例如方便追蹤容器建置的細節差異。
+- 版本控制與快速回滾：可同時有新舊版本的映像檔，方便在錯誤時快速切換版本。
 
-### **Disadvantages:**
+### 缺點:
 
-- Security: Containers are typically started with root privileges by default, which can pose potential risks. It is possible to start containers with other user identities, but implementation can be complex.
-- Learning Curve: Docker's containerization mechanism has its complexity, requiring a significant learning period to understand aspects such as data persistence, network configuration, and automatic restart mechanisms.
+- 安全性：預設以Root身分啟動容器，這會造成潛在的風險。可以改成以其他身分啟動容器，但是實作上較複雜。
+- 學習門檻：Docker的容器化機制有其複雜度，需要較長的學習期間，以理解其資料持久化、網路配置、自動重啟等機制。
