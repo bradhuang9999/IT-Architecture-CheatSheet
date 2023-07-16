@@ -1,0 +1,249 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>資訊架構備忘表 – 邏輯控制</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/</link>
+    <description>Recent content in 邏輯控制 on 資訊架構備忘表</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: Batch</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/batch/</link>
+      <pubDate>Sun, 25 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/batch/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;概述&#34;&gt;概述:&lt;/h3&gt;
+&lt;p&gt;Batch 程式是在伺服器端運行的一組程式，可以定時、手動或根據事件觸發執行。它常用於處理資料轉檔、報表產生和資料檢查等預先定義的任務清單。&lt;/p&gt;
+&lt;h2 id=&#34;使用情境&#34;&gt;使用情境&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;資料轉檔與檢查、產生報表&lt;/li&gt;
+&lt;li&gt;需耗費長時間執行的動作&lt;/li&gt;
+&lt;li&gt;須定時執行的動作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;缺點&#34;&gt;缺點&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;如果是較長時間執行的Batch程式往往會消耗較多系統資源&lt;/li&gt;
+&lt;li&gt;排程系統複雜: 由於各個Batch程式會在多個佇列中排隊執行，而不同程式的優先度與執行時間不一，若設計不當，往往會造成多個Job卡住。&lt;/li&gt;
+&lt;li&gt;以Batch形式進行的資料轉檔，由於並非即時轉檔，往往無法即時看到轉檔結果。現今架構較建議Real time進行資料串流處理。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Web API</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/web-api/</link>
+      <pubDate>Sun, 25 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/web-api/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;概述&#34;&gt;概述:&lt;/h3&gt;
+&lt;p&gt;Web API以HTTP、HTTPS或其他Web介面來提供相關服務給外部客戶或內部其他系統。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;使用情境:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;提供資源或服務: 內部系統、合作企業、客戶或是一般大眾&lt;/li&gt;
+&lt;li&gt;通訊與資料交換: 內部系統、合作企業、客戶&lt;/li&gt;
+&lt;li&gt;提供給其他應用程式呼叫，例如: 作為移動裝置的後端服務&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;優點:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;減少系統耦合度&lt;/li&gt;
+&lt;li&gt;提供標準化介面方便外部呼叫&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;缺點:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;安全性: 若通過公開網路傳送資料需要更注意資安議題，需透過HTTPS及身分認證等機制解決。&lt;/li&gt;
+&lt;li&gt;可能會有較大請求數量: 需透過水平擴展等機制以提供彈性的請求數量需求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;常見身分認證機制&#34;&gt;常見身分認證機制:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;JWT&lt;/li&gt;
+&lt;li&gt;OAuth&lt;/li&gt;
+&lt;li&gt;SAML&lt;/li&gt;
+&lt;li&gt;API金鑰&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;常見資料交換格式&#34;&gt;常見資料交換格式:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;JSON&lt;/li&gt;
+&lt;li&gt;XML&lt;/li&gt;
+&lt;li&gt;CSV&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 無伺服器 Function</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/serverless-function/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/serverless-function/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;概述&#34;&gt;概述:&lt;/h3&gt;
+&lt;p&gt;Serverless Function是一種設計模式，概念為讓軟體開發人員只需專注於實作程式邏輯，而不須煩惱程式平台與系統管理議題。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;使用情境:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Web API&lt;/li&gt;
+&lt;li&gt;批次處理&lt;/li&gt;
+&lt;li&gt;排程作業&lt;/li&gt;
+&lt;li&gt;事件驅動&lt;/li&gt;
+&lt;li&gt;前後端分離的後端伺服器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;優點:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;彈性: 使用時才須付費&lt;/li&gt;
+&lt;li&gt;伸縮性: 雲端平台將會按照使用量，自動擴展&lt;/li&gt;
+&lt;li&gt;無須管理架構: 不像IaaS、FaaS等模式還需要管理基礎架構或平台設定&lt;/li&gt;
+&lt;li&gt;以一般語言實作邏輯: 未來若服務使用量較大，可將同樣邏輯經過一些調整後搬到Container等環境。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;缺點:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;載入需時間: 每次服務執行前，都需要先載入邏輯，因此服務回應速度較慢。雖然可以某些平台可提供預先載入，但是其收費就會較高。&lt;/li&gt;
+&lt;li&gt;由於大多FaaS服務都是在外部網路的雲端雲端服務，與內部網路的服務相比，需要考慮更多安全性的議題。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 訊息佇列</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/message-queue/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/message-queue/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;概述&#34;&gt;概述:&lt;/h3&gt;
+&lt;p&gt;Message Queue是一種常用於非同步處理邏輯的機制。當某個服務需要較長時間完成時，為了避免上游等待，可以將服務請求放入佇列中，按序等待執行。後方會有多個服務Consumer從佇列中取得服務請求並完成相應的處理。&lt;/p&gt;
+&lt;p&gt;一個典型的Message Queue架構包含三個主要元件：Message producer（產生服務請求的角色）、Message consumer（處理服務請求的角色）以及Message broker（負責訊息排序和呼叫consumer的角色）。&lt;/p&gt;
+&lt;p&gt;透過使用Message Queue，我們能夠實現1對多的通訊。Producer不需要知道後方有多少個consumer，只要有註冊相應事件的consumer都會接收到訊息。這樣的設計模式有效地解耦了producer和consumer之間的直接依賴關係，使系統更加靈活和擴展。&lt;/p&gt;
+&lt;p&gt;透過適當地應用Message Queue，我們能夠改善系統的可靠性和效能，特別適用於處理非同步處理需求的情境。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;使用情境:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;非同步事件驅動&lt;/li&gt;
+&lt;li&gt;非同步通信&lt;/li&gt;
+&lt;li&gt;日誌處理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;優點:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;避免前端等待: producer只要發出訊息請求後，即可完成動作。&lt;/li&gt;
+&lt;li&gt;低耦合: 可將一個大的服務拆成多個鬆散的小服務。且各個服務之間不需要直接通信，交由Broker轉交請求即可。&lt;/li&gt;
+&lt;li&gt;擴展性: 當等待中的請求較多時，可動態增加更多Consumer來處理服務請求。&lt;/li&gt;
+&lt;li&gt;平行處理: 如果有多個consumer註冊同一事件，可同步進行事件處理，而不須依序排隊執行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;缺點:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;無法即時得知結果：由於訊息需等待broker轉發。所以producer若需等待結果，則需要追蹤此訊息處理的狀態。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: DB Procedure</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/db-procedure/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/db-procedure/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;概述&#34;&gt;概述:&lt;/h3&gt;
+&lt;p&gt;DB Procedure是存放於資料庫的程式，通常是以SQL為核心，搭配變數、邏輯判斷、迴圈的程式，以達到於資料庫高效處理資料的目的。&lt;/p&gt;
+&lt;h3 id=&#34;優點&#34;&gt;優點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在資料庫端即可處理複雜的資料處理，有效的處理大量資料，避免網路延遲與資料傳輸量的問題&lt;/li&gt;
+&lt;li&gt;在資料庫端處理，可以更方便的處理事務(Transaction)管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;缺點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;難以除錯與開發: 較難設定中斷點、記錄程式運行的Log、也較少方便、提供程式碼提示的編輯器。&lt;/li&gt;
+&lt;li&gt;基於程式架構的原因，難以使用現代的程式概念，例如: 物件導向。&lt;/li&gt;
+&lt;li&gt;耦合度較高: 由於程式都是在資料庫中，程式之間以及程式與資料表之間的耦合度很高。&lt;/li&gt;
+&lt;li&gt;較難更新程式: 更新DB Procedure與資料表時容易造成相關連物件的錯誤。難以達到zero down time的程式更新。&lt;/li&gt;
+&lt;li&gt;程式綁定特定資料庫，難以遷移至其他資料庫產品。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;案例&#34;&gt;案例&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;PL/SQL: Oracle資料庫的DB Proecdure&lt;/li&gt;
+&lt;li&gt;T-SQL: SQL Server資料庫的DB Proecdure&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: DB Function</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/db-function/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/db-function/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;DB Function是在DB端的一種程式，按照資料庫種類的語法會不一樣，例如PL/SQL, T-SQL。
+如同一般程式Function，取得傳入值並進行邏輯處理後，回傳結果。&lt;/p&gt;
+&lt;h3 id=&#34;與db-procedure的差異&#34;&gt;與DB Procedure的差異&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;可以在SQL中使用&lt;/li&gt;
+&lt;li&gt;通常不能在DB Function中異動資料&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;使用情境&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在SQL中，抽出重複性的子查詢指令&lt;/li&gt;
+&lt;li&gt;在SQL中，撰寫需有較複雜程式處理的邏輯&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: DB Trigger</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/db-trigger/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/db-trigger/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;DB Trigger是在DB端的一種程式，按照資料庫種類的語法會不一樣，例如PL/SQL, T-SQL。
+使用目的為監控特定資料表資料的異動，在資料新增、修改、刪除時執行特定邏輯。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;使用情境&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;紀錄異動Log&lt;/li&gt;
+&lt;li&gt;連動更新相關資料表&lt;/li&gt;
+&lt;li&gt;同步刪除關聯資料表的資料&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;優點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;可以在資料庫端實作Event Driven的邏輯: 事件發生時，自動執行預定義的邏輯&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;缺點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;使用過多會降低資料庫效能&lt;/li&gt;
+&lt;li&gt;須注意不同資料表之間的Trigger不會無限循環觸發&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

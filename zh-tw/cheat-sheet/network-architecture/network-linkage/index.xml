@@ -1,0 +1,111 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>資訊架構備忘表 – 連接</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-linkage/</link>
+    <description>Recent content in 連接 on 資訊架構備忘表</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-linkage/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: 專線</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-linkage/leased-line/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-linkage/leased-line/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;專線 (leased line) 是一種WAN的連接選項。由ISP業者提供固定頻寬的專用網路，可在不經過網際網路的情況下建立安全的通訊，用於連接不同區域的機房或子網路。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;&lt;strong&gt;使用情境&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;安全連接不同區域的子網路。&lt;/li&gt;
+&lt;li&gt;安全連接雲端供應商的服務。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;安全性：無需通過網際網路即可建立不同內部網路之間的安全通訊。&lt;/li&gt;
+&lt;li&gt;速度穩定：ISP根據簽訂的合約提供固定頻寬，無需與他人共享使用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;價格高昂：由ISP提供的專線根據頻寬大小計費，通常價格較高。&lt;/li&gt;
+&lt;li&gt;單點故障：單一專線網路存在故障的風險，通常需要同時組態多條專線作為備援使用。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 代理伺服器</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-linkage/proxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-linkage/proxy/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;Proxy (網路代理伺服器) 是作為內部網路設備存取外部網路的代理伺服器。&lt;/p&gt;
+&lt;h3 id=&#34;優點&#34;&gt;優點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;過濾風險網站：可設定網站黑名單，避免內部使用者存取高風險網站&lt;/li&gt;
+&lt;li&gt;阻擋攻擊資料：可檢查回傳內容是否有攻擊字串&lt;/li&gt;
+&lt;li&gt;隱藏真實IP：避免外部攻擊者直接呼叫內部設備&lt;/li&gt;
+&lt;li&gt;快取網站資料：可快取最近存取的靜態內容，減少網路流量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;缺點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;單點故障：若代理伺服器故障，則無法內部設備無法存取外部網路&lt;/li&gt;
+&lt;li&gt;影響網路速度：由於代理伺服器負責過濾、轉換封包，因此會造成一定程度的網路延遲&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 反向代理</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-linkage/reverse-proxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-linkage/reverse-proxy/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;反向代理 (Reverse Proxy) 存在於伺服器端，負責接收客戶端傳送的請求，並轉發給後端伺服器。&lt;/p&gt;
+&lt;h3 id=&#34;優點&#34;&gt;優點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;水平擴展：由於瀏覽器端透過反向代理轉傳請求，因此伺服器端可以有多台伺服器同時提供服務，以提高可用性&lt;/li&gt;
+&lt;li&gt;負載均衡：依照設定平衡呼叫各伺服器，避免特地伺服器的流量過大&lt;/li&gt;
+&lt;li&gt;錯誤偵測：若特定伺服器請求失敗次數過多，可自動停止呼叫該伺服器&lt;/li&gt;
+&lt;li&gt;網址重定向：依照請求網址與端口轉傳請求到對應的伺服器與端口&lt;/li&gt;
+&lt;li&gt;提供保護：避免曝露伺服器真實IP，並阻擋惡意封包，例如：透過白名單與黑名單IP 控制允許通過的請求&lt;/li&gt;
+&lt;li&gt;快取回傳內容：可快取近期的回傳內容，減輕後端伺服器壓力&lt;/li&gt;
+&lt;li&gt;支援HTTPS：可於反向代理進行HTTPS加密與認證，減輕後端伺服器處理SSL的壓力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;缺點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;架構複雜：由於反向代理伺服器負責轉傳封包，使路由路徑更為複雜&lt;/li&gt;
+&lt;li&gt;單點故障：客戶端請求透過反向代理轉發，若反向代理伺服器故障，則服務可能中斷。可透過水平擴展或集群來解決此問題。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;案例&#34;&gt;案例&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Nginx&lt;/li&gt;
+&lt;li&gt;Apache&lt;/li&gt;
+&lt;li&gt;IIS&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

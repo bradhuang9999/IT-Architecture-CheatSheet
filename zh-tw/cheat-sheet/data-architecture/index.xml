@@ -1,0 +1,83 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>資訊架構備忘表 – 資料儲存架構</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/</link>
+    <description>Recent content in 資料儲存架構 on 資訊架構備忘表</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: 儲存基礎設施</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 關聯式資料庫</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: NoSQL資料庫</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 高可用性儲存</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Data Security</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/data-security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/data-security/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

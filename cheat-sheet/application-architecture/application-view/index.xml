@@ -106,19 +106,19 @@
     </item>
     
     <item>
-      <title>Cheat Sheet: Codeless App</title>
-      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/application-view/codeless-app/</link>
+      <title>Cheat Sheet: No Code App</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/application-view/no-code-app/</link>
       <pubDate>Sun, 25 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/application-view/codeless-app/</guid>
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/application-view/no-code-app/</guid>
       <description>
         
         
         &lt;h3 id=&#34;overview&#34;&gt;&lt;strong&gt;Overview:&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;Codeless is a SaaS service that allows users to develop customized applications without the need for programming. It provides a UI design tool where users can drag and drop interface elements and define the actions to be performed when buttons are pressed. By abstracting the logic design process, Codeless uses visual tools to design user interfaces and action logics. The platform then executes the program logic based on the selected rules.&lt;/p&gt;
+&lt;p&gt;No Code App is a SaaS service that allows users to develop customized applications without the need for programming. It provides a UI design tool where users can drag and drop interface elements and define the actions to be performed when buttons are pressed. By abstracting the logic design process, Codeless uses visual tools to design user interfaces and action logics. The platform then executes the program logic based on the selected rules.&lt;/p&gt;
 &lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases:&lt;/strong&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Codeless is suitable for developing simple program functionalities such as form filling, data presentation, or basic interactive features. It may not be suitable for complex UI interfaces and processes.&lt;/li&gt;
+&lt;li&gt;No Code App is suitable for developing simple program functionalities such as form filling, data presentation, or basic interactive features. It may not be suitable for complex UI interfaces and processes.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages:&lt;/strong&gt;&lt;/h3&gt;
 &lt;ul&gt;

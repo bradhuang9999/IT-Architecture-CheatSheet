@@ -1,0 +1,181 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>資訊架構備忘表 – 資訊安全</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/</link>
+    <description>Recent content in 資訊安全 on 資訊架構備忘表</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: 防火牆</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/firewall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/firewall/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;防火牆是在邊界網路和內部網路之間設置的一個重要安全裝置，用於減少外部攻擊的風險。它還監控內部流量，以防止未經授權或高風險網站的訪問。防火牆使用多種機制來實現這一目的，包括IP白名單和流量限制等。&lt;/p&gt;
+&lt;h3 id=&#34;防火牆常見的防護機制&#34;&gt;&lt;strong&gt;防火牆常見的防護機制&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;第4層防火牆
+&lt;ul&gt;
+&lt;li&gt;允許特定IP地址&lt;/li&gt;
+&lt;li&gt;允許特定端口號&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;第7層防火牆
+&lt;ul&gt;
+&lt;li&gt;允許特定網址&lt;/li&gt;
+&lt;li&gt;允許特定標頭&lt;/li&gt;
+&lt;li&gt;Web應用防火牆（WAF）
+&lt;ul&gt;
+&lt;li&gt;檢查是否存在XSS、SQL注入等攻擊字串&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;狀態機防火牆
+&lt;ul&gt;
+&lt;li&gt;通過記錄IP地址的前後行為，判斷是否存在異常的網路行為&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 網路位址轉換 NAT</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/nat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/nat/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;NAT（Network Address Translation，網路位址轉換）是一種在邊緣網路的防火牆、路由器或專門的NAT伺服器上進行的技術，用於轉換內部設備和外部設備之間的封包。它將內部IP地址轉換為一個或多個公有IP地址，以防止外部惡意對象通過IP地址識別內部網路的設備清單。當收到響應時，根據請求的URL或端口等信息，NAT可確定將響應發送給哪個內部設備。&lt;/p&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;增加內部網路的安全性：NAT在邊緣網路遮蔽了內部IP地址，使外部設備無法識別內部網路的設備清單，也無法直接通過IP地址呼叫內部設備。&lt;/li&gt;
+&lt;li&gt;省去公有IP地址：NAT可以使用少量的公有IP地址供內部大量設備連接網際網路，從而減少了需要的公有IP地址數量和相應的費用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;增加網路架構的複雜度：所有連接外部網路的封包都需要通過NAT進行轉發和轉換，這增加了網路架構的複雜性。&lt;/li&gt;
+&lt;li&gt;影響網路速度：由於所有連接外部網路的封包都必須經過NAT，如果只有一台NAT伺服器，可能會降低外部網路的連接速度。這個問題可以通過水平擴展多台NAT伺服器來解決。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: VPN</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/vpn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/vpn/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;VPN（Virtual Private Network）通過在公共網路上建立安全的加密連線，保護使用者和伺服器之間的通訊，以防止被惡意第三方竊聽。&lt;/p&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;建立多個不同區域的私有網路之間的安全通訊，讓不同地區的網路環境可以互相連接。&lt;/li&gt;
+&lt;li&gt;提供遠端工作者安全地連接到私有網路，使他們能夠遠程訪問內部資源並進行工作。&lt;/li&gt;
+&lt;li&gt;為網路應用程式提供額外的一層安全防護，保護敏感資料和通訊的機密性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;加解密過程需要計算資源，可能導致傳輸速度變慢。&lt;/li&gt;
+&lt;li&gt;VPN技術較為複雜且需要額外的連接設備，因此管理和架設成本較高。&lt;/li&gt;
+&lt;li&gt;VPN設施有被DDoS等網路攻擊的風險，需要適當的安全措施以保護VPN的可用性和穩定性。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: HTTPS</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/https/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/https/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;HTTPS通過TLS（Transport Layer Security）協議，旨在保護網路雙方的通訊安全和資料完整性。&lt;/p&gt;
+&lt;h3 id=&#34;性質&#34;&gt;&lt;strong&gt;性質&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;HTTPS使用同時採用對稱加密和非對稱加密的方式進行傳輸，以確保資料的安全性和效率。非對稱加密用於建立安全連接和進行身份驗證，對稱加密用於加密傳輸的資料。&lt;/li&gt;
+&lt;li&gt;HTTPS的網址以&amp;quot;https://&amp;ldquo;開頭，並且默認使用的連接埠號是443，而不是HTTP的默認連接埠號80。這樣的設定有助於區分普通的HTTP連接和安全的HTTPS連接。&lt;/li&gt;
+&lt;li&gt;在網際網路上使用HTTPS時，需要向可信的證書頒發機構（CA）申請數字證書。這些數字證書用於驗證伺服器的身份，確保通訊的加密性和真實性。而在私人內部網路中，可以使用自簽名證書，但需要在各裝置上預先安裝和信任該證書。&lt;/li&gt;
+&lt;li&gt;HTTPS的主要作用是保護通訊內容不被竊聽和篡改。通過使用TLS協議，它提供了端到端的加密，確保資料在傳輸過程中的安全性。然而，HTTPS並不能完全防止其他類型的攻擊，如DDoS（分佈式拒絕服務）攻擊、木馬等。因此，綜合安全策略應包括其他安全措施，如防火牆、入侵檢測系統等。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;運作流程&#34;&gt;運作流程&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;申請階段：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;網站產生網站公鑰(site.pub)與網站私鑰(site.key)&lt;/li&gt;
+&lt;li&gt;網站以網站私鑰及網站資訊產生憑證申請文件(site.csr)，將site.csr提供給CA&lt;/li&gt;
+&lt;li&gt;CA驗證身分後以CA私鑰對site.csr內容進行簽章，合併產生網站憑證(site.crt)&lt;/li&gt;
+&lt;li&gt;將網站憑證提供給網站管理單位&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;握手(Handshake)階段：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;瀏覽器向網站請求建立HTTPS連線，網站提供網站憑證(server.crt)&lt;/li&gt;
+&lt;li&gt;檢查憑證日期等憑證資料是否有效&lt;/li&gt;
+&lt;li&gt;如果憑證的issuer是瀏覽器信任的CA，使用瀏覽器內存此CA的public key解開server.crt中的簽章，若能成功解開，代表此憑證由信任的CA頒發。解開後取得此憑證的簽章Hash值。&lt;/li&gt;
+&lt;li&gt;針對簽章的資料使用簽章中指定的Hash算法產生Hash值，與簽章內附的原始Hash值比對。如果兩者相同，可確認資料未被竄改。&lt;/li&gt;
+&lt;li&gt;產生對稱加密使用的金鑰，並使用site.crt中的網站公鑰進行加密，並傳送給網站。&lt;/li&gt;
+&lt;li&gt;網站使用網站私鑰進行解密，取得對稱加密的金鑰。&lt;/li&gt;
+&lt;li&gt;至此階段，雙方完成身分認證，並安全的交換對稱加密的金鑰。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;傳訊階段：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;瀏覽器以對稱加密金鑰對request進行加密，伺服器同樣的金鑰解密&lt;/li&gt;
+&lt;li&gt;伺服器以對稱加密金鑰對response進行加密，瀏覽器同樣的金鑰解密&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: DH算法</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/deffie-hellman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/deffie-hellman/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;Diffie-Hellman（DH）算法用於在不安全的網路環境中生成一組安全的溝通金鑰。&lt;/p&gt;
+&lt;h3 id=&#34;基本流程&#34;&gt;基本流程&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Alice方首先提供一組mod所用的大質數p和較小的指數g給Bob。&lt;/li&gt;
+&lt;li&gt;Alice和Bob各自生成不會在網路中傳輸的私密數字a和b。&lt;/li&gt;
+&lt;li&gt;Alice計算出公開值A=(g^a)%p，並將其提供給Bob。&lt;/li&gt;
+&lt;li&gt;Bob計算出公開值B=(g^b)%p，並將其提供給Alice。&lt;/li&gt;
+&lt;li&gt;Alice使用Bob提供的公開值B和自己的私密數字a計算出金鑰K=(B^a)%p。&lt;/li&gt;
+&lt;li&gt;Bob使用Alice提供的公開值A和自己的私密數字b計算出金鑰K=(A^b)%p。&lt;/li&gt;
+&lt;li&gt;由於雙方使用相同的公開值和私密數字進行計算，因此最終生成的金鑰K將是相同的。&lt;/li&gt;
+&lt;li&gt;如此一來，Alice和Bob可以使用此金鑰進行安全的加密溝通。&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

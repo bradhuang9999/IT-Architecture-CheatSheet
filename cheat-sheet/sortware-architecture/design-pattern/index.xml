@@ -1,0 +1,76 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT Architecture Cheat Sheet – Design Pattern</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/design-pattern/</link>
+    <description>Recent content in Design Pattern on IT Architecture Cheat Sheet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/design-pattern/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: Microservices</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/design-pattern/microservices/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/design-pattern/microservices/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Microservices is a software architecture pattern that involves breaking down a large system into smaller modules to achieve a loosely coupled system architecture. Each microservice has its own independent business logic and connects to its own database. Communication between microservices is typically done through lightweight protocols like HTTP.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Complex large-scale systems aiming to reduce coupling.&lt;/li&gt;
+&lt;li&gt;Systems that require flexible horizontal scalability.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Reduced coupling: By splitting the system into different services, direct internal calls are avoided, resulting in reduced coupling.&lt;/li&gt;
+&lt;li&gt;Easy horizontal scalability: Since each system can have independent containers, additional containers can be dynamically deployed to handle high traffic demands.&lt;/li&gt;
+&lt;li&gt;Technology independence: Different services can use different software architectures and technology choices based on their specific requirements.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Inability to directly cross-call systems: Once split into different services, direct invocation of business logic across services is not possible.&lt;/li&gt;
+&lt;li&gt;Increased network traffic: Communication between microservices relies on network communication, which may increase network traffic requirements.&lt;/li&gt;
+&lt;li&gt;Complex deployment and maintenance: Splitting into multiple services requires independent deployment, and managing them becomes more complex as they need to monitor traffic demands and dynamically scale.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Event Driven</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/design-pattern/event-driven/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/design-pattern/event-driven/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Event-driven pattern is a programming design pattern where events are registered and specific logic is associated with the occurrence of each event. In this pattern, the event handling logic is decoupled from the event triggering points, eliminating the need to directly specify the location of event triggers in the code. Instead, event registration and triggering systems are used to dynamically connect event triggers with their corresponding handling logic.&lt;/p&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Decoupling: Event handling logic is decoupled from event triggers, resulting in a more flexible and maintainable code structure.&lt;/li&gt;
+&lt;li&gt;Asynchrony: Event triggers can quickly respond to users without waiting for the completion of event handling logic, improving system responsiveness.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Unclear flow: Since event registration and triggering systems dynamically call event handling logic, it may be challenging to understand and trace the subsequent event flow.&lt;/li&gt;
+&lt;li&gt;Difficult transaction control: As event handling logics are independent from each other, it is difficult to track and control the results of previous event handling stages within a specific event handling logic.&lt;/li&gt;
+&lt;li&gt;Performance impact: The system&amp;rsquo;s performance may be affected due to the dynamic triggering and processing of a large number of events. Proper design and management of event registration are necessary to avoid performance issues.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>資訊架構備忘表 – Basic Element</title>
+    <title>資訊架構備忘表 – 基本要素</title>
     <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/basic-element/</link>
-    <description>Recent content in Basic Element on 資訊架構備忘表</description>
+    <description>Recent content in 基本要素 on 資訊架構備忘表</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <lastBuildDate>Thu, 05 Jan 2017 00:00:00 +0000</lastBuildDate>
@@ -16,7 +16,7 @@
     
     
     <item>
-      <title>Cheat Sheet: IaC</title>
+      <title>Cheat Sheet: 基礎設施即代碼</title>
       <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/basic-element/iac/</link>
       <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
       
@@ -24,20 +24,20 @@
       <description>
         
         
-        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;IaC (Infrastructure as Code) is a method of documenting the configuration requirements of infrastructure by writing code. With specific tools, this code can be deployed to multiple devices and changes can be made to the device state, achieving the goal of rapid deployment. There are generally two types of code that can be used to implement IaC: one describes the desired changes, and the other describes the desired system state.&lt;/p&gt;
-&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages&lt;/strong&gt;&lt;/h3&gt;
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;IaC (Infrastructure as Code)是一種通過編寫程式碼來記錄基礎設施的相關組態需求的方法。借助特定的工具，可以將這些程式碼部署到多個裝置上，並對裝置狀態進行變更，以實現快速部署的目標。通常有兩種模式的程式碼可以實現 IaC，一種是描述預期的變更內容，另一種是描述預期的系統狀態。&lt;/p&gt;
+&lt;h3 id=&#34;優點&#34;&gt;優點&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Rapid management: Allows for quick deployment and management of the state of multiple servers.&lt;/li&gt;
-&lt;li&gt;Easy understanding of changes: The expected changes are documented in the code.&lt;/li&gt;
-&lt;li&gt;Change traceability: Relevant change history is recorded in the version control system.&lt;/li&gt;
+&lt;li&gt;快速管理：可快速部屬、管理多台伺服器的狀態&lt;/li&gt;
+&lt;li&gt;快速了解異動內容：預計異動內容皆紀錄於代碼&lt;/li&gt;
+&lt;li&gt;可以追溯變更：相關異動歷程的紀錄於版本庫&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;缺點&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Higher complexity in setting up IaC.&lt;/li&gt;
-&lt;li&gt;Learning curve: Due to the complexity of the code and tools involved, it requires a longer learning time.&lt;/li&gt;
+&lt;li&gt;搭建IaC的複雜度較高&lt;/li&gt;
+&lt;li&gt;學習成本: 相關代碼與工具由於較複雜，需要較長學習時間。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;examples&#34;&gt;&lt;strong&gt;Examples&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;案例&#34;&gt;案例&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Anisble&lt;/li&gt;
 &lt;li&gt;Puppet&lt;/li&gt;
@@ -52,7 +52,7 @@
     </item>
     
     <item>
-      <title>Cheat Sheet: Vertical scaling</title>
+      <title>Cheat Sheet: 垂直伸縮</title>
       <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/basic-element/vertical-scaling/</link>
       <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
       
@@ -60,16 +60,49 @@
       <description>
         
         
-        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;When a server has high system resource demands (e.g., CPU, memory, disk space), if it is a physical machine, the solution is to upgrade the memory or disk space directly. If it is a virtual machine, the allocation of more system resources to the VM can be dynamically adjusted.&lt;/p&gt;
-&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages&lt;/strong&gt;&lt;/h3&gt;
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;當伺服器有較高的系統負載需求時(例如：CPU, 記憶體, 硬碟空間)，如果是實體機器，直接換上更高的記憶體或硬碟空間。如果是虛擬機器，則動態調整分配給VM更多的系統資源。&lt;/p&gt;
+&lt;h3 id=&#34;優點&#34;&gt;優點&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Simplicity: By increasing the system resources of a single server, it can handle increased system demands.&lt;/li&gt;
+&lt;li&gt;架構單純: 只要增加單一伺服器更多系統資源，就可以應對更多的系統需求&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;缺點&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Downtime: If it is a physical machine, installing new hardware is required. If it is a virtual machine, a reboot may be necessary.&lt;/li&gt;
-&lt;li&gt;Limited scalability: Vertical scaling is still limited by the hardware constraints of a single server. When system demands exceed these limitations, it is not possible to provide additional system resources.&lt;/li&gt;
+&lt;li&gt;停機時間：如果是實體機器需要安裝新的設備；如果是虛擬機器，可能需要重新開機。&lt;/li&gt;
+&lt;li&gt;有限的伸縮能力：垂直伸縮仍然受限於單一伺服器的硬體限制，當系統需求超過此限制時，無法提供更多的系統需求。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 水平伸縮</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/basic-element/horizontal-scaling/</link>
+      <pubDate>Sun, 25 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/basic-element/horizontal-scaling/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;水平伸縮是一種系統資源管理策略，當系統的資源需求動態上升或下降時，通過增加或減少伺服器或容器的數量，以有效地利用系統資源，提高系統效能。這可以通過根據流量預測進行自動排程，或根據系統負載量的偵測啟動自動伸縮。&lt;/p&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;最佳化系統資源利用率：當系統資源利用率低時，可以動態降低伺服器數量，以節約成本。&lt;/li&gt;
+&lt;li&gt;避免單點故障：多個伺服器或容器共同服務，搭配負載平衡與監控機制可以避免單點故障，提高系統可用性。&lt;/li&gt;
+&lt;li&gt;無須中斷服務：水平伸縮通常在運行期間進行，通過增加更多的伺服器或容器來應對高流量需求，無需停機或中斷服務。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;架構較複雜：需要考慮如何監控和管理伺服器或容器的數量和狀態。&lt;/li&gt;
+&lt;li&gt;非所有系統都適用：進行水平伸縮可能需要對系統進行重新設計，以確保各個元件能夠適應動態變化的環境。&lt;/li&gt;
+&lt;li&gt;網路和通信成本：由於系統由多個伺服器或容器組成，需要額外的通信流量和協調成本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;案例&#34;&gt;&lt;strong&gt;案例&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;容器環境：像是Kubernetes、Docker等容器環境提供了彈性的伸縮功能，可以根據需求自動調整容器的數量。&lt;/li&gt;
+&lt;li&gt;分布式資料庫：在分布式資料庫中，可以根據負載和數據量的變化來調整節點的數量，以提供更好的效能和可靠性。&lt;/li&gt;
+&lt;li&gt;分布式儲存：將數據存儲在多個節點上，可以根據數據量和存儲需求進行伸縮，以確保高效的數據存取和容量管理。&lt;/li&gt;
 &lt;/ul&gt;
 
       </description>

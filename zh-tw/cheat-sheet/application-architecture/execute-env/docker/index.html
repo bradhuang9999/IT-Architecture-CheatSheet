@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.115.2">
+<meta name="generator" content="Hugo 0.115.3">
 <meta name="robots" content="index, follow">
 
 
@@ -19,24 +19,24 @@
 <link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/android-192x192.png" sizes="192x192">
 
 <title>Docker | 資訊架構備忘表</title>
-<meta name="description" content="Overview: A representative product of containerization technology that separates independent software operating environments within the same operating system.
-Use Cases: Development and Testing: Docker can provide a testing environment with minimal system resources that aligns with the production environment during development and testing stages. Direct Use of Packaged Application Images: The Docker ecosystem offers various pre-packaged application images that can be directly used, saving time on setting up and configuring applications in different environments.">
+<meta name="description" content="概述: 容器化技術的代表性產品，在同一作業系統中分隔獨立的軟體運作環境。
+情境: 開發與測試：在開發與測試階段，使用Docker可以少量系統資源提供與正式環境一致的測試環境。 直接使用已封裝的應用程式映像檔：Docker生態系統可找到許多可直接使用的各式應用程式映象檔，節省在不同環境建置、設定應用程式的時間。 隔離多個應用程式環境：在同一伺服器中，分隔多個容器，以避免不同應用程式的版本與設定衝突或是使用時影響其他應用程式 快速部屬：Docker的輕量化特性，適合快速在多台伺服器部屬應用程式 微服務架構：Docker本身的隔離特性適合與微服務進行結合，微服務將應用程式拆為多個小程式，搭配使用Docker可快速、有彈性的依使用需求動態調整各微服務的容器數量。 雲原生程式：由於雲端以系統資源使用量為計價、以及可快速依需求提供多台運算資源。所以Docker的輕量化與快速部屬特性極適合雲端環境。 優點: 輕量化：由於容器內不包含作業系統，可以因此快速啟動，並且使用較少系統資源。 隔離性：各個容器獨立執行，避免應用程式的衝突。並且在任一容器錯誤時，可獨立重啟而不影響其他現有容器。 安全性：以容器隔離不同的應用程式，可增加安全性。 還原性：可監控容器的狀態並自動重啟。 管理機制豐富：內建多種管理容器的機制，例如：資源監控、錯誤偵測、自動重啟等。 避免作業系統產生的衝突：由於在作業系統上再封裝一個抽象層，因此可解決在傳統不同版本作業系統差異而造成的管理困難。 隨時啟用：由於具有獨立的運作環境，不受不同作業系統版本的差異影響。可直接載入並啟用開發商或社群所提供的映象檔。 水平伸縮：易於部屬與擴展，可快速新增或移除容器，以應對流量變化。 CICD機制：將Dockerfile等建置映像檔所需的資料放入版本庫中之後，可自動產生、驗證、部屬映像檔。 提供IaC機制：由於Dockerfile中記載完整的容器建置過程，因此具有IaC的相關優點，例如方便追蹤容器建置的細節差異。 版本控制與快速回滾：可同時有新舊版本的映像檔，方便在錯誤時快速切換版本。 缺點: 安全性：預設以Root身分啟動容器，這會造成潛在的風險。可以改成以其他身分啟動容器，但是實作上較複雜。 學習門檻：Docker的容器化機制有其複雜度，需要較長的學習期間，以理解其資料持久化、網路配置、自動重啟等機制。 ">
 <meta property="og:title" content="Docker" />
-<meta property="og:description" content="Overview: A representative product of containerization technology that separates independent software operating environments within the same operating system.
-Use Cases: Development and Testing: Docker can provide a testing environment with minimal system resources that aligns with the production environment during development and testing stages. Direct Use of Packaged Application Images: The Docker ecosystem offers various pre-packaged application images that can be directly used, saving time on setting up and configuring applications in different environments." />
+<meta property="og:description" content="概述: 容器化技術的代表性產品，在同一作業系統中分隔獨立的軟體運作環境。
+情境: 開發與測試：在開發與測試階段，使用Docker可以少量系統資源提供與正式環境一致的測試環境。 直接使用已封裝的應用程式映像檔：Docker生態系統可找到許多可直接使用的各式應用程式映象檔，節省在不同環境建置、設定應用程式的時間。 隔離多個應用程式環境：在同一伺服器中，分隔多個容器，以避免不同應用程式的版本與設定衝突或是使用時影響其他應用程式 快速部屬：Docker的輕量化特性，適合快速在多台伺服器部屬應用程式 微服務架構：Docker本身的隔離特性適合與微服務進行結合，微服務將應用程式拆為多個小程式，搭配使用Docker可快速、有彈性的依使用需求動態調整各微服務的容器數量。 雲原生程式：由於雲端以系統資源使用量為計價、以及可快速依需求提供多台運算資源。所以Docker的輕量化與快速部屬特性極適合雲端環境。 優點: 輕量化：由於容器內不包含作業系統，可以因此快速啟動，並且使用較少系統資源。 隔離性：各個容器獨立執行，避免應用程式的衝突。並且在任一容器錯誤時，可獨立重啟而不影響其他現有容器。 安全性：以容器隔離不同的應用程式，可增加安全性。 還原性：可監控容器的狀態並自動重啟。 管理機制豐富：內建多種管理容器的機制，例如：資源監控、錯誤偵測、自動重啟等。 避免作業系統產生的衝突：由於在作業系統上再封裝一個抽象層，因此可解決在傳統不同版本作業系統差異而造成的管理困難。 隨時啟用：由於具有獨立的運作環境，不受不同作業系統版本的差異影響。可直接載入並啟用開發商或社群所提供的映象檔。 水平伸縮：易於部屬與擴展，可快速新增或移除容器，以應對流量變化。 CICD機制：將Dockerfile等建置映像檔所需的資料放入版本庫中之後，可自動產生、驗證、部屬映像檔。 提供IaC機制：由於Dockerfile中記載完整的容器建置過程，因此具有IaC的相關優點，例如方便追蹤容器建置的細節差異。 版本控制與快速回滾：可同時有新舊版本的映像檔，方便在錯誤時快速切換版本。 缺點: 安全性：預設以Root身分啟動容器，這會造成潛在的風險。可以改成以其他身分啟動容器，但是實作上較複雜。 學習門檻：Docker的容器化機制有其複雜度，需要較長的學習期間，以理解其資料持久化、網路配置、自動重啟等機制。 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/execute-env/docker/" /><meta property="article:section" content="Cheat Sheet" />
 <meta property="article:published_time" content="2023-06-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-07-13T07:04:50+08:00" />
+<meta property="article:modified_time" content="2023-07-16T22:09:55+08:00" />
 <meta itemprop="name" content="Docker">
-<meta itemprop="description" content="Overview: A representative product of containerization technology that separates independent software operating environments within the same operating system.
-Use Cases: Development and Testing: Docker can provide a testing environment with minimal system resources that aligns with the production environment during development and testing stages. Direct Use of Packaged Application Images: The Docker ecosystem offers various pre-packaged application images that can be directly used, saving time on setting up and configuring applications in different environments."><meta itemprop="datePublished" content="2023-06-10T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2023-07-13T07:04:50+08:00" />
-<meta itemprop="wordCount" content="441">
+<meta itemprop="description" content="概述: 容器化技術的代表性產品，在同一作業系統中分隔獨立的軟體運作環境。
+情境: 開發與測試：在開發與測試階段，使用Docker可以少量系統資源提供與正式環境一致的測試環境。 直接使用已封裝的應用程式映像檔：Docker生態系統可找到許多可直接使用的各式應用程式映象檔，節省在不同環境建置、設定應用程式的時間。 隔離多個應用程式環境：在同一伺服器中，分隔多個容器，以避免不同應用程式的版本與設定衝突或是使用時影響其他應用程式 快速部屬：Docker的輕量化特性，適合快速在多台伺服器部屬應用程式 微服務架構：Docker本身的隔離特性適合與微服務進行結合，微服務將應用程式拆為多個小程式，搭配使用Docker可快速、有彈性的依使用需求動態調整各微服務的容器數量。 雲原生程式：由於雲端以系統資源使用量為計價、以及可快速依需求提供多台運算資源。所以Docker的輕量化與快速部屬特性極適合雲端環境。 優點: 輕量化：由於容器內不包含作業系統，可以因此快速啟動，並且使用較少系統資源。 隔離性：各個容器獨立執行，避免應用程式的衝突。並且在任一容器錯誤時，可獨立重啟而不影響其他現有容器。 安全性：以容器隔離不同的應用程式，可增加安全性。 還原性：可監控容器的狀態並自動重啟。 管理機制豐富：內建多種管理容器的機制，例如：資源監控、錯誤偵測、自動重啟等。 避免作業系統產生的衝突：由於在作業系統上再封裝一個抽象層，因此可解決在傳統不同版本作業系統差異而造成的管理困難。 隨時啟用：由於具有獨立的運作環境，不受不同作業系統版本的差異影響。可直接載入並啟用開發商或社群所提供的映象檔。 水平伸縮：易於部屬與擴展，可快速新增或移除容器，以應對流量變化。 CICD機制：將Dockerfile等建置映像檔所需的資料放入版本庫中之後，可自動產生、驗證、部屬映像檔。 提供IaC機制：由於Dockerfile中記載完整的容器建置過程，因此具有IaC的相關優點，例如方便追蹤容器建置的細節差異。 版本控制與快速回滾：可同時有新舊版本的映像檔，方便在錯誤時快速切換版本。 缺點: 安全性：預設以Root身分啟動容器，這會造成潛在的風險。可以改成以其他身分啟動容器，但是實作上較複雜。 學習門檻：Docker的容器化機制有其複雜度，需要較長的學習期間，以理解其資料持久化、網路配置、自動重啟等機制。 "><meta itemprop="datePublished" content="2023-06-10T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-07-16T22:09:55+08:00" />
+<meta itemprop="wordCount" content="24">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Docker"/>
-<meta name="twitter:description" content="Overview: A representative product of containerization technology that separates independent software operating environments within the same operating system.
-Use Cases: Development and Testing: Docker can provide a testing environment with minimal system resources that aligns with the production environment during development and testing stages. Direct Use of Packaged Application Images: The Docker ecosystem offers various pre-packaged application images that can be directly used, saving time on setting up and configuring applications in different environments."/>
+<meta name="twitter:description" content="概述: 容器化技術的代表性產品，在同一作業系統中分隔獨立的軟體運作環境。
+情境: 開發與測試：在開發與測試階段，使用Docker可以少量系統資源提供與正式環境一致的測試環境。 直接使用已封裝的應用程式映像檔：Docker生態系統可找到許多可直接使用的各式應用程式映象檔，節省在不同環境建置、設定應用程式的時間。 隔離多個應用程式環境：在同一伺服器中，分隔多個容器，以避免不同應用程式的版本與設定衝突或是使用時影響其他應用程式 快速部屬：Docker的輕量化特性，適合快速在多台伺服器部屬應用程式 微服務架構：Docker本身的隔離特性適合與微服務進行結合，微服務將應用程式拆為多個小程式，搭配使用Docker可快速、有彈性的依使用需求動態調整各微服務的容器數量。 雲原生程式：由於雲端以系統資源使用量為計價、以及可快速依需求提供多台運算資源。所以Docker的輕量化與快速部屬特性極適合雲端環境。 優點: 輕量化：由於容器內不包含作業系統，可以因此快速啟動，並且使用較少系統資源。 隔離性：各個容器獨立執行，避免應用程式的衝突。並且在任一容器錯誤時，可獨立重啟而不影響其他現有容器。 安全性：以容器隔離不同的應用程式，可增加安全性。 還原性：可監控容器的狀態並自動重啟。 管理機制豐富：內建多種管理容器的機制，例如：資源監控、錯誤偵測、自動重啟等。 避免作業系統產生的衝突：由於在作業系統上再封裝一個抽象層，因此可解決在傳統不同版本作業系統差異而造成的管理困難。 隨時啟用：由於具有獨立的運作環境，不受不同作業系統版本的差異影響。可直接載入並啟用開發商或社群所提供的映象檔。 水平伸縮：易於部屬與擴展，可快速新增或移除容器，以應對流量變化。 CICD機制：將Dockerfile等建置映像檔所需的資料放入版本庫中之後，可自動產生、驗證、部屬映像檔。 提供IaC機制：由於Dockerfile中記載完整的容器建置過程，因此具有IaC的相關優點，例如方便追蹤容器建置的細節差異。 版本控制與快速回滾：可同時有新舊版本的映像檔，方便在錯誤時快速切換版本。 缺點: 安全性：預設以Root身分啟動容器，這會造成潛在的風險。可以改成以其他身分啟動容器，但是實作上較複雜。 學習門檻：Docker的容器化機制有其複雜度，需要較長的學習期間，以理解其資料持久化、網路配置、自動重啟等機制。 "/>
 
 
 
@@ -125,21 +125,87 @@ if (!doNotTrack) {
   <ul class="ul-1">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-concept-li">
   <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-concept-check"/>
-  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-concept-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-concept"><span class="">Common Concept</span></a></label>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-concept-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-concept"><span class="">通用概念</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-element-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjective-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjective-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjective-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjective"><span class="">目標</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivehigh-performance-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivehigh-performance-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivehigh-performance-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/high-performance/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivehigh-performance"><span class="">高效率</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivecost-optimization-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivecost-optimization-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivecost-optimization-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/cost-optimization/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivecost-optimization"><span class="">成本最佳化</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivesecurity-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivesecurity-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivesecurity-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/security/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivesecurity"><span class="">資訊安全</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectiveautomation-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectiveautomation-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectiveautomation-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/automation/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectiveautomation"><span class="">自動化</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivecompliance-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivecompliance-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivecompliance-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/compliance/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivecompliance"><span class="">合規性</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivehigh-reliability-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivehigh-reliability-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivehigh-reliability-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/high-reliability/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptobjectivehigh-reliability"><span class="">高可靠</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattribute-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattribute-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattribute-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattribute"><span class="">屬性</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributescalability-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributescalability-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributescalability-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/scalability/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributescalability"><span class="">伸縮性</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributefault-tolerance-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributefault-tolerance-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributefault-tolerance-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/fault-tolerance/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributefault-tolerance"><span class="">高容錯</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributeusability-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributeusability-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributeusability-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/usability/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributeusability"><span class="">易用性</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributelow-coupling-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributelow-coupling-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributelow-coupling-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/low-coupling/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributelow-coupling"><span class="">低耦合</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributeportability-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributeportability-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributeportability-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/portability/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributeportability"><span class="">可移植性</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributeextensibility-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributeextensibility-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributeextensibility-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/extensibility/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptattributeextensibility"><span class="">可擴展性</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-element-li">
   <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-element-check"/>
-  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-element-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/basic-element/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-element"><span class="">Basic Element</span></a></label>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-element-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/basic-element/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-element"><span class="">基本要素</span></a></label>
   
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-elementiac-li">
   <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-elementiac-check"/>
-  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-elementiac-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/basic-element/iac/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-elementiac"><span class="">IaC</span></a></label>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-elementiac-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/basic-element/iac/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-elementiac"><span class="">基礎設施即代碼</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-elementvertical-scaling-li">
   <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-elementvertical-scaling-check"/>
-  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-elementvertical-scaling-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/basic-element/vertical-scaling/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-elementvertical-scaling"><span class="">Vertical scaling</span></a></label>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-elementvertical-scaling-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/basic-element/vertical-scaling/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-elementvertical-scaling"><span class="">垂直伸縮</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-elementhorizontal-scaling-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-elementhorizontal-scaling-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-elementhorizontal-scaling-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/basic-element/horizontal-scaling/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetcommon-conceptbasic-elementhorizontal-scaling"><span class="">水平伸縮</span></a></label>
   
 </li>
   </ul>
@@ -147,12 +213,12 @@ if (!doNotTrack) {
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecture-li">
   <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecture-check" checked/>
-  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecture-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecture"><span class="">Application Architecture</span></a></label>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecture-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecture"><span class="">應用程式架構</span></a></label>
   
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureexecute-env-li">
   <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureexecute-env-check" checked/>
-  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureexecute-env-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/execute-env/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureexecute-env"><span class="">Execute Envirentment</span></a></label>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureexecute-env-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/execute-env/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureexecute-env"><span class="">執行環境</span></a></label>
   
   <ul class="ul-3 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureexecute-envdocker-li">
@@ -163,20 +229,353 @@ if (!doNotTrack) {
   <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureexecute-envvm-check"/>
   <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureexecute-envvm-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/execute-env/vm/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureexecute-envvm"><span class="">VM</span></a></label>
   
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureexecute-envkubernetes-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureexecute-envkubernetes-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureexecute-envkubernetes-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/execute-env/kubernetes/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureexecute-envkubernetes"><span class="">Kubernetes</span></a></label>
+  
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-interface-li">
-  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-interface-check"/>
-  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-interface-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/application-interface/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-interface"><span class="">Application Interface</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-view-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-view-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-view-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/application-view/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-view"><span class="">應用程式介面</span></a></label>
   
   <ul class="ul-3 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-interfaceweb-application-li">
-  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-interfaceweb-application-check"/>
-  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-interfaceweb-application-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/application-interface/web-application/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-interfaceweb-application"><span class="">Web Application</span></a></label>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-viewweb-application-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-viewweb-application-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-viewweb-application-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/application-view/web-application/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-viewweb-application"><span class="">網路應用程式</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-interfaceprogressive-web-apps-li">
-  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-interfaceprogressive-web-apps-check"/>
-  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-interfaceprogressive-web-apps-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/application-interface/progressive-web-apps/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-interfaceprogressive-web-apps"><span class="">Progressive Web Apps</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-viewprogressive-web-apps-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-viewprogressive-web-apps-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-viewprogressive-web-apps-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/application-view/progressive-web-apps/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-viewprogressive-web-apps"><span class="">PWA</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-viewmobile-app-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-viewmobile-app-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-viewmobile-app-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/application-view/mobile-app/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-viewmobile-app"><span class="">手機應用程式</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-viewno-code-app-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-viewno-code-app-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-viewno-code-app-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/application-view/no-code-app/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architectureapplication-viewno-code-app"><span class="">無程式碼 App</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-control-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-control-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-control-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-control"><span class="">邏輯控制</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controlbatch-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controlbatch-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controlbatch-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/batch/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controlbatch"><span class="">Batch</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controlweb-api-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controlweb-api-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controlweb-api-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/web-api/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controlweb-api"><span class="">Web API</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controlserverless-function-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controlserverless-function-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controlserverless-function-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/serverless-function/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controlserverless-function"><span class="">無伺服器 Function</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controlmessage-queue-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controlmessage-queue-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controlmessage-queue-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/message-queue/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controlmessage-queue"><span class="">訊息佇列</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controldb-procedure-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controldb-procedure-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controldb-procedure-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/db-procedure/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controldb-procedure"><span class="">DB Procedure</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controldb-function-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controldb-function-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controldb-function-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/db-function/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controldb-function"><span class="">DB Function</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controldb-trigger-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controldb-trigger-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controldb-trigger-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/db-trigger/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetapplication-architecturelogic-controldb-trigger"><span class="">DB Trigger</span></a></label>
+  
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecture-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecture-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecture-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecture"><span class="">軟體架構</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principle-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principle-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principle-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/solid-principle/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principle"><span class="">SOLID 原則</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principlesingle-responsibility-principle-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principlesingle-responsibility-principle-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principlesingle-responsibility-principle-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/solid-principle/single-responsibility-principle/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principlesingle-responsibility-principle"><span class="">單一職責原則</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principleinterface-segregation-principle-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principleinterface-segregation-principle-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principleinterface-segregation-principle-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/solid-principle/interface-segregation-principle/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principleinterface-segregation-principle"><span class="">介面隔離原則</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principleliskov-substitution-principle-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principleliskov-substitution-principle-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principleliskov-substitution-principle-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/solid-principle/liskov-substitution-principle/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principleliskov-substitution-principle"><span class="">里氏替換原則</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principledependency-inversion-principle-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principledependency-inversion-principle-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principledependency-inversion-principle-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/solid-principle/dependency-inversion-principle/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principledependency-inversion-principle"><span class="">依賴反轉原則</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principleopen-closed-principle-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principleopen-closed-principle-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principleopen-closed-principle-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/solid-principle/open-closed-principle/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturesolid-principleopen-closed-principle"><span class="">開放封閉原則</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-security-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-security-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-security-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-security"><span class="">網路應用程式安全</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securitycontent-security-policy-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securitycontent-security-policy-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securitycontent-security-policy-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/content-security-policy/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securitycontent-security-policy"><span class="">內容安全策略 CSP</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securitysame-origin-policy-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securitysame-origin-policy-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securitysame-origin-policy-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/same-origin-policy/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securitysame-origin-policy"><span class="">同源政策</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securityprevent-xss-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securityprevent-xss-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securityprevent-xss-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/prevent-xss/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securityprevent-xss"><span class="">防範 XSS</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securityprevent-csrf-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securityprevent-csrf-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securityprevent-csrf-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/prevent-csrf/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securityprevent-csrf"><span class="">防範 跨站請求偽造</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securityprevent-sql-injection-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securityprevent-sql-injection-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securityprevent-sql-injection-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/prevent-sql-injection/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architectureweb-app-securityprevent-sql-injection"><span class="">防範 SQL injection</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturedesign-pattern-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturedesign-pattern-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturedesign-pattern-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/design-pattern/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturedesign-pattern"><span class="">設計模式</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturedesign-patternmicroservices-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturedesign-patternmicroservices-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturedesign-patternmicroservices-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/design-pattern/microservices/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturedesign-patternmicroservices"><span class="">微服務</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturedesign-patternevent-driven-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturedesign-patternevent-driven-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturedesign-patternevent-driven-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/design-pattern/event-driven/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetsortware-architecturedesign-patternevent-driven"><span class="">事件驅動</span></a></label>
+  
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecture-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecture-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecture-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecture"><span class="">網路架構</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardware-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardware-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardware-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-hardware/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardware"><span class="">設備</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardwarehub-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardwarehub-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardwarehub-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-hardware/hub/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardwarehub"><span class="">Hub</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardwareswitch-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardwareswitch-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardwareswitch-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-hardware/switch/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardwareswitch"><span class="">Switch</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardwarerouter-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardwarerouter-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardwarerouter-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-hardware/router/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardwarerouter"><span class="">路由器</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardwaremodem-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardwaremodem-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardwaremodem-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-hardware/modem/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-hardwaremodem"><span class="">數據機</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-linkage-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-linkage-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-linkage-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-linkage/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-linkage"><span class="">連接</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-linkageleased-line-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-linkageleased-line-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-linkageleased-line-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-linkage/leased-line/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-linkageleased-line"><span class="">專線</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-linkageproxy-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-linkageproxy-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-linkageproxy-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-linkage/proxy/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-linkageproxy"><span class="">代理伺服器</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-linkagereverse-proxy-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-linkagereverse-proxy-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-linkagereverse-proxy-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-linkage/reverse-proxy/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-linkagereverse-proxy"><span class="">反向代理</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-security-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-security-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-security-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-security"><span class="">資訊安全</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securityfirewall-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securityfirewall-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securityfirewall-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/firewall/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securityfirewall"><span class="">防火牆</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securitynat-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securitynat-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securitynat-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/nat/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securitynat"><span class="">網路位址轉換 NAT</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securityvpn-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securityvpn-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securityvpn-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/vpn/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securityvpn"><span class="">VPN</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securityhttps-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securityhttps-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securityhttps-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/https/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securityhttps"><span class="">HTTPS</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securitydeffie-hellman-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securitydeffie-hellman-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securitydeffie-hellman-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/deffie-hellman/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetnetwork-architecturenetwork-securitydeffie-hellman"><span class="">DH算法</span></a></label>
+  
+</li>
+  </ul>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecture-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecture-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecture-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecture"><span class="">資料儲存架構</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infra-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infra-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infra-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infra"><span class="">儲存基礎設施</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infradas-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infradas-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infradas-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/das/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infradas"><span class="">DAS</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infranas-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infranas-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infranas-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/nas/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infranas"><span class="">NAS</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infrasan-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infrasan-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infrasan-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/san/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infrasan"><span class="">SAN</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infraraid-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infraraid-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infraraid-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/raid/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infraraid"><span class="">RAID</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infrablock-storage-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infrablock-storage-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infrablock-storage-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/block-storage/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infrablock-storage"><span class="">Block Storage</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infraobject-storage-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infraobject-storage-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infraobject-storage-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/object-storage/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturestorage-infraobject-storage"><span class="">Object Storage</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-database-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-database-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-database-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-database"><span class="">關聯式資料庫</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasedata-normalization-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasedata-normalization-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasedata-normalization-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/data-normalization/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasedata-normalization"><span class="">正規化</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasedata-denormalization-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasedata-denormalization-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasedata-denormalization-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/data-denormalization/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasedata-denormalization"><span class="">反正規化</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasequery-optimization-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasequery-optimization-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasequery-optimization-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/query-optimization/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasequery-optimization"><span class="">查詢最佳化</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasesharding-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasesharding-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasesharding-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/sharding/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasesharding"><span class="">Sharding</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasepartition-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasepartition-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasepartition-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/partition/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturerelational-databasepartition"><span class="">Partition</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-database-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-database-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-database-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-database"><span class="">NoSQL資料庫</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-databasedocument-database-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-databasedocument-database-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-databasedocument-database-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/document-database/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-databasedocument-database"><span class="">文件資料庫</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-databasecolumnar-database-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-databasecolumnar-database-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-databasecolumnar-database-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/columnar-database/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-databasecolumnar-database"><span class="">列式資料庫</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-databasegraph-database-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-databasegraph-database-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-databasegraph-database-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/graph-database/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-databasegraph-database"><span class="">圖形資料庫</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-databasekey-value-database-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-databasekey-value-database-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-databasekey-value-database-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/key-value-database/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturenosql-databasekey-value-database"><span class="">鍵值資料庫</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-design-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-design-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-design-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-design"><span class="">高可用性儲存</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-designcold-backup-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-designcold-backup-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-designcold-backup-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/cold-backup/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-designcold-backup"><span class="">冷備份</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-designwarm-backup-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-designwarm-backup-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-designwarm-backup-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/warm-backup/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-designwarm-backup"><span class="">溫備份</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-designhot-backup-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-designhot-backup-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-designhot-backup-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/hot-backup/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-designhot-backup"><span class="">熱備份</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-designmulti-site-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-designmulti-site-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-designmulti-site-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/multi-site/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architectureha-storage-designmulti-site"><span class="">多站點</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-security-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-security-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-security-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/data-security/" class="align-left pl-0  td-sidebar-link td-sidebar-link__section" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-security"><span class="">Data Security</span></a></label>
+  
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-securitysymmetric-cryptography-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-securitysymmetric-cryptography-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-securitysymmetric-cryptography-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/data-security/symmetric-cryptography/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-securitysymmetric-cryptography"><span class="">對稱加密</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-securityasymmetric-cryptography-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-securityasymmetric-cryptography-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-securityasymmetric-cryptography-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/data-security/asymmetric-cryptography/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-securityasymmetric-cryptography"><span class="">非對稱性加密</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-securityhashing-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-securityhashing-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-securityhashing-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/data-security/hashing/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-securityhashing"><span class="">Hash雜湊</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-securitydigital-signature-li">
+  <input type="checkbox" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-securitydigital-signature-check"/>
+  <label for="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-securitydigital-signature-check"><a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/data-security/digital-signature/" class="align-left pl-0  td-sidebar-link td-sidebar-link__page" id="m-it-architecture-cheatsheetzh-twcheat-sheetdata-architecturedata-securitydigital-signature"><span class="">數位簽名</span></a></label>
   
 </li>
   </ul>
@@ -206,10 +605,10 @@ if (!doNotTrack) {
   <ul>
     <li>
       <ul>
-        <li><a href="#overview"><strong>Overview:</strong></a></li>
-        <li><a href="#use-cases"><strong>Use Cases:</strong></a></li>
-        <li><a href="#advantages"><strong>Advantages:</strong></a></li>
-        <li><a href="#disadvantages"><strong>Disadvantages:</strong></a></li>
+        <li><a href="#概述">概述:</a></li>
+        <li><a href="#情境">情境:</a></li>
+        <li><a href="#優點">優點:</a></li>
+        <li><a href="#缺點">缺點:</a></li>
       </ul>
     </li>
   </ul>
@@ -255,10 +654,10 @@ if (!doNotTrack) {
     <a href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/">Cheat Sheet</a>
   </li>
   <li class="breadcrumb-item">
-    <a href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/">Application Architecture</a>
+    <a href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/">應用程式架構</a>
   </li>
   <li class="breadcrumb-item">
-    <a href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/execute-env/">Execute Envirentment</a>
+    <a href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/execute-env/">執行環境</a>
   </li>
   <li class="breadcrumb-item active" aria-current="page">
     <a href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/execute-env/docker/" aria-disabled="true" class="btn-link disabled">Docker</a>
@@ -286,35 +685,35 @@ if (!doNotTrack) {
 
 		
 	</header>    
-	<h3 id="overview"><strong>Overview:</strong></h3>
-<p>A representative product of containerization technology that separates independent software operating environments within the same operating system.</p>
-<h3 id="use-cases"><strong>Use Cases:</strong></h3>
+	<h3 id="概述">概述:</h3>
+<p>容器化技術的代表性產品，在同一作業系統中分隔獨立的軟體運作環境。</p>
+<h3 id="情境">情境:</h3>
 <ul>
-<li>Development and Testing: Docker can provide a testing environment with minimal system resources that aligns with the production environment during development and testing stages.</li>
-<li>Direct Use of Packaged Application Images: The Docker ecosystem offers various pre-packaged application images that can be directly used, saving time on setting up and configuring applications in different environments.</li>
-<li>Isolation of Multiple Application Environments: Within the same server, containers can be used to separate multiple applications to avoid conflicts in versions and configurations or interference between applications.</li>
-<li>Rapid Deployment: Docker&rsquo;s lightweight nature makes it suitable for quickly deploying applications across multiple servers.</li>
-<li>Microservices Architecture: Docker&rsquo;s isolation capabilities make it suitable for integration with microservices. By breaking down applications into smaller components, Docker enables dynamic scaling of container instances based on demand.</li>
-<li>Cloud-Native Development: Docker&rsquo;s lightweight and fast deployment features are well-suited for cloud environments, which bill based on resource usage and provide scalable computing resources on-demand.</li>
+<li>開發與測試：在開發與測試階段，使用Docker可以少量系統資源提供與正式環境一致的測試環境。</li>
+<li>直接使用已封裝的應用程式映像檔：Docker生態系統可找到許多可直接使用的各式應用程式映象檔，節省在不同環境建置、設定應用程式的時間。</li>
+<li>隔離多個應用程式環境：在同一伺服器中，分隔多個容器，以避免不同應用程式的版本與設定衝突或是使用時影響其他應用程式</li>
+<li>快速部屬：Docker的輕量化特性，適合快速在多台伺服器部屬應用程式</li>
+<li>微服務架構：Docker本身的隔離特性適合與微服務進行結合，微服務將應用程式拆為多個小程式，搭配使用Docker可快速、有彈性的依使用需求動態調整各微服務的容器數量。</li>
+<li>雲原生程式：由於雲端以系統資源使用量為計價、以及可快速依需求提供多台運算資源。所以Docker的輕量化與快速部屬特性極適合雲端環境。</li>
 </ul>
-<h3 id="advantages"><strong>Advantages:</strong></h3>
+<h3 id="優點">優點:</h3>
 <ul>
-<li>Lightweight: Containers start quickly and consume fewer system resources since they don&rsquo;t include an operating system.</li>
-<li>Isolation: Each container runs independently, avoiding conflicts between applications. If an error occurs in one container, it can be restarted independently without affecting other containers.</li>
-<li>Security: Container isolation enhances security by separating different applications.</li>
-<li>Recoverability: Containers can be monitored, and automatic restart is possible.</li>
-<li>Rich Management Mechanisms: Docker provides built-in mechanisms for managing containers, such as resource monitoring, error detection, and automatic restart.</li>
-<li>Avoiding OS Conflicts: Docker abstracts away differences between different versions of operating systems, solving management challenges caused by those differences.</li>
-<li>On-Demand Activation: Containers can be directly loaded and activated from provided images by developers or the community, unaffected by differences in operating system versions.</li>
-<li>Horizontal Scaling: Easy to deploy and scale, allowing for quick addition or removal of containers to accommodate changes in traffic.</li>
-<li>CI/CD Mechanism: Dockerfiles and other necessary build files stored in version control can automatically generate, validate, and deploy container images.</li>
-<li>Provides IaC Mechanism: Dockerfiles contain the complete process for building containers, offering advantages similar to Infrastructure as Code (IaC), such as easy tracking of container build details.</li>
-<li>Version Control and Quick Rollback: Multiple versions of container images can be maintained, enabling quick switching between versions in case of errors.</li>
+<li>輕量化：由於容器內不包含作業系統，可以因此快速啟動，並且使用較少系統資源。</li>
+<li>隔離性：各個容器獨立執行，避免應用程式的衝突。並且在任一容器錯誤時，可獨立重啟而不影響其他現有容器。</li>
+<li>安全性：以容器隔離不同的應用程式，可增加安全性。</li>
+<li>還原性：可監控容器的狀態並自動重啟。</li>
+<li>管理機制豐富：內建多種管理容器的機制，例如：資源監控、錯誤偵測、自動重啟等。</li>
+<li>避免作業系統產生的衝突：由於在作業系統上再封裝一個抽象層，因此可解決在傳統不同版本作業系統差異而造成的管理困難。</li>
+<li>隨時啟用：由於具有獨立的運作環境，不受不同作業系統版本的差異影響。可直接載入並啟用開發商或社群所提供的映象檔。</li>
+<li>水平伸縮：易於部屬與擴展，可快速新增或移除容器，以應對流量變化。</li>
+<li>CICD機制：將Dockerfile等建置映像檔所需的資料放入版本庫中之後，可自動產生、驗證、部屬映像檔。</li>
+<li>提供IaC機制：由於Dockerfile中記載完整的容器建置過程，因此具有IaC的相關優點，例如方便追蹤容器建置的細節差異。</li>
+<li>版本控制與快速回滾：可同時有新舊版本的映像檔，方便在錯誤時快速切換版本。</li>
 </ul>
-<h3 id="disadvantages"><strong>Disadvantages:</strong></h3>
+<h3 id="缺點">缺點:</h3>
 <ul>
-<li>Security: Containers are typically started with root privileges by default, which can pose potential risks. It is possible to start containers with other user identities, but implementation can be complex.</li>
-<li>Learning Curve: Docker&rsquo;s containerization mechanism has its complexity, requiring a significant learning period to understand aspects such as data persistence, network configuration, and automatic restart mechanisms.</li>
+<li>安全性：預設以Root身分啟動容器，這會造成潛在的風險。可以改成以其他身分啟動容器，但是實作上較複雜。</li>
+<li>學習門檻：Docker的容器化機制有其複雜度，需要較長的學習期間，以理解其資料持久化、網路配置、自動重啟等機制。</li>
 </ul>
 
 	
@@ -382,7 +781,7 @@ if (!doNotTrack) {
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 13, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/c74e5247b5c2369d75e57edec8f268287ee2a20b">Add article (c74e524)</a>
+  最後修改 July 16, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/a489bf3439f385a4ea9854a27b5292b0bdb9d1c2">V0.1 (a489bf3)</a>
 </div>
 
 </div>

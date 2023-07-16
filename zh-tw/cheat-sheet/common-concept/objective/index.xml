@@ -1,0 +1,147 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>資訊架構備忘表 – 目標</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/</link>
+    <description>Recent content in 目標 on 資訊架構備忘表</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: 高效率</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/high-performance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/high-performance/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;高效率是架構設計的其中一項目標，高效率的架構可以提升使用者的滿意度而帶來更多營收也可以使企業更快速的應對外在環境變化。&lt;/p&gt;
+&lt;p&gt;可能的做法包含：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;通過事先了解系統運作特性，選擇適當的工具。每一種工具都是為了特定情境所設計，選擇正確的工具，可以大幅增加系統效率。例如，如果已知系統需要即時統計目前網站產品銷售情況，在銷售量很大的情況下使用列式資料庫通常會比傳統關聯性資料庫更有效率。&lt;/li&gt;
+&lt;li&gt;在合適的位置、時機進行計算。例如避免在使用者端或網站伺服器端進行大規模運算，因為瀏覽器通常可使用的系統資源較少，而網站伺服器需要服務大量的用戶。轉而將大規模運算透過Stream Data Pipeline進行分析，或是Batch程式批次進行處理。&lt;/li&gt;
+&lt;li&gt;水平自動伸縮：通過自動按照系統負載而擴增伺服器數量，可容納更多的系統資源需求。&lt;/li&gt;
+&lt;li&gt;優化計算邏輯：通過了解計算需求而設計適合的演算法，可大幅減少冗餘計算，而提升系統運作效率&lt;/li&gt;
+&lt;li&gt;緩存計算結果：通過緩存耗時或需要通過網路下載的計算結果。若在伺服器端或緩存伺服器即可取得結果，可避免重複地計算與冗餘的網路需求。&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 成本最佳化</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/cost-optimization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/cost-optimization/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;在進行架構設計時，成本是極重要的考慮因素。由於通常越高等級的服務，就需要最高的成本。例如，雖然RTO越低越好，但是RTO越低往往需要越高的成本。因此需要仔細確認所需的服務等級並進行成本最佳化。&lt;/p&gt;
+&lt;h3 id=&#34;精確計算成本&#34;&gt;精確計算成本&lt;/h3&gt;
+&lt;p&gt;由於成本性質差異，在計算成本時，分別資本支出與維護費用是較精確的做法。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Capital Expenditure (CapEx): 初次購賣設備、服務的費用、建置成本&lt;/li&gt;
+&lt;li&gt;Operating Expenditure (OpEx): 維護設備服務的費用、人力成本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;其他優化成本方式&#34;&gt;其他優化成本方式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;使用雲端服務：通過使用雲端服務，並搭配以使用量計價的模式，是一種常見優化成本
+方式。&lt;/li&gt;
+&lt;li&gt;水平自動伸縮：按照使用需求，動態配置系統資源，可減少冗餘配置&lt;/li&gt;
+&lt;li&gt;監控資源使用情況，並優化資源配置&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 資訊安全</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/security/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;由於現今有許多惡意的外部或內部成員可能會對試圖突破資訊安全防護，藉此牟利。這通常會對組織造成極大危害。例如 營運資料、客戶資料外洩，都會對組織的聲譽及金錢造成極大損害。
+為避免此情況發生，在設計架構初期，就需要考慮資訊安全因素。並且時時監控各風險情況。需考慮的安全因素包含深度防禦、零信任等重要措施。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 自動化</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/automation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/automation/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;盡可能的在架構設計中進行自動化有許多優點，包含可以減少人工錯誤發生可能性、將人力配置於更關鍵的事物、更快速應對外部與內部變化、大規模部屬與管理環境。&lt;/p&gt;
+&lt;h3 id=&#34;可能方式&#34;&gt;可能方式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;自動化部屬&lt;/li&gt;
+&lt;li&gt;自動化監控、報警&lt;/li&gt;
+&lt;li&gt;自動化測試&lt;/li&gt;
+&lt;li&gt;自動化資料備份&lt;/li&gt;
+&lt;li&gt;自動化排除錯誤&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 合規性</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/compliance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/compliance/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;根據組織所在的地區與產業，通常會有不同的合規性要求。違反合規性要求通常會導致罰款並對組織聲譽造成影響。在設計架構時，需要仔細確認須遵守的合規性要求範圍。避免在架構設計後，因不符合規性要求，需要額外時間與成本進行變更。&lt;/p&gt;
+&lt;p&gt;可能的合規性要求包含：歐盟的GDPR個資要求，金融與醫療產業通常也會有專門的合規性要求，另外多個地區有規定資料可存放的區域範圍。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 高可靠</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/high-reliability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/high-reliability/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;一個高可靠的系統，可以讓客戶與內部成員信任。這有助於提升信譽並帶來更多收益。不過要達到高可靠的系統，通常也有更多成本需求，例如冗餘配置、備份資料。&lt;/p&gt;
+&lt;h3 id=&#34;可能作法&#34;&gt;可能作法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;自動錯誤偵測&lt;/li&gt;
+&lt;li&gt;設計易於水平擴展的架構&lt;/li&gt;
+&lt;li&gt;設計高錯誤容忍的架構&lt;/li&gt;
+&lt;li&gt;冗餘架構&lt;/li&gt;
+&lt;li&gt;規劃災難還原策略&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,448 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-tw" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.115.3">
+<link rel="canonical" type="text/html" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/IT-Architecture-CheatSheet/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/IT-Architecture-CheatSheet/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/android-192x192.png" sizes="192x192">
+
+<title>儲存基礎設施 | 資訊架構備忘表</title>
+<meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
+<meta property="og:title" content="儲存基礎設施" />
+<meta property="og:description" content="The most popular HTML, CSS, and JS library in the world." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/" />
+<meta itemprop="name" content="儲存基礎設施">
+<meta itemprop="description" content="The most popular HTML, CSS, and JS library in the world."><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="儲存基礎設施"/>
+<meta name="twitter:description" content="The most popular HTML, CSS, and JS library in the world."/>
+
+
+
+
+<link rel="preload" href="/IT-Architecture-CheatSheet/scss/main.min.4a175a31b978c6dd30b302ad6502e2bc1cb1209487a07cde4b310c79b7717ec8.css" as="style">
+<link href="/IT-Architecture-CheatSheet/scss/main.min.4a175a31b978c6dd30b302ad6502e2bc1cb1209487a07cde4b310c79b7717ec8.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+  crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-00000000-0');
+}
+</script>
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+  <a class="navbar-brand" href="/IT-Architecture-CheatSheet/zh-tw/"><span class="navbar-brand__logo navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500"><g><path style="fill:#fff" d="M116.8525 421.9722c-5.7041.0-10.3442-4.3127-10.3442-9.6129V88.183c0-5.3002 4.6401-9.6117 10.3442-9.6117H320.858c3.0347.0 9.3959.5498 11.7506 2.6302l.3545.3442 58.905 63.2912c2.3101 2.491 2.9202 8.4928 2.9202 11.3184v256.2039c0 5.3002-4.6407 9.6129-10.3436 9.6129H116.8525z"/><g><g><g><path style="fill:#767676" d="M384.4445 423.2066H116.852c-6.3839.0-11.5786-4.8658-11.5786-10.8474V88.1831c0-5.9804 5.1947-10.8461 11.5786-10.8461h204.0062c.377.0 9.2786.0329 12.568 2.9389l.3947.3833 58.9508 63.337c3.2135 3.4652 3.2514 11.7924 3.2514 12.1593v256.2036C396.0231 418.3408 390.8284 423.2066 384.4445 423.2066zM116.5079 411.9189c.0848.0278.1999.0531.3441.0531h267.5925c.1442.0.2581-.0253.3441-.0531V156.1556c-.0076-.9033-.3593-3.7347-.7034-5.0037l-57.6527-61.9416c-1.4651-.3176-4.4533-.6389-5.5742-.6389H116.852c-.143.0-.2594.024-.3441.0531V411.9189zm267.4533-261.149zM327.0321 89.371v.0013V89.371z"/></g></g></g><g><g><path style="fill:#5b7fc0" d="M189.0874 210.1754l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4473C177.5953 212.627 183.0601 210.1742 189.0874 210.1754zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 234.1722 197.0804 232.033z"/><path style="opacity:.3;fill:#fff" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/><g><defs><path id="SVGID_1_" d="M194.7376 237.6875c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 234.2399 196.1861 236.239 194.7376 237.6875z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_2_);fill:#fff" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/><path style="opacity:.13;clip-path:url(#SVGID_2_);fill:#020202" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/></g><g><defs><path id="SVGID_3_" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_4_);fill:#5b7fc0" d="M172.6595 215.6045c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8475-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 209.1953 176.6171 211.647 172.6595 215.6045z"/></g></g><rect x="198.8952" y="225.1043" style="fill:#5b7fc0" width="122.6266" height="13.8671"/></g><g><path style="fill:#d95140" d="M189.0874 155.7611l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.0249 2.454-11.4897 6.4116-15.4473C177.5953 158.2128 183.0601 155.7599 189.0874 155.7611zm7.993 21.8577c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.2508 181.7667 197.0816 179.758 197.0804 177.6188z"/><path style="opacity:.3;fill:#fff" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/><g><defs><path id="SVGID_5_" d="M194.7376 183.2733c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 179.8256 196.1861 181.8248 194.7376 183.2733z"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_6_);fill:#fff" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/><path style="opacity:.13;clip-path:url(#SVGID_6_);fill:#020202" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/></g><g><defs><path id="SVGID_7_" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_8_);fill:#d95140" d="M172.6595 161.1903c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 154.7811 176.6171 157.2327 172.6595 161.1903z"/></g><rect x="198.8952" y="170.69" style="fill:#d95140" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#56a55c" d="M189.5379 264.6147l.0012-.0012c7.7751.0012 15.0294 4.1862 18.932 10.9235 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.3281-2.2733-15.458-6.4032-4.13-4.13-6.4032-9.6186-6.4056-15.4628.0012-6.0249 2.454-11.4897 6.4116-15.4472C178.0458 267.0663 183.5105 264.6135 189.5379 264.6147zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6538 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.7013 290.6202 197.5321 288.6115 197.5309 286.4723z"/><path style="opacity:.3;fill:#fff" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/><g><defs><path id="SVGID_9_" d="M195.1881 292.1268c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9941 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.5344 288.6792 196.6366 290.6783 195.1881 292.1268z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_10_);fill:#fff" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/><path style="opacity:.13;clip-path:url(#SVGID_10_);fill:#020202" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/></g><g><defs><path id="SVGID_11_" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/></defs><clipPath id="SVGID_12_"><use xlink:href="#SVGID_11_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_12_);fill:#56a55c" d="M173.11 270.0439c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7325-11.1497-10.9151-18.926-10.9151C182.5311 263.6346 177.0676 266.0863 173.11 270.0439z"/></g></g><rect x="199.3456" y="279.5436" style="fill:#56a55c" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#f1bc42" d="M189.0874 318.7208l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3305-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4472C177.5953 321.1724 183.0601 318.7196 189.0874 318.7208zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 342.7176 197.0804 340.5784z"/><path style="opacity:.3;fill:#fff" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/><g><defs><path id="SVGID_13_" d="M194.7376 346.2329c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 342.7853 196.1861 344.7844 194.7376 346.2329z"/></defs><clipPath id="SVGID_14_"><use xlink:href="#SVGID_13_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_14_);fill:#fff" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/><path style="opacity:.13;clip-path:url(#SVGID_14_);fill:#020202" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/></g><g><defs><path id="SVGID_15_" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/></defs><clipPath id="SVGID_16_"><use xlink:href="#SVGID_15_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_16_);fill:#f1bc42" d="M172.6595 324.15c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8474-1.0151-7.6327-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 317.7407 176.6171 320.1924 172.6595 324.15z"/></g></g><rect x="198.8952" y="333.6497" style="fill:#f1bc42" width="122.6266" height="13.8671"/></g></g></svg></span><span class="navbar-brand__name">資訊架構備忘表</span></a>
+  <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+    <ul class="navbar-nav mt-2 mt-lg-0">
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link active" href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/"><span class="active">Cheat Sheet</span></a>
+      </li>
+      <li class="nav-item dropdown mr-4 d-none d-lg-block">
+        
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	繁體中文
+</a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	
+	<a class="dropdown-item" href="/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/storage-infra/">English</a>
+	
+</div></li>
+      </ul>
+  </div>
+  <div class="navbar-nav d-none d-lg-block">
+    <div class="td-search">
+  <div class="td-search__icon"></div>
+  <input type="search" class="td-search__input form-control td-search-input" placeholder="站內搜索…" aria-label="站內搜索…" autocomplete="off">
+</div>
+
+  </div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+這是本節的多頁可打印視圖。
+<a href="#" onclick="print();return false;">點擊此處打印</a>.
+</p><p>
+<a href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/">返回此頁面的常規視圖</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">儲存基礎設施</h1>
+
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1: <a href="#pg-807729680d004eb1fb47693de4c476b3">DAS</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-b7ed36665afd3753ec36d922a4eccf28">NAS</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-d2c0abe5e26fac3e14b6e9c0554e34da">SAN</a></li>
+
+
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-c4dde74ce75157a0237a126419ff5cfd">RAID</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5: <a href="#pg-e2f029a2ac83d5e79c99e7bb6e18f2ad">Block Storage</a></li>
+
+
+    
+  
+    
+    
+	
+<li>6: <a href="#pg-cfb92545a9cc36df9fbd8fdc96ecc3d3">Object Storage</a></li>
+
+
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-807729680d004eb1fb47693de4c476b3">1 - DAS</h1>
+    
+	<h3 id="描述">描述</h3>
+<p>Direct attached storage (DAS) 通過硬體直接掛載硬碟來連接磁碟機。可使用SATA, SAS, USB等方式連接硬碟。</p>
+<h3 id="使用情境">使用情境</h3>
+<ul>
+<li>個人電腦或小型工作站</li>
+<li>單一伺服器</li>
+</ul>
+<h3 id="優點">優點</h3>
+<ul>
+<li>架構單純: 只要掛載硬碟即可使用</li>
+<li>價格便宜: 相對於NAS與DAS，不須額外設定與伺服器</li>
+</ul>
+<h3 id="缺點">缺點</h3>
+<ul>
+<li>絕大部分的DAS裝置，無法與其他伺服器共享硬碟存取</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-b7ed36665afd3753ec36d922a4eccf28">2 - NAS</h1>
+    
+	<h3 id="描述">描述</h3>
+<p>Network attached storage (NAS) 為獨立的檔案存取伺服器，伺服器透過網路連接硬碟。</p>
+<h3 id="使用情境">使用情境</h3>
+<ul>
+<li>企業共享磁碟</li>
+<li>多台伺服器共同讀取同一磁碟空間</li>
+</ul>
+<h3 id="優點">優點</h3>
+<ul>
+<li>可同時供多台伺服器存取資料</li>
+<li>可同時掛載多個硬碟，提供更大的磁碟儲存空間</li>
+<li>搭配RAID等機制可提供減少單一硬碟損壞造成資料遺失的缺點</li>
+</ul>
+<h3 id="缺點">缺點</h3>
+<ul>
+<li>價格較高: 相對於DAS，需要獨立的伺服器，且同時有多顆硬碟，因此成本較高</li>
+<li>架構與管理複雜: NAS需要管理伺服器、網路與儲存設定，因此管理較為困難</li>
+<li>單點故障風險: 如果NAS伺服器的網路或電源中斷，則無法提供資料存取服務</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d2c0abe5e26fac3e14b6e9c0554e34da">3 - SAN</h1>
+    
+	<h3 id="描述">描述</h3>
+<p>Storage area network (SAN) 使用獨立光纖網路、多台磁碟陣列、多台Switch共同組成儲存空間。雖然是由多台磁碟陣列組成，但是對伺服器來說，仍然可如同一般硬碟一樣進行掛載磁碟使用。SAN可解決NAS單點故障的風險，存取速度也更快，但是價格十分高昂。</p>
+<h3 id="使用情境">使用情境</h3>
+<ul>
+<li>大型企業共用磁碟、伺服器使用</li>
+</ul>
+<h3 id="優點">優點</h3>
+<ul>
+<li>避免單點故障: 由於同時有多台磁碟陣列提供存取，避免單一磁碟陣列損壞而無法連接的問題</li>
+<li>快速存取: SAN透過光纖存取資料，因此存取速度較快</li>
+<li>不佔用區網流量: SAN透過獨立網路進行資料存取，不會影響其他區域網路服務</li>
+<li>易於水平擴展: 由於有多台磁碟陣列，可分批增加磁碟陣列的儲存空間，而不影響服務運行</li>
+</ul>
+<h3 id="缺點">缺點</h3>
+<ul>
+<li>價格十分高昂: SAN需要多台磁碟陣列及光纖網路，這都需要較高的成本</li>
+<li>管理十分複雜: SAN需額外管理各磁碟陣列之設備及維護光纖網路的設定，因此管理複雜並且難以學習曲線較高</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-c4dde74ce75157a0237a126419ff5cfd">4 - RAID</h1>
+    
+	<h3 id="描述">描述</h3>
+<p>RAID（Redundant Array of Independent Disks）是以多個硬碟互相備援資料，以降低單一硬碟損壞造成資料遺失的風險。有多種RAID的等級，例如RAID 0, RAID 1, RIAD6等。各自有不同的備援邏輯及備份次數。可通過硬體或軟體實現RAID架構。</p>
+<h3 id="使用情境">使用情境</h3>
+<ul>
+<li>具有重要資料，希望避免單一硬碟故障造成資料遺失</li>
+</ul>
+<h3 id="優點">優點</h3>
+<ul>
+<li>冗餘備援：透過多個硬碟互相備援減低資料損失風險</li>
+<li>讀寫效率高：由於有多個硬碟，可同時並行讀寫多個不同的硬碟</li>
+</ul>
+<h3 id="缺點">缺點</h3>
+<ul>
+<li>價格較高：按照不同的RAID等級，需要更多的冗餘備份硬碟，並且可能需要採購專門的RAID磁碟陣列</li>
+<li>管理複雜：需要考慮不同的RAID等級等儲存設定</li>
+<li>寫入速度可能降低：某些RAID模式下，因為需要同時寫入多個硬碟，可能會降低寫入速度</li>
+<li>無法應對區域性風險：無法避免區域性的停電或天災的資料損失風險</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-e2f029a2ac83d5e79c99e7bb6e18f2ad">5 - Block Storage</h1>
+    
+	<h3 id="述"><strong>述</strong></h3>
+<p>若有大量資料儲存需求，以一個一個資料區塊為單位，分散儲存於多台伺服器中。可以連續或隨機地讀取檔案，也可以儲存結構性與關聯性的多組檔案。</p>
+<h3 id="使用情境"><strong>使用情境</strong></h3>
+<ul>
+<li>企業內部共用資料夾</li>
+<li>虛擬機器（VM）或容器掛載的資料夾</li>
+</ul>
+<h3 id="優點"><strong>優點</strong></h3>
+<ul>
+<li>可儲存大量的檔案：透過水平擴展，Block Storage能夠應對大容量的儲存需求。</li>
+<li>可儲存結構性的檔案：Block Storage支援儲存結構化的資料，如關聯式數據庫。</li>
+</ul>
+<h3 id="缺點"><strong>缺點</strong></h3>
+<ul>
+<li>架構較複雜，管理較複雜：Block Storage需要較多的配置和管理，包括區塊分配、存取控制等。</li>
+<li>建置成本高昂：建立和維護Block Storage的成本通常較高，包括硬體設備、存儲軟體、數據保護等方面的投入。</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-cfb92545a9cc36df9fbd8fdc96ecc3d3">6 - Object Storage</h1>
+    
+	<h3 id="描述"><strong>描述</strong></h3>
+<p>Object Storage是一種儲存架構，以每一個檔案為單位，各檔案給予一個獨立的ID。通過這個ID搭配RESTful API進行存取。檔案的類型可以為圖片、影片或一般文件。這些檔案可以彈性地存放於分散式環境。通常搭配冗餘多重備份機制，以避免因災難造成資料遺失。</p>
+<h3 id="使用情境"><strong>使用情境</strong></h3>
+<ul>
+<li>大量的檔案儲存需求</li>
+<li>CDN、相簿、影片串流</li>
+<li>獨立的檔案: 儲存大量的圖片、影片、一般文件，較不適合儲存一組相關聯的結構性檔案。例如: 資料庫</li>
+</ul>
+<h3 id="優點"><strong>優點</strong></h3>
+<ul>
+<li>易於儲存與備份: 各個檔案獨立，方便分散式儲存與備份</li>
+<li>易於存取: 通過RESTful API即可存取檔案</li>
+</ul>
+<h3 id="缺點"><strong>缺點</strong></h3>
+<ul>
+<li>無法儲存結構性資料: Object Storage主要用於儲存非結構化的檔案，不適合存儲結構化資料或關聯性數據。</li>
+<li>無法掛載為傳統作業系統的網路磁碟機: Object Storage無法像傳統的Block Storage那樣直接掛載為傳統作業系統的網路磁碟機，而是通過API進行存取。</li>
+<li>架構較複雜: Object Storage的架構相對複雜，需要更多的配置和管理。</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
+    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/bradhuang9999/IT-Architecture-CheatSheet" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2023 The IT Architecture Cheat Sheet Authors 保留所有權利</small>
+        <small class="ml-1"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">隱私政策</a></small>
+	
+		
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+  <script src="/IT-Architecture-CheatSheet/js/main.min.6f7d640700b5cc73e0ca656e7c5a34738b8f5f56c8670fb52fe5a96d5b221476.js" integrity="sha256-b31kBwC1zHPgymVufFo0c4uPX1bIZw&#43;1L&#43;WpbVsiFHY=" crossorigin="anonymous"></script>
+<script src='/IT-Architecture-CheatSheet/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

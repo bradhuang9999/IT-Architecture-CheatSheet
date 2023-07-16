@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.115.2">
+<meta name="generator" content="Hugo 0.115.3">
 <link rel="canonical" type="text/html" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/">
 <link rel="alternate" type="application/rss&#43;xml" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/index.xml">
 <meta name="robots" content="noindex, nofollow">
@@ -20,15 +20,15 @@
 <link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/IT-Architecture-CheatSheet/favicons/android-192x192.png" sizes="192x192">
 
-<title>Application Architecture | 資訊架構備忘表</title>
+<title>應用程式架構 | 資訊架構備忘表</title>
 <meta name="description" content="The most popular HTML, CSS, and JS library in the world.">
-<meta property="og:title" content="Application Architecture" />
+<meta property="og:title" content="應用程式架構" />
 <meta property="og:description" content="The most popular HTML, CSS, and JS library in the world." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/" />
-<meta itemprop="name" content="Application Architecture">
+<meta itemprop="name" content="應用程式架構">
 <meta itemprop="description" content="The most popular HTML, CSS, and JS library in the world."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Application Architecture"/>
+<meta name="twitter:title" content="應用程式架構"/>
 <meta name="twitter:description" content="The most popular HTML, CSS, and JS library in the world."/>
 
 
@@ -105,7 +105,7 @@ if (!doNotTrack) {
 
 
 
-<h1 class="title">Application Architecture</h1>
+<h1 class="title">應用程式架構</h1>
 
 
 
@@ -122,7 +122,7 @@ if (!doNotTrack) {
     
     
 	
-<li>1: <a href="#pg-e6772ea7d204715fd1408c30168fce84">Execute Envirentment</a></li>
+<li>1: <a href="#pg-e6772ea7d204715fd1408c30168fce84">執行環境</a></li>
 
 
     
@@ -150,6 +150,14 @@ if (!doNotTrack) {
 
     
   
+    
+    
+	
+<li>1.3: <a href="#pg-0dca827fa896730c526faf1a1cfc0653">Kubernetes</a></li>
+
+
+    
+  
 
     </ul>
     
@@ -157,7 +165,7 @@ if (!doNotTrack) {
     
     
 	
-<li>2: <a href="#pg-57521f0d2362967fad667af9f9fb5c0c">Application Interface</a></li>
+<li>2: <a href="#pg-99adbb19fedab8d2cbf97645212879b7">應用程式介面</a></li>
 
 
     
@@ -172,7 +180,7 @@ if (!doNotTrack) {
     
     
 	
-<li>2.1: <a href="#pg-4f80fbbe66c84a6f29c38503dca9b414">Web Application</a></li>
+<li>2.1: <a href="#pg-cc6aa255d8881adc0aac374f6aa29eec">網路應用程式</a></li>
 
 
     
@@ -180,7 +188,98 @@ if (!doNotTrack) {
     
     
 	
-<li>2.2: <a href="#pg-e7ad9edbc169f2e28da0bb5e5c12f553">Progressive Web Apps</a></li>
+<li>2.2: <a href="#pg-3aabdb996b3cea4eb4689b3ffaca88ff">PWA</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2.3: <a href="#pg-e8625a264c7bb58eff0ca9db04cb9309">手機應用程式</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2.4: <a href="#pg-ad0a27ce6e6372eea2213f2762de21c7">無程式碼 App</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-cc620050aa4cd142bdb957e5b480c0f3">邏輯控制</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>3.1: <a href="#pg-b6adc99e2fc720d015399891f6d76b1f">Batch</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.2: <a href="#pg-35519184a4f0152c6d32db78640cefb4">Web API</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.3: <a href="#pg-0d9251decb39e4779f11bfe5dba75374">無伺服器 Function</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.4: <a href="#pg-732adf9ea09f2ee8c023e4c3e280d811">訊息佇列</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.5: <a href="#pg-aafefe45efa983a4c34aafb2ba32cae1">DB Procedure</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.6: <a href="#pg-6a7124f201df42e319ba825bf34cea29">DB Function</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.7: <a href="#pg-4aad44857deaecd5722953925db6b969">DB Trigger</a></li>
 
 
     
@@ -194,8 +293,7 @@ if (!doNotTrack) {
 
 
 <div class="content">
-      <p>Hello Common Concept</p>
-
+      
 </div>
 </div>
 
@@ -216,10 +314,9 @@ if (!doNotTrack) {
 
 <div class="td-content" style="">
     
-	<h1 id="pg-e6772ea7d204715fd1408c30168fce84">1 - Execute Envirentment</h1>
+	<h1 id="pg-e6772ea7d204715fd1408c30168fce84">1 - 執行環境</h1>
     
-	<p>Hello Common Concept</p>
-
+	
 </div>
 
 
@@ -244,35 +341,35 @@ if (!doNotTrack) {
     
 	<h1 id="pg-6bd25ce6cff9ac95f21fb7b72a9a1fe1">1.1 - Docker</h1>
     
-	<h3 id="overview"><strong>Overview:</strong></h3>
-<p>A representative product of containerization technology that separates independent software operating environments within the same operating system.</p>
-<h3 id="use-cases"><strong>Use Cases:</strong></h3>
+	<h3 id="概述">概述:</h3>
+<p>容器化技術的代表性產品，在同一作業系統中分隔獨立的軟體運作環境。</p>
+<h3 id="情境">情境:</h3>
 <ul>
-<li>Development and Testing: Docker can provide a testing environment with minimal system resources that aligns with the production environment during development and testing stages.</li>
-<li>Direct Use of Packaged Application Images: The Docker ecosystem offers various pre-packaged application images that can be directly used, saving time on setting up and configuring applications in different environments.</li>
-<li>Isolation of Multiple Application Environments: Within the same server, containers can be used to separate multiple applications to avoid conflicts in versions and configurations or interference between applications.</li>
-<li>Rapid Deployment: Docker&rsquo;s lightweight nature makes it suitable for quickly deploying applications across multiple servers.</li>
-<li>Microservices Architecture: Docker&rsquo;s isolation capabilities make it suitable for integration with microservices. By breaking down applications into smaller components, Docker enables dynamic scaling of container instances based on demand.</li>
-<li>Cloud-Native Development: Docker&rsquo;s lightweight and fast deployment features are well-suited for cloud environments, which bill based on resource usage and provide scalable computing resources on-demand.</li>
+<li>開發與測試：在開發與測試階段，使用Docker可以少量系統資源提供與正式環境一致的測試環境。</li>
+<li>直接使用已封裝的應用程式映像檔：Docker生態系統可找到許多可直接使用的各式應用程式映象檔，節省在不同環境建置、設定應用程式的時間。</li>
+<li>隔離多個應用程式環境：在同一伺服器中，分隔多個容器，以避免不同應用程式的版本與設定衝突或是使用時影響其他應用程式</li>
+<li>快速部屬：Docker的輕量化特性，適合快速在多台伺服器部屬應用程式</li>
+<li>微服務架構：Docker本身的隔離特性適合與微服務進行結合，微服務將應用程式拆為多個小程式，搭配使用Docker可快速、有彈性的依使用需求動態調整各微服務的容器數量。</li>
+<li>雲原生程式：由於雲端以系統資源使用量為計價、以及可快速依需求提供多台運算資源。所以Docker的輕量化與快速部屬特性極適合雲端環境。</li>
 </ul>
-<h3 id="advantages"><strong>Advantages:</strong></h3>
+<h3 id="優點">優點:</h3>
 <ul>
-<li>Lightweight: Containers start quickly and consume fewer system resources since they don&rsquo;t include an operating system.</li>
-<li>Isolation: Each container runs independently, avoiding conflicts between applications. If an error occurs in one container, it can be restarted independently without affecting other containers.</li>
-<li>Security: Container isolation enhances security by separating different applications.</li>
-<li>Recoverability: Containers can be monitored, and automatic restart is possible.</li>
-<li>Rich Management Mechanisms: Docker provides built-in mechanisms for managing containers, such as resource monitoring, error detection, and automatic restart.</li>
-<li>Avoiding OS Conflicts: Docker abstracts away differences between different versions of operating systems, solving management challenges caused by those differences.</li>
-<li>On-Demand Activation: Containers can be directly loaded and activated from provided images by developers or the community, unaffected by differences in operating system versions.</li>
-<li>Horizontal Scaling: Easy to deploy and scale, allowing for quick addition or removal of containers to accommodate changes in traffic.</li>
-<li>CI/CD Mechanism: Dockerfiles and other necessary build files stored in version control can automatically generate, validate, and deploy container images.</li>
-<li>Provides IaC Mechanism: Dockerfiles contain the complete process for building containers, offering advantages similar to Infrastructure as Code (IaC), such as easy tracking of container build details.</li>
-<li>Version Control and Quick Rollback: Multiple versions of container images can be maintained, enabling quick switching between versions in case of errors.</li>
+<li>輕量化：由於容器內不包含作業系統，可以因此快速啟動，並且使用較少系統資源。</li>
+<li>隔離性：各個容器獨立執行，避免應用程式的衝突。並且在任一容器錯誤時，可獨立重啟而不影響其他現有容器。</li>
+<li>安全性：以容器隔離不同的應用程式，可增加安全性。</li>
+<li>還原性：可監控容器的狀態並自動重啟。</li>
+<li>管理機制豐富：內建多種管理容器的機制，例如：資源監控、錯誤偵測、自動重啟等。</li>
+<li>避免作業系統產生的衝突：由於在作業系統上再封裝一個抽象層，因此可解決在傳統不同版本作業系統差異而造成的管理困難。</li>
+<li>隨時啟用：由於具有獨立的運作環境，不受不同作業系統版本的差異影響。可直接載入並啟用開發商或社群所提供的映象檔。</li>
+<li>水平伸縮：易於部屬與擴展，可快速新增或移除容器，以應對流量變化。</li>
+<li>CICD機制：將Dockerfile等建置映像檔所需的資料放入版本庫中之後，可自動產生、驗證、部屬映像檔。</li>
+<li>提供IaC機制：由於Dockerfile中記載完整的容器建置過程，因此具有IaC的相關優點，例如方便追蹤容器建置的細節差異。</li>
+<li>版本控制與快速回滾：可同時有新舊版本的映像檔，方便在錯誤時快速切換版本。</li>
 </ul>
-<h3 id="disadvantages"><strong>Disadvantages:</strong></h3>
+<h3 id="缺點">缺點:</h3>
 <ul>
-<li>Security: Containers are typically started with root privileges by default, which can pose potential risks. It is possible to start containers with other user identities, but implementation can be complex.</li>
-<li>Learning Curve: Docker&rsquo;s containerization mechanism has its complexity, requiring a significant learning period to understand aspects such as data persistence, network configuration, and automatic restart mechanisms.</li>
+<li>安全性：預設以Root身分啟動容器，這會造成潛在的風險。可以改成以其他身分啟動容器，但是實作上較複雜。</li>
+<li>學習門檻：Docker的容器化機制有其複雜度，需要較長的學習期間，以理解其資料持久化、網路配置、自動重啟等機制。</li>
 </ul>
 
 </div>
@@ -291,22 +388,61 @@ if (!doNotTrack) {
     
 	<h1 id="pg-f2cf5ee6dd5c004661dcc0beb939ef0c">1.2 - VM</h1>
     
-	<h3 id="overview"><strong>Overview:</strong></h3>
-<p>A VM (Virtual Machine) is a virtualized environment created within a physical machine, dividing it into multiple independent virtual machines. Each VM can be configured with its own allocated computational and memory resources. Within each VM, a separate operating system and applications can be installed. This allows for multiple isolated software environments to meet different usage requirements.</p>
-<h3 id="use-cases"><strong>Use Cases:</strong></h3>
+	<h3 id="概述">概述:</h3>
+<p>VM (Virtual Machine) 是在一台實體機器中分割多個獨立的虛擬機器，每一個VM可設置可使用的運算資源與記憶體資源量。在每一個VM中，安裝獨立的作業系統與應用程式。這種模式可以提供多個不互相干擾的軟體運作環境，以滿足多個不同的使用需求。</p>
+<h3 id="使用情境">使用情境:</h3>
 <ul>
-<li>Isolated Environments: When there is a larger server available and multiple smaller computing needs that require independent operation.</li>
-<li>Cloud Migration: When migrating from on-premises to the cloud, but the existing architecture cannot be containerized or requires the installation of non-containerizable software.</li>
-<li>Vertical Scaling: When there is a need to dynamically adjust the computational resources of the operating environment based on usage requirements.</li>
-<li>Horizontal Scaling: Through VM image mechanisms, VMs can be quickly deployed to other machines.</li>
-<li>System Restoration: Quick system restoration can be achieved through VM image mechanisms.</li>
+<li>獨立環境：有一台較大的伺服器，且同時有多個希望獨立運作的中小型運算需求。</li>
+<li>移植雲端：預計將地端環境移植到雲端，但是舊有架構尚無法容器化或需安裝其他無法容器化套裝軟體。</li>
+<li>垂直伸縮：希望可以依照使用需求，動態調整作業環境的運算資源量。</li>
+<li>水平伸縮：透過VM的映象檔機制，可以快速部屬到其他機器</li>
+<li>系統還原：透過VM的映象檔機制快速進行系統還原。</li>
 </ul>
-<h3 id="disadvantages"><strong>Disadvantages:</strong></h3>
+<h3 id="缺點">缺點:</h3>
 <ul>
-<li>Resource Intensive: Compared to lightweight containerization technologies, each VM requires an operating system, resulting in higher resource usage.</li>
-<li>Slow Startup: Each VM has its own operating system, leading to slower boot times.</li>
-<li>Costly: Additional VM management systems or licenses are often required to utilize the full VM functionality, resulting in higher costs.</li>
-<li>Difficult Horizontal Scaling: Scaling VMs can be challenging, especially for large-scale deployment and management of multiple VMs. Adjustments need to be made to individual VM configurations, network settings, and other attributes, requiring additional time and effort.</li>
+<li>資源使用量大：相較於輕量化的容器管理技術，每一個VM都需要安裝作業系統，因此需要使用較多系統資源</li>
+<li>啟動速度慢：每一個VM都有獨立的作業系統，因此載入速度較慢</li>
+<li>費用高昂：需要採購額外的VM管理系統才能使用完整VM機制，這往往需要高額的授權費用。</li>
+<li>水平擴展不易：VM的擴展相對較困難，特別是在需要大規模部署和管理多個VM的情境下。每一台VM的設定、網路配置等屬性都需要進行調整，這可能需要額外的時間和工作量。</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0dca827fa896730c526faf1a1cfc0653">1.3 - Kubernetes</h1>
+    
+	<h3 id="概述">概述:</h3>
+<p>Kubernetes是一個大規模部屬與容器編排的工具。</p>
+<p>主要功能如下:</p>
+<ul>
+<li>容器編排：將功能相關的容器組成pod，pod裡面可以有獨立的子網路等設定</li>
+<li>容器部屬：依照伺服器負載數值或排程，進行自動化容器部屬。當伺服器無法容納更多容器時，將自動啟動更多伺服器。</li>
+<li>高可用性：當容器或伺服器錯誤時，自動替換失敗的容器或伺服器</li>
+<li>網路管理：替各容器分配獨立的IP位置及網路區隔。</li>
+<li>服務發現：由於同一容器分布於多台伺服器中，以負載均衡模式將流量到合適的容器。</li>
+<li>部屬管理：與CICD結合，可用各種方式進行部屬管理與測試，例如：灰度部屬或A/B測試</li>
+</ul>
+<h3 id="使用情境">使用情境:</h3>
+<ul>
+<li>可在多達上萬台分布式環境中管理容器服務</li>
+<li>多區域與混合雲中管理容器服務</li>
+</ul>
+<h3 id="缺點">缺點:</h3>
+<ul>
+<li>設定複雜：由於管理上萬台伺服器的複雜性，其網路與容器相關設定較為複雜</li>
+<li>學習曲線高：由於有許多抽象的概念，例如pod, service, ingress，而且有許多不同的設定會影響容器集群，因此需要較長的時間進行學習。</li>
+<li>資源消耗：由於需要監控、管理容器，因此需要耗費較多系統資源。</li>
 </ul>
 
 </div>
@@ -327,10 +463,9 @@ if (!doNotTrack) {
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-57521f0d2362967fad667af9f9fb5c0c">2 - Application Interface</h1>
+	<h1 id="pg-99adbb19fedab8d2cbf97645212879b7">2 - 應用程式介面</h1>
     
-	<p>Hello Common Concept</p>
-
+	
 </div>
 
 
@@ -353,25 +488,25 @@ if (!doNotTrack) {
 
 <div class="td-content" style="">
     
-	<h1 id="pg-4f80fbbe66c84a6f29c38503dca9b414">2.1 - Web Application</h1>
+	<h1 id="pg-cc6aa255d8881adc0aac374f6aa29eec">2.1 - 網路應用程式</h1>
     
-	<h3 id="overview"><strong>Overview:</strong></h3>
-<p>Web applications are accessed through a browser to directly use the application on a website.</p>
-<h3 id="advantages"><strong>Advantages:</strong></h3>
+	<h3 id="概述">概述:</h3>
+<p>網路應用程式是通過瀏覽器連接網站，直接使用應用程式。</p>
+<h3 id="優點">優點:</h3>
 <ul>
-<li>No Installation Required: Unlike traditional standalone applications that require installation, web applications can be accessed simply by connecting to a website through a browser.</li>
-<li>Version Synchronization: When connecting to a web application, the latest version is always used, avoiding issues caused by version inconsistencies.</li>
-<li>Cross-Platform Usage: Web applications can be accessed using standard browsers, eliminating compatibility issues across different types and versions of computers.</li>
-<li>Low Client-Side Load: Most of the computation is performed on the server-side.</li>
+<li>不須安裝: 不同於傳統單機應用程式需要進行安裝，只要通過瀏覽器連接網站就可以取得應用程式。</li>
+<li>版本同步: 連線到網路應用程式時隨時都是使用最新版的應用程式，避免版本不一致所造成的使用問題。</li>
+<li>跨平台使用: 只要使用標準瀏覽器，就可以使用應用程式。免於不同種類、版本電腦的差異問題。</li>
+<li>客戶端負載低: 大部分的計算可於伺服器端進行。</li>
 </ul>
-<h3 id="disadvantages"><strong>Disadvantages:</strong></h3>
+<h3 id="缺點">缺點:</h3>
 <ul>
-<li>Security: Connecting to web applications over public networks introduces more cybersecurity risks, such as XSS, SQL injection, CSRF attacks.</li>
-<li>Complexity: Web applications are divided into frontend components responsible for display and backend components handling business logic, making the overall process more abstract and complex.</li>
-<li>Browser Version Issues: Different users may have different browser versions installed, requiring consideration for browser compatibility.</li>
-<li>No Offline Usage: Web applications cannot be used when there is no internet connection. Modern Progressive Web Applications (PWAs) address this issue by caching data.</li>
-<li>Network Speed Issues: Some clients may have unstable internet speeds, which can affect performance. Techniques such as caching and reducing/delaying network requests need to be considered.</li>
-<li>Limitations on Software and Hardware Access: Due to browser support and security concerns, web applications cannot access all hardware information and user files in the same way as native applications.</li>
+<li>安全性: 通過公共網路連接應用程式，有更多的資安風險。例如XSS, SQL Injection, CSRF等攻擊。</li>
+<li>複雜性: 程式分割為處理顯示的瀏覽器前端與處理商業邏輯的伺服器後端，流程較為抽象與複雜。</li>
+<li>瀏覽器版本問題: 不同用戶端安裝的瀏覽器版本不一，需要考慮瀏覽器的相容性議題。
+無法離線使用: 當沒有網路時，就無法使用網路應用程式。現代的PWA應用程式將資料進行緩存以緩解此問題。</li>
+<li>網路速度問題: 某些客戶的網路速度較不穩定，可能會影響使用效能，需要考慮快取或縮減、延遲網路請求等技術。</li>
+<li>軟硬體訪問限制: 由於瀏覽器的支援性及安全性議題，沒有辦法如同原生應用程式一般，可以讀取全部硬體資訊及全部的使用者資訊與檔案</li>
 </ul>
 
 </div>
@@ -388,28 +523,377 @@ if (!doNotTrack) {
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-e7ad9edbc169f2e28da0bb5e5c12f553">2.2 - Progressive Web Apps</h1>
+	<h1 id="pg-3aabdb996b3cea4eb4689b3ffaca88ff">2.2 - PWA</h1>
     
-	<h3 id="overview"><strong>Overview:</strong></h3>
-<p>PWA (Progressive Web Application) is a special form of web application that provides some functionalities of native applications. It achieves this by defining information such as icons, theme colors, and utilizing service workers to provide partial functionality and push notifications even when the network is unavailable. PWAs aim to offer native-like features across different platforms.</p>
-<h2 id="use-cases"><strong>Use Cases:</strong></h2>
+	<h3 id="概述">概述:</h3>
+<p>PWA (Progressive web application) 是一種特殊形式的網路應用程式。藉由定義icon、主題顏色等類似傳統應用程式所需的資訊，以及service worker的機制以在網路中斷時提供部分功能及訊息推送機制。以讓PWA可以在跨平台的裝置上提供模擬原生應用程式的功能。</p>
+<h2 id="使用情境">使用情境:</h2>
 <ul>
-<li>Providing cross-platform applications in a native-like format.</li>
-<li>Not requiring constant internet connectivity for the web application.</li>
-<li>Offering better services to users in limited network environments.</li>
+<li>以模擬原生應用程式的形式，提供跨平台的應用程式。</li>
+<li>不一定隨時都需要連接到網路的網路應用程式</li>
+<li>提供更好的服務給網路環境受限的用戶</li>
 </ul>
-<h2 id="advantages"><strong>Advantages:</strong></h2>
-<p>In addition to the advantages of web applications, such as cross-platform compatibility, no installation or updates, PWAs have the following benefits:</p>
+<h2 id="優點">優點:</h2>
+<p>除了如同網頁應用程式的優點，例如：跨平台、免安裝、免更新等優點之外。PWA又多了</p>
 <ul>
-<li>App-like Experience: They can generate desktop shortcuts and icons, similar to traditional applications.</li>
-<li>Offline Usage: They can provide core functionality even when the network is unavailable.</li>
-<li>Fast Loading: Due to data caching in the browser, PWAs have faster startup times.</li>
+<li>類應用程式: 可產生桌面捷徑與icon等類似傳統應用程式的功能</li>
+<li>離線使用: 在網路中斷時，仍可提供部分核心功能。</li>
+<li>載入速度快: 由於已經將程式資料快取於瀏覽器，因此啟動速度較快。</li>
 </ul>
-<h2 id="disadvantages"><strong>Disadvantages:</strong></h2>
-<p>In addition to the general disadvantages of web applications, PWAs have the following drawbacks:</p>
+<h2 id="缺點">缺點:</h2>
+<p>除了一般網路應用程式的缺點外，又多了以下缺點</p>
 <ul>
-<li>Complex Caching Mechanism: Managing offline and online data caching with different update strategies can be challenging and complex.</li>
-<li>Inconsistent Browser Support: Support for PWAs may vary across different browsers and devices, with some browsers lacking complete compatibility.</li>
+<li>快取控制機制複雜: 由於需要快取離線資訊，聯網時又需要更新資料。不同的資料其更新策略又不一致，因此快取控制的機制較為複雜。</li>
+<li>不同瀏覽器的支援程度不一致，有些設備的瀏覽器對PWA的支援度並不完整。</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-e8625a264c7bb58eff0ca9db04cb9309">2.3 - 手機應用程式</h1>
+    
+	<h3 id="概述">概述:</h3>
+<p>手機應用程式是一種專門安裝在手機上的應用程式，通常通過手機上的應用程式商店進行安裝。不同作業系統的預設開發框架不同，須分別開發。或使用跨平台開發框架，例如React Native或Flutter進行開發。</p>
+<h2 id="優點">優點:</h2>
+<ul>
+<li>方便與易用: 可直接通過應用程式商店安裝，無須額外下載或輸入網址。且介面通常經過優化，適合在手機上使用。</li>
+<li>支援性高: 通過使用者授權後，可完整支援手機的各種硬體功能與讀取各種系統資訊。</li>
+<li>離線使用: 除非需網路功能，不然大部分手機應用程式可以離線運行</li>
+</ul>
+<h2 id="缺點">缺點:</h2>
+<ul>
+<li>開發成本高: 須分別替iOS或Android進行開發，且需要測試多版本的手機廠牌</li>
+<li>舊版本手機支援問題: 需考慮許多使用者仍然使用舊型號的手機，其軟硬體支援度較差。</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-ad0a27ce6e6372eea2213f2762de21c7">2.4 - 無程式碼 App</h1>
+    
+	<h3 id="概述">概述:</h3>
+<p>無程式碼 App是一種SaaS服務，藉由UI介面設計工具，不需要寫程式，直接拖曳相關介面並選擇按鈕按下後的處理動作，簡單的完成客製化程式的開發。其做法為通過抽象化邏輯設計流程，使用可視化工具設計使用者介面與動作邏輯，後續平台按照選定的規則執行程式邏輯。</p>
+<h2 id="使用情境">使用情境:</h2>
+<ul>
+<li>如果只需要開發簡單的程式功能，例如表單填寫、資料呈現或單純的互動功能，不適合需要複雜的UI介面與流程的程式。</li>
+</ul>
+<h2 id="優點">優點:</h2>
+<ul>
+<li>無須撰寫程式即可設計使用應用程式，讓非程式開發人員也可以簡單的設計自己想要的軟體介面與功能。</li>
+</ul>
+<h2 id="缺點">缺點:</h2>
+<ul>
+<li>能使用的功能受限於此Codeless App平台所設計的框架，無法設計較複雜的應用程式與流程。</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-cc620050aa4cd142bdb957e5b480c0f3">3 - 邏輯控制</h1>
+    
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-b6adc99e2fc720d015399891f6d76b1f">3.1 - Batch</h1>
+    
+	<h3 id="概述">概述:</h3>
+<p>Batch 程式是在伺服器端運行的一組程式，可以定時、手動或根據事件觸發執行。它常用於處理資料轉檔、報表產生和資料檢查等預先定義的任務清單。</p>
+<h2 id="使用情境">使用情境</h2>
+<ul>
+<li>資料轉檔與檢查、產生報表</li>
+<li>需耗費長時間執行的動作</li>
+<li>須定時執行的動作</li>
+</ul>
+<h2 id="缺點">缺點</h2>
+<ul>
+<li>如果是較長時間執行的Batch程式往往會消耗較多系統資源</li>
+<li>排程系統複雜: 由於各個Batch程式會在多個佇列中排隊執行，而不同程式的優先度與執行時間不一，若設計不當，往往會造成多個Job卡住。</li>
+<li>以Batch形式進行的資料轉檔，由於並非即時轉檔，往往無法即時看到轉檔結果。現今架構較建議Real time進行資料串流處理。</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-35519184a4f0152c6d32db78640cefb4">3.2 - Web API</h1>
+    
+	<h3 id="概述">概述:</h3>
+<p>Web API以HTTP、HTTPS或其他Web介面來提供相關服務給外部客戶或內部其他系統。</p>
+<h3 id="使用情境">使用情境:</h3>
+<ul>
+<li>提供資源或服務: 內部系統、合作企業、客戶或是一般大眾</li>
+<li>通訊與資料交換: 內部系統、合作企業、客戶</li>
+<li>提供給其他應用程式呼叫，例如: 作為移動裝置的後端服務</li>
+</ul>
+<h3 id="優點">優點:</h3>
+<ul>
+<li>減少系統耦合度</li>
+<li>提供標準化介面方便外部呼叫</li>
+</ul>
+<h3 id="缺點">缺點:</h3>
+<ul>
+<li>安全性: 若通過公開網路傳送資料需要更注意資安議題，需透過HTTPS及身分認證等機制解決。</li>
+<li>可能會有較大請求數量: 需透過水平擴展等機制以提供彈性的請求數量需求</li>
+</ul>
+<h3 id="常見身分認證機制">常見身分認證機制:</h3>
+<ul>
+<li>JWT</li>
+<li>OAuth</li>
+<li>SAML</li>
+<li>API金鑰</li>
+</ul>
+<h3 id="常見資料交換格式">常見資料交換格式:</h3>
+<ul>
+<li>JSON</li>
+<li>XML</li>
+<li>CSV</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0d9251decb39e4779f11bfe5dba75374">3.3 - 無伺服器 Function</h1>
+    
+	<h3 id="概述">概述:</h3>
+<p>Serverless Function是一種設計模式，概念為讓軟體開發人員只需專注於實作程式邏輯，而不須煩惱程式平台與系統管理議題。</p>
+<h3 id="使用情境">使用情境:</h3>
+<ul>
+<li>Web API</li>
+<li>批次處理</li>
+<li>排程作業</li>
+<li>事件驅動</li>
+<li>前後端分離的後端伺服器</li>
+</ul>
+<h3 id="優點">優點:</h3>
+<ul>
+<li>彈性: 使用時才須付費</li>
+<li>伸縮性: 雲端平台將會按照使用量，自動擴展</li>
+<li>無須管理架構: 不像IaaS、FaaS等模式還需要管理基礎架構或平台設定</li>
+<li>以一般語言實作邏輯: 未來若服務使用量較大，可將同樣邏輯經過一些調整後搬到Container等環境。</li>
+</ul>
+<h3 id="缺點">缺點:</h3>
+<ul>
+<li>載入需時間: 每次服務執行前，都需要先載入邏輯，因此服務回應速度較慢。雖然可以某些平台可提供預先載入，但是其收費就會較高。</li>
+<li>由於大多FaaS服務都是在外部網路的雲端雲端服務，與內部網路的服務相比，需要考慮更多安全性的議題。</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-732adf9ea09f2ee8c023e4c3e280d811">3.4 - 訊息佇列</h1>
+    
+	<h3 id="概述">概述:</h3>
+<p>Message Queue是一種常用於非同步處理邏輯的機制。當某個服務需要較長時間完成時，為了避免上游等待，可以將服務請求放入佇列中，按序等待執行。後方會有多個服務Consumer從佇列中取得服務請求並完成相應的處理。</p>
+<p>一個典型的Message Queue架構包含三個主要元件：Message producer（產生服務請求的角色）、Message consumer（處理服務請求的角色）以及Message broker（負責訊息排序和呼叫consumer的角色）。</p>
+<p>透過使用Message Queue，我們能夠實現1對多的通訊。Producer不需要知道後方有多少個consumer，只要有註冊相應事件的consumer都會接收到訊息。這樣的設計模式有效地解耦了producer和consumer之間的直接依賴關係，使系統更加靈活和擴展。</p>
+<p>透過適當地應用Message Queue，我們能夠改善系統的可靠性和效能，特別適用於處理非同步處理需求的情境。</p>
+<h3 id="使用情境">使用情境:</h3>
+<ul>
+<li>非同步事件驅動</li>
+<li>非同步通信</li>
+<li>日誌處理</li>
+</ul>
+<h3 id="優點">優點:</h3>
+<ul>
+<li>避免前端等待: producer只要發出訊息請求後，即可完成動作。</li>
+<li>低耦合: 可將一個大的服務拆成多個鬆散的小服務。且各個服務之間不需要直接通信，交由Broker轉交請求即可。</li>
+<li>擴展性: 當等待中的請求較多時，可動態增加更多Consumer來處理服務請求。</li>
+<li>平行處理: 如果有多個consumer註冊同一事件，可同步進行事件處理，而不須依序排隊執行。</li>
+</ul>
+<h3 id="缺點">缺點:</h3>
+<ul>
+<li>無法即時得知結果：由於訊息需等待broker轉發。所以producer若需等待結果，則需要追蹤此訊息處理的狀態。</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-aafefe45efa983a4c34aafb2ba32cae1">3.5 - DB Procedure</h1>
+    
+	<h3 id="概述">概述:</h3>
+<p>DB Procedure是存放於資料庫的程式，通常是以SQL為核心，搭配變數、邏輯判斷、迴圈的程式，以達到於資料庫高效處理資料的目的。</p>
+<h3 id="優點">優點</h3>
+<ul>
+<li>在資料庫端即可處理複雜的資料處理，有效的處理大量資料，避免網路延遲與資料傳輸量的問題</li>
+<li>在資料庫端處理，可以更方便的處理事務(Transaction)管理</li>
+</ul>
+<h3 id="缺點">缺點</h3>
+<ul>
+<li>難以除錯與開發: 較難設定中斷點、記錄程式運行的Log、也較少方便、提供程式碼提示的編輯器。</li>
+<li>基於程式架構的原因，難以使用現代的程式概念，例如: 物件導向。</li>
+<li>耦合度較高: 由於程式都是在資料庫中，程式之間以及程式與資料表之間的耦合度很高。</li>
+<li>較難更新程式: 更新DB Procedure與資料表時容易造成相關連物件的錯誤。難以達到zero down time的程式更新。</li>
+<li>程式綁定特定資料庫，難以遷移至其他資料庫產品。</li>
+</ul>
+<h3 id="案例">案例</h3>
+<ul>
+<li>PL/SQL: Oracle資料庫的DB Proecdure</li>
+<li>T-SQL: SQL Server資料庫的DB Proecdure</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-6a7124f201df42e319ba825bf34cea29">3.6 - DB Function</h1>
+    
+	<h3 id="描述">描述</h3>
+<p>DB Function是在DB端的一種程式，按照資料庫種類的語法會不一樣，例如PL/SQL, T-SQL。
+如同一般程式Function，取得傳入值並進行邏輯處理後，回傳結果。</p>
+<h3 id="與db-procedure的差異">與DB Procedure的差異</h3>
+<ul>
+<li>可以在SQL中使用</li>
+<li>通常不能在DB Function中異動資料</li>
+</ul>
+<h3 id="使用情境">使用情境</h3>
+<ul>
+<li>在SQL中，抽出重複性的子查詢指令</li>
+<li>在SQL中，撰寫需有較複雜程式處理的邏輯</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-4aad44857deaecd5722953925db6b969">3.7 - DB Trigger</h1>
+    
+	<h3 id="描述">描述</h3>
+<p>DB Trigger是在DB端的一種程式，按照資料庫種類的語法會不一樣，例如PL/SQL, T-SQL。
+使用目的為監控特定資料表資料的異動，在資料新增、修改、刪除時執行特定邏輯。</p>
+<h3 id="使用情境">使用情境</h3>
+<ul>
+<li>紀錄異動Log</li>
+<li>連動更新相關資料表</li>
+<li>同步刪除關聯資料表的資料</li>
+</ul>
+<h3 id="優點">優點</h3>
+<ul>
+<li>可以在資料庫端實作Event Driven的邏輯: 事件發生時，自動執行預定義的邏輯</li>
+</ul>
+<h3 id="缺點">缺點</h3>
+<ul>
+<li>使用過多會降低資料庫效能</li>
+<li>須注意不同資料表之間的Trigger不會無限循環觸發</li>
 </ul>
 
 </div>

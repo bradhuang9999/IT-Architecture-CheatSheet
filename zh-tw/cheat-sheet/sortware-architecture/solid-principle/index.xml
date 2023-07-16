@@ -1,0 +1,120 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>資訊架構備忘表 – SOLID 原則</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/solid-principle/</link>
+    <description>Recent content in SOLID 原則 on 資訊架構備忘表</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/solid-principle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: 單一職責原則</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/solid-principle/single-responsibility-principle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/solid-principle/single-responsibility-principle/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;描述&#34;&gt;描述&lt;/h2&gt;
+&lt;p&gt;一段程式，例如：類別、介面或函數應該只負責單一職責，以減少程式耦合度、提高可讀性、可維護性、可測試性。&lt;/p&gt;
+&lt;h3 id=&#34;舉例&#34;&gt;舉例&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在書籍訂單系統之中，訂單管理、訂單正確性檢查、操作訂單資料表 應分為不同的類別。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 介面隔離原則</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/solid-principle/interface-segregation-principle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/solid-principle/interface-segregation-principle/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;為了提升程式碼的可讀性和可維護性，一個類別不應該被強制實作不需要的方法。因此，當某些情況下某個介面的某些功能不需要被實作時，應將該介面拆分為多個子介面。&lt;/p&gt;
+&lt;h3 id=&#34;舉例&#34;&gt;&lt;strong&gt;舉例&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;舉個例子來說，假設有一個名為「DataManager」的介面，負責資料的查詢和修改。若有些情況下只需要實作查詢功能，那麼應該將「DataManager」介面拆分為「DataReader」和「DataModifier」兩個子介面。這樣，每個子介面可以根據具體需求獨立實作，提升彈性和可擴展性。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 里氏替換原則</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/solid-principle/liskov-substitution-principle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/solid-principle/liskov-substitution-principle/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;里氏替換原則的概念為，子類別應該可以完全替換父類別的任何使用位置。&lt;/p&gt;
+&lt;p&gt;如果子類別沒有按照里氏替換原則設計，由於其他程式並不 一定知道此父類別程式的具體實作類別，當子類別的行為與父類別有衝突時，呼叫的程式可能會產生錯誤。因此子類別應該保持與父類別的行為一致，只是針對細節做出更多補充。如果真的需要不同的功能，代表應該分出不同的類別，而不在此父類別的繼承進行調整。&lt;/p&gt;
+&lt;h3 id=&#34;可替換父類別的前提&#34;&gt;可替換父類別的前提&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;行為模式需要與父類別一致&lt;/li&gt;
+&lt;li&gt;只擴增該父類別的行為細節&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;舉例&#34;&gt;舉例&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;假設我們有一個介面名為「DataReader」，用於讀取不同類型的資料，例如從檔案、資料庫或網路中讀取。根據Liskov Substitution Principle，任何實作「DataReader」介面的類別應該能夠替代「DataReader」的使用，並且提供一致的行為。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 依賴反轉原則</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/solid-principle/dependency-inversion-principle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/solid-principle/dependency-inversion-principle/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;依賴反轉原則是指在元件設計時，避免直接在元件內部實例化具有不同實作內容的物件，以應對不同情境的呼叫需求。相反地，元件應透過指定傳入的介面，將可能變動的邏輯由外部傳入。這樣做可以降低程式碼間的耦合度。&lt;/p&gt;
+&lt;p&gt;具體實現依賴反轉原則的方式如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;依賴注入：元件在設計時指定傳入的介面，當使用該元件時，透過傳入的介面實作來動態決定該元件的功能實現方式。&lt;/li&gt;
+&lt;li&gt;依賴尋找：利用像 Spring 這樣的容器管理機制，容器能夠在需要時動態回傳所需類別的具體實作物件。&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 開放封閉原則</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/solid-principle/open-closed-principle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/solid-principle/open-closed-principle/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;描述&#34;&gt;描述&lt;/h2&gt;
+&lt;p&gt;開放封閉原則是指應該對擴展功能開放，並對現有程式修改封閉。為達到此原則，可以使用繼承、多型或設計模式等方式實現
+具體來說，包含下列幾種常見方式&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;繼承: 子類別可以在繼承父類別現有功能的情況下，針對差異的部分進行覆寫。實作介面也可以達到類似的作法。&lt;/li&gt;
+&lt;li&gt;多型: 同樣的一個方法，在不同傳入值的情況下，可有不同的實作。因此增加不同的傳入值，以處理不同的情況，以避免改變現有方法。&lt;/li&gt;
+&lt;li&gt;設計模式中有許多針對彈性設計的經典解法，像是可以使用Builder模式以提供彈性建立物件的方式；Decortor模式可以動態添加額外功能；依賴注入模式將變動的邏輯抽成獨立的介面，依照傳入的介面實作不同，而有不同的處理邏輯。&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

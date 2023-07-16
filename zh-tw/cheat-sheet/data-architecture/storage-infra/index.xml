@@ -1,0 +1,203 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>資訊架構備忘表 – 儲存基礎設施</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/</link>
+    <description>Recent content in 儲存基礎設施 on 資訊架構備忘表</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: DAS</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/das/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/das/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;Direct attached storage (DAS) 通過硬體直接掛載硬碟來連接磁碟機。可使用SATA, SAS, USB等方式連接硬碟。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;使用情境&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;個人電腦或小型工作站&lt;/li&gt;
+&lt;li&gt;單一伺服器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;優點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;架構單純: 只要掛載硬碟即可使用&lt;/li&gt;
+&lt;li&gt;價格便宜: 相對於NAS與DAS，不須額外設定與伺服器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;缺點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;絕大部分的DAS裝置，無法與其他伺服器共享硬碟存取&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: NAS</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/nas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/nas/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;Network attached storage (NAS) 為獨立的檔案存取伺服器，伺服器透過網路連接硬碟。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;使用情境&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;企業共享磁碟&lt;/li&gt;
+&lt;li&gt;多台伺服器共同讀取同一磁碟空間&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;優點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;可同時供多台伺服器存取資料&lt;/li&gt;
+&lt;li&gt;可同時掛載多個硬碟，提供更大的磁碟儲存空間&lt;/li&gt;
+&lt;li&gt;搭配RAID等機制可提供減少單一硬碟損壞造成資料遺失的缺點&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;缺點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;價格較高: 相對於DAS，需要獨立的伺服器，且同時有多顆硬碟，因此成本較高&lt;/li&gt;
+&lt;li&gt;架構與管理複雜: NAS需要管理伺服器、網路與儲存設定，因此管理較為困難&lt;/li&gt;
+&lt;li&gt;單點故障風險: 如果NAS伺服器的網路或電源中斷，則無法提供資料存取服務&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: SAN</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/san/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/san/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;Storage area network (SAN) 使用獨立光纖網路、多台磁碟陣列、多台Switch共同組成儲存空間。雖然是由多台磁碟陣列組成，但是對伺服器來說，仍然可如同一般硬碟一樣進行掛載磁碟使用。SAN可解決NAS單點故障的風險，存取速度也更快，但是價格十分高昂。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;使用情境&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;大型企業共用磁碟、伺服器使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;優點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;避免單點故障: 由於同時有多台磁碟陣列提供存取，避免單一磁碟陣列損壞而無法連接的問題&lt;/li&gt;
+&lt;li&gt;快速存取: SAN透過光纖存取資料，因此存取速度較快&lt;/li&gt;
+&lt;li&gt;不佔用區網流量: SAN透過獨立網路進行資料存取，不會影響其他區域網路服務&lt;/li&gt;
+&lt;li&gt;易於水平擴展: 由於有多台磁碟陣列，可分批增加磁碟陣列的儲存空間，而不影響服務運行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;缺點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;價格十分高昂: SAN需要多台磁碟陣列及光纖網路，這都需要較高的成本&lt;/li&gt;
+&lt;li&gt;管理十分複雜: SAN需額外管理各磁碟陣列之設備及維護光纖網路的設定，因此管理複雜並且難以學習曲線較高&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: RAID</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/raid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/raid/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;RAID（Redundant Array of Independent Disks）是以多個硬碟互相備援資料，以降低單一硬碟損壞造成資料遺失的風險。有多種RAID的等級，例如RAID 0, RAID 1, RIAD6等。各自有不同的備援邏輯及備份次數。可通過硬體或軟體實現RAID架構。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;使用情境&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;具有重要資料，希望避免單一硬碟故障造成資料遺失&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;優點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;冗餘備援：透過多個硬碟互相備援減低資料損失風險&lt;/li&gt;
+&lt;li&gt;讀寫效率高：由於有多個硬碟，可同時並行讀寫多個不同的硬碟&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;缺點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;價格較高：按照不同的RAID等級，需要更多的冗餘備份硬碟，並且可能需要採購專門的RAID磁碟陣列&lt;/li&gt;
+&lt;li&gt;管理複雜：需要考慮不同的RAID等級等儲存設定&lt;/li&gt;
+&lt;li&gt;寫入速度可能降低：某些RAID模式下，因為需要同時寫入多個硬碟，可能會降低寫入速度&lt;/li&gt;
+&lt;li&gt;無法應對區域性風險：無法避免區域性的停電或天災的資料損失風險&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Block Storage</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/block-storage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/block-storage/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;述&#34;&gt;&lt;strong&gt;述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;若有大量資料儲存需求，以一個一個資料區塊為單位，分散儲存於多台伺服器中。可以連續或隨機地讀取檔案，也可以儲存結構性與關聯性的多組檔案。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;&lt;strong&gt;使用情境&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;企業內部共用資料夾&lt;/li&gt;
+&lt;li&gt;虛擬機器（VM）或容器掛載的資料夾&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;可儲存大量的檔案：透過水平擴展，Block Storage能夠應對大容量的儲存需求。&lt;/li&gt;
+&lt;li&gt;可儲存結構性的檔案：Block Storage支援儲存結構化的資料，如關聯式數據庫。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;架構較複雜，管理較複雜：Block Storage需要較多的配置和管理，包括區塊分配、存取控制等。&lt;/li&gt;
+&lt;li&gt;建置成本高昂：建立和維護Block Storage的成本通常較高，包括硬體設備、存儲軟體、數據保護等方面的投入。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Object Storage</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/object-storage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/storage-infra/object-storage/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Object Storage是一種儲存架構，以每一個檔案為單位，各檔案給予一個獨立的ID。通過這個ID搭配RESTful API進行存取。檔案的類型可以為圖片、影片或一般文件。這些檔案可以彈性地存放於分散式環境。通常搭配冗餘多重備份機制，以避免因災難造成資料遺失。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;&lt;strong&gt;使用情境&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;大量的檔案儲存需求&lt;/li&gt;
+&lt;li&gt;CDN、相簿、影片串流&lt;/li&gt;
+&lt;li&gt;獨立的檔案: 儲存大量的圖片、影片、一般文件，較不適合儲存一組相關聯的結構性檔案。例如: 資料庫&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;易於儲存與備份: 各個檔案獨立，方便分散式儲存與備份&lt;/li&gt;
+&lt;li&gt;易於存取: 通過RESTful API即可存取檔案&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;無法儲存結構性資料: Object Storage主要用於儲存非結構化的檔案，不適合存儲結構化資料或關聯性數據。&lt;/li&gt;
+&lt;li&gt;無法掛載為傳統作業系統的網路磁碟機: Object Storage無法像傳統的Block Storage那樣直接掛載為傳統作業系統的網路磁碟機，而是通過API進行存取。&lt;/li&gt;
+&lt;li&gt;架構較複雜: Object Storage的架構相對複雜，需要更多的配置和管理。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

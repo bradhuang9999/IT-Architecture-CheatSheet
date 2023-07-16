@@ -1,0 +1,143 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT Architecture Cheat Sheet – Web App Security</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/web-app-security/</link>
+    <description>Recent content in Web App Security on IT Architecture Cheat Sheet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/web-app-security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: Content Security Policy</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/web-app-security/content-security-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/web-app-security/content-security-policy/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Content Security Policy (CSP) is a website security mechanism used to restrict certain types of unsafe behaviors on web pages. By defining a security policy for web content, CSP can adjust the security settings for various behaviors on the web page, including restrictions on resource loading sources, allowance of inline JavaScript and CSS, and limiting requests to HTTPS only.&lt;/p&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Reduces the likelihood of browsers executing risky actions, minimizing security risks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Requires understanding the nuances of different configuration settings, making it complex to set up.&lt;/li&gt;
+&lt;li&gt;CSP rules need careful design and testing to ensure they do not adversely affect the normal functioning of website features, especially for existing website functionalities that use higher-risk behaviors (such as inline CSS).&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Same-origin policy</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/web-app-security/same-origin-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/web-app-security/same-origin-policy/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Same-origin policy is a browser security mechanism that restricts access to cookies, DOM, localStorage, indexedDB, and limits the use of AJAX calls from different domains. It helps to mitigate the risks of XSS attacks and cookie leakage from external sources.&lt;/p&gt;
+&lt;p&gt;If there is a need to access resources from other domains, it can be achieved through Cross-Origin Resource Sharing (CORS) or JSONP. CORS allows other domains to access resources by adding the Access-Control-Allow-Origin header in the response. JSONP bypasses the same-origin policy restriction by loading a script tag in HTML.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Prevent XSS</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/web-app-security/prevent-xss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/web-app-security/prevent-xss/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;XSS (Cross-Site Scripting) is a common website security vulnerability that allows attackers to inject malicious code into a website. By injecting this code, attackers can execute it when users browse the website, achieving their malicious goals such as redirecting users to other websites or stealing user-entered information.&lt;/p&gt;
+&lt;h3 id=&#34;three-types-of-xss&#34;&gt;&lt;strong&gt;Three Types of XSS&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Reflected XSS: Malicious code is injected into the backend through user-controlled data, such as URL parameters, cookies, or form inputs. The backend then returns this data directly to the frontend, causing the malicious code to be executed when users view the web page.&lt;/li&gt;
+&lt;li&gt;Stored XSS: Malicious code is stored in a database. When data is retrieved from the database and rendered on the frontend, the malicious code is executed.&lt;/li&gt;
+&lt;li&gt;DOM-based XSS: Malicious code is returned to the frontend through methods like Ajax. The frontend directly inserts the malicious code into the DOM structure of the page, resulting in the execution of the malicious code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;preventing-xss&#34;&gt;&lt;strong&gt;Preventing XSS&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use Content Security Policy (CSP) to restrict the execution of content on web pages, preventing the injection and execution of malicious code.&lt;/li&gt;
+&lt;li&gt;Perform HTML encoding on data outputted to the web page to ensure that risky content is not displayed, preventing the execution of malicious code.&lt;/li&gt;
+&lt;li&gt;Validate and filter input data transmitted to the backend to prevent the use and storage of risky content.&lt;/li&gt;
+&lt;li&gt;Regularly conduct black-box penetration testing and white-box source code scanning on the website to ensure there are no security vulnerabilities.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Prevent CSRF</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/web-app-security/prevent-csrf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/web-app-security/prevent-csrf/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Cross-Site Request Forgery (CSRF) is an attack method that exploits the authenticated session of a user on a website to perform malicious actions on a targeted website.&lt;/p&gt;
+&lt;h3 id=&#34;attack-scenario&#34;&gt;&lt;strong&gt;Attack Scenario&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Background: The user is already logged in to the targeted website, and the browser has the website&amp;rsquo;s cookies stored.&lt;/p&gt;
+&lt;p&gt;Attack: The user visits a malicious website that contains an image or hyperlink. When the user interacts with the image or hyperlink, it triggers a request to the targeted website with malicious content. Since the request carries the correct cookies, the targeted website trusts the request and becomes vulnerable to the attack.&lt;/p&gt;
+&lt;h3 id=&#34;prevention-methods&#34;&gt;&lt;strong&gt;Prevention Methods&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;The server-side should check whether the Origin or Referer in the request headers matches the domain of the targeted website. If they don&amp;rsquo;t match, the server should reject the request.&lt;/li&gt;
+&lt;li&gt;When generating web pages, the server-side should generate a random CSRF token and store it in the user&amp;rsquo;s session instead of cookies. Each time a request is received, the server-side should verify if the CSRF token in the request matches the one stored in the user&amp;rsquo;s session to ensure the request comes from the correct webpage.&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Prevent SQL injection</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/web-app-security/prevent-sql-injection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/web-app-security/prevent-sql-injection/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;SQL injection attack refers to directly concatenating untrusted variables into SQL strings. If these variables contain malicious content, the database may be vulnerable to attacks or unauthorized data retrieval. There are two methods to prevent SQL injection:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Avoid directly concatenating untrusted variables into SQL strings and instead use parameterized queries or prepared statements to pass variables. For example, in Java, you can use PreparedStatement to pass variables:&lt;/p&gt;
+&lt;p&gt;Example with SQL injection vulnerability:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;String&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;request&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;getParameter&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// Untrusted variable from frontend
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;String&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;sql&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;SELECT * FROM booking WHERE title = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;Statement&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;stmt&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;conn&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;createStatement&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;stmt&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;executeQuery&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;sql&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Example with the fix:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;String&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;request&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;getParameter&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// Untrusted variable from frontend
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;String&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;sql&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;SELECT * FROM booking WHERE title = ?&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;PreparedStatement&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;stmt&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;conn&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;prepareStatement&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;sql&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;stmt&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setString&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;stmt&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;executeQuery&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Check if untrusted variables contain dangerous strings or unexpected content, such as single quotes or semicolons. If they contain dangerous strings, throw an error or handle them appropriately.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

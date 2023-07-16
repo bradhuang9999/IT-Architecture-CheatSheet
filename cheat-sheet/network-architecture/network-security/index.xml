@@ -1,0 +1,181 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT Architecture Cheat Sheet – Network Security</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-security/</link>
+    <description>Recent content in Network Security on IT Architecture Cheat Sheet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: Firewall</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-security/firewall/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-security/firewall/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;A firewall is an important security device placed between the boundary network and the internal network to reduce the risk of external attacks. It is responsible for monitoring and controlling incoming and outgoing network traffic. Firewalls employ various mechanisms to achieve this, including IP whitelisting and traffic restrictions.&lt;/p&gt;
+&lt;h3 id=&#34;common-firewall-protection-mechanisms&#34;&gt;&lt;strong&gt;Common Firewall Protection Mechanisms&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Layer 4 Firewall
+&lt;ul&gt;
+&lt;li&gt;Allows specific IP addresses&lt;/li&gt;
+&lt;li&gt;Allows specific port numbers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Layer 7 Firewall
+&lt;ul&gt;
+&lt;li&gt;Allows specific URLs&lt;/li&gt;
+&lt;li&gt;Allows specific headers&lt;/li&gt;
+&lt;li&gt;Web Application Firewall (WAF)
+&lt;ul&gt;
+&lt;li&gt;Checks for XSS, SQL injection, and other attack strings&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Stateful Firewall
+&lt;ul&gt;
+&lt;li&gt;Detects abnormal network behavior by analyzing the sequence of packets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: NAT</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-security/nat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-security/nat/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;NAT (Network Address Translation) is a technique performed on the firewall, router, or dedicated NAT server in an edge network to translate packets between internal and external devices. It converts internal IP addresses into one or more public IP addresses to prevent external malicious entities from identifying the list of devices in the internal network through IP addresses. When a response is received, NAT determines which internal device to send the response to based on information such as the requested URL or port.&lt;/p&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;Advantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Enhanced security for internal networks: NAT masks the internal IP addresses at the edge network, making it impossible for external devices to identify the list of devices in the internal network or directly call internal devices through IP addresses.&lt;/li&gt;
+&lt;li&gt;Conservation of public IP addresses: NAT allows a large number of internal devices to connect to the internet using a small pool of public IP addresses, reducing the required number of public IP addresses and associated costs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;Disadvantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Increased complexity of network architecture: All packets connecting to the external network need to pass through NAT for forwarding and translation, which adds complexity to the network architecture.&lt;/li&gt;
+&lt;li&gt;Impact on network speed: Since all packets connecting to the external network must go through NAT, having only one NAT server may potentially reduce the connection speed to the external network. This issue can be mitigated by horizontally scaling multiple NAT servers.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: VPN</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-security/vpn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-security/vpn/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;A Virtual Private Network (VPN) establishes a secure encrypted connection over a public network, protecting the communication between users and servers from being intercepted by malicious third parties.&lt;/p&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Enables secure communication between multiple private networks in different locations, allowing interconnectedness between network environments from various regions.&lt;/li&gt;
+&lt;li&gt;Provides remote workers a secure way to connect to a private network, enabling them to remotely access internal resources and perform their work.&lt;/li&gt;
+&lt;li&gt;Offers an additional layer of security protection for network applications, safeguarding the confidentiality of sensitive data and communications.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The encryption and decryption processes require computational resources, which can potentially slow down transmission speeds.&lt;/li&gt;
+&lt;li&gt;VPN technology is more complex and requires additional networking equipment, resulting in higher management and setup costs.&lt;/li&gt;
+&lt;li&gt;VPN infrastructure is vulnerable to network attacks such as DDoS, necessitating appropriate security measures to protect the availability and stability of the VPN.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: HTTPS</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-security/https/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-security/https/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;HTTPS (Hypertext Transfer Protocol Secure) aims to protect the communication security and data integrity between network entities through the use of the Transport Layer Security (TLS) protocol.&lt;/p&gt;
+&lt;h3 id=&#34;characteristics&#34;&gt;&lt;strong&gt;Characteristics&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;HTTPS utilizes a combination of symmetric and asymmetric encryption for transmission, ensuring data security and efficiency. Asymmetric encryption is used for establishing secure connections and performing authentication, while symmetric encryption is used for encrypting transmitted data.&lt;/li&gt;
+&lt;li&gt;URLs in HTTPS begin with &amp;ldquo;https://&amp;rdquo; and, by default, use port 443 instead of the default port 80 used by HTTP. This configuration helps differentiate between regular HTTP connections and secure HTTPS connections.&lt;/li&gt;
+&lt;li&gt;When using HTTPS on the internet, it requires obtaining digital certificates from trusted Certificate Authorities (CAs). These certificates are used to verify the identity of servers, ensuring communication encryption and authenticity. In private internal networks, self-signed certificates can be used but need to be pre-installed and trusted on each device.&lt;/li&gt;
+&lt;li&gt;The primary purpose of HTTPS is to protect the confidentiality and integrity of communication content. Through the use of the TLS protocol, it provides end-to-end encryption, ensuring data security during transmission. However, HTTPS does not fully protect against other types of attacks, such as DDoS (Distributed Denial of Service) attacks and malware. Therefore, a comprehensive security strategy should include additional security measures like firewalls, intrusion detection systems, etc.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;handshake-process&#34;&gt;&lt;strong&gt;Handshake Process&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Application Stage:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The website generates a website public key (site.pub) and a website private key (site.key).&lt;/li&gt;
+&lt;li&gt;Using the website private key and website information, a certificate signing request (CSR) file (site.csr) is created and provided to a Certificate Authority (CA).&lt;/li&gt;
+&lt;li&gt;After verifying the identity, the CA signs the CSR content with its private key, generating a website certificate (site.crt).&lt;/li&gt;
+&lt;li&gt;The website certificate is provided to the website administration.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Handshake Stage:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The browser requests a HTTPS connection with the website, and the website provides its website certificate (server.crt).&lt;/li&gt;
+&lt;li&gt;The certificate&amp;rsquo;s validity, including its dates and other certificate data, is checked.&lt;/li&gt;
+&lt;li&gt;If the certificate&amp;rsquo;s issuer is a CA trusted by the browser, the browser uses the CA&amp;rsquo;s public key stored in its memory to decrypt the signature in server.crt. If successful, it means the certificate was issued by a trusted CA. The decrypted signature hash value is obtained.&lt;/li&gt;
+&lt;li&gt;The data specified by the signature is hashed using the hash algorithm specified in the signature to generate a hash value, which is compared to the original hash value attached to the signature. If they match, it confirms that the data hasn&amp;rsquo;t been tampered with.&lt;/li&gt;
+&lt;li&gt;A symmetric encryption key is generated for encryption and encrypted using the website&amp;rsquo;s public key from site.crt. The encrypted key is then sent to the website.&lt;/li&gt;
+&lt;li&gt;The website decrypts the encrypted key using its private key, obtaining the symmetric encryption key.&lt;/li&gt;
+&lt;li&gt;At this stage, both parties have completed authentication and securely exchanged the symmetric encryption key.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Communication Stage:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The browser encrypts the request using the symmetric encryption key, and the server decrypts it using the same key.&lt;/li&gt;
+&lt;li&gt;The server encrypts the response using the symmetric encryption key, and the browser decrypts it using the same key.&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Deffie-Hellman</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-security/deffie-hellman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-security/deffie-hellman/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The Diffie-Hellman (DH) algorithm is used to generate a secure communication key in an insecure network environment.&lt;/p&gt;
+&lt;h3 id=&#34;basic-procedure&#34;&gt;&lt;strong&gt;Basic Procedure&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Alice first provides Bob with a large prime number, denoted as &amp;ldquo;p,&amp;rdquo; and a smaller exponent, denoted as &amp;ldquo;g,&amp;rdquo; to be used for calculations.&lt;/li&gt;
+&lt;li&gt;Both Alice and Bob generate secret numbers, denoted as &amp;ldquo;a&amp;rdquo; and &amp;ldquo;b&amp;rdquo; respectively, which are kept private and not transmitted over the network.&lt;/li&gt;
+&lt;li&gt;Alice computes the public value A = (g^a) mod p and shares it with Bob.&lt;/li&gt;
+&lt;li&gt;Bob computes the public value B = (g^b) mod p and shares it with Alice.&lt;/li&gt;
+&lt;li&gt;Alice uses the public value B provided by Bob and her own secret number a to compute the key K = (B^a) mod p.&lt;/li&gt;
+&lt;li&gt;Bob uses the public value A provided by Alice and his own secret number b to compute the key K = (A^b) mod p.&lt;/li&gt;
+&lt;li&gt;Since both parties use the same public values and secret numbers for calculations, the resulting key K will be the same for both Alice and Bob.&lt;/li&gt;
+&lt;li&gt;With this shared key K, Alice and Bob can engage in secure encrypted communication.&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

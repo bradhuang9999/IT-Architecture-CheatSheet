@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>資訊架構備忘表 – Common Concept</title>
+    <title>資訊架構備忘表 – 通用概念</title>
     <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/</link>
-    <description>Recent content in Common Concept on 資訊架構備忘表</description>
+    <description>Recent content in 通用概念 on 資訊架構備忘表</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     
@@ -15,7 +15,33 @@
     
     
     <item>
-      <title>Cheat Sheet: Basic Element</title>
+      <title>Cheat Sheet: 目標</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/objective/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 屬性</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 基本要素</title>
       <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/basic-element/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       
@@ -24,14 +50,6 @@
         
         
         
-
-&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
-&lt;p&gt;This is a placeholder page. Replace it with your own content.&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;This is the section landing page.&lt;/p&gt;
-
       </description>
     </item>
     

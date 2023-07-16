@@ -1,0 +1,153 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>資訊架構備忘表 – 屬性</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/</link>
+    <description>Recent content in 屬性 on 資訊架構備忘表</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: 伸縮性</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/scalability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/scalability/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;由於系統使用量的多變化性，架構設計會考慮其各項需求伸縮的容易度。易於伸縮的系統可依照需求即時調整。在系統需求量高時，增加資源以快速消化需求。在系統需求量低時，減少資源以節約成本。在系統的各方面都需要考慮伸縮性，包含計算、檔案讀寫、資料庫讀寫、網路流量等。&lt;/p&gt;
+&lt;h3 id=&#34;常用作法&#34;&gt;常用作法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;需求量規劃：按照目前使用量，預測未來增長、及特殊事件下的需求量，以決定系統伸縮設計方式&lt;/li&gt;
+&lt;li&gt;垂直伸縮：在單一伺服器上增加更多系統資源。伸縮速度較慢，伸縮彈性較小。&lt;/li&gt;
+&lt;li&gt;水平伸縮：伸縮至多台伺服器。伸縮速度較快，伸縮彈性大。&lt;/li&gt;
+&lt;li&gt;自動伸縮：動態偵測系統需求量，自動進行伸縮。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 高容錯</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/fault-tolerance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/fault-tolerance/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;高容錯的架構可以避免單點故障造成系統無法使用或出現重大錯誤。&lt;/p&gt;
+&lt;h3 id=&#34;可能作法&#34;&gt;&lt;strong&gt;可能作法&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;冗餘設計：通過使用冗餘的組件或服務來增加系統的可靠性，以防止單一點故障。這包括使用備援伺服器、備援網路連接、備援數據存儲等。然而，需要注意冗餘設計會增加成本和複雜性。&lt;/li&gt;
+&lt;li&gt;錯誤偵測和恢復：實施錯誤偵測機制，以及自動化的錯誤恢復策略。這可以包括使用監控系統和健康檢查來檢測故障，並自動將流量轉移到正常運行的組件上。這有助於快速檢測和恢復系統中的錯誤，降低故障對系統的影響。&lt;/li&gt;
+&lt;li&gt;快速恢復：在發生故障後，能夠快速恢復系統的正常運行。這包括快速故障轉移、快速故障排除和快速故障恢復策略的實施。快速恢復能夠最小化服務中斷的時間，提高系統的可用性。&lt;/li&gt;
+&lt;li&gt;容錯測試與演練：藉由定期測試系統的容錯能力，可確認目前架構可應對單元故障之風險。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 易用性</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/usability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/usability/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;系統設計時應該盡可能易於使用以減少不熟悉的使用者初次使用時的挫折感，並減少操作的多餘動作。這有助於吸引更多客群並帶來更多利潤。&lt;/p&gt;
+&lt;h3 id=&#34;可能做法&#34;&gt;&lt;strong&gt;可能做法&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;設計易於上手的UX：通過良好的UX設計，可以幫助使用者快速上手，並增進使用的效率。包括直觀的界面設計、一致的操作流程和清晰的指導。&lt;/li&gt;
+&lt;li&gt;減少應用程式的大小及網路需求：應該努力減少應用程式的大小，以提高下載速度和運行效率。同時，減少網路需求可以降低用戶在使用過程中遇到的延遲和不穩定性。&lt;/li&gt;
+&lt;li&gt;考慮無障礙設計：除了普通用戶外，還應該關注身體機能有差異的用戶。遵循無障礙設計原則，例如提供可讀性高的文字、明確的標籤和鍵盤導航，以確保所有用戶都能輕鬆訪問和使用系統。&lt;/li&gt;
+&lt;li&gt;多國語系的使用者介面：考慮不同區域的用戶，提供多語言的使用者介面可以提升他們的使用體驗。這樣的設計可以減少語言障礙並確保全球用戶能夠輕鬆理解和操作系統。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 低耦合</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/low-coupling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/low-coupling/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;系統的低耦合性指的是模組之間的相互依賴程度低。在大型系統中，通常會根據功能性質將系統拆分為多個模組，例如訂單模組、使用者資訊模組等。儘管這些模組可能需要相互協作，但為了更好地管理模組，應該減少模組之間的直接相依性。這樣可以避免耦合度過高，從而使各模組更容易進行變更，因為一旦進行變更可能對其他模組產生重大影響。&lt;/p&gt;
+&lt;h3 id=&#34;不同種類的耦合方式從低到高排列&#34;&gt;&lt;strong&gt;不同種類的耦合方式從低到高排列：&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;內容耦合：直接讀取另一模組的內部資料，例如直接使用變數，或是直接讀取另一模組的資料表。&lt;/li&gt;
+&lt;li&gt;外部耦合：兩個模組都讀寫一個全域的資料位置。&lt;/li&gt;
+&lt;li&gt;控制耦合：提供接口給對方模組，讓B模組使用此接口控制A模組，封裝自己的資料和流程。&lt;/li&gt;
+&lt;li&gt;訊息耦合：提供外部訊息介面供呼叫，例如通過Web API進行呼叫。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;可能的做法&#34;&gt;&lt;strong&gt;可能的做法：&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;解耦資料存取：將資料存取和流程控制與內部資料、特定資料庫解耦，以提高系統的靈活性。&lt;/li&gt;
+&lt;li&gt;依賴反轉：高階模組使用元件時，元件只需指定回傳的介面，而非具體的類別，以減少程式之間的耦合度。&lt;/li&gt;
+&lt;li&gt;事件驅動：使用事件或訊息傳遞方式進行模組之間的呼叫，甚至可以透過非同步事件處理機制進一步降低耦合度。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 可移植性</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/portability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/portability/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;開發應用程式時應考慮可移植性，因為同樣的商業邏輯未來可能要在不同環境下執行。例如，本來是網頁後端伺服器須執行此邏輯，後來需要在Batch或排程作業中也要可以執行此邏輯。讓應用程式可移植性高，未來轉移環境時可減少修改的幅度。&lt;/p&gt;
+&lt;h3 id=&#34;常見作法&#34;&gt;&lt;strong&gt;常見作法&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;使用可執行於多環境的程式語言，例如 Java、Golang：這樣的程式語言具有跨平台的特性，可以在不同作業系統和環境中執行，提高應用程式的可移植性。&lt;/li&gt;
+&lt;li&gt;將與外部交互的接口使用介面獨立成可抽換元件，未來只需抽換接口實作即可：這種做法可以將與外部系統的依賴降低到最低，當需要轉移環境或更換外部系統時，只需實作新的接口即可，不需修改大量程式碼。&lt;/li&gt;
+&lt;li&gt;程式模組化，避免高耦合的程式，造成程式難以調整架構：模組化的程式設計可以將功能拆分為獨立的模組，降低模組之間的相依性，使得模組可以獨立調整和替換，提高可移植性。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 可擴展性</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/extensibility/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/attribute/extensibility/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;可擴展的軟體與系統架構，有助於保留未來擴增功能的彈性。避免未來因需求調整而進行變更時，系統架構需進行大幅度調整。&lt;/p&gt;
+&lt;h3 id=&#34;常見作法&#34;&gt;&lt;strong&gt;常見作法&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;考慮未來變化可能：在設計階段預先思考未來可能的功能發展，包括功能的新增、變更或刪除，以保留系統的彈性。這可以通過良好的需求分析和設計規劃來實現。&lt;/li&gt;
+&lt;li&gt;模組化設計和低耦合度：將系統拆分為獨立的模組，並確保模組之間的耦合度盡可能低。這樣可以使得新增或替換功能時只需調整相應的模組，而不需對整個系統進行大幅度調整。此外，提供標準化的介面或API，以便未來在相同的介面下實作新功能，進一步提升系統的可擴展性。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

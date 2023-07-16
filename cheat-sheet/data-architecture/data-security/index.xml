@@ -1,0 +1,156 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT Architecture Cheat Sheet – Data Security</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/data-security/</link>
+    <description>Recent content in Data Security on IT Architecture Cheat Sheet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/data-security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: Symmetric cryptography</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/data-security/symmetric-cryptography/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/data-security/symmetric-cryptography/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Symmetric encryption is a cryptographic technique that uses the same key for both encryption and decryption of data.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Symmetric encryption is suitable for scenarios that require an efficient data encryption mechanism, often combined with secure key distribution mechanisms to prevent key leakage.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fast encryption and decryption speed, making it suitable for data transmission.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Since the same key is used for both encryption and decryption, there is a security risk if the key is transmitted over the network.&lt;/li&gt;
+&lt;li&gt;Secure key exchange techniques can be used to generate shared keys, such as:
+&lt;ol&gt;
+&lt;li&gt;Encrypting the key using RSA for transmission.&lt;/li&gt;
+&lt;li&gt;Using the Diffie-Hellman algorithm to generate mutually communicable keys.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;&lt;strong&gt;Examples&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;DES (Data Encryption Standard): (Obsolete) DES algorithm is no longer recommended for use due to its vulnerability to brute force attacks.&lt;/li&gt;
+&lt;li&gt;AES (Advanced Encryption Standard): A widely used symmetric encryption algorithm known for its security and efficiency.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Asymmetric cryptography</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/data-security/asymmetric-cryptography/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/data-security/asymmetric-cryptography/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Asymmetric encryption is a cryptographic technique that, unlike symmetric encryption, uses a pair of keys, including a public key and a private key, for encryption and decryption operations.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s how it works: A pair of public and private keys is generated. The public key can be distributed to others over the network, while the private key must be kept secret and not transmitted over the internet. During the encryption process, the sender uses the private key to encrypt the data or create a digital signature. The receiver, upon receiving the encrypted data, uses the public key to decrypt it or verify the signature. If the decryption or verification is successful, it confirms that the data indeed comes from the corresponding private key and has not been tampered with during transmission.&lt;/p&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Digital Signatures:&lt;/strong&gt; Used to verify the authenticity and integrity of files or data, preventing forgery or tampering.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Message Encryption:&lt;/strong&gt; Used to protect sensitive information during network transmission, where only the private key holder can decrypt and read the content.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HTTPS Communication:&lt;/strong&gt; Used to encrypt the transmission data of websites, ensuring privacy and security during communication.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Secure Transmission of Symmetric Encryption Keys:&lt;/strong&gt; In symmetric encryption, asymmetric encryption algorithms can be used to securely transmit the symmetric encryption key, ensuring it remains confidential during transmission.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;&lt;strong&gt;Advantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Higher Security:&lt;/strong&gt; The private key is not transmitted over the network, and only the private key holder can decrypt or sign the data, providing higher security.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Secure Key Exchange:&lt;/strong&gt; Can be used for secure exchange of symmetric encryption algorithm keys, enhancing the overall system security.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;disadvantages&#34;&gt;&lt;strong&gt;Disadvantages&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Slower Encryption/Decryption Speed:&lt;/strong&gt; Asymmetric encryption algorithms are more complex compared to symmetric encryption, requiring more time to complete encryption and decryption operations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;&lt;strong&gt;Examples&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;RSA (Rivest-Shamir-Adleman)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DSA (Digital Signature Algorithm)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ECC (Elliptic Curve Cryptography)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Hashing</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/data-security/hashing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/data-security/hashing/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;A hash algorithm is an algorithm that generates a digest by compressing and transforming data.&lt;/p&gt;
+&lt;h3 id=&#34;characteristics&#34;&gt;&lt;strong&gt;Characteristics&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The same input will always produce the same fixed hash value, and it is not possible to reverse-engineer the original content from the hash value.&lt;/li&gt;
+&lt;li&gt;There are multiple implementations of hash algorithms, such as MD5 and SHA.&lt;/li&gt;
+&lt;li&gt;Some hash algorithms are considered insecure and should be avoided, such as MD5 and SHA1. Careful consideration should be given when selecting a hash algorithm.&lt;/li&gt;
+&lt;li&gt;The difficulty of cracking a hash algorithm can be increased by using a salt value.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Digital Signatures: Generate a hash value for text and encrypt it using a private key. Transmit the hash value along with the text to verify that the text has not been tampered with.&lt;/li&gt;
+&lt;li&gt;Password Storage: Convert passwords into hash values and store them in a database. When a user logs in, convert the entered password into a hash value and compare it for verification. Even if a hacker gains access to the database, the irreversible nature of the stored hash values helps prevent password leaks.&lt;/li&gt;
+&lt;li&gt;Generating Hash Tables: In system architectures, hash tables can be used to quickly search for target values in large datasets in constant time.&lt;/li&gt;
+&lt;li&gt;Error Detection: By utilizing the property that different data yields different hash values, hash values can be used to verify if data has been lost during transmission.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;&lt;strong&gt;Examples&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MD2, MD4, MD5&lt;/li&gt;
+&lt;li&gt;SHA1, SHA2, SHA256&lt;/li&gt;
+&lt;li&gt;RIPEMD&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Digital signature</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/data-security/digital-signature/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/data-security/digital-signature/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Digital signature is a process of signing a document using a private key. Since the private key is not transmitted externally, the recipient of the document can verify the signature by successfully validating it using the corresponding public key, thus confirming that the document was signed by the owner of the private key.&lt;/p&gt;
+&lt;h3 id=&#34;process-of-digital-signature&#34;&gt;&lt;strong&gt;Process of Digital Signature&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;The sender generates a digital digest of the original document content using a hash algorithm.&lt;/li&gt;
+&lt;li&gt;The sender encrypts the digital digest using their private key to create a digital signature.&lt;/li&gt;
+&lt;li&gt;The recipient uses the sender&amp;rsquo;s public key to decrypt the digital signature and obtain the digital digest.&lt;/li&gt;
+&lt;li&gt;The recipient generates a digital digest of the received document content using the same hash algorithm.&lt;/li&gt;
+&lt;li&gt;The recipient compares the generated digital digest with the decrypted digital digest to verify if they match. If they do, it confirms that the document is intact and originated from a trusted entity.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;use-cases&#34;&gt;&lt;strong&gt;Use Cases&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ensuring Document Authenticity: Documents exchanged over the internet are vulnerable to tampering. By using digital signature mechanisms, the authenticity of a document can be verified, ensuring that it was generated by the owner of the private key and has not been altered.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

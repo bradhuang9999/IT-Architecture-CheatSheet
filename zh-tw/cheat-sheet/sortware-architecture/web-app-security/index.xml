@@ -1,0 +1,144 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>資訊架構備忘表 – 網路應用程式安全</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/</link>
+    <description>Recent content in 網路應用程式安全 on 資訊架構備忘表</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: 內容安全策略 CSP</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/content-security-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/content-security-policy/</guid>
+      <description>
+        
+        
+        &lt;p&gt;將下列問答翻譯為簡單的英文：&lt;/p&gt;
+&lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Content Security Policy (CSP) 是一種網站安全機制，用於限制網頁執行特定類型的不安全行為。通過定義網頁內容的安全政策，CSP 可以調整網頁端各項行為的安全性設定，包括資源載入來源的限制、是否允許 inline JavaScript 和 CSS，以及是否僅允許 HTTPS 請求。&lt;/p&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;限制瀏覽器執行風險性動作的可能性，減少安全性風險的發生。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;設定較複雜，需要理解各種設定的行為細節差異。&lt;/li&gt;
+&lt;li&gt;需仔細設計和測試 CSP 規則，以確保不影響網站功能的正常運作，特別是對於使用了較高風險性行為（如 inline CSS）的現有網站功能。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 同源政策</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/same-origin-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/same-origin-policy/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;Same-origin policy是一種瀏覽器安全機制，此機制不允許其他網域的js存取目前網站的cookie, dom, localStorage, indexedDB，呼叫其他網域的ajax也會受到限制。以減少XSS, cookie洩漏等外部攻擊的風險。&lt;/p&gt;
+&lt;p&gt;如果想要存取其他網域的資源，可以通過跨域資源共享(CORS)或JSONP等方式實現。CORS藉由response header增加Access-Control-Allow-Origin來允許其他網域的資源。JSONP藉由在HTML中載入Script標籤來規避同源策略限制。&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 防範 XSS</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/prevent-xss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/prevent-xss/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;XSS（跨站指令碼攻擊）是一種常見的網站安全漏洞攻擊方式。攻擊者通過向網站注入惡意程式碼，使得使用者在瀏覽網站時執行該惡意程式碼，從而達到攻擊的目的，如重新導向到其他網站或竊取使用者輸入的資訊。&lt;/p&gt;
+&lt;h3 id=&#34;三種xss類型&#34;&gt;&lt;strong&gt;三種XSS類型&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;反射型：惡意程式碼通過URL參數、Cookie或表單等使用者可控的資料傳入後端，後端將這些資料直接返回給前端，導致惡意程式碼在使用者瀏覽網頁時被執行。&lt;/li&gt;
+&lt;li&gt;儲存型：惡意程式碼被儲存在資料庫中，當從資料庫中提取資料並在前端呈現時，惡意程式碼被執行。&lt;/li&gt;
+&lt;li&gt;DOM型：惡意程式碼通過Ajax等方式返回給前端，前端直接將惡意程式碼插入到頁面的DOM結構中，導致惡意程式碼被執行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;預防xss的方式&#34;&gt;&lt;strong&gt;預防XSS的方式&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;使用CSP（內容安全策略）來限制網頁的執行內容，防止惡意程式碼的注入和執行。&lt;/li&gt;
+&lt;li&gt;對輸出到網頁上的資料進行HTML編碼，確保不會顯示具有風險的內容，避免惡意程式碼的執行。&lt;/li&gt;
+&lt;li&gt;對傳輸到後端的資料進行輸入驗證和過濾，避免使用和儲存具有風險的內容。&lt;/li&gt;
+&lt;li&gt;定期對網站執行黑箱滲透測試、白箱原始碼掃描，以確保網站沒有安全性漏洞。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 防範 跨站請求偽造</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/prevent-csrf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/prevent-csrf/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Cross-Site Request Forgery (CSRF) 是一種攻擊方式，利用已登入網站的使用者認證，對攻擊目標網站執行惡意行為。&lt;/p&gt;
+&lt;h3 id=&#34;攻擊範例情境&#34;&gt;&lt;strong&gt;攻擊範例情境&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;背景: 使用者已經登入攻擊目標網站，並且瀏覽器中保存有該網站的 Cookie。&lt;/p&gt;
+&lt;p&gt;攻擊: 使用者訪問一個惡意網站，該網站中包含一個圖片或超連結，該圖片或超連結會向攻擊目標網站發送帶有攻擊內容的請求。由於該請求攜帶了正確的 Cookie，攻擊目標網站會信任此請求，從而受到攻擊。&lt;/p&gt;
+&lt;h3 id=&#34;防範方式&#34;&gt;&lt;strong&gt;防範方式&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;伺服器端應檢查請求的標頭中的 Origin 或 Referer 是否與目標網站的網域一致，若不一致，則拒絕處理此請求。&lt;/li&gt;
+&lt;li&gt;伺服器端在生成網頁時，應生成一個具有隨機性的 CSRF token，並將其存儲在使用者的會話中而非 Cookie 中。每次收到請求時，伺服器端需檢查該請求攜帶的 CSRF token 是否與使用者會話中的相符，以確認請求是否來自正確的網頁。&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 防範 SQL injection</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/prevent-sql-injection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/prevent-sql-injection/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;描述&#34;&gt;描述&lt;/h2&gt;
+&lt;p&gt;SQL injection 攻擊是指直接把不可信任的變數直接串上 SQL 字串，若此變數內含攻擊內容，則資料庫可能會被攻擊或取出未經授權的資料。避免 SQL injection 的方法有兩種：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;不要直接把不可信任的變數串上 SQL 字串，而是使用元件傳遞變數的方式。例如，在 Java 中可以使用 PreparedStatement 來傳遞變數：&lt;/p&gt;
+&lt;p&gt;有SQL injection 風險的範例&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;String&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;request&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;getParameter&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// 從前端傳來的變數
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;String&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;sql&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;SELECT * FROM booking WHERE title = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;Statement&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;stmt&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;conn&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;createStatement&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;stmt&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;executeQuery&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;sql&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;修正後的範例&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;String&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;title&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;request&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;getParameter&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt; &lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;// 從前端傳來的變數
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8f5902;font-style:italic&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;String&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;sql&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#4e9a06&#34;&gt;&amp;#34;SELECT * FROM booking WHERE title = ?&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;PreparedStatement&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;stmt&lt;/span&gt; &lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;conn&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;prepareStatement&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#000&#34;&gt;sql&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;stmt&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;setString&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#0000cf;font-weight:bold&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#000&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#000&#34;&gt;stmt&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#c4a000&#34;&gt;executeQuery&lt;/span&gt;&lt;span style=&#34;color:#ce5c00;font-weight:bold&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;檢查不可信任的變數是否包含危險字串或非預期的內容，例如單引號、分號等。如果包含危險字串，則拋出錯誤或進行適當的處理。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

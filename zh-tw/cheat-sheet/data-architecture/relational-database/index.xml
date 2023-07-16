@@ -1,0 +1,162 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>資訊架構備忘表 – 關聯式資料庫</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/</link>
+    <description>Recent content in 關聯式資料庫 on 資訊架構備忘表</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: 正規化</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/data-normalization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/data-normalization/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;資料正規化是一種將資料按照其邏輯關係分別儲存於多個不同資料表的方法，以避免在多個資料表中儲存重複的資料。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;&lt;strong&gt;使用情境&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;資料正規化常用於資料屬性較複雜的情況下，當單一資料表無法完整儲存所有資料時。&lt;/p&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;減少資料儲存量：透過正規化，減少重複性資料欄位的儲存，有效降低儲存空間需求。&lt;/li&gt;
+&lt;li&gt;資料表的彈性與可擴展性較高：將資料分割為多個資料表，容易根據需求調整和擴充欄位。&lt;/li&gt;
+&lt;li&gt;減少資料不一致風險：當資料發生異動時，只需要修改相應的位置，避免多處修改造成不一致的風險。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;複雜度：資料正規化需要管理多個資料表，相較於單一資料表，操作上更為複雜。&lt;/li&gt;
+&lt;li&gt;開發成本增加：需要建立適當的資料異動介面來處理多個資料表，因此開發時間和成本會相對增加。&lt;/li&gt;
+&lt;li&gt;查詢時間較長：為了獲取完整的資料，需要連結多個資料表，若未建立適當的索引，可能導致查詢時間增加。建立適當索引可以改善查詢效能。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 反正規化</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/data-denormalization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/data-denormalization/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;當資料處理流程與屬性十分複雜時，過度正規化可能導致資料處理流程過於繁複，增加開發成本和維護複雜度。因此，在某些情況下，可以考慮減少正規化的設計，以簡化資料處理流程。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;&lt;strong&gt;使用情境&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;當資料處理流程和欄位非常複雜時，希望減少開發複雜度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;查詢速度提升：由於資料已經反正規化並存放在一起，可以減少關聯多個資料表的需求，加快查詢速度。&lt;/li&gt;
+&lt;li&gt;控制開發複雜度：適當的反正規化可以減少所需開發的介面數量，簡化開發過程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;儲存空間增加：由於存在重複性資料，需要更多的儲存空間。&lt;/li&gt;
+&lt;li&gt;資料異動的複雜度和時間增加：由於需要更新多個存放相同資料的位置，因此修改資料的複雜度和時間會增加。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 查詢最佳化</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/query-optimization/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/query-optimization/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;由於資料庫通常存有大量的資料，如果查詢語句沒有經過最佳化，可能會導致查詢速度較慢，使使用者感到不滿，同時也會消耗過多的系統資源。因此，在處理大量資料時，需要關注查詢最佳化的問題。&lt;/p&gt;
+&lt;h3 id=&#34;常見作法&#34;&gt;&lt;strong&gt;常見作法&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;適時建立和使用索引：建立資料索引可以加快查詢速度。但是索引的建立需要額外的儲存空間，並且查詢時依據不同的資料庫會有不同的索引選擇邏輯。若索引建立不當，可能導致查詢無法使用索引。&lt;/li&gt;
+&lt;li&gt;查看SQL的執行計畫：通過查看SQL語句使用的索引和資源狀態，瞭解當前查詢的實際運行方式，有助於最佳化查詢語句。&lt;/li&gt;
+&lt;li&gt;謹慎使用hint：可以使用hint指定使用索引，但需要謹慎使用此功能，因為資料庫應該能自動選擇合適的索引。&lt;/li&gt;
+&lt;li&gt;建立彙總檔案：如果經常需要獲取某個彙總後的資料，可以考慮事先生成彙總檔案，以減少查詢的計算量。&lt;/li&gt;
+&lt;li&gt;使用Partition, Sharding, 分頁等高級功能：根據具體需求，考慮使用分區或分頁等高級功能來最佳化查詢效率。&lt;/li&gt;
+&lt;li&gt;監控和分析資料庫運行情況：監控當前耗費較多系統資源的SQL語句，並嘗試最佳化高負載的SQL查詢。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Sharding</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/sharding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/sharding/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Sharding是一種將龐大的資料表根據時間、字母、數字或Hash值等設定為shard key的方法，並使用該shard key將資料表分割儲存於多個不同的伺服器中。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;&lt;strong&gt;使用情境&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;當單一資料表過大且存在明確可用的Shard key時。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;分散伺服器負載：將資料分散儲存在不同資料庫中，避免某些關鍵資料表（如商品資訊）集中在特定伺服器上造成過多系統需求。&lt;/li&gt;
+&lt;li&gt;水平擴展：根據需求將資料分散儲存在多台伺服器上，提升資料庫操作速度，增加使用者滿意度。&lt;/li&gt;
+&lt;li&gt;高可用性：將資料庫分散至多個伺服器，降低單點故障的風險。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;需謹慎設計Shard key：某些情況下，某些Shard key可能會集中過多資料，例如名人的推文。透過事先分析資料分布，可幫助設計適當的Shard key。&lt;/li&gt;
+&lt;li&gt;增加join資料表的複雜度：在執行join操作時，若資料橫跨多個伺服器，查詢速度會變慢。&lt;/li&gt;
+&lt;li&gt;增加伺服器管理的複雜度：需考慮資料一致性、伺服器故障恢復等問題，建置成本也較高。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Partition</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/partition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/partition/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Partition是將一個巨大的資料表根據時間、字母、數字或Hash值等方式設定分區鍵(Partition key)，並使用該分區鍵將資料表分割並存儲於同一伺服器上的多個不同硬碟或磁碟陣列中。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;&lt;strong&gt;使用情境&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;當單一資料表過大且存在明確可用的分區鍵時。&lt;/li&gt;
+&lt;li&gt;希望能夠在單一伺服器上分散單一資料表過大的負擔。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;查詢效能優化：資料查詢可以分散在多個硬碟上，提升查詢效能。&lt;/li&gt;
+&lt;li&gt;架構簡單：無需使用複雜的分散式多伺服器資料庫管理架構。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;單點故障：當單一分區或伺服器發生故障時，該分區的資料將無法存取。&lt;/li&gt;
+&lt;li&gt;資料不均衡風險：若分區鍵設計不當，可能導致資料分佈不平衡，使部分硬碟處於閒置狀態。&lt;/li&gt;
+&lt;li&gt;管理複雜性：需要考慮跨分區查詢、資料一致性、備份、故障恢復等議題&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

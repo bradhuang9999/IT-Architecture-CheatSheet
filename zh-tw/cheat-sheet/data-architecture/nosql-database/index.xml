@@ -1,0 +1,184 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>資訊架構備忘表 – NoSQL資料庫</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/</link>
+    <description>Recent content in NoSQL資料庫 on 資訊架構備忘表</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: 文件資料庫</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/document-database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/document-database/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;文件資料庫是一種形式的 NoSQL 資料庫，其特徵為以單一文件、非正規化的方式進行儲存。市場上有多種不同性質的文件資料庫，根據其設計目的和特性，各自的優缺點略有不同。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;&lt;strong&gt;使用情境&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;為高負載網站提供高性能、高可用性的資料儲存方案。&lt;/li&gt;
+&lt;li&gt;儲存大量網路爬蟲蒐集的資料。&lt;/li&gt;
+&lt;li&gt;進行大數據彙整與分析。&lt;/li&gt;
+&lt;li&gt;開發搜索引擎和全文檢索應用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;無須預先定義資料格式：相對於傳統 SQL 資料庫，文件資料庫允許彈性的資料存放，可以以樹狀結構存放複雜的文件內容。&lt;/li&gt;
+&lt;li&gt;可控制的一致性：文件資料庫提供多種資料一致性方案，可以選擇適合的方案以提升寫入效率，允許在不同區域短期內的資料不一致。&lt;/li&gt;
+&lt;li&gt;快速寫入：由於可選擇較低的一致性，文件資料庫可以實現快速的寫入操作。&lt;/li&gt;
+&lt;li&gt;易於水平擴展：大多文件資料庫在設計時，即考慮cluster、一致性控制、以容器為基礎等易於水平擴展的架構&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;難以處理複雜的關聯查詢：文件資料庫在處理複雜的跨資料表查詢方面較差，不如傳統的關聯性資料庫。&lt;/li&gt;
+&lt;li&gt;較高的儲存空間需求：文件資料庫的非正規化特性可能導致冗餘儲存，需要較多的儲存空間。&lt;/li&gt;
+&lt;li&gt;事務控制較弱：相較於傳統資料庫的 ACID 特性，文件資料庫的事務控制能力較弱。&lt;/li&gt;
+&lt;li&gt;需學習專用語法：不同的文件資料庫產品有各自的查詢與資料異動語法，需要學習特定的語法和技術。&lt;/li&gt;
+&lt;li&gt;金額計算精確度較低：某些文件資料庫產品為了快速彙總資料概要而降低金額計算的精確度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;案例&#34;&gt;&lt;strong&gt;案例&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MongoDB&lt;/li&gt;
+&lt;li&gt;Couchbase&lt;/li&gt;
+&lt;li&gt;Elasticsearch&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 列式資料庫</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/columnar-database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/columnar-database/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;列式資料庫(Columnar Database) 以Column為單位儲存資料，因此若目標是僅需要抓取少數欄位進行分析，可以快速取得所需欄位的數值。
+例如，對於銷售資料中的許多明細欄位，其中有兩個欄位：商品編號和銷售金額。
+這些欄位被分開儲存，因此若想要取得特定商品的銷售金額，只需要掃描商品清單的欄位，找到目標商品的對應行索引（row idx）。
+然後使用該行索引篩選銷售金額欄位的對應數值資料，即可取得該商品的銷售金額。
+由於資料存放時，未使用的欄位是分開存放的，所以資料讀取速度比基於行的傳統資料庫更快。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;&lt;strong&gt;使用情境&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;即時的大數據分析系統&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;彙總特定欄位速度快：由於各欄位分開存放，可以快速取出各欄位的彙總資料。&lt;/li&gt;
+&lt;li&gt;可快速寫入：相對於傳統OLAP資料庫，可以即時將資料存放於各個欄位，滿足即時大數據分析需求。&lt;/li&gt;
+&lt;li&gt;易於水平擴展：由於各欄位分開存放，可以將資料存放於其他伺服器上，提高可用性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在彙總較多欄位時，效率可能會比傳統基於行的資料庫差。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;案例&#34;&gt;案例&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Apache Cassandra&lt;/li&gt;
+&lt;li&gt;Amazon Redshift&lt;/li&gt;
+&lt;li&gt;Google BigQuery&lt;/li&gt;
+&lt;li&gt;Vertica&lt;/li&gt;
+&lt;li&gt;Apache Parquet&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 圖形資料庫</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/graph-database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/graph-database/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;圖形資料庫（Graph Database）專門用於記錄大量資料之間的關聯性，其中的資料以節點（Node）表示，而節點之間的關係則以邊（Edge）表示。透過定義邊的起點、終點、方向和屬性，圖形資料庫能夠在擁有大量邊需儲存的情況下，以特定節點為基礎快速尋找相關的節點。為了提升查詢速度，通常會建立常用邊的索引。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;&lt;strong&gt;使用情境&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;交友網站：利用朋友關係作為邊，推薦朋友的朋友。利用共同嗜好作為邊，推薦具有相同嗜好的使用者。&lt;/li&gt;
+&lt;li&gt;推薦引擎：利用瀏覽歷史、購買紀錄、使用者偏好等關係尋找相關的推薦商品或影片。&lt;/li&gt;
+&lt;li&gt;詐騙偵測：利用付款對象、地址、電話等交易資訊尋找潛在的詐騙風險。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;快速查詢物件之間的關聯性：即使擁有百萬筆以上的關聯性資料，圖形資料庫仍能快速進行查詢。&lt;/li&gt;
+&lt;li&gt;資料模型靈活：能夠根據業務需求自定義多種形式的節點和邊。&lt;/li&gt;
+&lt;li&gt;內建圖形演算法：圖形資料庫通常內建各種圖形演算法，方便使用者快速執行各種與關聯性資料相關的演算法查詢。&lt;/li&gt;
+&lt;li&gt;易於水平擴展：圖形資料庫的設計考慮到大型網站常見的十億筆以上關聯資料需求，可輕鬆地基於水平擴展架構擴展到多個伺服器，以滿足大量關聯操作需求。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;高度專用化：圖形資料庫專注於儲存和查詢物件之間的關係，若需獲取相關物件的詳細資料（如商品明細），通常需要與其他資料庫結合使用。&lt;/li&gt;
+&lt;li&gt;需要大量儲存空間：由於節點之間的關係通常複雜，且為了提升查詢效能會建立索引，這會需要更多的儲存空間。&lt;/li&gt;
+&lt;li&gt;學習成本高：圖形資料庫的查詢語言和資料模型與傳統的SQL有所不同，需要額外的學習時間和努力。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;案例&#34;&gt;&lt;strong&gt;案例&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Amazon Neptune&lt;/li&gt;
+&lt;li&gt;ArangoDB&lt;/li&gt;
+&lt;li&gt;JanusGraph&lt;/li&gt;
+&lt;li&gt;Neo4j&lt;/li&gt;
+&lt;li&gt;OrientDB&lt;/li&gt;
+&lt;li&gt;TigerGraph&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 鍵值資料庫</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/key-value-database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/key-value-database/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;Key Value Database (鍵值資料庫) 將資料以Key做為資料索引來存放資料，無須定義每筆資料的內容格式。由於每一筆資料都各自獨立，因此可以在水平擴展下，快速的存放極大量的資料。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;使用情境&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;建立資料快取：於Key Value Database暫存資料後，可以針對近期的資料進行快速存取。&lt;/li&gt;
+&lt;li&gt;無狀態伺服器：將User的會話狀態從Web伺服器移動到Key Value Database，可避免因使用者的狀態資料固定在特定伺服器而無法水平擴展或因故障而替換伺服器。以增加更高的網站可用性。&lt;/li&gt;
+&lt;li&gt;購物車資料：由於尖峰時段可能會有極大量的資料存取需求，可以將使用者的購物車資料存放於Key Value Database中以減少關聯式資料庫的負擔，並且避免大量服務請求，造成使用者資料遺失。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;優點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;高彈性的資料存放格式：各Key值的資料獨立存放，無需事先定義格式&lt;/li&gt;
+&lt;li&gt;快速存取資料：只要確認Key值，可快速取得對應內容&lt;/li&gt;
+&lt;li&gt;水平擴展：由於各Key值獨立，因此更易於水平擴展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;缺點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;不易跨Key值進行計算：Key Value Database以Key值為目標進行儲存，大多只能提供簡單的聚合計算，若需要進行複雜的聚合計算，建議使用其他種類的資料庫。&lt;/li&gt;
+&lt;li&gt;較難參考其他資料源：因此無法使用PK, FK及Join的方式進行資料約束與參考&lt;/li&gt;
+&lt;li&gt;資料持久性限制：某些Key Value Database存放於記憶體中而非進行永久儲存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;案例&#34;&gt;案例&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Redis&lt;/li&gt;
+&lt;li&gt;Amazon DynamoDB&lt;/li&gt;
+&lt;li&gt;Apache Cassandra&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,146 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>資訊架構備忘表 – 高可用性儲存</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/</link>
+    <description>Recent content in 高可用性儲存 on 資訊架構備忘表</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: 冷備份</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/cold-backup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/cold-backup/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;冷備份是定期在其他位置產生資料備份，以便在系統或硬體故障時，使用這些備份資料進行系統還原。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;&lt;strong&gt;使用情境&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;個人或小型系統&lt;/li&gt;
+&lt;li&gt;可接受較長的RPO（Recovery Point Objective，系統故障時可接受的資料遺失區間）&lt;/li&gt;
+&lt;li&gt;可接受較長的RTO（Recovery Time Objective，系統恢復所需的時間）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;架構簡單：只需要設定定時產生備份資料並存放於其他位置即可。&lt;/li&gt;
+&lt;li&gt;成本低廉：不需要啟動額外的伺服器，因此成本最低。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;RPO長：由於冷備份通常較長時間產生一次備份資料（例如每天一次），因此在系統故障時可能會有較長的資料遺失範圍。&lt;/li&gt;
+&lt;li&gt;RTO長：由於冷備份在系統復原時需要進行備份資料的載入、設定連線等程序，因此需要較長的系統恢復時間。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 溫備份</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/warm-backup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/warm-backup/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;溫備份（Warm backup）設置一個專用的備援伺服器，該伺服器已經安裝了相關的服務並定期更新系統，同時載入最新的備份資料。在正常情況下，該備援伺服器不處於運行狀態，且系統不會對其進行讀取或修改操作。只有在主伺服器發生故障時，才會啟動備援伺服器，載入差異資料以提供系統服務。溫備份的RTO通常需要數小時到數天的時間。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;&lt;strong&gt;使用情境&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;溫備份適用於內部小型系統，希望在數小時內恢復服務。&lt;/p&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;較低的RPO：由於備援伺服器定期載入最新的備份資料，因此在故障發生時損失的資料較少。&lt;/li&gt;
+&lt;li&gt;較低的RTO：因為備份資料已經載入備援伺服器中，只需要修改設定即可快速啟動服務。此外，還可以通過故障偵測等自動切換模式來進一步減少RTO時間。&lt;/li&gt;
+&lt;li&gt;架構簡單：不需要考慮多站點架構的資料同步問題，降低了架構的複雜性。&lt;/li&gt;
+&lt;li&gt;成本較低：只需要額外一台備援伺服器。在雲端架構中，平時可以使用較少的系統資源。在切換至備援伺服器時，通過垂直伸縮可獲得更多的系統資源。由於雲端提供的按使用付費模式，可以有效控制成本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;RPO仍然存在：由於資料是定期備份，因此在最新的備份與故障發生之間仍可能有一定的時間差。&lt;/li&gt;
+&lt;li&gt;成本較高：需要額外的備援伺服器，並需承擔隨時啟動備援伺服器的成本。如果需要自動故障偵測和啟動備援可能需要額外成本。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 熱備份</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/hot-backup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/hot-backup/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;描述&lt;/h3&gt;
+&lt;p&gt;Hot backup (熱備份) 是指即時將資料同步到另一個備援伺服器。當主伺服器故障時，備援伺服器停止接收同步資料，改成作為主要伺服器，並修改其他服務設定，改成連接此備援伺服器。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;使用情境&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;希望降低RPO、RTO，但又不使架構過於複雜且有合理的備份成本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;優點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;較低的RPO：由於資料通常以毫秒或秒為單位進行同步，因此正常能損失較少的資料。&lt;/li&gt;
+&lt;li&gt;較低的RTO：因為備份資料已載入備援伺服器中，只需要修改設定即可啟動服務。甚至可以通過故障偵測等模式自動進行切換。&lt;/li&gt;
+&lt;li&gt;架構單純：不需要考慮多站點架構的資料同步問題。&lt;/li&gt;
+&lt;li&gt;成本較低：只需要額外一台備援伺服器。在雲端架構中，平常甚至可以使用較少的系統資源。當改為主伺服器時，再透過垂直伸縮，取得較多的系統資源。由於雲端pay as you go的特性，可以降低成本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;缺點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;成本較高：需要隨時啟動另一台備援伺服器。如果需要自動故障偵測並切換，則需要更多的設備與管理成本。&lt;/li&gt;
+&lt;li&gt;仍然有RPO：由於轉移服務至備援伺服器需要一定時間，因此仍有一定時間的RPO&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;案例&#34;&gt;案例&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;資料庫即時抄寫資料到備援資料庫&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 多站點</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/multi-site/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/multi-site/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;多站點(Multi-site) 是一種資料高可用性的設計模式，同時有多台伺服器互相同步資料，並提供系統服務。當任一伺服器故障時，自動停止此伺服器的服務，由其他伺服器支援系統需求。有多種模式可以達到多站點架構，例如：主要伺服器作為提供資料寫入、備份伺服器提供資料讀取，或是伺服器集群架構同時協調多個伺服器進行服務。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;&lt;strong&gt;使用情境&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;企業希望提供極高可用性的架構。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;最低的RPO和RTO：藉由即時同步並自動故障切換，可提供極高的可用性。&lt;/li&gt;
+&lt;li&gt;系統回應速度：由於有多台伺服器進行服務，可降低單一伺服器之壓力，提升使用者滿意度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;成本較高：同時有多台伺服器進行服務，系統成本較高。&lt;/li&gt;
+&lt;li&gt;架構複雜：需要協調多台伺服器之間的資料同步與自動切換機制，因此架構複雜。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;案例&#34;&gt;&lt;strong&gt;案例&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;企業使用主要伺服器和備份伺服器的多站點架構，以提供高可用性的資料讀寫服務。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

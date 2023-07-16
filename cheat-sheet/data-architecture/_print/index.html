@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.115.2">
+<meta name="generator" content="Hugo 0.115.3">
 <link rel="canonical" type="text/html" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/">
 <link rel="alternate" type="application/rss&#43;xml" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/index.xml">
 <meta name="robots" content="noindex, nofollow">
@@ -70,9 +70,7 @@ if (!doNotTrack) {
 </a>
 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 	
-	<a class="dropdown-item" href="/IT-Architecture-CheatSheet/no/"></a>
-	
-	<a class="dropdown-item" href="/IT-Architecture-CheatSheet/zh-tw/">繁體中文</a>
+	<a class="dropdown-item" href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/">繁體中文</a>
 	
 </div></li>
       </ul>
@@ -349,6 +347,57 @@ This is the multi-page printable view of this section.
     </ul>
     
   
+    
+    
+	
+<li>5: <a href="#pg-23cffaf4a205be59549c73026cd9917d">Data Security</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>5.1: <a href="#pg-e91850e5e48da507816edf0df4be2aa1">Symmetric cryptography</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5.2: <a href="#pg-b0d472d48850d3e0ae3b6acf8e8a97e6">Asymmetric cryptography</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5.3: <a href="#pg-86c4162dd0c8a2323250673faa5e880a">Hashing</a></li>
+
+
+    
+  
+    
+    
+	
+<li>5.4: <a href="#pg-cbc84e9bf8cf696287e63b2b5442018a">Digital signature</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
 
     </ul>
 
@@ -575,19 +624,25 @@ This is the multi-page printable view of this section.
     
 	<h1 id="pg-cfb92545a9cc36df9fbd8fdc96ecc3d3">1.6 - Object Storage</h1>
     
-	<p>Description
-Object Storage is a storage architecture where each file is treated as an individual object and is assigned a unique ID. Access to these objects is performed through a RESTful API. Files can include images, videos, or general documents and are stored flexibly in a distributed environment. Object Storage is often accompanied by redundant multiple backups to prevent data loss in case of disasters.</p>
-<p>Use Cases
-Large-scale file storage requirements.
-CDNs, photo galleries, video streaming.
-Independent files: Suitable for storing a large number of images, videos, and general documents, but less suitable for storing a group of related structured files, such as a database.
-Advantages
-Easy storage and backup: Each file is independent, allowing for distributed storage and backup.
-Easy access: Files can be accessed through a RESTful API.
-Disadvantages
-Cannot store structured data: Object Storage is primarily designed for storing unstructured files and is not suitable for storing structured data or relational databases.
-Cannot be mounted as a traditional network drive: Object Storage cannot be directly mounted as a network drive in traditional operating systems like Block Storage. Access is done through APIs.
-Complex architecture: Object Storage has a relatively complex architecture that requires more configuration and management.</p>
+	<h3 id="description"><strong>Description</strong></h3>
+<p>Object Storage is a storage architecture that treats each file as an individual object with a unique ID. Access to these files is done through the use of RESTful API. Files can include various types such as images, videos, or general documents, and they can be flexibly stored in a distributed environment. Object Storage is often accompanied by redundant multiple backups to prevent data loss in case of disasters.</p>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<ul>
+<li>Large-scale file storage needs</li>
+<li>Content Delivery Networks (CDNs), photo albums, video streaming</li>
+<li>Independent files: Storing a large number of images, videos, and general documents, rather than a group of related structured files (e.g., databases).</li>
+</ul>
+<h3 id="advantages"><strong>Advantages</strong></h3>
+<ul>
+<li>Easy storage and backup: Each file is stored independently, allowing for distributed storage and backups.</li>
+<li>Easy access: Files can be accessed through a RESTful API.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages</strong></h3>
+<ul>
+<li>Unable to store structured data: Object Storage is primarily used for storing unstructured files and is not suitable for structured data or relational data storage.</li>
+<li>Cannot be mounted as a network drive for traditional operating systems: Object Storage cannot be directly mounted as a network drive for traditional operating systems like Block Storage. Instead, access is done through an API.</li>
+<li>Complex architecture: Object Storage has a relatively complex architecture, requiring more configuration and management.</li>
+</ul>
 
 </div>
 
@@ -1160,6 +1215,189 @@ Complex architecture: Object Storage has a relatively complex architecture that 
 <h3 id="examples">Examples</h3>
 <ul>
 <li>An enterprise implements a multi-site architecture with a primary server and a backup server to provide high availability for data read and write services.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-23cffaf4a205be59549c73026cd9917d">5 - Data Security</h1>
+    
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-e91850e5e48da507816edf0df4be2aa1">5.1 - Symmetric cryptography</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>Symmetric encryption is a cryptographic technique that uses the same key for both encryption and decryption of data.</p>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<ul>
+<li>Symmetric encryption is suitable for scenarios that require an efficient data encryption mechanism, often combined with secure key distribution mechanisms to prevent key leakage.</li>
+</ul>
+<h3 id="advantages"><strong>Advantages</strong></h3>
+<ul>
+<li>Fast encryption and decryption speed, making it suitable for data transmission.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages</strong></h3>
+<ul>
+<li>Since the same key is used for both encryption and decryption, there is a security risk if the key is transmitted over the network.</li>
+<li>Secure key exchange techniques can be used to generate shared keys, such as:
+<ol>
+<li>Encrypting the key using RSA for transmission.</li>
+<li>Using the Diffie-Hellman algorithm to generate mutually communicable keys.</li>
+</ol>
+</li>
+</ul>
+<h3 id="examples"><strong>Examples</strong></h3>
+<ul>
+<li>DES (Data Encryption Standard): (Obsolete) DES algorithm is no longer recommended for use due to its vulnerability to brute force attacks.</li>
+<li>AES (Advanced Encryption Standard): A widely used symmetric encryption algorithm known for its security and efficiency.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-b0d472d48850d3e0ae3b6acf8e8a97e6">5.2 - Asymmetric cryptography</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>Asymmetric encryption is a cryptographic technique that, unlike symmetric encryption, uses a pair of keys, including a public key and a private key, for encryption and decryption operations.</p>
+<p>Here&rsquo;s how it works: A pair of public and private keys is generated. The public key can be distributed to others over the network, while the private key must be kept secret and not transmitted over the internet. During the encryption process, the sender uses the private key to encrypt the data or create a digital signature. The receiver, upon receiving the encrypted data, uses the public key to decrypt it or verify the signature. If the decryption or verification is successful, it confirms that the data indeed comes from the corresponding private key and has not been tampered with during transmission.</p>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<ul>
+<li><strong>Digital Signatures:</strong> Used to verify the authenticity and integrity of files or data, preventing forgery or tampering.</li>
+<li><strong>Message Encryption:</strong> Used to protect sensitive information during network transmission, where only the private key holder can decrypt and read the content.</li>
+<li><strong>HTTPS Communication:</strong> Used to encrypt the transmission data of websites, ensuring privacy and security during communication.</li>
+<li><strong>Secure Transmission of Symmetric Encryption Keys:</strong> In symmetric encryption, asymmetric encryption algorithms can be used to securely transmit the symmetric encryption key, ensuring it remains confidential during transmission.</li>
+</ul>
+<h3 id="advantages"><strong>Advantages</strong></h3>
+<ul>
+<li><strong>Higher Security:</strong> The private key is not transmitted over the network, and only the private key holder can decrypt or sign the data, providing higher security.</li>
+<li><strong>Secure Key Exchange:</strong> Can be used for secure exchange of symmetric encryption algorithm keys, enhancing the overall system security.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages</strong></h3>
+<ul>
+<li><strong>Slower Encryption/Decryption Speed:</strong> Asymmetric encryption algorithms are more complex compared to symmetric encryption, requiring more time to complete encryption and decryption operations.</li>
+</ul>
+<h3 id="examples"><strong>Examples</strong></h3>
+<ul>
+<li><strong>RSA (Rivest-Shamir-Adleman)</strong></li>
+<li><strong>DSA (Digital Signature Algorithm)</strong></li>
+<li><strong>ECC (Elliptic Curve Cryptography)</strong></li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-86c4162dd0c8a2323250673faa5e880a">5.3 - Hashing</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>A hash algorithm is an algorithm that generates a digest by compressing and transforming data.</p>
+<h3 id="characteristics"><strong>Characteristics</strong></h3>
+<ul>
+<li>The same input will always produce the same fixed hash value, and it is not possible to reverse-engineer the original content from the hash value.</li>
+<li>There are multiple implementations of hash algorithms, such as MD5 and SHA.</li>
+<li>Some hash algorithms are considered insecure and should be avoided, such as MD5 and SHA1. Careful consideration should be given when selecting a hash algorithm.</li>
+<li>The difficulty of cracking a hash algorithm can be increased by using a salt value.</li>
+</ul>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<ul>
+<li>Digital Signatures: Generate a hash value for text and encrypt it using a private key. Transmit the hash value along with the text to verify that the text has not been tampered with.</li>
+<li>Password Storage: Convert passwords into hash values and store them in a database. When a user logs in, convert the entered password into a hash value and compare it for verification. Even if a hacker gains access to the database, the irreversible nature of the stored hash values helps prevent password leaks.</li>
+<li>Generating Hash Tables: In system architectures, hash tables can be used to quickly search for target values in large datasets in constant time.</li>
+<li>Error Detection: By utilizing the property that different data yields different hash values, hash values can be used to verify if data has been lost during transmission.</li>
+</ul>
+<h3 id="examples"><strong>Examples</strong></h3>
+<ul>
+<li>MD2, MD4, MD5</li>
+<li>SHA1, SHA2, SHA256</li>
+<li>RIPEMD</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-cbc84e9bf8cf696287e63b2b5442018a">5.4 - Digital signature</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>Digital signature is a process of signing a document using a private key. Since the private key is not transmitted externally, the recipient of the document can verify the signature by successfully validating it using the corresponding public key, thus confirming that the document was signed by the owner of the private key.</p>
+<h3 id="process-of-digital-signature"><strong>Process of Digital Signature</strong></h3>
+<ol>
+<li>The sender generates a digital digest of the original document content using a hash algorithm.</li>
+<li>The sender encrypts the digital digest using their private key to create a digital signature.</li>
+<li>The recipient uses the sender&rsquo;s public key to decrypt the digital signature and obtain the digital digest.</li>
+<li>The recipient generates a digital digest of the received document content using the same hash algorithm.</li>
+<li>The recipient compares the generated digital digest with the decrypted digital digest to verify if they match. If they do, it confirms that the document is intact and originated from a trusted entity.</li>
+</ol>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<ul>
+<li>Ensuring Document Authenticity: Documents exchanged over the internet are vulnerable to tampering. By using digital signature mechanisms, the authenticity of a document can be verified, ensuring that it was generated by the owner of the private key and has not been altered.</li>
 </ul>
 
 </div>

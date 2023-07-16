@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.115.2">
+<meta name="generator" content="Hugo 0.115.3">
 <link rel="canonical" type="text/html" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/">
 <link rel="alternate" type="application/rss&#43;xml" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/index.xml">
 <meta name="robots" content="noindex, nofollow">
@@ -70,9 +70,7 @@ if (!doNotTrack) {
 </a>
 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 	
-	<a class="dropdown-item" href="/IT-Architecture-CheatSheet/no/"></a>
-	
-	<a class="dropdown-item" href="/IT-Architecture-CheatSheet/zh-tw/">繁體中文</a>
+	<a class="dropdown-item" href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/">繁體中文</a>
 	
 </div></li>
       </ul>
@@ -124,7 +122,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>1: <a href="#pg-e33507bc0477a0f442e15e7112f10146">Solid Principle</a></li>
+<li>1: <a href="#pg-e33507bc0477a0f442e15e7112f10146">SOLID Principle</a></li>
 
 
     
@@ -180,6 +178,100 @@ This is the multi-page printable view of this section.
     </ul>
     
   
+    
+    
+	
+<li>2: <a href="#pg-46d7fe1a6e620dc3187daae041956908">Web App Security</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>2.1: <a href="#pg-30d2238d8af0c6304f9c39903a01adcf">Content Security Policy</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2.2: <a href="#pg-e81648a2d090fdbcc0ffdfd008240832">Same-origin policy</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2.3: <a href="#pg-6ee6e8cbf9d73bb72550ee6614648d59">Prevent XSS</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2.4: <a href="#pg-d3d67c467fcaff68c0c57dce8ed987ab">Prevent CSRF</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2.5: <a href="#pg-a86fba7da36d5e69740cad5b05e33987">Prevent SQL injection</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-d1c69bd7054f58188d6f9428bc185106">Design Pattern</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>3.1: <a href="#pg-555e468288ef774e8c9080564c092843">Microservices</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.2: <a href="#pg-5d7d4c3cd94be6dedf4f7633bbcadfad">Event Driven</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
 
     </ul>
 
@@ -206,7 +298,7 @@ This is the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-e33507bc0477a0f442e15e7112f10146">1 - Solid Principle</h1>
+	<h1 id="pg-e33507bc0477a0f442e15e7112f10146">1 - SOLID Principle</h1>
     
 	
 </div>
@@ -336,6 +428,275 @@ This is the multi-page printable view of this section.
 <li>Polymorphism: The same method can have different implementations based on different input values. By adding different input values to handle different cases, existing methods can be extended without modification.</li>
 <li>Design patterns offer classic solutions for flexible design. For example, the Builder pattern provides a flexible way to create objects, the Decorator pattern allows dynamic addition of additional functionality, and the Dependency Injection pattern separates variable logic into independent interfaces, implementing different behaviors based on the injected interface.</li>
 </ol>
+
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-46d7fe1a6e620dc3187daae041956908">2 - Web App Security</h1>
+    
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-30d2238d8af0c6304f9c39903a01adcf">2.1 - Content Security Policy</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>Content Security Policy (CSP) is a website security mechanism used to restrict certain types of unsafe behaviors on web pages. By defining a security policy for web content, CSP can adjust the security settings for various behaviors on the web page, including restrictions on resource loading sources, allowance of inline JavaScript and CSS, and limiting requests to HTTPS only.</p>
+<h3 id="advantages"><strong>Advantages</strong></h3>
+<ul>
+<li>Reduces the likelihood of browsers executing risky actions, minimizing security risks.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages</strong></h3>
+<ul>
+<li>Requires understanding the nuances of different configuration settings, making it complex to set up.</li>
+<li>CSP rules need careful design and testing to ensure they do not adversely affect the normal functioning of website features, especially for existing website functionalities that use higher-risk behaviors (such as inline CSS).</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-e81648a2d090fdbcc0ffdfd008240832">2.2 - Same-origin policy</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>Same-origin policy is a browser security mechanism that restricts access to cookies, DOM, localStorage, indexedDB, and limits the use of AJAX calls from different domains. It helps to mitigate the risks of XSS attacks and cookie leakage from external sources.</p>
+<p>If there is a need to access resources from other domains, it can be achieved through Cross-Origin Resource Sharing (CORS) or JSONP. CORS allows other domains to access resources by adding the Access-Control-Allow-Origin header in the response. JSONP bypasses the same-origin policy restriction by loading a script tag in HTML.</p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-6ee6e8cbf9d73bb72550ee6614648d59">2.3 - Prevent XSS</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>XSS (Cross-Site Scripting) is a common website security vulnerability that allows attackers to inject malicious code into a website. By injecting this code, attackers can execute it when users browse the website, achieving their malicious goals such as redirecting users to other websites or stealing user-entered information.</p>
+<h3 id="three-types-of-xss"><strong>Three Types of XSS</strong></h3>
+<ul>
+<li>Reflected XSS: Malicious code is injected into the backend through user-controlled data, such as URL parameters, cookies, or form inputs. The backend then returns this data directly to the frontend, causing the malicious code to be executed when users view the web page.</li>
+<li>Stored XSS: Malicious code is stored in a database. When data is retrieved from the database and rendered on the frontend, the malicious code is executed.</li>
+<li>DOM-based XSS: Malicious code is returned to the frontend through methods like Ajax. The frontend directly inserts the malicious code into the DOM structure of the page, resulting in the execution of the malicious code.</li>
+</ul>
+<h3 id="preventing-xss"><strong>Preventing XSS</strong></h3>
+<ul>
+<li>Use Content Security Policy (CSP) to restrict the execution of content on web pages, preventing the injection and execution of malicious code.</li>
+<li>Perform HTML encoding on data outputted to the web page to ensure that risky content is not displayed, preventing the execution of malicious code.</li>
+<li>Validate and filter input data transmitted to the backend to prevent the use and storage of risky content.</li>
+<li>Regularly conduct black-box penetration testing and white-box source code scanning on the website to ensure there are no security vulnerabilities.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d3d67c467fcaff68c0c57dce8ed987ab">2.4 - Prevent CSRF</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>Cross-Site Request Forgery (CSRF) is an attack method that exploits the authenticated session of a user on a website to perform malicious actions on a targeted website.</p>
+<h3 id="attack-scenario"><strong>Attack Scenario</strong></h3>
+<p>Background: The user is already logged in to the targeted website, and the browser has the website&rsquo;s cookies stored.</p>
+<p>Attack: The user visits a malicious website that contains an image or hyperlink. When the user interacts with the image or hyperlink, it triggers a request to the targeted website with malicious content. Since the request carries the correct cookies, the targeted website trusts the request and becomes vulnerable to the attack.</p>
+<h3 id="prevention-methods"><strong>Prevention Methods</strong></h3>
+<ol>
+<li>The server-side should check whether the Origin or Referer in the request headers matches the domain of the targeted website. If they don&rsquo;t match, the server should reject the request.</li>
+<li>When generating web pages, the server-side should generate a random CSRF token and store it in the user&rsquo;s session instead of cookies. Each time a request is received, the server-side should verify if the CSRF token in the request matches the one stored in the user&rsquo;s session to ensure the request comes from the correct webpage.</li>
+</ol>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-a86fba7da36d5e69740cad5b05e33987">2.5 - Prevent SQL injection</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>SQL injection attack refers to directly concatenating untrusted variables into SQL strings. If these variables contain malicious content, the database may be vulnerable to attacks or unauthorized data retrieval. There are two methods to prevent SQL injection:</p>
+<ol>
+<li>
+<p>Avoid directly concatenating untrusted variables into SQL strings and instead use parameterized queries or prepared statements to pass variables. For example, in Java, you can use PreparedStatement to pass variables:</p>
+<p>Example with SQL injection vulnerability:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">String</span> <span style="color:#000">title</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getParameter</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;title&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span> <span style="color:#8f5902;font-style:italic">// Untrusted variable from frontend
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">String</span> <span style="color:#000">sql</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;SELECT * FROM booking WHERE title = &#34;</span> <span style="color:#ce5c00;font-weight:bold">+</span> <span style="color:#000">title</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">Statement</span> <span style="color:#000">stmt</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">conn</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">createStatement</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">stmt</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">executeQuery</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">sql</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span></code></pre></div><p>Example with the fix:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#000">String</span> <span style="color:#000">title</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">request</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">getParameter</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#4e9a06">&#34;title&#34;</span><span style="color:#ce5c00;font-weight:bold">);</span> <span style="color:#8f5902;font-style:italic">// Untrusted variable from frontend
+</span></span></span><span style="display:flex;"><span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">String</span> <span style="color:#000">sql</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#4e9a06">&#34;SELECT * FROM booking WHERE title = ?&#34;</span><span style="color:#ce5c00;font-weight:bold">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">PreparedStatement</span> <span style="color:#000">stmt</span> <span style="color:#ce5c00;font-weight:bold">=</span> <span style="color:#000">conn</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">prepareStatement</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#000">sql</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">stmt</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">setString</span><span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#0000cf;font-weight:bold">1</span><span style="color:#ce5c00;font-weight:bold">,</span> <span style="color:#000">title</span><span style="color:#ce5c00;font-weight:bold">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#000">stmt</span><span style="color:#ce5c00;font-weight:bold">.</span><span style="color:#c4a000">executeQuery</span><span style="color:#ce5c00;font-weight:bold">();</span>
+</span></span></code></pre></div></li>
+<li>
+<p>Check if untrusted variables contain dangerous strings or unexpected content, such as single quotes or semicolons. If they contain dangerous strings, throw an error or handle them appropriately.</p>
+</li>
+</ol>
+
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d1c69bd7054f58188d6f9428bc185106">3 - Design Pattern</h1>
+    
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-555e468288ef774e8c9080564c092843">3.1 - Microservices</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>Microservices is a software architecture pattern that involves breaking down a large system into smaller modules to achieve a loosely coupled system architecture. Each microservice has its own independent business logic and connects to its own database. Communication between microservices is typically done through lightweight protocols like HTTP.</p>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<ul>
+<li>Complex large-scale systems aiming to reduce coupling.</li>
+<li>Systems that require flexible horizontal scalability.</li>
+</ul>
+<h3 id="advantages"><strong>Advantages</strong></h3>
+<ul>
+<li>Reduced coupling: By splitting the system into different services, direct internal calls are avoided, resulting in reduced coupling.</li>
+<li>Easy horizontal scalability: Since each system can have independent containers, additional containers can be dynamically deployed to handle high traffic demands.</li>
+<li>Technology independence: Different services can use different software architectures and technology choices based on their specific requirements.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages</strong></h3>
+<ul>
+<li>Inability to directly cross-call systems: Once split into different services, direct invocation of business logic across services is not possible.</li>
+<li>Increased network traffic: Communication between microservices relies on network communication, which may increase network traffic requirements.</li>
+<li>Complex deployment and maintenance: Splitting into multiple services requires independent deployment, and managing them becomes more complex as they need to monitor traffic demands and dynamically scale.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-5d7d4c3cd94be6dedf4f7633bbcadfad">3.2 - Event Driven</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>Event-driven pattern is a programming design pattern where events are registered and specific logic is associated with the occurrence of each event. In this pattern, the event handling logic is decoupled from the event triggering points, eliminating the need to directly specify the location of event triggers in the code. Instead, event registration and triggering systems are used to dynamically connect event triggers with their corresponding handling logic.</p>
+<h3 id="advantages"><strong>Advantages</strong></h3>
+<ul>
+<li>Decoupling: Event handling logic is decoupled from event triggers, resulting in a more flexible and maintainable code structure.</li>
+<li>Asynchrony: Event triggers can quickly respond to users without waiting for the completion of event handling logic, improving system responsiveness.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages</strong></h3>
+<ul>
+<li>Unclear flow: Since event registration and triggering systems dynamically call event handling logic, it may be challenging to understand and trace the subsequent event flow.</li>
+<li>Difficult transaction control: As event handling logics are independent from each other, it is difficult to track and control the results of previous event handling stages within a specific event handling logic.</li>
+<li>Performance impact: The system&rsquo;s performance may be affected due to the dynamic triggering and processing of a large number of events. Proper design and management of event registration are necessary to avoid performance issues.</li>
+</ul>
 
 </div>
 

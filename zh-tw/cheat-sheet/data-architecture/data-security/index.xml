@@ -1,0 +1,156 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>資訊架構備忘表 – Data Security</title>
+    <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/data-security/</link>
+    <description>Recent content in Data Security on 資訊架構備忘表</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    
+	  <atom:link href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/data-security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Cheat Sheet: 對稱加密</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/data-security/symmetric-cryptography/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/data-security/symmetric-cryptography/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;對稱加密是一種加密技術，使用同一把金鑰對資料進行加密和解密。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;&lt;strong&gt;使用情境&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;對稱加密適用於需要提供高效的資料加密機制的場景，通常結合安全的金鑰傳遞機制以防止金鑰洩露。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;加解密速度快，適合用於傳輸資料。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;由於加密和解密使用同一把金鑰，如果通過網路傳輸金鑰，會存在安全性問題。&lt;/li&gt;
+&lt;li&gt;可以使用金鑰交換技術安全地生成共享金鑰，例如：
+&lt;ol&gt;
+&lt;li&gt;使用RSA加密金鑰傳輸。&lt;/li&gt;
+&lt;li&gt;使用Diffie-Hellman演算法生成相互通訊的金鑰。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;案例&#34;&gt;&lt;strong&gt;案例&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;DES (Data Encryption Standard) ：(過時) 由於DES算法已可被暴力破解，現已不推薦使用。&lt;/li&gt;
+&lt;li&gt;AES (Advanced Encryption Standard)&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 非對稱性加密</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/data-security/asymmetric-cryptography/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/data-security/asymmetric-cryptography/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;非對稱性加密是一種加密技術，與對稱性加密不同，它使用一對金鑰，包括公鑰和私鑰，來進行加密和解密操作。&lt;/p&gt;
+&lt;p&gt;運作方式如下：先產生一組公私鑰對。公鑰可以在網路上傳輸給其他人，但私鑰必須保密，不會在網際網路上傳輸。在加密過程中，傳送者使用私鑰對資料進行加密或數位簽名。接收者收到加密後的資料後，使用公鑰鑰對其進行解密或驗證簽名。如果解密或驗證成功，那麼可以確認該資料確實來自公鑰對應的私鑰，且在傳輸過程中沒有被篡改。&lt;/p&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;&lt;strong&gt;使用情境&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;數位簽章：&lt;/strong&gt; 用於驗證檔案或資料的真實性和完整性，防止偽造或篡改。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;訊息加密：&lt;/strong&gt; 用於保護敏感資訊在網路傳輸過程中的安全性，只有私鑰擁有者能夠解密讀取內容。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HTTPS訊息傳輸：&lt;/strong&gt; 用於對網站的傳輸資料進行加密，確保通訊過程中的隱私和安全。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安全傳輸對稱性加密金鑰：&lt;/strong&gt; 在對稱性加密中，用非對稱性加密演算法傳輸對稱加密的金鑰，確保金鑰在傳輸過程中不被洩露。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;優點&#34;&gt;&lt;strong&gt;優點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;安全性較高：&lt;/strong&gt; 私鑰不會在網路上傳輸，只有私鑰持有者能夠解密或簽署資料，因此提供較高的安全性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安全金鑰交換：&lt;/strong&gt; 可以用於安全地交換對稱加密演算法的金鑰，增加了整個系統的安全性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;缺點&#34;&gt;&lt;strong&gt;缺點&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;加解密速度較慢：&lt;/strong&gt; 與對稱性加密相比，非對稱性加密的演算法複雜性較高，因此需要更長的時間來完成加解密操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;案例&#34;&gt;&lt;strong&gt;案例&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;RSA（Rivest-Shamir-Adleman）&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DSA（Digital Signature Algorithm）&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ECC（Elliptic Curve Cryptography）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: Hash雜湊</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/data-security/hashing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/data-security/hashing/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;雜湊演算法是通過壓縮和轉換生成摘要的一種演算法。&lt;/p&gt;
+&lt;h3 id=&#34;性質&#34;&gt;&lt;strong&gt;性質&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;相同的原文將產生固定的雜湊值，且無法通過雜湊值逆推原文內容。&lt;/li&gt;
+&lt;li&gt;存在多種雜湊演算法的實現，例如MD5、SHA。&lt;/li&gt;
+&lt;li&gt;一些雜湊演算法已被認為是不安全的，應避免使用，例如MD5、SHA1。應謹慎選擇雜湊演算法。&lt;/li&gt;
+&lt;li&gt;可以使用鹽值（Salt）來增加雜湊演算法的破解難度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;&lt;strong&gt;使用情境&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;數位簽名：將文字生成雜湊值，並使用私鑰進行加密，將雜湊值與文字一起傳輸，用於驗證文字未被篡改。&lt;/li&gt;
+&lt;li&gt;密碼儲存：將密碼轉換為雜湊值儲存在資料庫中。使用者登錄時，將輸入的密碼轉換為雜湊值進行比對驗證。即使駭客獲取了資料庫權限，由於資料庫中記錄的是無法還原的雜湊值，因此可以避免密碼洩露。&lt;/li&gt;
+&lt;li&gt;生成雜湊表：在系統架構中，通過雜湊表可以在常數時間內在大量資料中快速尋找目標值。&lt;/li&gt;
+&lt;li&gt;錯誤校正：通過資料內容不同，雜湊值也不同的特性，使用雜湊值驗證資料傳輸中是否丟失。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;案例&#34;&gt;&lt;strong&gt;案例&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MD2, MD4, MD5&lt;/li&gt;
+&lt;li&gt;SHA1, SHA2, SHA256&lt;/li&gt;
+&lt;li&gt;RIPEMD&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheet: 數位簽名</title>
+      <link>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/data-security/digital-signature/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/data-security/digital-signature/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;描述&#34;&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;數位簽名是通過使用私鑰對文件內容進行簽名。由於私鑰不會向外傳輸，因此接收到文件的人，如果可以通過公鑰成功驗證簽名內容，就可以確定該文件由私鑰所有者簽署。&lt;/p&gt;
+&lt;h3 id=&#34;數位簽名的流程&#34;&gt;&lt;strong&gt;數位簽名的流程&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;生成端將原始文件內容使用雜湊演算法生成數字摘要。&lt;/li&gt;
+&lt;li&gt;生成端使用私鑰對數字摘要進行加密，生成數位簽名。&lt;/li&gt;
+&lt;li&gt;驗證端使用公鑰對數位簽名進行解密，還原出數字摘要。&lt;/li&gt;
+&lt;li&gt;驗證端將接收到的文件內容使用相同的雜湊演算法生成數字摘要。&lt;/li&gt;
+&lt;li&gt;驗證端比對數字摘要是否一致，以判斷文件是完整的原始文件，並且此文件是由信任的單位生成。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;使用情境&#34;&gt;&lt;strong&gt;使用情境&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;確保文件真實性：通過網路交換的文件存在被篡改的風險，通過數位簽名機制可以確認該文件由私鑰所有者生成，並且未被篡改。&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="generator" content="Hugo 0.115.2">
+<meta name="generator" content="Hugo 0.115.3">
 <link rel="canonical" type="text/html" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/">
 <link rel="alternate" type="application/rss&#43;xml" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/index.xml">
 <meta name="robots" content="noindex, nofollow">
@@ -70,9 +70,7 @@ if (!doNotTrack) {
 </a>
 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 	
-	<a class="dropdown-item" href="/IT-Architecture-CheatSheet/no/"></a>
-	
-	<a class="dropdown-item" href="/IT-Architecture-CheatSheet/zh-tw/">繁體中文</a>
+	<a class="dropdown-item" href="/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/">繁體中文</a>
 	
 </div></li>
       </ul>
@@ -175,7 +173,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>2: <a href="#pg-fece2beda58108c1f964e008d772c633">Networdk Linkage</a></li>
+<li>2: <a href="#pg-cd1bfc7b3e00465e2971dafa3cc9f0a4">Network Linkage</a></li>
 
 
     
@@ -190,7 +188,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>2.1: <a href="#pg-d9ebe0882cd71396b6fafd0672cc13be">Leased line</a></li>
+<li>2.1: <a href="#pg-96d1762e28bbb5574a4dab230b429928">Leased line</a></li>
 
 
     
@@ -198,7 +196,7 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>2.2: <a href="#pg-257de9c05bb3981b535fd996ace86b69">NAT</a></li>
+<li>2.2: <a href="#pg-b3fe836728560225e47ee50bf80fbe3c">Proxy</a></li>
 
 
     
@@ -206,7 +204,34 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>2.3: <a href="#pg-8b8d67c2b23c1f9f719c95c0454724a6">Proxy</a></li>
+<li>2.3: <a href="#pg-9e9d363675626a03bab0c7bbf19b3452">Reverse Proxy</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-71daa17f451b22114a27c54941dc44dc">Network Security</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>3.1: <a href="#pg-8edeac7182744238613f387133843d69">Firewall</a></li>
 
 
     
@@ -214,7 +239,31 @@ This is the multi-page printable view of this section.
     
     
 	
-<li>2.4: <a href="#pg-70abd1a08de0ea6a788a13f47ec28a40">Reverse Proxy</a></li>
+<li>3.2: <a href="#pg-7dd46988c01ee362d4ceddd45ebc4d17">NAT</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.3: <a href="#pg-c73071c808a68bbd1718ea8f2a3be9a2">VPN</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.4: <a href="#pg-a7ba5b07d3e4e020ea1e9be4b77f7569">HTTPS</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.5: <a href="#pg-13652ff8962ee6bc808e0808d34c2693">Deffie-Hellman</a></li>
 
 
     
@@ -407,7 +456,7 @@ This is the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-fece2beda58108c1f964e008d772c633">2 - Networdk Linkage</h1>
+	<h1 id="pg-cd1bfc7b3e00465e2971dafa3cc9f0a4">2 - Network Linkage</h1>
     
 	
 </div>
@@ -432,7 +481,7 @@ This is the multi-page printable view of this section.
 
 <div class="td-content" style="">
     
-	<h1 id="pg-d9ebe0882cd71396b6fafd0672cc13be">2.1 - Leased line</h1>
+	<h1 id="pg-96d1762e28bbb5574a4dab230b429928">2.1 - Leased line</h1>
     
 	<h3 id="description">Description</h3>
 <p>Leased line is a type of WAN connection option. It is a dedicated network provided by an Internet Service Provider (ISP) with a fixed bandwidth, allowing for secure communication without going through the internet. Leased lines are used to connect different areas of data centers or subnets.</p>
@@ -466,36 +515,7 @@ This is the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-257de9c05bb3981b535fd996ace86b69">2.2 - NAT</h1>
-    
-	<h3 id="description">Description</h3>
-<p>NAT (Network Address Translation) is a technique performed on the firewall, router, or dedicated NAT server in an edge network to translate packets between internal and external devices. It converts internal IP addresses into one or more public IP addresses to prevent external malicious entities from identifying the list of devices in the internal network through IP addresses. When a response is received, NAT determines which internal device to send the response to based on information such as the requested URL or port.</p>
-<h3 id="advantages">Advantages</h3>
-<ul>
-<li>Enhanced security for internal networks: NAT masks the internal IP addresses at the edge network, making it impossible for external devices to identify the list of devices in the internal network or directly call internal devices through IP addresses.</li>
-<li>Conservation of public IP addresses: NAT allows a large number of internal devices to connect to the internet using a small pool of public IP addresses, reducing the required number of public IP addresses and associated costs.</li>
-</ul>
-<h3 id="disadvantages">Disadvantages</h3>
-<ul>
-<li>Increased complexity of network architecture: All packets connecting to the external network need to pass through NAT for forwarding and translation, which adds complexity to the network architecture.</li>
-<li>Impact on network speed: Since all packets connecting to the external network must go through NAT, having only one NAT server may potentially reduce the connection speed to the external network. This issue can be mitigated by horizontally scaling multiple NAT servers.</li>
-</ul>
-
-</div>
-
-
-
-    
-	
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-8b8d67c2b23c1f9f719c95c0454724a6">2.3 - Proxy</h1>
+	<h1 id="pg-b3fe836728560225e47ee50bf80fbe3c">2.2 - Proxy</h1>
     
 	<h3 id="description">Description</h3>
 <p>A Proxy (Proxy Server) is a server that acts as an intermediary between internal network devices and external networks.</p>
@@ -526,7 +546,7 @@ This is the multi-page printable view of this section.
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-70abd1a08de0ea6a788a13f47ec28a40">2.4 - Reverse Proxy</h1>
+	<h1 id="pg-9e9d363675626a03bab0c7bbf19b3452">2.3 - Reverse Proxy</h1>
     
 	<h3 id="description">Description</h3>
 <p>A Reverse Proxy exists on the server side and is responsible for receiving client requests and forwarding them to backend servers.</p>
@@ -551,6 +571,218 @@ This is the multi-page printable view of this section.
 <li>Apache</li>
 <li>IIS</li>
 </ul>
+
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-71daa17f451b22114a27c54941dc44dc">3 - Network Security</h1>
+    
+	
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-8edeac7182744238613f387133843d69">3.1 - Firewall</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>A firewall is an important security device placed between the boundary network and the internal network to reduce the risk of external attacks. It is responsible for monitoring and controlling incoming and outgoing network traffic. Firewalls employ various mechanisms to achieve this, including IP whitelisting and traffic restrictions.</p>
+<h3 id="common-firewall-protection-mechanisms"><strong>Common Firewall Protection Mechanisms</strong></h3>
+<ul>
+<li>Layer 4 Firewall
+<ul>
+<li>Allows specific IP addresses</li>
+<li>Allows specific port numbers</li>
+</ul>
+</li>
+<li>Layer 7 Firewall
+<ul>
+<li>Allows specific URLs</li>
+<li>Allows specific headers</li>
+<li>Web Application Firewall (WAF)
+<ul>
+<li>Checks for XSS, SQL injection, and other attack strings</li>
+</ul>
+</li>
+<li>Stateful Firewall
+<ul>
+<li>Detects abnormal network behavior by analyzing the sequence of packets</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-7dd46988c01ee362d4ceddd45ebc4d17">3.2 - NAT</h1>
+    
+	<h3 id="description">Description</h3>
+<p>NAT (Network Address Translation) is a technique performed on the firewall, router, or dedicated NAT server in an edge network to translate packets between internal and external devices. It converts internal IP addresses into one or more public IP addresses to prevent external malicious entities from identifying the list of devices in the internal network through IP addresses. When a response is received, NAT determines which internal device to send the response to based on information such as the requested URL or port.</p>
+<h3 id="advantages">Advantages</h3>
+<ul>
+<li>Enhanced security for internal networks: NAT masks the internal IP addresses at the edge network, making it impossible for external devices to identify the list of devices in the internal network or directly call internal devices through IP addresses.</li>
+<li>Conservation of public IP addresses: NAT allows a large number of internal devices to connect to the internet using a small pool of public IP addresses, reducing the required number of public IP addresses and associated costs.</li>
+</ul>
+<h3 id="disadvantages">Disadvantages</h3>
+<ul>
+<li>Increased complexity of network architecture: All packets connecting to the external network need to pass through NAT for forwarding and translation, which adds complexity to the network architecture.</li>
+<li>Impact on network speed: Since all packets connecting to the external network must go through NAT, having only one NAT server may potentially reduce the connection speed to the external network. This issue can be mitigated by horizontally scaling multiple NAT servers.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-c73071c808a68bbd1718ea8f2a3be9a2">3.3 - VPN</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>A Virtual Private Network (VPN) establishes a secure encrypted connection over a public network, protecting the communication between users and servers from being intercepted by malicious third parties.</p>
+<h3 id="advantages"><strong>Advantages</strong></h3>
+<ul>
+<li>Enables secure communication between multiple private networks in different locations, allowing interconnectedness between network environments from various regions.</li>
+<li>Provides remote workers a secure way to connect to a private network, enabling them to remotely access internal resources and perform their work.</li>
+<li>Offers an additional layer of security protection for network applications, safeguarding the confidentiality of sensitive data and communications.</li>
+</ul>
+<h3 id="disadvantages"><strong>Disadvantages</strong></h3>
+<ul>
+<li>The encryption and decryption processes require computational resources, which can potentially slow down transmission speeds.</li>
+<li>VPN technology is more complex and requires additional networking equipment, resulting in higher management and setup costs.</li>
+<li>VPN infrastructure is vulnerable to network attacks such as DDoS, necessitating appropriate security measures to protect the availability and stability of the VPN.</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-a7ba5b07d3e4e020ea1e9be4b77f7569">3.4 - HTTPS</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>HTTPS (Hypertext Transfer Protocol Secure) aims to protect the communication security and data integrity between network entities through the use of the Transport Layer Security (TLS) protocol.</p>
+<h3 id="characteristics"><strong>Characteristics</strong></h3>
+<ol>
+<li>HTTPS utilizes a combination of symmetric and asymmetric encryption for transmission, ensuring data security and efficiency. Asymmetric encryption is used for establishing secure connections and performing authentication, while symmetric encryption is used for encrypting transmitted data.</li>
+<li>URLs in HTTPS begin with &ldquo;https://&rdquo; and, by default, use port 443 instead of the default port 80 used by HTTP. This configuration helps differentiate between regular HTTP connections and secure HTTPS connections.</li>
+<li>When using HTTPS on the internet, it requires obtaining digital certificates from trusted Certificate Authorities (CAs). These certificates are used to verify the identity of servers, ensuring communication encryption and authenticity. In private internal networks, self-signed certificates can be used but need to be pre-installed and trusted on each device.</li>
+<li>The primary purpose of HTTPS is to protect the confidentiality and integrity of communication content. Through the use of the TLS protocol, it provides end-to-end encryption, ensuring data security during transmission. However, HTTPS does not fully protect against other types of attacks, such as DDoS (Distributed Denial of Service) attacks and malware. Therefore, a comprehensive security strategy should include additional security measures like firewalls, intrusion detection systems, etc.</li>
+</ol>
+<h3 id="handshake-process"><strong>Handshake Process</strong></h3>
+<p><strong>Application Stage:</strong></p>
+<ol>
+<li>The website generates a website public key (site.pub) and a website private key (site.key).</li>
+<li>Using the website private key and website information, a certificate signing request (CSR) file (site.csr) is created and provided to a Certificate Authority (CA).</li>
+<li>After verifying the identity, the CA signs the CSR content with its private key, generating a website certificate (site.crt).</li>
+<li>The website certificate is provided to the website administration.</li>
+</ol>
+<p><strong>Handshake Stage:</strong></p>
+<ol>
+<li>The browser requests a HTTPS connection with the website, and the website provides its website certificate (server.crt).</li>
+<li>The certificate&rsquo;s validity, including its dates and other certificate data, is checked.</li>
+<li>If the certificate&rsquo;s issuer is a CA trusted by the browser, the browser uses the CA&rsquo;s public key stored in its memory to decrypt the signature in server.crt. If successful, it means the certificate was issued by a trusted CA. The decrypted signature hash value is obtained.</li>
+<li>The data specified by the signature is hashed using the hash algorithm specified in the signature to generate a hash value, which is compared to the original hash value attached to the signature. If they match, it confirms that the data hasn&rsquo;t been tampered with.</li>
+<li>A symmetric encryption key is generated for encryption and encrypted using the website&rsquo;s public key from site.crt. The encrypted key is then sent to the website.</li>
+<li>The website decrypts the encrypted key using its private key, obtaining the symmetric encryption key.</li>
+<li>At this stage, both parties have completed authentication and securely exchanged the symmetric encryption key.</li>
+</ol>
+<p><strong>Communication Stage:</strong></p>
+<ol>
+<li>The browser encrypts the request using the symmetric encryption key, and the server decrypts it using the same key.</li>
+<li>The server encrypts the response using the symmetric encryption key, and the browser decrypts it using the same key.</li>
+</ol>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-13652ff8962ee6bc808e0808d34c2693">3.5 - Deffie-Hellman</h1>
+    
+	<h3 id="description"><strong>Description</strong></h3>
+<p>The Diffie-Hellman (DH) algorithm is used to generate a secure communication key in an insecure network environment.</p>
+<h3 id="basic-procedure"><strong>Basic Procedure</strong></h3>
+<ol>
+<li>Alice first provides Bob with a large prime number, denoted as &ldquo;p,&rdquo; and a smaller exponent, denoted as &ldquo;g,&rdquo; to be used for calculations.</li>
+<li>Both Alice and Bob generate secret numbers, denoted as &ldquo;a&rdquo; and &ldquo;b&rdquo; respectively, which are kept private and not transmitted over the network.</li>
+<li>Alice computes the public value A = (g^a) mod p and shares it with Bob.</li>
+<li>Bob computes the public value B = (g^b) mod p and shares it with Alice.</li>
+<li>Alice uses the public value B provided by Bob and her own secret number a to compute the key K = (B^a) mod p.</li>
+<li>Bob uses the public value A provided by Alice and his own secret number b to compute the key K = (A^b) mod p.</li>
+<li>Since both parties use the same public values and secret numbers for calculations, the resulting key K will be the same for both Alice and Bob.</li>
+<li>With this shared key K, Alice and Bob can engage in secure encrypted communication.</li>
+</ol>
 
 </div>
 
