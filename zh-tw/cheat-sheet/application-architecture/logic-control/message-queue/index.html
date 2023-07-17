@@ -33,14 +33,14 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/message-queue/" /><meta property="article:section" content="Cheat Sheet" />
 <meta property="article:published_time" content="2023-07-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-07-16T22:09:55+08:00" />
+<meta property="article:modified_time" content="2023-07-17T20:53:55+08:00" />
 <meta itemprop="name" content="訊息佇列">
 <meta itemprop="description" content="概述: Message Queue是一種常用於非同步處理邏輯的機制。當某個服務需要較長時間完成時，為了避免上游等待，可以將服務請求放入佇列中，按序等待執行。後方會有多個服務Consumer從佇列中取得服務請求並完成相應的處理。
 一個典型的Message Queue架構包含三個主要元件：Message producer（產生服務請求的角色）、Message consumer（處理服務請求的角色）以及Message broker（負責訊息排序和呼叫consumer的角色）。
 透過使用Message Queue，我們能夠實現1對多的通訊。Producer不需要知道後方有多少個consumer，只要有註冊相應事件的consumer都會接收到訊息。這樣的設計模式有效地解耦了producer和consumer之間的直接依賴關係，使系統更加靈活和擴展。
 透過適當地應用Message Queue，我們能夠改善系統的可靠性和效能，特別適用於處理非同步處理需求的情境。
 使用情境: 非同步事件驅動 非同步通信 日誌處理 優點: 避免前端等待: producer只要發出訊息請求後，即可完成動作。 低耦合: 可將一個大的服務拆成多個鬆散的小服務。且各個服務之間不需要直接通信，交由Broker轉交請求即可。 擴展性: 當等待中的請求較多時，可動態增加更多Consumer來處理服務請求。 平行處理: 如果有多個consumer註冊同一事件，可同步進行事件處理，而不須依序排隊執行。 缺點: 無法即時得知結果：由於訊息需等待broker轉發。所以producer若需等待結果，則需要追蹤此訊息處理的狀態。 "><meta itemprop="datePublished" content="2023-07-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2023-07-16T22:09:55+08:00" />
+<meta itemprop="dateModified" content="2023-07-17T20:53:55+08:00" />
 <meta itemprop="wordCount" content="27">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="訊息佇列"/>
@@ -61,14 +61,14 @@
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
-	gtag('config', 'UA-00000000-0');
+	gtag('config', 'G-FBEFPVNEK1');
 }
 </script>
   </head>
@@ -785,7 +785,7 @@ if (!doNotTrack) {
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 16, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/a489bf3439f385a4ea9854a27b5292b0bdb9d1c2">V0.1 (a489bf3)</a>
+  最後修改 July 17, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/0bf1078f507b0c4a56c72e0549a02edbe7c73f3c">Add googleAnalytics (0bf1078)</a>
 </div>
 
 </div>

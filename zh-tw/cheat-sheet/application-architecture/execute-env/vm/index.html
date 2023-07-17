@@ -27,11 +27,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/execute-env/vm/" /><meta property="article:section" content="Cheat Sheet" />
 <meta property="article:published_time" content="2023-06-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-07-16T22:09:55+08:00" />
+<meta property="article:modified_time" content="2023-07-17T20:53:55+08:00" />
 <meta itemprop="name" content="VM">
 <meta itemprop="description" content="概述: VM (Virtual Machine) 是在一台實體機器中分割多個獨立的虛擬機器，每一個VM可設置可使用的運算資源與記憶體資源量。在每一個VM中，安裝獨立的作業系統與應用程式。這種模式可以提供多個不互相干擾的軟體運作環境，以滿足多個不同的使用需求。
 使用情境: 獨立環境：有一台較大的伺服器，且同時有多個希望獨立運作的中小型運算需求。 移植雲端：預計將地端環境移植到雲端，但是舊有架構尚無法容器化或需安裝其他無法容器化套裝軟體。 垂直伸縮：希望可以依照使用需求，動態調整作業環境的運算資源量。 水平伸縮：透過VM的映象檔機制，可以快速部屬到其他機器 系統還原：透過VM的映象檔機制快速進行系統還原。 缺點: 資源使用量大：相較於輕量化的容器管理技術，每一個VM都需要安裝作業系統，因此需要使用較多系統資源 啟動速度慢：每一個VM都有獨立的作業系統，因此載入速度較慢 費用高昂：需要採購額外的VM管理系統才能使用完整VM機制，這往往需要高額的授權費用。 水平擴展不易：VM的擴展相對較困難，特別是在需要大規模部署和管理多個VM的情境下。每一台VM的設定、網路配置等屬性都需要進行調整，這可能需要額外的時間和工作量。 "><meta itemprop="datePublished" content="2023-06-10T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2023-07-16T22:09:55+08:00" />
+<meta itemprop="dateModified" content="2023-07-17T20:53:55+08:00" />
 <meta itemprop="wordCount" content="16">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="VM"/>
@@ -49,14 +49,14 @@
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
-	gtag('config', 'UA-00000000-0');
+	gtag('config', 'G-FBEFPVNEK1');
 }
 </script>
   </head>
@@ -767,7 +767,7 @@ if (!doNotTrack) {
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 16, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/a489bf3439f385a4ea9854a27b5292b0bdb9d1c2">V0.1 (a489bf3)</a>
+  最後修改 July 17, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/0bf1078f507b0c4a56c72e0549a02edbe7c73f3c">Add googleAnalytics (0bf1078)</a>
 </div>
 
 </div>

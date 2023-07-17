@@ -33,14 +33,14 @@ String title = request.getParameter(&#34;title&#34;); // 從前端傳來的變�
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/web-app-security/prevent-sql-injection/" /><meta property="article:section" content="Cheat Sheet" />
 
-<meta property="article:modified_time" content="2023-07-16T22:09:55+08:00" />
+<meta property="article:modified_time" content="2023-07-17T20:53:55+08:00" />
 <meta itemprop="name" content="防範 SQL injection">
 <meta itemprop="description" content="描述 SQL injection 攻擊是指直接把不可信任的變數直接串上 SQL 字串，若此變數內含攻擊內容，則資料庫可能會被攻擊或取出未經授權的資料。避免 SQL injection 的方法有兩種：
 不要直接把不可信任的變數串上 SQL 字串，而是使用元件傳遞變數的方式。例如，在 Java 中可以使用 PreparedStatement 來傳遞變數：
 有SQL injection 風險的範例
 String title = request.getParameter(&#34;title&#34;); // 從前端傳來的變數 String sql = &#34;SELECT * FROM booking WHERE title = &#34; &#43; title; Statement stmt = conn.createStatement(); stmt.executeQuery(sql); 修正後的範例
 String title = request.getParameter(&#34;title&#34;); // 從前端傳來的變數 String sql = &#34;SELECT * FROM booking WHERE title = ?&#34;; PreparedStatement stmt = conn.prepareStatement(sql); stmt.setString(1, title); stmt.executeQuery(); 檢查不可信任的變數是否包含危險字串或非預期的內容，例如單引號、分號等。如果包含危險字串，則拋出錯誤或進行適當的處理。">
-<meta itemprop="dateModified" content="2023-07-16T22:09:55+08:00" />
+<meta itemprop="dateModified" content="2023-07-17T20:53:55+08:00" />
 <meta itemprop="wordCount" content="69">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="防範 SQL injection"/>
@@ -61,14 +61,14 @@ String title = request.getParameter(&#34;title&#34;); // 從前端傳來的變�
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
-	gtag('config', 'UA-00000000-0');
+	gtag('config', 'G-FBEFPVNEK1');
 }
 </script>
   </head>
@@ -777,7 +777,7 @@ if (!doNotTrack) {
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 16, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/a489bf3439f385a4ea9854a27b5292b0bdb9d1c2">V0.1 (a489bf3)</a>
+  最後修改 July 17, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/0bf1078f507b0c4a56c72e0549a02edbe7c73f3c">Add googleAnalytics (0bf1078)</a>
 </div>
 
 </div>

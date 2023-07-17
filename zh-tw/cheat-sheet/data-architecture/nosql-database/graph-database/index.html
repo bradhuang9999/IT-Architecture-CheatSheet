@@ -27,11 +27,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/graph-database/" /><meta property="article:section" content="Cheat Sheet" />
 
-<meta property="article:modified_time" content="2023-07-16T22:09:55+08:00" />
+<meta property="article:modified_time" content="2023-07-17T20:53:55+08:00" />
 <meta itemprop="name" content="圖形資料庫">
 <meta itemprop="description" content="描述 圖形資料庫（Graph Database）專門用於記錄大量資料之間的關聯性，其中的資料以節點（Node）表示，而節點之間的關係則以邊（Edge）表示。透過定義邊的起點、終點、方向和屬性，圖形資料庫能夠在擁有大量邊需儲存的情況下，以特定節點為基礎快速尋找相關的節點。為了提升查詢速度，通常會建立常用邊的索引。
 使用情境 交友網站：利用朋友關係作為邊，推薦朋友的朋友。利用共同嗜好作為邊，推薦具有相同嗜好的使用者。 推薦引擎：利用瀏覽歷史、購買紀錄、使用者偏好等關係尋找相關的推薦商品或影片。 詐騙偵測：利用付款對象、地址、電話等交易資訊尋找潛在的詐騙風險。 優點 快速查詢物件之間的關聯性：即使擁有百萬筆以上的關聯性資料，圖形資料庫仍能快速進行查詢。 資料模型靈活：能夠根據業務需求自定義多種形式的節點和邊。 內建圖形演算法：圖形資料庫通常內建各種圖形演算法，方便使用者快速執行各種與關聯性資料相關的演算法查詢。 易於水平擴展：圖形資料庫的設計考慮到大型網站常見的十億筆以上關聯資料需求，可輕鬆地基於水平擴展架構擴展到多個伺服器，以滿足大量關聯操作需求。 缺點 高度專用化：圖形資料庫專注於儲存和查詢物件之間的關係，若需獲取相關物件的詳細資料（如商品明細），通常需要與其他資料庫結合使用。 需要大量儲存空間：由於節點之間的關係通常複雜，且為了提升查詢效能會建立索引，這會需要更多的儲存空間。 學習成本高：圖形資料庫的查詢語言和資料模型與傳統的SQL有所不同，需要額外的學習時間和努力。 案例 Amazon Neptune ArangoDB JanusGraph Neo4j OrientDB TigerGraph ">
-<meta itemprop="dateModified" content="2023-07-16T22:09:55+08:00" />
+<meta itemprop="dateModified" content="2023-07-17T20:53:55+08:00" />
 <meta itemprop="wordCount" content="24">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="圖形資料庫"/>
@@ -49,14 +49,14 @@
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
-	gtag('config', 'UA-00000000-0');
+	gtag('config', 'G-FBEFPVNEK1');
 }
 </script>
   </head>
@@ -782,7 +782,7 @@ if (!doNotTrack) {
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 16, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/a489bf3439f385a4ea9854a27b5292b0bdb9d1c2">V0.1 (a489bf3)</a>
+  最後修改 July 17, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/0bf1078f507b0c4a56c72e0549a02edbe7c73f3c">Add googleAnalytics (0bf1078)</a>
 </div>
 
 </div>

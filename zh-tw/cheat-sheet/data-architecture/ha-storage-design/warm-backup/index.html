@@ -29,12 +29,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/warm-backup/" /><meta property="article:section" content="Cheat Sheet" />
 
-<meta property="article:modified_time" content="2023-07-16T22:09:55+08:00" />
+<meta property="article:modified_time" content="2023-07-17T20:53:55+08:00" />
 <meta itemprop="name" content="溫備份">
 <meta itemprop="description" content="描述 溫備份（Warm backup）設置一個專用的備援伺服器，該伺服器已經安裝了相關的服務並定期更新系統，同時載入最新的備份資料。在正常情況下，該備援伺服器不處於運行狀態，且系統不會對其進行讀取或修改操作。只有在主伺服器發生故障時，才會啟動備援伺服器，載入差異資料以提供系統服務。溫備份的RTO通常需要數小時到數天的時間。
 使用情境 溫備份適用於內部小型系統，希望在數小時內恢復服務。
 優點 較低的RPO：由於備援伺服器定期載入最新的備份資料，因此在故障發生時損失的資料較少。 較低的RTO：因為備份資料已經載入備援伺服器中，只需要修改設定即可快速啟動服務。此外，還可以通過故障偵測等自動切換模式來進一步減少RTO時間。 架構簡單：不需要考慮多站點架構的資料同步問題，降低了架構的複雜性。 成本較低：只需要額外一台備援伺服器。在雲端架構中，平時可以使用較少的系統資源。在切換至備援伺服器時，通過垂直伸縮可獲得更多的系統資源。由於雲端提供的按使用付費模式，可以有效控制成本。 缺點 RPO仍然存在：由於資料是定期備份，因此在最新的備份與故障發生之間仍可能有一定的時間差。 成本較高：需要額外的備援伺服器，並需承擔隨時啟動備援伺服器的成本。如果需要自動故障偵測和啟動備援可能需要額外成本。 ">
-<meta itemprop="dateModified" content="2023-07-16T22:09:55+08:00" />
+<meta itemprop="dateModified" content="2023-07-17T20:53:55+08:00" />
 <meta itemprop="wordCount" content="13">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="溫備份"/>
@@ -53,14 +53,14 @@
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
-	gtag('config', 'UA-00000000-0');
+	gtag('config', 'G-FBEFPVNEK1');
 }
 </script>
   </head>
@@ -771,7 +771,7 @@ if (!doNotTrack) {
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 16, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/a489bf3439f385a4ea9854a27b5292b0bdb9d1c2">V0.1 (a489bf3)</a>
+  最後修改 July 17, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/0bf1078f507b0c4a56c72e0549a02edbe7c73f3c">Add googleAnalytics (0bf1078)</a>
 </div>
 
 </div>

@@ -27,11 +27,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/query-optimization/" /><meta property="article:section" content="Cheat Sheet" />
 
-<meta property="article:modified_time" content="2023-07-16T22:09:55+08:00" />
+<meta property="article:modified_time" content="2023-07-17T20:53:55+08:00" />
 <meta itemprop="name" content="查詢最佳化">
 <meta itemprop="description" content="描述 由於資料庫通常存有大量的資料，如果查詢語句沒有經過最佳化，可能會導致查詢速度較慢，使使用者感到不滿，同時也會消耗過多的系統資源。因此，在處理大量資料時，需要關注查詢最佳化的問題。
 常見作法 適時建立和使用索引：建立資料索引可以加快查詢速度。但是索引的建立需要額外的儲存空間，並且查詢時依據不同的資料庫會有不同的索引選擇邏輯。若索引建立不當，可能導致查詢無法使用索引。 查看SQL的執行計畫：通過查看SQL語句使用的索引和資源狀態，瞭解當前查詢的實際運行方式，有助於最佳化查詢語句。 謹慎使用hint：可以使用hint指定使用索引，但需要謹慎使用此功能，因為資料庫應該能自動選擇合適的索引。 建立彙總檔案：如果經常需要獲取某個彙總後的資料，可以考慮事先生成彙總檔案，以減少查詢的計算量。 使用Partition, Sharding, 分頁等高級功能：根據具體需求，考慮使用分區或分頁等高級功能來最佳化查詢效率。 監控和分析資料庫運行情況：監控當前耗費較多系統資源的SQL語句，並嘗試最佳化高負載的SQL查詢。 ">
-<meta itemprop="dateModified" content="2023-07-16T22:09:55+08:00" />
+<meta itemprop="dateModified" content="2023-07-17T20:53:55+08:00" />
 <meta itemprop="wordCount" content="11">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="查詢最佳化"/>
@@ -49,14 +49,14 @@
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
-	gtag('config', 'UA-00000000-0');
+	gtag('config', 'G-FBEFPVNEK1');
 }
 </script>
   </head>
@@ -760,7 +760,7 @@ if (!doNotTrack) {
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 16, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/a489bf3439f385a4ea9854a27b5292b0bdb9d1c2">V0.1 (a489bf3)</a>
+  最後修改 July 17, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/0bf1078f507b0c4a56c72e0549a02edbe7c73f3c">Add googleAnalytics (0bf1078)</a>
 </div>
 
 </div>

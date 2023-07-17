@@ -27,11 +27,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/ha-storage-design/hot-backup/" /><meta property="article:section" content="Cheat Sheet" />
 
-<meta property="article:modified_time" content="2023-07-16T22:09:55+08:00" />
+<meta property="article:modified_time" content="2023-07-17T20:53:55+08:00" />
 <meta itemprop="name" content="熱備份">
 <meta itemprop="description" content="描述 Hot backup (熱備份) 是指即時將資料同步到另一個備援伺服器。當主伺服器故障時，備援伺服器停止接收同步資料，改成作為主要伺服器，並修改其他服務設定，改成連接此備援伺服器。
 使用情境 希望降低RPO、RTO，但又不使架構過於複雜且有合理的備份成本。 優點 較低的RPO：由於資料通常以毫秒或秒為單位進行同步，因此正常能損失較少的資料。 較低的RTO：因為備份資料已載入備援伺服器中，只需要修改設定即可啟動服務。甚至可以通過故障偵測等模式自動進行切換。 架構單純：不需要考慮多站點架構的資料同步問題。 成本較低：只需要額外一台備援伺服器。在雲端架構中，平常甚至可以使用較少的系統資源。當改為主伺服器時，再透過垂直伸縮，取得較多的系統資源。由於雲端pay as you go的特性，可以降低成本。 缺點 成本較高：需要隨時啟動另一台備援伺服器。如果需要自動故障偵測並切換，則需要更多的設備與管理成本。 仍然有RPO：由於轉移服務至備援伺服器需要一定時間，因此仍有一定時間的RPO 案例 資料庫即時抄寫資料到備援資料庫 ">
-<meta itemprop="dateModified" content="2023-07-16T22:09:55+08:00" />
+<meta itemprop="dateModified" content="2023-07-17T20:53:55+08:00" />
 <meta itemprop="wordCount" content="20">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="熱備份"/>
@@ -49,14 +49,14 @@
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
-	gtag('config', 'UA-00000000-0');
+	gtag('config', 'G-FBEFPVNEK1');
 }
 </script>
   </head>
@@ -774,7 +774,7 @@ if (!doNotTrack) {
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 16, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/a489bf3439f385a4ea9854a27b5292b0bdb9d1c2">V0.1 (a489bf3)</a>
+  最後修改 July 17, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/0bf1078f507b0c4a56c72e0549a02edbe7c73f3c">Add googleAnalytics (0bf1078)</a>
 </div>
 
 </div>

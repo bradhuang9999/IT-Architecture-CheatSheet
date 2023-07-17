@@ -27,11 +27,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-linkage/reverse-proxy/" /><meta property="article:section" content="Cheat Sheet" />
 
-<meta property="article:modified_time" content="2023-07-16T22:09:55+08:00" />
+<meta property="article:modified_time" content="2023-07-17T20:53:55+08:00" />
 <meta itemprop="name" content="反向代理">
 <meta itemprop="description" content="描述 反向代理 (Reverse Proxy) 存在於伺服器端，負責接收客戶端傳送的請求，並轉發給後端伺服器。
 優點 水平擴展：由於瀏覽器端透過反向代理轉傳請求，因此伺服器端可以有多台伺服器同時提供服務，以提高可用性 負載均衡：依照設定平衡呼叫各伺服器，避免特地伺服器的流量過大 錯誤偵測：若特定伺服器請求失敗次數過多，可自動停止呼叫該伺服器 網址重定向：依照請求網址與端口轉傳請求到對應的伺服器與端口 提供保護：避免曝露伺服器真實IP，並阻擋惡意封包，例如：透過白名單與黑名單IP 控制允許通過的請求 快取回傳內容：可快取近期的回傳內容，減輕後端伺服器壓力 支援HTTPS：可於反向代理進行HTTPS加密與認證，減輕後端伺服器處理SSL的壓力 缺點 架構複雜：由於反向代理伺服器負責轉傳封包，使路由路徑更為複雜 單點故障：客戶端請求透過反向代理轉發，若反向代理伺服器故障，則服務可能中斷。可透過水平擴展或集群來解決此問題。 案例 Nginx Apache IIS ">
-<meta itemprop="dateModified" content="2023-07-16T22:09:55+08:00" />
+<meta itemprop="dateModified" content="2023-07-17T20:53:55+08:00" />
 <meta itemprop="wordCount" content="21">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="反向代理"/>
@@ -49,14 +49,14 @@
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
-	gtag('config', 'UA-00000000-0');
+	gtag('config', 'G-FBEFPVNEK1');
 }
 </script>
   </head>
@@ -774,7 +774,7 @@ if (!doNotTrack) {
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 16, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/a489bf3439f385a4ea9854a27b5292b0bdb9d1c2">V0.1 (a489bf3)</a>
+  最後修改 July 17, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/0bf1078f507b0c4a56c72e0549a02edbe7c73f3c">Add googleAnalytics (0bf1078)</a>
 </div>
 
 </div>

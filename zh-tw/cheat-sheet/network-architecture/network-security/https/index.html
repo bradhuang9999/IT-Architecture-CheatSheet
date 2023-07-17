@@ -33,14 +33,14 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/https/" /><meta property="article:section" content="Cheat Sheet" />
 
-<meta property="article:modified_time" content="2023-07-16T22:09:55+08:00" />
+<meta property="article:modified_time" content="2023-07-17T20:53:55+08:00" />
 <meta itemprop="name" content="HTTPS">
 <meta itemprop="description" content="描述 HTTPS通過TLS（Transport Layer Security）協議，旨在保護網路雙方的通訊安全和資料完整性。
 性質 HTTPS使用同時採用對稱加密和非對稱加密的方式進行傳輸，以確保資料的安全性和效率。非對稱加密用於建立安全連接和進行身份驗證，對稱加密用於加密傳輸的資料。 HTTPS的網址以&quot;https://&ldquo;開頭，並且默認使用的連接埠號是443，而不是HTTP的默認連接埠號80。這樣的設定有助於區分普通的HTTP連接和安全的HTTPS連接。 在網際網路上使用HTTPS時，需要向可信的證書頒發機構（CA）申請數字證書。這些數字證書用於驗證伺服器的身份，確保通訊的加密性和真實性。而在私人內部網路中，可以使用自簽名證書，但需要在各裝置上預先安裝和信任該證書。 HTTPS的主要作用是保護通訊內容不被竊聽和篡改。通過使用TLS協議，它提供了端到端的加密，確保資料在傳輸過程中的安全性。然而，HTTPS並不能完全防止其他類型的攻擊，如DDoS（分佈式拒絕服務）攻擊、木馬等。因此，綜合安全策略應包括其他安全措施，如防火牆、入侵檢測系統等。 運作流程 申請階段：
 網站產生網站公鑰(site.pub)與網站私鑰(site.key) 網站以網站私鑰及網站資訊產生憑證申請文件(site.csr)，將site.csr提供給CA CA驗證身分後以CA私鑰對site.csr內容進行簽章，合併產生網站憑證(site.crt) 將網站憑證提供給網站管理單位 握手(Handshake)階段：
 瀏覽器向網站請求建立HTTPS連線，網站提供網站憑證(server.crt) 檢查憑證日期等憑證資料是否有效 如果憑證的issuer是瀏覽器信任的CA，使用瀏覽器內存此CA的public key解開server.crt中的簽章，若能成功解開，代表此憑證由信任的CA頒發。解開後取得此憑證的簽章Hash值。 針對簽章的資料使用簽章中指定的Hash算法產生Hash值，與簽章內附的原始Hash值比對。如果兩者相同，可確認資料未被竄改。 產生對稱加密使用的金鑰，並使用site.crt中的網站公鑰進行加密，並傳送給網站。 網站使用網站私鑰進行解密，取得對稱加密的金鑰。 至此階段，雙方完成身分認證，並安全的交換對稱加密的金鑰。 傳訊階段：
 瀏覽器以對稱加密金鑰對request進行加密，伺服器同樣的金鑰解密 伺服器以對稱加密金鑰對response進行加密，瀏覽器同樣的金鑰解密 ">
-<meta itemprop="dateModified" content="2023-07-16T22:09:55+08:00" />
+<meta itemprop="dateModified" content="2023-07-17T20:53:55+08:00" />
 <meta itemprop="wordCount" content="27">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="HTTPS"/>
@@ -61,14 +61,14 @@
   integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
   crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-00000000-0"></script>
+<link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
-	gtag('config', 'UA-00000000-0');
+	gtag('config', 'G-FBEFPVNEK1');
 }
 </script>
   </head>
@@ -794,7 +794,7 @@ if (!doNotTrack) {
 	
 	
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 16, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/a489bf3439f385a4ea9854a27b5292b0bdb9d1c2">V0.1 (a489bf3)</a>
+  最後修改 July 17, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/0bf1078f507b0c4a56c72e0549a02edbe7c73f3c">Add googleAnalytics (0bf1078)</a>
 </div>
 
 </div>

@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/batch/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/execute-env/docker/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -29,7 +29,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/basic-element/iac/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -42,7 +42,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/execute-env/vm/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -55,7 +55,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/application-view/web-application/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -68,7 +68,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/ha-storage-design/cold-backup/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -81,7 +81,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -94,7 +94,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/web-app-security/content-security-policy/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -107,7 +107,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/storage-infra/das/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -120,7 +120,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/relational-database/data-normalization/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -133,7 +133,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/nosql-database/document-database/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -146,7 +146,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/execute-env/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -159,7 +159,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-security/firewall/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -172,7 +172,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/high-performance/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -185,7 +185,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-hardware/hub/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -198,7 +198,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-linkage/leased-line/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -211,7 +211,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/design-pattern/microservices/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -224,7 +224,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-hardware/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -237,7 +237,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -250,7 +250,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/scalability/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -263,13 +263,13 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/single-responsibility-principle/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/storage-infra/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -282,7 +282,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/data-security/symmetric-cryptography/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -295,7 +295,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/web-api/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -308,7 +308,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/application-view/progressive-web-apps/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -321,7 +321,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/basic-element/vertical-scaling/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -334,7 +334,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -347,7 +347,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/application-view/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -360,7 +360,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/data-security/asymmetric-cryptography/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -373,7 +373,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -386,7 +386,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/nosql-database/columnar-database/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -399,7 +399,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/cost-optimization/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -412,7 +412,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/relational-database/data-denormalization/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -425,7 +425,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/design-pattern/event-driven/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -438,7 +438,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/fault-tolerance/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -451,10 +451,10 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/interface-segregation-principle/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/storage-infra/nas/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -467,7 +467,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-security/nat/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -480,7 +480,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-linkage/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -493,7 +493,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/relational-database/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -506,7 +506,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/web-app-security/same-origin-policy/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -519,7 +519,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-hardware/switch/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -532,7 +532,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/ha-storage-design/warm-backup/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -545,7 +545,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/web-app-security/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -558,7 +558,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/serverless-function/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -571,7 +571,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/basic-element/horizontal-scaling/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -584,7 +584,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/execute-env/kubernetes/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -597,7 +597,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/application-view/mobile-app/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -610,7 +610,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/design-pattern/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -623,7 +623,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/nosql-database/graph-database/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -636,7 +636,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/data-security/hashing/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -649,7 +649,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/ha-storage-design/hot-backup/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -662,10 +662,10 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/liskov-substitution-principle/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -678,7 +678,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-security/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -691,7 +691,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/nosql-database/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -704,7 +704,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/web-app-security/prevent-xss/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -717,7 +717,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-linkage/proxy/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -730,7 +730,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/relational-database/query-optimization/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -743,7 +743,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-hardware/router/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -756,7 +756,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/storage-infra/san/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -769,7 +769,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/security/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -782,7 +782,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -795,7 +795,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/usability/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -808,7 +808,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-security/vpn/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -821,7 +821,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/message-queue/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -834,7 +834,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/application-view/no-code-app/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -847,7 +847,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/automation/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -860,10 +860,10 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/dependency-inversion-principle/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/data-security/digital-signature/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -876,7 +876,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/ha-storage-design/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -889,7 +889,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-security/https/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -902,7 +902,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/nosql-database/key-value-database/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -915,7 +915,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/low-coupling/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -928,7 +928,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-hardware/modem/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -941,7 +941,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/ha-storage-design/multi-site/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -954,7 +954,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -967,7 +967,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/web-app-security/prevent-csrf/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -980,7 +980,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/storage-infra/raid/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -993,7 +993,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-linkage/reverse-proxy/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -1006,7 +1006,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/relational-database/sharding/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -1019,7 +1019,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/db-procedure/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -1032,7 +1032,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/storage-infra/block-storage/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -1045,7 +1045,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/compliance/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -1058,7 +1058,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/data-security/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -1071,7 +1071,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/network-architecture/network-security/deffie-hellman/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -1084,10 +1084,10 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/solid-principle/open-closed-principle/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/relational-database/partition/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -1100,7 +1100,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/portability/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -1113,7 +1113,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/sortware-architecture/web-app-security/prevent-sql-injection/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -1126,7 +1126,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/db-function/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -1139,7 +1139,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/attribute/extensibility/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -1152,7 +1152,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/objective/high-reliability/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -1165,7 +1165,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/storage-infra/object-storage/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -1178,7 +1178,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/application-architecture/logic-control/db-trigger/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -1191,7 +1191,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/data-architecture/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -1204,7 +1204,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/common-concept/basic-element/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -1234,7 +1234,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/cheat-sheet/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
@@ -1247,7 +1247,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="no"
@@ -1265,7 +1265,7 @@
                 />
   </url><url>
     <loc>https://bradhuang9999.github.io/IT-Architecture-CheatSheet/search/</loc>
-    <lastmod>2023-07-16T22:09:55+08:00</lastmod>
+    <lastmod>2023-07-17T20:53:55+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
