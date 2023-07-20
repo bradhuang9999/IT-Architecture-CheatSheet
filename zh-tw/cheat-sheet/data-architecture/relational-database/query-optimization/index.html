@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-tw" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-tw" class="no-js">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,11 +27,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/relational-database/query-optimization/" /><meta property="article:section" content="Cheat Sheet" />
 
-<meta property="article:modified_time" content="2023-07-20T21:01:21+08:00" />
+<meta property="article:modified_time" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="name" content="查詢最佳化">
 <meta itemprop="description" content="描述 由於資料庫通常存有大量的資料，如果查詢語句沒有經過最佳化，可能會導致查詢速度較慢，使使用者感到不滿，同時也會消耗過多的系統資源。因此，在處理大量資料時，需要關注查詢最佳化的問題。
 常見作法 適時建立和使用索引：建立資料索引可以加快查詢速度。但是索引的建立需要額外的儲存空間，並且查詢時依據不同的資料庫會有不同的索引選擇邏輯。若索引建立不當，可能導致查詢無法使用索引。 查看SQL的執行計畫：通過查看SQL語句使用的索引和資源狀態，瞭解當前查詢的實際運行方式，有助於最佳化查詢語句。 謹慎使用hint：可以使用hint指定使用索引，但需要謹慎使用此功能，因為資料庫應該能自動選擇合適的索引。 建立彙總檔案：如果經常需要獲取某個彙總後的資料，可以考慮事先生成彙總檔案，以減少查詢的計算量。 使用Partition, Sharding, 分頁等高級功能：根據具體需求，考慮使用分區或分頁等高級功能來最佳化查詢效率。 監控和分析資料庫運行情況：監控當前耗費較多系統資源的SQL語句，並嘗試最佳化高負載的SQL查詢。 ">
-<meta itemprop="dateModified" content="2023-07-20T21:01:21+08:00" />
+<meta itemprop="dateModified" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="wordCount" content="11">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="查詢最佳化"/>
@@ -52,7 +52,9 @@
 <link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css">
 
 
-<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script>
+
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/purify.min.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -612,7 +614,7 @@ if (!doNotTrack) {
             
 	
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
             
   
 
@@ -709,7 +711,7 @@ if (!doNotTrack) {
 
 		<br />
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/e2f142f084d00ff59f2accb24dc02c6c8d99c6d4">Upgrate to docsy 0.70.1 (e2f142f)</a>
+  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/2fa4b3c57219159201e01794e4420be74f6ed105">add dom purify (2fa4b3c)</a>
 </div>
 
 </div>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-tw" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-tw" class="no-js">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,11 +27,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/common-concept/basic-element/horizontal-scaling/" /><meta property="article:section" content="Cheat Sheet" />
 <meta property="article:published_time" content="2023-06-25T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-07-20T21:01:21+08:00" />
+<meta property="article:modified_time" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="name" content="水平伸縮">
 <meta itemprop="description" content="描述 水平伸縮是一種系統資源管理策略，當系統的資源需求動態上升或下降時，通過增加或減少伺服器或容器的數量，以有效地利用系統資源，提高系統效能。這可以通過根據流量預測進行自動排程，或根據系統負載量的偵測啟動自動伸縮。
 優點 最佳化系統資源利用率：當系統資源利用率低時，可以動態降低伺服器數量，以節約成本。 避免單點故障：多個伺服器或容器共同服務，搭配負載平衡與監控機制可以避免單點故障，提高系統可用性。 無須中斷服務：水平伸縮通常在運行期間進行，通過增加更多的伺服器或容器來應對高流量需求，無需停機或中斷服務。 缺點 架構較複雜：需要考慮如何監控和管理伺服器或容器的數量和狀態。 非所有系統都適用：進行水平伸縮可能需要對系統進行重新設計，以確保各個元件能夠適應動態變化的環境。 網路和通信成本：由於系統由多個伺服器或容器組成，需要額外的通信流量和協調成本。 案例 容器環境：像是Kubernetes、Docker等容器環境提供了彈性的伸縮功能，可以根據需求自動調整容器的數量。 分布式資料庫：在分布式資料庫中，可以根據負載和數據量的變化來調整節點的數量，以提供更好的效能和可靠性。 分布式儲存：將數據存儲在多個節點上，可以根據數據量和存儲需求進行伸縮，以確保高效的數據存取和容量管理。 "><meta itemprop="datePublished" content="2023-06-25T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2023-07-20T21:01:21+08:00" />
+<meta itemprop="dateModified" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="wordCount" content="14">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="水平伸縮"/>
@@ -52,7 +52,9 @@
 <link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css">
 
 
-<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script>
+
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/purify.min.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -614,7 +616,7 @@ if (!doNotTrack) {
             
 	
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
             
   
 
@@ -720,7 +722,7 @@ if (!doNotTrack) {
 
 		<br />
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/e2f142f084d00ff59f2accb24dc02c6c8d99c6d4">Upgrate to docsy 0.70.1 (e2f142f)</a>
+  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/2fa4b3c57219159201e01794e4420be74f6ed105">add dom purify (2fa4b3c)</a>
 </div>
 
 </div>

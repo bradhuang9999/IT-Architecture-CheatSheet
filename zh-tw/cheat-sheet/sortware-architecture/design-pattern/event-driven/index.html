@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-tw" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-tw" class="no-js">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,11 +27,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/sortware-architecture/design-pattern/event-driven/" /><meta property="article:section" content="Cheat Sheet" />
 
-<meta property="article:modified_time" content="2023-07-20T21:01:21+08:00" />
+<meta property="article:modified_time" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="name" content="事件驅動">
 <meta itemprop="description" content="描述 事件驅動模式是一種以註冊事件並指定事件發生時預期執行的邏輯的程式設計模式。該模式中，事件處理邏輯與事件觸發點解耦合，不需要在程式碼中直接指定事件觸發的位置，而是通過事件註冊和觸發系統來動態連接事件觸發點和處理邏輯。
 優點 解耦合：事件處理邏輯與事件觸發點解耦合，使得程式結構更靈活且易於維護。 非同步：事件觸發程式不需要等待事件處理邏輯完成，可以快速回應使用者，提高系統的反應速度。 缺點 處理流程不明確：由於事件註冊和觸發系統動態呼叫事件處理邏輯，因此後續的事件流程可能不容易理解和追蹤。 交易控制困難：因為各個事件處理邏輯相互獨立，無法在某個事件處理邏輯中追蹤和控制之前事件處理階段的結果。 效能影響：由於需要動態觸發事件並處理大量的事件，系統的效能可能受到影響。需要適當地設計和管理事件註冊，以避免性能問題。 ">
-<meta itemprop="dateModified" content="2023-07-20T21:01:21+08:00" />
+<meta itemprop="dateModified" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="wordCount" content="9">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="事件驅動"/>
@@ -52,7 +52,9 @@
 <link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css">
 
 
-<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script>
+
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/purify.min.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -613,7 +615,7 @@ if (!doNotTrack) {
             
 	
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
             
   
 
@@ -712,7 +714,7 @@ if (!doNotTrack) {
 
 		<br />
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/e2f142f084d00ff59f2accb24dc02c6c8d99c6d4">Upgrate to docsy 0.70.1 (e2f142f)</a>
+  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/2fa4b3c57219159201e01794e4420be74f6ed105">add dom purify (2fa4b3c)</a>
 </div>
 
 </div>

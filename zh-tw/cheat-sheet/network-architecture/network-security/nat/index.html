@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-tw" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-tw" class="no-js">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,11 +27,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-security/nat/" /><meta property="article:section" content="Cheat Sheet" />
 
-<meta property="article:modified_time" content="2023-07-20T21:01:21+08:00" />
+<meta property="article:modified_time" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="name" content="網路位址轉換 NAT">
 <meta itemprop="description" content="描述 NAT（Network Address Translation，網路位址轉換）是一種在邊緣網路的防火牆、路由器或專門的NAT伺服器上進行的技術，用於轉換內部設備和外部設備之間的封包。它將內部IP地址轉換為一個或多個公有IP地址，以防止外部惡意對象通過IP地址識別內部網路的設備清單。當收到響應時，根據請求的URL或端口等信息，NAT可確定將響應發送給哪個內部設備。
 優點 增加內部網路的安全性：NAT在邊緣網路遮蔽了內部IP地址，使外部設備無法識別內部網路的設備清單，也無法直接通過IP地址呼叫內部設備。 省去公有IP地址：NAT可以使用少量的公有IP地址供內部大量設備連接網際網路，從而減少了需要的公有IP地址數量和相應的費用。 缺點 增加網路架構的複雜度：所有連接外部網路的封包都需要通過NAT進行轉發和轉換，這增加了網路架構的複雜性。 影響網路速度：由於所有連接外部網路的封包都必須經過NAT，如果只有一台NAT伺服器，可能會降低外部網路的連接速度。這個問題可以通過水平擴展多台NAT伺服器來解決。 ">
-<meta itemprop="dateModified" content="2023-07-20T21:01:21+08:00" />
+<meta itemprop="dateModified" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="wordCount" content="10">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="網路位址轉換 NAT"/>
@@ -52,7 +52,9 @@
 <link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css">
 
 
-<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script>
+
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/purify.min.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -613,7 +615,7 @@ if (!doNotTrack) {
             
 	
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
             
   
 
@@ -711,7 +713,7 @@ if (!doNotTrack) {
 
 		<br />
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/e2f142f084d00ff59f2accb24dc02c6c8d99c6d4">Upgrate to docsy 0.70.1 (e2f142f)</a>
+  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/2fa4b3c57219159201e01794e4420be74f6ed105">add dom purify (2fa4b3c)</a>
 </div>
 
 </div>

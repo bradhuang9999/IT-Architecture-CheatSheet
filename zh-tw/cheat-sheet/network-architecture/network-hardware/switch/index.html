@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-tw" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-tw" class="no-js">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,11 +27,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/network-architecture/network-hardware/switch/" /><meta property="article:section" content="Cheat Sheet" />
 
-<meta property="article:modified_time" content="2023-07-20T21:01:21+08:00" />
+<meta property="article:modified_time" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="name" content="Switch">
 <meta itemprop="description" content="描述 Switch類似於Hub可以讓區域網路中的多台設備互相傳輸封包，但是由於其會記錄各端口的MAC編號於內部的MAC表，因此可精確傳替封包給目標設備。
 功能 轉傳封包：使用MAC表精確傳遞封包給目標設備 廣播尋找MAC位置：若是不認識的MAC，透過廣播尋找設備。 維護MAC表：尋找到MAC對應設備或該端口MAC變更或關閉，則異動MAC表內容。 提供介面調整設定：提供介面供管理者手動調整MAC表或設定子網路對應的端口 使用情境 需在區域網路中，供多台設備互相傳輸封包 優點 網路流量小：使用MAC表精準傳輸封包到目標設備，封包數量較低，減少流量。 同時可連接多數量設備：因為沒有封包衝突的問題，故可以同時供多台設備交換資料。 安全性高：不會把封包傳遞給非目標的對象，減少被監聽的風險。 缺點 價格較高：相較於Hub，由於其結構較複雜，價格較高 使用較複雜：需要依需求管理網路分割、MAC表 單點故障：如果鏈接的單一Switch發生故障，會導致相關設備無法聯網。此問題可透過負載均衡等方式解決。 ">
-<meta itemprop="dateModified" content="2023-07-20T21:01:21+08:00" />
+<meta itemprop="dateModified" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="wordCount" content="17">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Switch"/>
@@ -52,7 +52,9 @@
 <link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css">
 
 
-<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script>
+
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/purify.min.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -615,7 +617,7 @@ if (!doNotTrack) {
             
 	
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
             
   
 
@@ -726,7 +728,7 @@ if (!doNotTrack) {
 
 		<br />
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/e2f142f084d00ff59f2accb24dc02c6c8d99c6d4">Upgrate to docsy 0.70.1 (e2f142f)</a>
+  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/2fa4b3c57219159201e01794e4420be74f6ed105">add dom purify (2fa4b3c)</a>
 </div>
 
 </div>

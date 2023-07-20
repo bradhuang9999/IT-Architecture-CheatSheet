@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-tw" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-tw" class="no-js">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,11 +27,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/nosql-database/document-database/" /><meta property="article:section" content="Cheat Sheet" />
 
-<meta property="article:modified_time" content="2023-07-20T21:01:21+08:00" />
+<meta property="article:modified_time" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="name" content="文件資料庫">
 <meta itemprop="description" content="描述 文件資料庫是一種形式的 NoSQL 資料庫，其特徵為以單一文件、非正規化的方式進行儲存。市場上有多種不同性質的文件資料庫，根據其設計目的和特性，各自的優缺點略有不同。
 使用情境 為高負載網站提供高性能、高可用性的資料儲存方案。 儲存大量網路爬蟲蒐集的資料。 進行大數據彙整與分析。 開發搜索引擎和全文檢索應用。 優點 無須預先定義資料格式：相對於傳統 SQL 資料庫，文件資料庫允許彈性的資料存放，可以以樹狀結構存放複雜的文件內容。 可控制的一致性：文件資料庫提供多種資料一致性方案，可以選擇適合的方案以提升寫入效率，允許在不同區域短期內的資料不一致。 快速寫入：由於可選擇較低的一致性，文件資料庫可以實現快速的寫入操作。 易於水平擴展：大多文件資料庫在設計時，即考慮cluster、一致性控制、以容器為基礎等易於水平擴展的架構 缺點 難以處理複雜的關聯查詢：文件資料庫在處理複雜的跨資料表查詢方面較差，不如傳統的關聯性資料庫。 較高的儲存空間需求：文件資料庫的非正規化特性可能導致冗餘儲存，需要較多的儲存空間。 事務控制較弱：相較於傳統資料庫的 ACID 特性，文件資料庫的事務控制能力較弱。 需學習專用語法：不同的文件資料庫產品有各自的查詢與資料異動語法，需要學習特定的語法和技術。 金額計算精確度較低：某些文件資料庫產品為了快速彙總資料概要而降低金額計算的精確度。 案例 MongoDB Couchbase Elasticsearch ">
-<meta itemprop="dateModified" content="2023-07-20T21:01:21+08:00" />
+<meta itemprop="dateModified" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="wordCount" content="28">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="文件資料庫"/>
@@ -52,7 +52,9 @@
 <link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css">
 
 
-<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script>
+
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/purify.min.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -615,7 +617,7 @@ if (!doNotTrack) {
             
 	
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
             
   
 
@@ -731,7 +733,7 @@ if (!doNotTrack) {
 
 		<br />
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/e2f142f084d00ff59f2accb24dc02c6c8d99c6d4">Upgrate to docsy 0.70.1 (e2f142f)</a>
+  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/2fa4b3c57219159201e01794e4420be74f6ed105">add dom purify (2fa4b3c)</a>
 </div>
 
 </div>

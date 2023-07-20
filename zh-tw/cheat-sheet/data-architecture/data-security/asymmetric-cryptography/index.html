@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-tw" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-tw" class="no-js">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,12 +29,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/data-architecture/data-security/asymmetric-cryptography/" /><meta property="article:section" content="Cheat Sheet" />
 
-<meta property="article:modified_time" content="2023-07-20T21:01:21+08:00" />
+<meta property="article:modified_time" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="name" content="非對稱性加密">
 <meta itemprop="description" content="描述 非對稱性加密是一種加密技術，與對稱性加密不同，它使用一對金鑰，包括公鑰和私鑰，來進行加密和解密操作。
 運作方式如下：先產生一組公私鑰對。公鑰可以在網路上傳輸給其他人，但私鑰必須保密，不會在網際網路上傳輸。在加密過程中，傳送者使用私鑰對資料進行加密或數位簽名。接收者收到加密後的資料後，使用公鑰鑰對其進行解密或驗證簽名。如果解密或驗證成功，那麼可以確認該資料確實來自公鑰對應的私鑰，且在傳輸過程中沒有被篡改。
 使用情境 數位簽章： 用於驗證檔案或資料的真實性和完整性，防止偽造或篡改。 訊息加密： 用於保護敏感資訊在網路傳輸過程中的安全性，只有私鑰擁有者能夠解密讀取內容。 HTTPS訊息傳輸： 用於對網站的傳輸資料進行加密，確保通訊過程中的隱私和安全。 安全傳輸對稱性加密金鑰： 在對稱性加密中，用非對稱性加密演算法傳輸對稱加密的金鑰，確保金鑰在傳輸過程中不被洩露。 優點 安全性較高： 私鑰不會在網路上傳輸，只有私鑰持有者能夠解密或簽署資料，因此提供較高的安全性。 安全金鑰交換： 可以用於安全地交換對稱加密演算法的金鑰，增加了整個系統的安全性。 缺點 加解密速度較慢： 與對稱性加密相比，非對稱性加密的演算法複雜性較高，因此需要更長的時間來完成加解密操作。 案例 RSA（Rivest-Shamir-Adleman） DSA（Digital Signature Algorithm） ECC（Elliptic Curve Cryptography） ">
-<meta itemprop="dateModified" content="2023-07-20T21:01:21+08:00" />
+<meta itemprop="dateModified" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="wordCount" content="28">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="非對稱性加密"/>
@@ -56,7 +56,9 @@
 <link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css">
 
 
-<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script>
+
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/purify.min.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -619,7 +621,7 @@ if (!doNotTrack) {
             
 	
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
             
   
 
@@ -730,7 +732,7 @@ if (!doNotTrack) {
 
 		<br />
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/e2f142f084d00ff59f2accb24dc02c6c8d99c6d4">Upgrate to docsy 0.70.1 (e2f142f)</a>
+  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/2fa4b3c57219159201e01794e4420be74f6ed105">add dom purify (2fa4b3c)</a>
 </div>
 
 </div>

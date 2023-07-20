@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-tw" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-tw" class="no-js">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,11 +27,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/db-procedure/" /><meta property="article:section" content="Cheat Sheet" />
 <meta property="article:published_time" content="2023-07-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-07-20T21:01:21+08:00" />
+<meta property="article:modified_time" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="name" content="DB Procedure">
 <meta itemprop="description" content="概述: DB Procedure是存放於資料庫的程式，通常是以SQL為核心，搭配變數、邏輯判斷、迴圈的程式，以達到於資料庫高效處理資料的目的。
 優點 在資料庫端即可處理複雜的資料處理，有效的處理大量資料，避免網路延遲與資料傳輸量的問題 在資料庫端處理，可以更方便的處理事務(Transaction)管理 缺點 難以除錯與開發: 較難設定中斷點、記錄程式運行的Log、也較少方便、提供程式碼提示的編輯器。 基於程式架構的原因，難以使用現代的程式概念，例如: 物件導向。 耦合度較高: 由於程式都是在資料庫中，程式之間以及程式與資料表之間的耦合度很高。 較難更新程式: 更新DB Procedure與資料表時容易造成相關連物件的錯誤。難以達到zero down time的程式更新。 程式綁定特定資料庫，難以遷移至其他資料庫產品。 案例 PL/SQL: Oracle資料庫的DB Proecdure T-SQL: SQL Server資料庫的DB Proecdure "><meta itemprop="datePublished" content="2023-07-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2023-07-20T21:01:21+08:00" />
+<meta itemprop="dateModified" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="wordCount" content="27">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="DB Procedure"/>
@@ -52,7 +52,9 @@
 <link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css">
 
 
-<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script>
+
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/purify.min.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -614,7 +616,7 @@ if (!doNotTrack) {
             
 	
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
             
   
 
@@ -720,7 +722,7 @@ if (!doNotTrack) {
 
 		<br />
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/e2f142f084d00ff59f2accb24dc02c6c8d99c6d4">Upgrate to docsy 0.70.1 (e2f142f)</a>
+  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/2fa4b3c57219159201e01794e4420be74f6ed105">add dom purify (2fa4b3c)</a>
 </div>
 
 </div>

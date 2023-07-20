@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-tw" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-tw" class="no-js">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,11 +27,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/application-view/web-application/" /><meta property="article:section" content="Cheat Sheet" />
 <meta property="article:published_time" content="2023-06-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-07-20T21:01:21+08:00" />
+<meta property="article:modified_time" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="name" content="網路應用程式">
 <meta itemprop="description" content="概述: 網路應用程式是通過瀏覽器連接網站，直接使用應用程式。
 優點: 不須安裝: 不同於傳統單機應用程式需要進行安裝，只要通過瀏覽器連接網站就可以取得應用程式。 版本同步: 連線到網路應用程式時隨時都是使用最新版的應用程式，避免版本不一致所造成的使用問題。 跨平台使用: 只要使用標準瀏覽器，就可以使用應用程式。免於不同種類、版本電腦的差異問題。 客戶端負載低: 大部分的計算可於伺服器端進行。 缺點: 安全性: 通過公共網路連接應用程式，有更多的資安風險。例如XSS, SQL Injection, CSRF等攻擊。 複雜性: 程式分割為處理顯示的瀏覽器前端與處理商業邏輯的伺服器後端，流程較為抽象與複雜。 瀏覽器版本問題: 不同用戶端安裝的瀏覽器版本不一，需要考慮瀏覽器的相容性議題。 無法離線使用: 當沒有網路時，就無法使用網路應用程式。現代的PWA應用程式將資料進行緩存以緩解此問題。 網路速度問題: 某些客戶的網路速度較不穩定，可能會影響使用效能，需要考慮快取或縮減、延遲網路請求等技術。 軟硬體訪問限制: 由於瀏覽器的支援性及安全性議題，沒有辦法如同原生應用程式一般，可以讀取全部硬體資訊及全部的使用者資訊與檔案 "><meta itemprop="datePublished" content="2023-06-10T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2023-07-20T21:01:21+08:00" />
+<meta itemprop="dateModified" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="wordCount" content="27">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="網路應用程式"/>
@@ -52,7 +52,9 @@
 <link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css">
 
 
-<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script>
+
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/purify.min.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -613,7 +615,7 @@ if (!doNotTrack) {
             
 	
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
             
   
 
@@ -717,7 +719,7 @@ if (!doNotTrack) {
 
 		<br />
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/e2f142f084d00ff59f2accb24dc02c6c8d99c6d4">Upgrate to docsy 0.70.1 (e2f142f)</a>
+  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/2fa4b3c57219159201e01794e4420be74f6ed105">add dom purify (2fa4b3c)</a>
 </div>
 
 </div>

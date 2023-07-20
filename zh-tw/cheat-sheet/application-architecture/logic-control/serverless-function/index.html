@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-tw" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-tw" class="no-js">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,11 +27,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/zh-tw/cheat-sheet/application-architecture/logic-control/serverless-function/" /><meta property="article:section" content="Cheat Sheet" />
 <meta property="article:published_time" content="2023-07-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-07-20T21:01:21+08:00" />
+<meta property="article:modified_time" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="name" content="無伺服器 Function">
 <meta itemprop="description" content="概述: Serverless Function是一種設計模式，概念為讓軟體開發人員只需專注於實作程式邏輯，而不須煩惱程式平台與系統管理議題。
 使用情境: Web API 批次處理 排程作業 事件驅動 前後端分離的後端伺服器 優點: 彈性: 使用時才須付費 伸縮性: 雲端平台將會按照使用量，自動擴展 無須管理架構: 不像IaaS、FaaS等模式還需要管理基礎架構或平台設定 以一般語言實作邏輯: 未來若服務使用量較大，可將同樣邏輯經過一些調整後搬到Container等環境。 缺點: 載入需時間: 每次服務執行前，都需要先載入邏輯，因此服務回應速度較慢。雖然可以某些平台可提供預先載入，但是其收費就會較高。 由於大多FaaS服務都是在外部網路的雲端雲端服務，與內部網路的服務相比，需要考慮更多安全性的議題。 "><meta itemprop="datePublished" content="2023-07-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2023-07-20T21:01:21+08:00" />
+<meta itemprop="dateModified" content="2023-07-20T21:26:32+08:00" />
 <meta itemprop="wordCount" content="23">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="無伺服器 Function"/>
@@ -52,7 +52,9 @@
 <link rel="stylesheet" href="https://bradhuang9999.github.io/IT-Architecture-CheatSheet/css/styles.css">
 
 
-<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/wiki-view.js'></script>
+
+<script defer src='https://bradhuang9999.github.io/IT-Architecture-CheatSheet/js/purify.min.js'></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-FBEFPVNEK1"></script>
 <script>
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -614,7 +616,7 @@ if (!doNotTrack) {
             
 	
           </aside>
-          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
             
   
 
@@ -722,7 +724,7 @@ if (!doNotTrack) {
 
 		<br />
 	<div class="text-muted mt-5 pt-3 border-top">
-  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/e2f142f084d00ff59f2accb24dc02c6c8d99c6d4">Upgrate to docsy 0.70.1 (e2f142f)</a>
+  最後修改 July 20, 2023: <a href="https://github.com/bradhuang9999/IT-Architecture-Toolset/commit/2fa4b3c57219159201e01794e4420be74f6ed105">add dom purify (2fa4b3c)</a>
 </div>
 
 </div>
