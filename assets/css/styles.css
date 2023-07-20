@@ -9,3 +9,11 @@ div.div-cheatsheet a {
 div.div-cheatsheet a:hover, div.div-cheatsheet a:focus {
     font-weight: bolder;
 }
+
+.w-fit-parent {
+    width: 100%
+}
+
+.h-fit-screen {
+    height: "100vh"
+}
