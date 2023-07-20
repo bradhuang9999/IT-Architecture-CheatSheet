@@ -3,3 +3,5 @@
 
 {{ $wikiView := resources.Get "js/wiki-view.js" }}
 <script defer src='{{ $wikiView.Permalink }}'></script>
+
+<script defer src='{{ absURL "js/purify.min.js" }}'></script>

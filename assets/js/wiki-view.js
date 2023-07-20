@@ -8,13 +8,12 @@ $('#div-cheatsheet button[data-modal-href]').on('click', async function(e) {
         type: 'GET'
     });
 
-    var hrefContent = $(hrefContentStr);
+    let hrefContentClean = DOMPurify.sanitize(hrefContentStr, { USE_PROFILES: { html: true } });
+    var hrefContent = $(hrefContentClean);
     
 
     var wikiModalDiv = document.getElementById('wikiModal');
-    //wikiModalDiv.querySelector('.modal-title').innerText = btn.innerText;
     wikiModalDiv.querySelector('.modal-body').innerHTML = hrefContent.find('.td-content').html();
-    //wikiModalDiv.querySelector('iframe').src = href;
     wikiModal = new bootstrap.Modal(wikiModalDiv, {});
     wikiModal.show();  
     
